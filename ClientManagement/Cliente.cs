@@ -8,9 +8,16 @@ namespace ClientManagement
 {
     class Cliente
     {
-        private string nome;
-        private string cognome;
-        private string numero;
-        private string email;
+        public string Nome { get; set; }
+        public string Cognome { get; set; }
+        public string Numero { get; set; }
+        public string Email { get; set; }
+        public string Indirizzo { get; set; }
+        public int totAcquisti { get; set; }
+
+        public Cliente()
+        {
+
+        }
     }
 }

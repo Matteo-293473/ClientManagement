@@ -121,9 +121,6 @@
   <data name="appbar.add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar.power" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.power.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="appbar.book.contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.book.contact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,8 +129,5 @@
   </data>
   <data name="appbar.home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clientManagement1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clientManagement1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

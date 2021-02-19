@@ -93,29 +93,9 @@ namespace ClientManagement.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap appbar_power {
-            get {
-                object obj = ResourceManager.GetObject("appbar.power", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap clientManagement {
             get {
                 object obj = ResourceManager.GetObject("clientManagement", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap clientManagement1 {
-            get {
-                object obj = ResourceManager.GetObject("clientManagement1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
