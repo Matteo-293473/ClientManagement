@@ -25,8 +25,7 @@ namespace ClientManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            home1.Visible = true;
-            contatti1.Visible = false;
+            home1.BringToFront();
 
         }
 
@@ -46,8 +45,7 @@ namespace ClientManagement
             btnHome.BackColor = Color.FromArgb(46, 51, 73);
 
             // gestire meglio con tab control selectedTab
-            home1.Visible = true;
-            contatti1.Visible = false;
+            home1.BringToFront();
 
         }
 
@@ -68,8 +66,7 @@ namespace ClientManagement
             pnlSideMenu.Top = btnRubrica.Top;
             pnlSideMenu.Left = btnRubrica.Left;
             btnRubrica.BackColor = Color.FromArgb(46, 51, 73);
-            contatti1.Visible = true;
-            home1.Visible = false;
+            contatti1.BringToFront();
         }
 
         private void BtnCommissioni_Click(object sender, EventArgs e)
@@ -115,6 +112,11 @@ namespace ClientManagement
         }
 
         private void contatti1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void home1_Load_1(object sender, EventArgs e)
         {
 
         }

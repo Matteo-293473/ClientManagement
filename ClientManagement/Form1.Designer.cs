@@ -172,8 +172,9 @@ namespace ClientManagement
             // 
             this.home1.Location = new System.Drawing.Point(172, 0);
             this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(762, 485);
+            this.home1.Size = new System.Drawing.Size(764, 485);
             this.home1.TabIndex = 7;
+            this.home1.Load += new System.EventHandler(this.home1_Load_1);
             // 
             // Form1
             // 

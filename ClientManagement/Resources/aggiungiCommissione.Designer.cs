@@ -29,8 +29,6 @@ namespace ClientManagement.Resources
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aggiungiCommissione));
-            this.btnIndietro = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -40,17 +38,6 @@ namespace ClientManagement.Resources
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.lblCognome = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnIndietro
-            // 
-            this.btnIndietro.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIndietro.Image = ((System.Drawing.Image)(resources.GetObject("btnIndietro.Image")));
-            this.btnIndietro.Location = new System.Drawing.Point(60, 22);
-            this.btnIndietro.Name = "btnIndietro";
-            this.btnIndietro.Size = new System.Drawing.Size(77, 57);
-            this.btnIndietro.TabIndex = 0;
-            this.btnIndietro.UseVisualStyleBackColor = false;
-            this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click);
             // 
             // dateTimePicker1
             // 
@@ -127,7 +114,6 @@ namespace ClientManagement.Resources
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.btnIndietro);
             this.Name = "aggiungiCommissione";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
@@ -138,7 +124,6 @@ namespace ClientManagement.Resources
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnIndietro;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;

@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace ClientManagement
 {
-    public partial class Home : UserControl
+    public partial class Home1 : UserControl
     {
-        public Home()
+        public Home1()
         {
             InitializeComponent();
         }
 
         private void BtnNuovaCommissione(object sender, EventArgs e)
-        {
-            //aggiungiCommissione1.BringToFront();
-        }
-
-        private void home11_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void aggiungiCommissione1_Load(object sender, EventArgs e)
         {
 
         }
