@@ -16,15 +16,17 @@ namespace ClientManagement
         public Form1()
         {
             InitializeComponent();
-            PnlSideMenu.Height = btnHome.Height;
-            PnlSideMenu.Top = btnHome.Top;
-            PnlSideMenu.Left = btnHome.Left;
+            pnlSideMenu.Height = btnHome.Height;
+            pnlSideMenu.Top = btnHome.Top;
+            pnlSideMenu.Left = btnHome.Left;
             btnHome.BackColor = Color.FromArgb(46, 51, 73);
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            home1.Visible = true;
+            contatti1.Visible = false;
 
         }
 
@@ -37,10 +39,13 @@ namespace ClientManagement
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            PnlSideMenu.Height = btnHome.Height;
-            PnlSideMenu.Top = btnHome.Top;
-            PnlSideMenu.Left = btnHome.Left;
+            pnlSideMenu.Height = btnHome.Height;
+            pnlSideMenu.Top = btnHome.Top;
+            pnlSideMenu.Left = btnHome.Left;
             btnHome.BackColor = Color.FromArgb(46, 51, 73);
+            home1.Visible = true;
+            contatti1.Visible = false;
+
         }
 
         private void PnlLogo_Paint(object sender, PaintEventArgs e)
@@ -56,26 +61,28 @@ namespace ClientManagement
 
         private void BtnRubrica_Click(object sender, EventArgs e)
         {
-            PnlSideMenu.Height = btnRubrica.Height;
-            PnlSideMenu.Top = btnRubrica.Top;
-            PnlSideMenu.Left = btnRubrica.Left;
+            pnlSideMenu.Height = btnRubrica.Height;
+            pnlSideMenu.Top = btnRubrica.Top;
+            pnlSideMenu.Left = btnRubrica.Left;
             btnRubrica.BackColor = Color.FromArgb(46, 51, 73);
+            contatti1.Visible = true;
+            home1.Visible = false;
         }
 
         private void BtnCommissioni_Click(object sender, EventArgs e)
         {
-            PnlSideMenu.Height = btnCommissioni.Height;
-            PnlSideMenu.Top = btnCommissioni.Top;
-            PnlSideMenu.Left = btnCommissioni.Left;
+            pnlSideMenu.Height = btnCommissioni.Height;
+            pnlSideMenu.Top = btnCommissioni.Top;
+            pnlSideMenu.Left = btnCommissioni.Left;
             btnCommissioni.BackColor = Color.FromArgb(46, 51, 73);
         }
 
 
         private void BtnScadenze_Click(object sender, EventArgs e)
         {
-            PnlSideMenu.Height = btnScadenze.Height;
-            PnlSideMenu.Top = btnScadenze.Top;
-            PnlSideMenu.Left = btnScadenze.Left;
+            pnlSideMenu.Height = btnScadenze.Height;
+            pnlSideMenu.Top = btnScadenze.Top;
+            pnlSideMenu.Left = btnScadenze.Left;
             btnScadenze.BackColor = Color.FromArgb(46, 51, 73);
         }
 
@@ -97,6 +104,16 @@ namespace ClientManagement
         private void btnScadenze_Leave(object sender, EventArgs e)
         {
             btnScadenze.BackColor = Color.FromArgb(11, 7, 17);
+        }
+
+        private void home1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contatti1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
