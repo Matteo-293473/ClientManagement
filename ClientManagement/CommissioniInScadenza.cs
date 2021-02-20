@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ClientManagement
 {
-    public partial class Home1 : UserControl
+    public partial class CommissioniInScadenza : UserControl
     {
-        public Home1()
+        public CommissioniInScadenza()
         {
             InitializeComponent();
-        }
-
-        private void BtnNuovaCommissione(object sender, EventArgs e)
-        {
-
         }
     }
 }

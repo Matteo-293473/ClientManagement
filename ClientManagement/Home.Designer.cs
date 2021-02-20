@@ -30,26 +30,28 @@ namespace ClientManagement
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.btnRiduciAIcona = new System.Windows.Forms.Button();
+            this.btnNuovaCommission = new System.Windows.Forms.Button();
             this.btnIndietro = new System.Windows.Forms.Button();
             this.aggiungiCommissione1 = new ClientManagement.Resources.aggiungiCommissione();
+            this.commissioniInScadenza1 = new ClientManagement.CommissioniInScadenza();
             this.SuspendLayout();
             // 
-            // btnRiduciAIcona
+            // btnNuovaCommission
             // 
-            this.btnRiduciAIcona.BackColor = System.Drawing.Color.Black;
-            this.btnRiduciAIcona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRiduciAIcona.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRiduciAIcona.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRiduciAIcona.Image = global::ClientManagement.Properties.Resources.appbar_add;
-            this.btnRiduciAIcona.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRiduciAIcona.Location = new System.Drawing.Point(177, 26);
-            this.btnRiduciAIcona.Name = "btnRiduciAIcona";
-            this.btnRiduciAIcona.Size = new System.Drawing.Size(239, 49);
-            this.btnRiduciAIcona.TabIndex = 13;
-            this.btnRiduciAIcona.Text = "Nuova commissione";
-            this.btnRiduciAIcona.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRiduciAIcona.UseVisualStyleBackColor = false;
+            this.btnNuovaCommission.BackColor = System.Drawing.Color.Black;
+            this.btnNuovaCommission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuovaCommission.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnNuovaCommission.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuovaCommission.Image = global::ClientManagement.Properties.Resources.appbar_add;
+            this.btnNuovaCommission.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuovaCommission.Location = new System.Drawing.Point(27, 26);
+            this.btnNuovaCommission.Name = "btnNuovaCommission";
+            this.btnNuovaCommission.Size = new System.Drawing.Size(239, 49);
+            this.btnNuovaCommission.TabIndex = 13;
+            this.btnNuovaCommission.Text = "Nuova commissione";
+            this.btnNuovaCommission.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuovaCommission.UseVisualStyleBackColor = false;
+            this.btnNuovaCommission.Click += new System.EventHandler(this.BtnNuovaCommissione);
             // 
             // btnIndietro
             // 
@@ -60,21 +62,30 @@ namespace ClientManagement
             this.btnIndietro.Size = new System.Drawing.Size(77, 57);
             this.btnIndietro.TabIndex = 14;
             this.btnIndietro.UseVisualStyleBackColor = false;
+            this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click);
             // 
             // aggiungiCommissione1
             // 
-            this.aggiungiCommissione1.Location = new System.Drawing.Point(-3, 86);
+            this.aggiungiCommissione1.Location = new System.Drawing.Point(0, 85);
             this.aggiungiCommissione1.Name = "aggiungiCommissione1";
-            this.aggiungiCommissione1.Size = new System.Drawing.Size(764, 399);
+            this.aggiungiCommissione1.Size = new System.Drawing.Size(764, 400);
             this.aggiungiCommissione1.TabIndex = 15;
+            // 
+            // commissioniInScadenza1
+            // 
+            this.commissioniInScadenza1.Location = new System.Drawing.Point(0, 86);
+            this.commissioniInScadenza1.Name = "commissioniInScadenza1";
+            this.commissioniInScadenza1.Size = new System.Drawing.Size(764, 400);
+            this.commissioniInScadenza1.TabIndex = 16;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.commissioniInScadenza1);
             this.Controls.Add(this.aggiungiCommissione1);
             this.Controls.Add(this.btnIndietro);
-            this.Controls.Add(this.btnRiduciAIcona);
+            this.Controls.Add(this.btnNuovaCommission);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
@@ -82,8 +93,9 @@ namespace ClientManagement
         }
 
         #endregion
-        private System.Windows.Forms.Button btnRiduciAIcona;
+        private System.Windows.Forms.Button btnNuovaCommission;
         private System.Windows.Forms.Button btnIndietro;
         private Resources.aggiungiCommissione aggiungiCommissione1;
+        private CommissioniInScadenza commissioniInScadenza1;
     }
 }
