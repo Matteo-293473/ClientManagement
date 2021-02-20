@@ -39,10 +39,13 @@ namespace ClientManagement
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
+            // se viene selezionato abbiamo il colore più chiaro
             pnlSideMenu.Height = btnHome.Height;
             pnlSideMenu.Top = btnHome.Top;
             pnlSideMenu.Left = btnHome.Left;
             btnHome.BackColor = Color.FromArgb(46, 51, 73);
+
+            // gestire meglio con tab control selectedTab
             home1.Visible = true;
             contatti1.Visible = false;
 

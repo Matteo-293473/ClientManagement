@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\aggiungiCommissione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\aggiungiCommissione.Designer.cs">
+      <DependentUpon>aggiungiCommissione.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Contatti.resx">
       <DependentUpon>Contatti.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +94,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\aggiungiCommissione.resx">
+      <DependentUpon>aggiungiCommissione.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

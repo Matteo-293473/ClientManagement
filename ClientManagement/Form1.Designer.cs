@@ -37,8 +37,8 @@ namespace ClientManagement
             this.btnRubrica = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
-            this.home1 = new ClientManagement.Home();
             this.contatti1 = new ClientManagement.Contatti();
+            this.home1 = new ClientManagement.Home();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBoxLogo)).BeginInit();
@@ -160,20 +160,20 @@ namespace ClientManagement
             this.PctBoxLogo.TabStop = false;
             this.PctBoxLogo.Click += new System.EventHandler(this.PctBoxLogo_Click);
             // 
-            // home1
-            // 
-            this.home1.Location = new System.Drawing.Point(172, 0);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(764, 485);
-            this.home1.TabIndex = 7;
-            // 
             // contatti1
             // 
-            this.contatti1.Location = new System.Drawing.Point(492, 3);
+            this.contatti1.Location = new System.Drawing.Point(172, 0);
             this.contatti1.Name = "contatti1";
             this.contatti1.Size = new System.Drawing.Size(762, 482);
             this.contatti1.TabIndex = 6;
             this.contatti1.Load += new System.EventHandler(this.contatti1_Load);
+            // 
+            // home1
+            // 
+            this.home1.Location = new System.Drawing.Point(172, 0);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(762, 485);
+            this.home1.TabIndex = 7;
             // 
             // Form1
             // 

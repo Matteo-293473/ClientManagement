@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClientManagement
+namespace ClientManagement.Resources
 {
-    public partial class Home : UserControl
+    public partial class aggiungiCommissione : UserControl
     {
-        public Home()
+        public aggiungiCommissione()
         {
             InitializeComponent();
-            aggiungiCommissione1.Visible = false;
         }
 
-        private void BtnNuovaCommissione(object sender, EventArgs e)
+        private void btnIndietro_Click(object sender, EventArgs e)
         {
-            aggiungiCommissione1.Visible = true;
+            this.Visible = false;
         }
     }
 }

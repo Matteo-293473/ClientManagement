@@ -47,7 +47,7 @@ namespace ClientManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnContatti);
             this.Name = "Contatti";
-            this.Size = new System.Drawing.Size(347, 292);
+            this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
 
         }

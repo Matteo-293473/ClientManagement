@@ -30,6 +30,7 @@ namespace ClientManagement
         private void InitializeComponent()
         {
             this.btnRiduciAIcona = new System.Windows.Forms.Button();
+            this.aggiungiCommissione1 = new ClientManagement.Resources.aggiungiCommissione();
             this.SuspendLayout();
             // 
             // btnRiduciAIcona
@@ -40,19 +41,27 @@ namespace ClientManagement
             this.btnRiduciAIcona.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRiduciAIcona.Image = global::ClientManagement.Properties.Resources.appbar_add;
             this.btnRiduciAIcona.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRiduciAIcona.Location = new System.Drawing.Point(23, 22);
+            this.btnRiduciAIcona.Location = new System.Drawing.Point(30, 41);
             this.btnRiduciAIcona.Name = "btnRiduciAIcona";
-            this.btnRiduciAIcona.Size = new System.Drawing.Size(232, 61);
+            this.btnRiduciAIcona.Size = new System.Drawing.Size(234, 45);
             this.btnRiduciAIcona.TabIndex = 8;
             this.btnRiduciAIcona.Text = "Nuova commissione";
             this.btnRiduciAIcona.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRiduciAIcona.UseVisualStyleBackColor = false;
-            this.btnRiduciAIcona.Click += new System.EventHandler(this.btnRiduciAIcona_Click);
+            this.btnRiduciAIcona.Click += new System.EventHandler(this.BtnNuovaCommissione);
+            // 
+            // aggiungiCommissione1
+            // 
+            this.aggiungiCommissione1.Location = new System.Drawing.Point(0, 0);
+            this.aggiungiCommissione1.Name = "aggiungiCommissione1";
+            this.aggiungiCommissione1.Size = new System.Drawing.Size(764, 485);
+            this.aggiungiCommissione1.TabIndex = 9;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.aggiungiCommissione1);
             this.Controls.Add(this.btnRiduciAIcona);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(764, 485);
@@ -63,5 +72,6 @@ namespace ClientManagement
         #endregion
 
         private System.Windows.Forms.Button btnRiduciAIcona;
+        private Resources.aggiungiCommissione aggiungiCommissione1;
     }
 }
