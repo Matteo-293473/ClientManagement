@@ -37,75 +37,141 @@ namespace ClientManagement.Resources
             this.lblDescrizioneCommissione = new System.Windows.Forms.Label();
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.lblCognome = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnAggiungiEntry = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(485, 177);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker1.Location = new System.Drawing.Point(282, 274);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.Size = new System.Drawing.Size(261, 25);
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 121);
+            this.textBox1.Location = new System.Drawing.Point(85, 80);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.Size = new System.Drawing.Size(148, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(60, 167);
+            this.textBox2.Location = new System.Drawing.Point(85, 132);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.Size = new System.Drawing.Size(148, 20);
+            this.textBox2.TabIndex = 1;
             // 
             // lblDataScadenza
             // 
             this.lblDataScadenza.AutoSize = true;
-            this.lblDataScadenza.Location = new System.Drawing.Point(485, 158);
+            this.lblDataScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDataScadenza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDataScadenza.Location = new System.Drawing.Point(278, 252);
             this.lblDataScadenza.Name = "lblDataScadenza";
-            this.lblDataScadenza.Size = new System.Drawing.Size(55, 13);
+            this.lblDataScadenza.Size = new System.Drawing.Size(73, 19);
             this.lblDataScadenza.TabIndex = 4;
             this.lblDataScadenza.Text = "Scadenza";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(60, 262);
+            this.textBox3.Location = new System.Drawing.Point(282, 80);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(206, 109);
-            this.textBox3.TabIndex = 5;
+            this.textBox3.Size = new System.Drawing.Size(389, 141);
+            this.textBox3.TabIndex = 4;
             // 
             // lblDescrizioneCommissione
             // 
             this.lblDescrizioneCommissione.AutoSize = true;
-            this.lblDescrizioneCommissione.Location = new System.Drawing.Point(57, 245);
+            this.lblDescrizioneCommissione.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDescrizioneCommissione.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDescrizioneCommissione.Location = new System.Drawing.Point(278, 58);
             this.lblDescrizioneCommissione.Name = "lblDescrizioneCommissione";
-            this.lblDescrizioneCommissione.Size = new System.Drawing.Size(153, 13);
+            this.lblDescrizioneCommissione.Size = new System.Drawing.Size(226, 19);
             this.lblDescrizioneCommissione.TabIndex = 6;
             this.lblDescrizioneCommissione.Text = "Descrizione della commissione:";
             // 
             // lblNomeCliente
             // 
             this.lblNomeCliente.AutoSize = true;
-            this.lblNomeCliente.Location = new System.Drawing.Point(57, 105);
+            this.lblNomeCliente.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNomeCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNomeCliente.Location = new System.Drawing.Point(82, 58);
             this.lblNomeCliente.Name = "lblNomeCliente";
-            this.lblNomeCliente.Size = new System.Drawing.Size(38, 13);
+            this.lblNomeCliente.Size = new System.Drawing.Size(56, 19);
             this.lblNomeCliente.TabIndex = 7;
             this.lblNomeCliente.Text = "Nome:";
             // 
             // lblCognome
             // 
             this.lblCognome.AutoSize = true;
-            this.lblCognome.Location = new System.Drawing.Point(57, 151);
+            this.lblCognome.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCognome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCognome.Location = new System.Drawing.Point(82, 110);
             this.lblCognome.Name = "lblCognome";
-            this.lblCognome.Size = new System.Drawing.Size(55, 13);
+            this.lblCognome.Size = new System.Drawing.Size(80, 19);
             this.lblCognome.TabIndex = 8;
             this.lblCognome.Text = "Cognome:";
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEmail.Location = new System.Drawing.Point(82, 199);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 19);
+            this.lblEmail.TabIndex = 10;
+            this.lblEmail.Text = "Email:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(86, 221);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(147, 20);
+            this.textBox4.TabIndex = 2;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNumero.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNumero.Location = new System.Drawing.Point(82, 252);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(151, 19);
+            this.lblNumero.TabIndex = 12;
+            this.lblNumero.Text = "Numero di telefono:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(85, 274);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(148, 20);
+            this.textBox5.TabIndex = 3;
+            // 
+            // btnAggiungiEntry
+            // 
+            this.btnAggiungiEntry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAggiungiEntry.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAggiungiEntry.Image = global::ClientManagement.Properties.Resources.appbar_add;
+            this.btnAggiungiEntry.Location = new System.Drawing.Point(596, 242);
+            this.btnAggiungiEntry.Name = "btnAggiungiEntry";
+            this.btnAggiungiEntry.Size = new System.Drawing.Size(75, 57);
+            this.btnAggiungiEntry.TabIndex = 13;
+            this.btnAggiungiEntry.UseVisualStyleBackColor = false;
+            // 
             // aggiungiCommissione
             // 
+            this.Controls.Add(this.btnAggiungiEntry);
+            this.Controls.Add(this.lblNumero);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.lblCognome);
             this.Controls.Add(this.lblNomeCliente);
             this.Controls.Add(this.lblDescrizioneCommissione);
@@ -132,5 +198,10 @@ namespace ClientManagement.Resources
         private System.Windows.Forms.Label lblDescrizioneCommissione;
         private System.Windows.Forms.Label lblNomeCliente;
         private System.Windows.Forms.Label lblCognome;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnAggiungiEntry;
     }
 }

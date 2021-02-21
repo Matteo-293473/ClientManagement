@@ -32,8 +32,8 @@ namespace ClientManagement
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btnNuovaCommission = new System.Windows.Forms.Button();
             this.btnIndietro = new System.Windows.Forms.Button();
-            this.aggiungiCommissione1 = new ClientManagement.Resources.aggiungiCommissione();
             this.commissioniInScadenza1 = new ClientManagement.CommissioniInScadenza();
+            this.aggiungiCommissione1 = new ClientManagement.Resources.aggiungiCommissione();
             this.SuspendLayout();
             // 
             // btnNuovaCommission
@@ -64,28 +64,28 @@ namespace ClientManagement
             this.btnIndietro.UseVisualStyleBackColor = false;
             this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click);
             // 
-            // aggiungiCommissione1
-            // 
-            this.aggiungiCommissione1.Location = new System.Drawing.Point(0, 85);
-            this.aggiungiCommissione1.Name = "aggiungiCommissione1";
-            this.aggiungiCommissione1.Size = new System.Drawing.Size(764, 400);
-            this.aggiungiCommissione1.TabIndex = 15;
-            // 
             // commissioniInScadenza1
             // 
             this.commissioniInScadenza1.Location = new System.Drawing.Point(0, 86);
             this.commissioniInScadenza1.Name = "commissioniInScadenza1";
-            this.commissioniInScadenza1.Size = new System.Drawing.Size(764, 400);
+            this.commissioniInScadenza1.Size = new System.Drawing.Size(764, 399);
             this.commissioniInScadenza1.TabIndex = 16;
+            // 
+            // aggiungiCommissione1
+            // 
+            this.aggiungiCommissione1.Location = new System.Drawing.Point(0, 80);
+            this.aggiungiCommissione1.Name = "aggiungiCommissione1";
+            this.aggiungiCommissione1.Size = new System.Drawing.Size(764, 405);
+            this.aggiungiCommissione1.TabIndex = 15;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.commissioniInScadenza1);
-            this.Controls.Add(this.aggiungiCommissione1);
             this.Controls.Add(this.btnIndietro);
             this.Controls.Add(this.btnNuovaCommission);
+            this.Controls.Add(this.commissioniInScadenza1);
+            this.Controls.Add(this.aggiungiCommissione1);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);

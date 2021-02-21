@@ -31,14 +31,14 @@ namespace ClientManagement
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.PnlLogo = new System.Windows.Forms.Panel();
             this.btnScadenze = new System.Windows.Forms.Button();
             this.btnCommissioni = new System.Windows.Forms.Button();
             this.btnRubrica = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.PnlLogo = new System.Windows.Forms.Panel();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
-            this.contatti1 = new ClientManagement.Contatti();
             this.home1 = new ClientManagement.Home();
+            this.contatti1 = new ClientManagement.Contatti();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBoxLogo)).BeginInit();
@@ -57,16 +57,6 @@ namespace ClientManagement
             this.pnlSideMenu.Name = "pnlSideMenu";
             this.pnlSideMenu.Size = new System.Drawing.Size(176, 485);
             this.pnlSideMenu.TabIndex = 1;
-            // 
-            // PnlLogo
-            // 
-            this.PnlLogo.Controls.Add(this.PctBoxLogo);
-            this.PnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.PnlLogo.Name = "PnlLogo";
-            this.PnlLogo.Size = new System.Drawing.Size(176, 111);
-            this.PnlLogo.TabIndex = 10;
-            this.PnlLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlLogo_Paint);
             // 
             // btnScadenze
             // 
@@ -148,6 +138,16 @@ namespace ClientManagement
             this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             this.btnHome.Leave += new System.EventHandler(this.btnHome_Leave);
             // 
+            // PnlLogo
+            // 
+            this.PnlLogo.Controls.Add(this.PctBoxLogo);
+            this.PnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.PnlLogo.Name = "PnlLogo";
+            this.PnlLogo.Size = new System.Drawing.Size(176, 111);
+            this.PnlLogo.TabIndex = 10;
+            this.PnlLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlLogo_Paint);
+            // 
             // PctBoxLogo
             // 
             this.PctBoxLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -160,14 +160,6 @@ namespace ClientManagement
             this.PctBoxLogo.TabStop = false;
             this.PctBoxLogo.Click += new System.EventHandler(this.PctBoxLogo_Click);
             // 
-            // contatti1
-            // 
-            this.contatti1.Location = new System.Drawing.Point(172, 0);
-            this.contatti1.Name = "contatti1";
-            this.contatti1.Size = new System.Drawing.Size(762, 482);
-            this.contatti1.TabIndex = 6;
-            this.contatti1.Load += new System.EventHandler(this.contatti1_Load);
-            // 
             // home1
             // 
             this.home1.Location = new System.Drawing.Point(172, 0);
@@ -176,14 +168,22 @@ namespace ClientManagement
             this.home1.TabIndex = 7;
             this.home1.Load += new System.EventHandler(this.home1_Load_1);
             // 
+            // contatti1
+            // 
+            this.contatti1.Location = new System.Drawing.Point(172, 0);
+            this.contatti1.Name = "contatti1";
+            this.contatti1.Size = new System.Drawing.Size(762, 482);
+            this.contatti1.TabIndex = 6;
+            this.contatti1.Load += new System.EventHandler(this.contatti1_Load);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(934, 485);
-            this.Controls.Add(this.home1);
             this.Controls.Add(this.pnlSideMenu);
+            this.Controls.Add(this.home1);
             this.Controls.Add(this.contatti1);
             this.Name = "Form1";
             this.Text = "ClientManagement";

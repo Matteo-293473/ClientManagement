@@ -107,6 +107,7 @@
     <EmbeddedResource Include="Resources\aggiungiCommissione.resx">
       <DependentUpon>aggiungiCommissione.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DiagrammaClassi.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
