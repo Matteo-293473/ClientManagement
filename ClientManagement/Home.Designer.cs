@@ -32,8 +32,8 @@ namespace ClientManagement
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btnNuovaCommission = new System.Windows.Forms.Button();
             this.btnIndietro = new System.Windows.Forms.Button();
-            this.commissioniInScadenza1 = new ClientManagement.CommissioniInScadenza();
-            this.aggiungiCommissione1 = new ClientManagement.Resources.aggiungiCommissione();
+            this.commissioniInScadenza1 = new global::ClientManagement.CommissioniInScadenza();
+            this.aggiungiCommissione1 = new global::ClientManagement.Resources.aggiungiCommissione();
             this.SuspendLayout();
             // 
             // btnNuovaCommission

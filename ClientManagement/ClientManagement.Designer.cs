@@ -1,7 +1,7 @@
 ﻿
 namespace ClientManagement
 {
-    partial class Form1
+    partial class ClientManagement
     {
         /// <summary>
         /// Variabile di progettazione necessaria.
@@ -29,7 +29,7 @@ namespace ClientManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientManagement));
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.btnScadenze = new System.Windows.Forms.Button();
             this.btnCommissioni = new System.Windows.Forms.Button();
@@ -37,8 +37,8 @@ namespace ClientManagement
             this.btnHome = new System.Windows.Forms.Button();
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
-            this.home1 = new ClientManagement.Home();
-            this.contatti1 = new ClientManagement.Contatti();
+            this.home1 = new global::ClientManagement.Home();
+            this.contatti1 = new global::ClientManagement.Contatti();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBoxLogo)).BeginInit();

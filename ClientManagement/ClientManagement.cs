@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace ClientManagement
 {
-    public partial class Form1 : Form
+    public partial class ClientManagement : Form
     {
 
-        public Form1()
+        private HandlerClientManagement editor;
+        public ClientManagement()
         {
             InitializeComponent();
+            editor = new HandlerClientManagement(btnHome, btnRubrica, btnCommissioni, btnScadenze, pnlSideMenu);
             pnlSideMenu.Height = btnHome.Height;
             pnlSideMenu.Top = btnHome.Top;
             pnlSideMenu.Left = btnHome.Left;
@@ -25,6 +27,7 @@ namespace ClientManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             home1.BringToFront();
 
         }
@@ -39,10 +42,11 @@ namespace ClientManagement
         private void BtnHome_Click(object sender, EventArgs e)
         {
             // se viene selezionato abbiamo il colore più chiaro
-            pnlSideMenu.Height = btnHome.Height;
-            pnlSideMenu.Top = btnHome.Top;
-            pnlSideMenu.Left = btnHome.Left;
-            btnHome.BackColor = Color.FromArgb(46, 51, 73);
+            //pnlSideMenu.Height = btnHome.Height;
+            //pnlSideMenu.Top = btnHome.Top;
+            //pnlSideMenu.Left = btnHome.Left;
+            //btnHome.BackColor = Color.FromArgb(46, 51, 73);
+            editor.ColoreSelezionato(btnHome, pnlSideMenu);
 
             // gestire meglio con tab control selectedTab
             home1.BringToFront();
@@ -62,28 +66,19 @@ namespace ClientManagement
 
         private void BtnRubrica_Click(object sender, EventArgs e)
         {
-            pnlSideMenu.Height = btnRubrica.Height;
-            pnlSideMenu.Top = btnRubrica.Top;
-            pnlSideMenu.Left = btnRubrica.Left;
-            btnRubrica.BackColor = Color.FromArgb(46, 51, 73);
+            editor.ColoreSelezionato(btnRubrica, pnlSideMenu);
             contatti1.BringToFront();
         }
 
         private void BtnCommissioni_Click(object sender, EventArgs e)
         {
-            pnlSideMenu.Height = btnCommissioni.Height;
-            pnlSideMenu.Top = btnCommissioni.Top;
-            pnlSideMenu.Left = btnCommissioni.Left;
-            btnCommissioni.BackColor = Color.FromArgb(46, 51, 73);
+            editor.ColoreSelezionato(btnCommissioni, pnlSideMenu);
         }
 
 
         private void BtnScadenze_Click(object sender, EventArgs e)
         {
-            pnlSideMenu.Height = btnScadenze.Height;
-            pnlSideMenu.Top = btnScadenze.Top;
-            pnlSideMenu.Left = btnScadenze.Left;
-            btnScadenze.BackColor = Color.FromArgb(46, 51, 73);
+            editor.ColoreSelezionato(btnScadenze, pnlSideMenu);
         }
 
         private void btnHome_Leave(object sender, EventArgs e)

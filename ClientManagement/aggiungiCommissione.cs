@@ -12,11 +12,11 @@ namespace ClientManagement.Resources
 {
     public partial class aggiungiCommissione : UserControl
     {
-        private EditorHandler editor;
+        private EditorHandlerAggiungiCommissione editor;
         public aggiungiCommissione()
         {
             InitializeComponent();
-            editor = new EditorHandler(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione);
+            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione);
 
         }
 
