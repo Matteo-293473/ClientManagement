@@ -77,6 +77,7 @@ namespace ClientManagement
             this.aggiungiCommissione1.Name = "aggiungiCommissione1";
             this.aggiungiCommissione1.Size = new System.Drawing.Size(764, 405);
             this.aggiungiCommissione1.TabIndex = 15;
+            this.aggiungiCommissione1.Load += new System.EventHandler(this.aggiungiCommissione1_Load_1);
             // 
             // Home
             // 
@@ -84,8 +85,8 @@ namespace ClientManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnIndietro);
             this.Controls.Add(this.btnNuovaCommission);
-            this.Controls.Add(this.commissioniInScadenza1);
             this.Controls.Add(this.aggiungiCommissione1);
+            this.Controls.Add(this.commissioniInScadenza1);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);

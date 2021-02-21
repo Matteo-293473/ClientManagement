@@ -42,5 +42,10 @@ namespace ClientManagement
             btnNuovaCommission.Show();
             commissioniInScadenza1.BringToFront();
         }
+
+        private void aggiungiCommissione1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
