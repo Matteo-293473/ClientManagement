@@ -18,10 +18,7 @@ namespace ClientManagement
         {
             InitializeComponent();
             editor = new HandlerClientManagement(btnHome, btnRubrica, btnCommissioni, btnScadenze, pnlSideMenu);
-            pnlSideMenu.Height = btnHome.Height;
-            pnlSideMenu.Top = btnHome.Top;
-            pnlSideMenu.Left = btnHome.Left;
-            btnHome.BackColor = Color.FromArgb(46, 51, 73);
+            editor.ColoreSelezione(btnHome,pnlSideMenu);
         }
 
 
@@ -42,11 +39,7 @@ namespace ClientManagement
         private void BtnHome_Click(object sender, EventArgs e)
         {
             // se viene selezionato abbiamo il colore più chiaro
-            //pnlSideMenu.Height = btnHome.Height;
-            //pnlSideMenu.Top = btnHome.Top;
-            //pnlSideMenu.Left = btnHome.Left;
-            //btnHome.BackColor = Color.FromArgb(46, 51, 73);
-            editor.ColoreSelezionato(btnHome, pnlSideMenu);
+            editor.ColoreSelezione(btnHome, pnlSideMenu);
 
             // gestire meglio con tab control selectedTab
             home1.BringToFront();
@@ -66,39 +59,39 @@ namespace ClientManagement
 
         private void BtnRubrica_Click(object sender, EventArgs e)
         {
-            editor.ColoreSelezionato(btnRubrica, pnlSideMenu);
+            editor.ColoreSelezione(btnRubrica, pnlSideMenu);
             contatti1.BringToFront();
         }
 
         private void BtnCommissioni_Click(object sender, EventArgs e)
         {
-            editor.ColoreSelezionato(btnCommissioni, pnlSideMenu);
+            editor.ColoreSelezione(btnCommissioni, pnlSideMenu);
         }
 
 
         private void BtnScadenze_Click(object sender, EventArgs e)
         {
-            editor.ColoreSelezionato(btnScadenze, pnlSideMenu);
+            editor.ColoreSelezione(btnScadenze, pnlSideMenu);
         }
 
         private void btnHome_Leave(object sender, EventArgs e)
         {
-            btnHome.BackColor = Color.FromArgb(11, 7, 17);
+            editor.ColoreDeselezione(btnHome);
         }
 
         private void btnRubrica_Leave(object sender, EventArgs e)
         {
-            btnRubrica.BackColor = Color.FromArgb(11, 7, 17);
+            editor.ColoreDeselezione(btnRubrica);
         }
 
         private void btnCommissioni_Leave(object sender, EventArgs e)
         {
-            btnCommissioni.BackColor = Color.FromArgb(11, 7, 17);
+            editor.ColoreDeselezione(btnCommissioni);
         }
 
         private void btnScadenze_Leave(object sender, EventArgs e)
         {
-            btnScadenze.BackColor = Color.FromArgb(11, 7, 17);
+            editor.ColoreDeselezione(btnScadenze);
         }
 
         private void home1_Load(object sender, EventArgs e)

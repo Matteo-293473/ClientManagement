@@ -25,7 +25,7 @@ namespace ClientManagement
             this.pnlSideMenu = pnlSideMenu;
         }
 
-        internal void ColoreSelezionato(Button btn, Panel pnl)
+        internal void ColoreSelezione(Button btn, Panel pnl)
         {
             // se viene selezionato abbiamo il colore più chiaro
             pnl.Height = btn.Height;
@@ -34,6 +34,9 @@ namespace ClientManagement
             btn.BackColor = Color.FromArgb(46, 51, 73);
 
         }
-
+        internal void ColoreDeselezione(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(11, 7, 17);
+        }
     }
 }

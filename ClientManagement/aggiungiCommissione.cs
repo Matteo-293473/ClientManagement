@@ -32,7 +32,28 @@ namespace ClientManagement.Resources
 
         private void btnAggiungiEntry_Click(object sender, EventArgs e)
         {
-            editor.ResetFields();
+            try
+            {
+                if (!editor.ControllaValiditaInput())
+                    throw new Exception();
+
+                editor.ResetFields();
+            }
+            catch(Exception)
+            {
+                System.Windows.Forms.MessageBox.Show("Input errati");
+            }
+            
+        }
+
+        private void txtNumeroTelefono_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            editor.ControllaNumeroTelefono(e);
         }
     }
 }

@@ -154,6 +154,8 @@ namespace ClientManagement.Resources
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(148, 20);
             this.txtNumeroTelefono.TabIndex = 3;
+            this.txtNumeroTelefono.TextChanged += new System.EventHandler(this.txtNumeroTelefono_TextChanged);
+            this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTelefono_KeyPress);
             // 
             // btnAggiungiEntry
             // 
