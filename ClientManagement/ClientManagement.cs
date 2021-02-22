@@ -14,13 +14,11 @@ namespace ClientManagement
     {
 
         private HandlerClientManagement editor;
-        private List<Commissione> commissioni;
         public ClientManagement()
         {
             InitializeComponent();
             editor = new HandlerClientManagement(btnHome, btnRubrica, btnCommissioni, btnScadenze, pnlSideMenu);
             editor.ColoreSelezione(btnHome,pnlSideMenu);
-            commissioni = new List<Commissione>();
         }
 
 
@@ -111,9 +109,5 @@ namespace ClientManagement
 
         }
 
-        public void AggiungiCommissione(Commissione commissione)
-        {
-            commissioni.Add(commissione);
-        }
     }
 }

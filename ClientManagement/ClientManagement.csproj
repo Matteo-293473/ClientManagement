@@ -74,6 +74,7 @@
     <Compile Include="ClientManagement.Designer.cs">
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entry.cs" />
     <Compile Include="HandlerClientManagement.cs" />
     <Compile Include="Home.cs">
       <SubType>UserControl</SubType>
@@ -81,6 +82,7 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaEntry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="aggiungiCommissione.cs">

@@ -14,7 +14,17 @@ namespace ClientManagement
     {
         public CommissioniInScadenza()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            //foreach (Entry entry in ListaEntry.entries)
+            //listView1.Items.Add("c");
+            //listView1.Items.Add("b");
+
+            //listView1
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

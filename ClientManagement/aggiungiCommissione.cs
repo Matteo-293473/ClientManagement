@@ -36,8 +36,9 @@ namespace ClientManagement.Resources
             {
                 if (!editor.ControllaValiditaInput())
                     throw new Exception();
-                Commissione commissione = new Commissione();
-                
+                Entry entry = new Entry();
+                ListaEntry.AggiungiAllaLista(entry);
+
                 editor.ResetFields();
             }
             catch(Exception)
