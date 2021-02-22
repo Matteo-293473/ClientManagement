@@ -21,12 +21,11 @@ namespace ClientManagement
             editor.ColoreSelezione(btnHome,pnlSideMenu);
         }
 
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
             home1.BringToFront();
-
+            
         }
 
 

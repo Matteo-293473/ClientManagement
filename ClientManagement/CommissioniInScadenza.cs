@@ -14,16 +14,23 @@ namespace ClientManagement
     {
         public CommissioniInScadenza()
         {
-            InitializeComponent(); 
-            //foreach (Entry entry in ListaEntry.entries)
-            //listView1.Items.Add("c");
-            //listView1.Items.Add("b");
-
-            //listView1
+            InitializeComponent();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void CommissioniInScadenza_Load(object sender, EventArgs e)
+        {
+            foreach (Cliente cl in ListaClienti.clienti)
+                foreach (Commissione cm in cl.Commissioni) 
+                {
+                    //lstCommissioniScadenza.Items.Add(cm.Descrizione);
+                    lstCommissioniScadenza.Items.Add(cm);
+                }
+                    
 
         }
     }

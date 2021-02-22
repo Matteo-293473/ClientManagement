@@ -9,6 +9,7 @@ namespace ClientManagement
 {
     class EditorHandlerAggiungiCommissione
     {
+
         private TextBox txtNome;
         private TextBox txtCognome;
         private TextBox txtEmail;

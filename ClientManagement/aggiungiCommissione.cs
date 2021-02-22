@@ -10,9 +10,13 @@ using System.Windows.Forms;
 
 namespace ClientManagement.Resources
 {
+    //Declare EventHandler outside of class
+    public delegate void MyEventHandler(object source, Entry r);
+
     public partial class aggiungiCommissione : UserControl
     {
         private EditorHandlerAggiungiCommissione editor;
+
         public aggiungiCommissione()
         {
             InitializeComponent();
@@ -36,9 +40,14 @@ namespace ClientManagement.Resources
             {
                 if (!editor.ControllaValiditaInput())
                     throw new Exception();
-                Entry entry = new Entry();
-                ListaEntry.AggiungiAllaLista(entry);
+                //Cliente = new Cliente(txtNome,txtCognome,txtEmail,txt)
+                //Entry entry = new Entry();
 
+                Commissione cm = new Commissione(txtDescrizioneCommissione.Text);
+                Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text, cm);
+                ListaClienti.AggiungiAllaLista(cl);
+                // passiamo la nostra entry tra UserControl attraverso eventi
+                //InviaEntry?.Invoke(this, entry);
                 editor.ResetFields();
             }
             catch(Exception)
@@ -57,5 +66,6 @@ namespace ClientManagement.Resources
         {
             editor.ControllaNumeroTelefono(e);
         }
+
     }
 }

@@ -8,12 +8,13 @@ namespace ClientManagement
 {
     public class Commissione
     {
-        protected string stato;
-        protected DateTime scadenza;
+        //protected string stato;
+        //protected DateTime scadenza;
+        public string Descrizione { set; get; }
 
-        public Commissione()
+        public Commissione(string descrizione)
         {
-
+            this.Descrizione = descrizione;
         }
     }
 }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ClientManagement
 {
-    public static class ListaEntry
+    public static class ListaClienti
     {
         // sistemare con proprieta
-        public static List<Entry> entries = new List<Entry>();
+        public static List<Cliente> clienti = new List<Cliente>();
 
-        public static void AggiungiAllaLista(Entry entry)
+        public static void AggiungiAllaLista(Cliente cl)
         {
-            entries.Add(entry);
+            clienti.Add(cl);
         }
     }
 }
