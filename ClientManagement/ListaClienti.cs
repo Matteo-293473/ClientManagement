@@ -10,10 +10,11 @@ namespace ClientManagement
     {
         // sistemare con proprieta
         public static List<Cliente> clienti = new List<Cliente>();
-
+        public static event EventHandler<List<Cliente>> OnListaCambia;
         public static void AggiungiAllaLista(Cliente cl)
         {
             clienti.Add(cl);
+            OnListaCambia?.Invoke(cl, clienti);
         }
     }
 }

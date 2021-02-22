@@ -10,8 +10,6 @@ using System.Windows.Forms;
 
 namespace ClientManagement.Resources
 {
-    //Declare EventHandler outside of class
-    public delegate void MyEventHandler(object source, Entry r);
 
     public partial class aggiungiCommissione : UserControl
     {
