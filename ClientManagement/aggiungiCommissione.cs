@@ -36,7 +36,8 @@ namespace ClientManagement.Resources
             {
                 if (!editor.ControllaValiditaInput())
                     throw new Exception();
-
+                Commissione commissione = new Commissione();
+                
                 editor.ResetFields();
             }
             catch(Exception)

@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace ClientManagement
 {
-    class Commissione
+    public class Commissione
     {
         protected string stato;
         protected DateTime scadenza;
 
+        public Commissione()
+        {
+
+        }
     }
 }
