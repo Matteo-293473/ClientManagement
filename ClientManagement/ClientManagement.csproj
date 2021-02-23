@@ -60,6 +60,12 @@
     <Compile Include="CommissioniInScadenza.Designer.cs">
       <DependentUpon>CommissioniInScadenza.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommissioniTotali.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommissioniTotali.Designer.cs">
+      <DependentUpon>CommissioniTotali.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contatti.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="CommissioniInScadenza.resx">
       <DependentUpon>CommissioniInScadenza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommissioniTotali.resx">
+      <DependentUpon>CommissioniTotali.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contatti.resx">
       <DependentUpon>Contatti.cs</DependentUpon>

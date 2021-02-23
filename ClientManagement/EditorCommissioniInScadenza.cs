@@ -19,6 +19,9 @@ namespace ClientManagement
         {
             // rimuoviamo gli elementi presenti
             //lstCommissioniScadenza.Items.Clear();
+            var date = DateTime.Now;
+            var nextSunday = date.AddDays(7 - (int)date.DayOfWeek);
+
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
             ListViewItem lst;
@@ -33,9 +36,10 @@ namespace ClientManagement
                     arr[4] = cm.Descrizione;
                     arr[5] = cm.Scadenza.ToString();
                     lst = new ListViewItem(arr);
+
                     //se l'item non esiste allora lo inseriamo
-                    //if (!lstCommissioniScadenza.Items.ContainsKey(cl.Numero.ToString()))
-                    lstCommissioniScadenza.Items.Add(lst);
+                    if (cm.Scadenza < nextSunday)
+                        lstCommissioniScadenza.Items.Add(lst);
                 }
 
         }

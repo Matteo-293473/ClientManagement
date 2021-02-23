@@ -59,8 +59,9 @@ namespace ClientManagement
         {
             // controllo degli input
             if ((txtNumeroTelefono.Text.All(char.IsDigit)) && 
-                (txtNome.Text.All(char.IsLetter)) && 
-                (txtCognome.Text.All(char.IsLetter)))
+                (txtNome.Text.All(char.IsLetter))          && 
+                (txtCognome.Text.All(char.IsLetter))       &&
+                (dtpScadenza.Value > DateTime.Now))  // controlliamo che non sia una data passata
                 return true;
             else
                 return false;

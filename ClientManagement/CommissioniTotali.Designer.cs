@@ -1,7 +1,7 @@
 ﻿
 namespace ClientManagement
 {
-    partial class CommissioniInScadenza
+    partial class CommissioniTotali
     {
         /// <summary> 
         /// Variabile di progettazione necessaria.
@@ -36,8 +36,6 @@ namespace ClientManagement
             this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtCommissioniScadenza = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -53,13 +51,12 @@ namespace ClientManagement
             this.lstCommissioniScadenza.FullRowSelect = true;
             this.lstCommissioniScadenza.GridLines = true;
             this.lstCommissioniScadenza.HideSelection = false;
-            this.lstCommissioniScadenza.Location = new System.Drawing.Point(49, 85);
+            this.lstCommissioniScadenza.Location = new System.Drawing.Point(50, 132);
             this.lstCommissioniScadenza.Name = "lstCommissioniScadenza";
-            this.lstCommissioniScadenza.Size = new System.Drawing.Size(660, 213);
-            this.lstCommissioniScadenza.TabIndex = 0;
+            this.lstCommissioniScadenza.Size = new System.Drawing.Size(650, 314);
+            this.lstCommissioniScadenza.TabIndex = 1;
             this.lstCommissioniScadenza.UseCompatibleStateImageBehavior = false;
             this.lstCommissioniScadenza.View = System.Windows.Forms.View.Details;
-            this.lstCommissioniScadenza.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // clmNome
             // 
@@ -93,55 +90,25 @@ namespace ClientManagement
             this.clmScadenza.Text = "Scadenza";
             this.clmScadenza.Width = 68;
             // 
-            // txtCommissioniScadenza
-            // 
-            this.txtCommissioniScadenza.AutoSize = true;
-            this.txtCommissioniScadenza.Enabled = false;
-            this.txtCommissioniScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.txtCommissioniScadenza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCommissioniScadenza.Location = new System.Drawing.Point(45, 63);
-            this.txtCommissioniScadenza.Name = "txtCommissioniScadenza";
-            this.txtCommissioniScadenza.Size = new System.Drawing.Size(245, 19);
-            this.txtCommissioniScadenza.TabIndex = 1;
-            this.txtCommissioniScadenza.Text = "Commissioni di questa settimana:";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(49, 323);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "EDIT";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // CommissioniInScadenza
+            // CommissioniTotali
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtCommissioniScadenza);
             this.Controls.Add(this.lstCommissioniScadenza);
-            this.Name = "CommissioniInScadenza";
-            this.Size = new System.Drawing.Size(764, 400);
-            this.Load += new System.EventHandler(this.CommissioniInScadenza_Load);
+            this.Name = "CommissioniTotali";
+            this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListView lstCommissioniScadenza;
-        private System.Windows.Forms.Label txtCommissioniScadenza;
         private System.Windows.Forms.ColumnHeader clmNome;
         private System.Windows.Forms.ColumnHeader clmCognome;
         private System.Windows.Forms.ColumnHeader clmEmail;
         private System.Windows.Forms.ColumnHeader clmNtel;
         private System.Windows.Forms.ColumnHeader clmComm;
         private System.Windows.Forms.ColumnHeader clmScadenza;
-        private System.Windows.Forms.Button button1;
     }
 }
