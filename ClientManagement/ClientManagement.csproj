@@ -66,6 +66,7 @@
     <Compile Include="Contatti.Designer.cs">
       <DependentUpon>Contatti.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditorCommissioniInScadenza.cs" />
     <Compile Include="EditorHandlerAggiungiCommissione.cs" />
     <Compile Include="ClientManagement.cs">
       <SubType>Form</SubType>

@@ -29,23 +29,53 @@ namespace ClientManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnContatti = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.clmNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmCognome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmNumero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // btnContatti
+            // listView1
             // 
-            this.btnContatti.Location = new System.Drawing.Point(124, 126);
-            this.btnContatti.Name = "btnContatti";
-            this.btnContatti.Size = new System.Drawing.Size(75, 23);
-            this.btnContatti.TabIndex = 0;
-            this.btnContatti.Text = "btnContatti";
-            this.btnContatti.UseVisualStyleBackColor = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmNome,
+            this.clmCognome,
+            this.clmEmail,
+            this.clmNumero});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(57, 113);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(651, 326);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // clmNome
+            // 
+            this.clmNome.Text = "Nome";
+            this.clmNome.Width = 73;
+            // 
+            // clmCognome
+            // 
+            this.clmCognome.Text = "Cognome";
+            this.clmCognome.Width = 111;
+            // 
+            // clmEmail
+            // 
+            this.clmEmail.Text = "Email";
+            this.clmEmail.Width = 120;
+            // 
+            // clmNumero
+            // 
+            this.clmNumero.Text = "Numero";
+            this.clmNumero.Width = 133;
             // 
             // Contatti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnContatti);
+            this.Controls.Add(this.listView1);
             this.Name = "Contatti";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
@@ -54,6 +84,10 @@ namespace ClientManagement
 
         #endregion
 
-        private System.Windows.Forms.Button btnContatti;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader clmNome;
+        private System.Windows.Forms.ColumnHeader clmCognome;
+        private System.Windows.Forms.ColumnHeader clmEmail;
+        private System.Windows.Forms.ColumnHeader clmNumero;
     }
 }
