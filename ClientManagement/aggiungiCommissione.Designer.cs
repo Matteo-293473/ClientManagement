@@ -29,7 +29,7 @@ namespace ClientManagement.Resources
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpScadenza = new System.Windows.Forms.DateTimePicker();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCognome = new System.Windows.Forms.TextBox();
             this.lblDataScadenza = new System.Windows.Forms.Label();
@@ -44,13 +44,13 @@ namespace ClientManagement.Resources
             this.btnAggiungiEntry = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtpScadenza
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Location = new System.Drawing.Point(282, 274);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 25);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.dtpScadenza.Location = new System.Drawing.Point(282, 269);
+            this.dtpScadenza.Name = "dtpScadenza";
+            this.dtpScadenza.Size = new System.Drawing.Size(261, 25);
+            this.dtpScadenza.TabIndex = 5;
             // 
             // txtNome
             // 
@@ -72,7 +72,7 @@ namespace ClientManagement.Resources
             this.lblDataScadenza.AutoSize = true;
             this.lblDataScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblDataScadenza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDataScadenza.Location = new System.Drawing.Point(278, 252);
+            this.lblDataScadenza.Location = new System.Drawing.Point(278, 247);
             this.lblDataScadenza.Name = "lblDataScadenza";
             this.lblDataScadenza.Size = new System.Drawing.Size(73, 19);
             this.lblDataScadenza.TabIndex = 4;
@@ -183,9 +183,10 @@ namespace ClientManagement.Resources
             this.Controls.Add(this.lblDataScadenza);
             this.Controls.Add(this.txtCognome);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpScadenza);
             this.Name = "aggiungiCommissione";
             this.Size = new System.Drawing.Size(764, 485);
+            this.Load += new System.EventHandler(this.aggiungiCommissione_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +195,7 @@ namespace ClientManagement.Resources
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpScadenza;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCognome;
         private System.Windows.Forms.Label lblDataScadenza;

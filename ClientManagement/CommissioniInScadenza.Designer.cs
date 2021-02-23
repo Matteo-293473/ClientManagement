@@ -30,13 +30,13 @@ namespace ClientManagement
         private void InitializeComponent()
         {
             this.lstCommissioniScadenza = new System.Windows.Forms.ListView();
-            this.txtCommissioniScadenza = new System.Windows.Forms.Label();
             this.clmNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCognome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtCommissioniScadenza = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -60,6 +60,38 @@ namespace ClientManagement
             this.lstCommissioniScadenza.View = System.Windows.Forms.View.Details;
             this.lstCommissioniScadenza.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // clmNome
+            // 
+            this.clmNome.Text = "Nome";
+            this.clmNome.Width = 80;
+            // 
+            // clmCognome
+            // 
+            this.clmCognome.Text = "Cognome";
+            this.clmCognome.Width = 100;
+            // 
+            // clmEmail
+            // 
+            this.clmEmail.DisplayIndex = 3;
+            this.clmEmail.Text = "Email";
+            this.clmEmail.Width = 120;
+            // 
+            // clmNtel
+            // 
+            this.clmNtel.DisplayIndex = 2;
+            this.clmNtel.Text = "N. Tel.";
+            this.clmNtel.Width = 125;
+            // 
+            // clmComm
+            // 
+            this.clmComm.Text = "Commissione";
+            this.clmComm.Width = 150;
+            // 
+            // clmScadenza
+            // 
+            this.clmScadenza.Text = "Scadenza";
+            this.clmScadenza.Width = 68;
+            // 
             // txtCommissioniScadenza
             // 
             this.txtCommissioniScadenza.AutoSize = true;
@@ -71,37 +103,6 @@ namespace ClientManagement
             this.txtCommissioniScadenza.Size = new System.Drawing.Size(187, 19);
             this.txtCommissioniScadenza.TabIndex = 1;
             this.txtCommissioniScadenza.Text = "Commissioni in scadenza:";
-            // 
-            // clmNome
-            // 
-            this.clmNome.Text = "Nome";
-            this.clmNome.Width = 80;
-            // 
-            // clmCognome
-            // 
-            this.clmCognome.Text = "Cognome";
-            this.clmCognome.Width = 100;
-            // 
-            // clmNtel
-            // 
-            this.clmNtel.DisplayIndex = 2;
-            this.clmNtel.Text = "N. Tel.";
-            this.clmNtel.Width = 125;
-            // 
-            // clmEmail
-            // 
-            this.clmEmail.DisplayIndex = 3;
-            this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 120;
-            // 
-            // clmComm
-            // 
-            this.clmComm.Text = "Commissione";
-            this.clmComm.Width = 150;
-            // 
-            // clmScadenza
-            // 
-            this.clmScadenza.Text = "Scadenza";
             // 
             // CommissioniInScadenza
             // 

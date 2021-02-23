@@ -18,7 +18,7 @@ namespace ClientManagement.Resources
         public aggiungiCommissione()
         {
             InitializeComponent();
-            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione);
+            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
 
         }
 
@@ -41,16 +41,16 @@ namespace ClientManagement.Resources
                 //Cliente = new Cliente(txtNome,txtCognome,txtEmail,txt)
                 //Entry entry = new Entry();
 
-                Commissione cm = new Commissione(txtDescrizioneCommissione.Text);
+                Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
                 Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text, cm);
                 ListaClienti.AggiungiAllaLista(cl);
                 // passiamo la nostra entry tra UserControl attraverso eventi
                 //InviaEntry?.Invoke(this, entry);
                 editor.ResetFields();
             }
-            catch(Exception)
+            catch(Exception err)
             {
-                System.Windows.Forms.MessageBox.Show("Input errati");
+                System.Windows.Forms.MessageBox.Show("Input errati " + err.Message);
             }
             
         }
@@ -65,5 +65,9 @@ namespace ClientManagement.Resources
             editor.ControllaNumeroTelefono(e);
         }
 
+        private void aggiungiCommissione_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

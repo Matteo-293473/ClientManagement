@@ -14,6 +14,8 @@ namespace ClientManagement
         public static void AggiungiAllaLista(Cliente cl)
         {
             clienti.Add(cl);
+
+            // se viene aggiunto un elemento alla lista viene segnalato 
             OnListaCambia?.Invoke(cl, clienti);
         }
     }

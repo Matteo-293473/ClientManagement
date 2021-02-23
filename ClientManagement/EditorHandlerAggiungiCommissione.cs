@@ -22,14 +22,16 @@ namespace ClientManagement
         public string Email { get => txtEmail.Text; }
         public string NumeroTelefono { get => txtNumeroTelefono.Text; }
         public string DescrizioneCommissione { get => txtDescrizioneCommissione.Text; }
+        public DateTime Scadenza { get => dtpScadenza.Value; }
 
-        public EditorHandlerAggiungiCommissione(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono, TextBox txtDescrizioneCommissione)
+        public EditorHandlerAggiungiCommissione(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono, TextBox txtDescrizioneCommissione, DateTimePicker dtpScadenza)
         {
             this.txtNome = txtNome;
             this.txtCognome = txtCognome;
             this.txtEmail = txtEmail;
             this.txtNumeroTelefono = txtNumeroTelefono;
             this.txtDescrizioneCommissione = txtDescrizioneCommissione;
+            this.dtpScadenza = dtpScadenza;
         }
         
         internal void ResetFields()
@@ -39,6 +41,7 @@ namespace ClientManagement
             txtEmail.Text = "";
             txtNumeroTelefono.Text = "";
             txtDescrizioneCommissione.Text = "";
+            dtpScadenza.ResetText();
 
         }
 
