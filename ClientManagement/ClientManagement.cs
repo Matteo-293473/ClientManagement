@@ -65,6 +65,7 @@ namespace ClientManagement
         private void BtnCommissioni_Click(object sender, EventArgs e)
         {
             editor.ColoreSelezione(btnCommissioni, pnlSideMenu);
+            commissioniTotali1.BringToFront();
         }
 
 

@@ -97,6 +97,7 @@ namespace ClientManagement
             this.Controls.Add(this.lstCommissioniScadenza);
             this.Name = "CommissioniTotali";
             this.Size = new System.Drawing.Size(764, 485);
+            this.Load += new System.EventHandler(this.CommissioniTotali_Load);
             this.ResumeLayout(false);
 
         }

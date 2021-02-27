@@ -73,6 +73,7 @@
       <DependentUpon>Contatti.cs</DependentUpon>
     </Compile>
     <Compile Include="EditorCommissioniInScadenza.cs" />
+    <Compile Include="EditorCommissioniTotali.cs" />
     <Compile Include="EditorContatti.cs" />
     <Compile Include="EditorHandlerAggiungiCommissione.cs" />
     <Compile Include="ClientManagement.cs">
