@@ -16,13 +16,12 @@ namespace ClientManagement
         {
             InitializeComponent();
             commissioniInScadenza1.BringToFront();
-            btnIndietro.Hide();
         }
 
         private void BtnNuovaCommissione(object sender, EventArgs e)
         {
-            btnNuovaCommission.Hide();
-            btnIndietro.Show();
+            //btnNuovaCommission.Hide();
+           
             aggiungiCommissione1.BringToFront();
         }
 
@@ -38,12 +37,16 @@ namespace ClientManagement
 
         private void btnIndietro_Click(object sender, EventArgs e)
         {
-            btnIndietro.Hide();
-            btnNuovaCommission.Show();
+            //btnNuovaCommission.Show();
             commissioniInScadenza1.BringToFront();
         }
 
         private void aggiungiCommissione1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void commissioniInScadenza1_Load(object sender, EventArgs e)
         {
 
         }

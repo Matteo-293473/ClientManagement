@@ -37,9 +37,10 @@ namespace ClientManagement
             this.btnHome = new System.Windows.Forms.Button();
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
-            this.home1 = new Home();
-            this.contatti1 = new Contatti();
+            this.calendario1 = new Calendario();
             this.commissioniTotali1 = new CommissioniTotali();
+            this.contatti1 = new Contatti();
+            this.home1 = new Home();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBoxLogo)).BeginInit();
@@ -58,6 +59,7 @@ namespace ClientManagement
             this.pnlSideMenu.Name = "pnlSideMenu";
             this.pnlSideMenu.Size = new System.Drawing.Size(176, 485);
             this.pnlSideMenu.TabIndex = 1;
+            this.pnlSideMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSideMenu_Paint);
             // 
             // btnScadenze
             // 
@@ -161,21 +163,13 @@ namespace ClientManagement
             this.PctBoxLogo.TabStop = false;
             this.PctBoxLogo.Click += new System.EventHandler(this.PctBoxLogo_Click);
             // 
-            // home1
+            // calendario1
             // 
-            this.home1.Location = new System.Drawing.Point(172, 0);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(764, 485);
-            this.home1.TabIndex = 7;
-            this.home1.Load += new System.EventHandler(this.home1_Load_1);
-            // 
-            // contatti1
-            // 
-            this.contatti1.Location = new System.Drawing.Point(172, 0);
-            this.contatti1.Name = "contatti1";
-            this.contatti1.Size = new System.Drawing.Size(762, 482);
-            this.contatti1.TabIndex = 6;
-            this.contatti1.Load += new System.EventHandler(this.contatti1_Load);
+            this.calendario1.Location = new System.Drawing.Point(172, 3);
+            this.calendario1.Name = "calendario1";
+            this.calendario1.Size = new System.Drawing.Size(764, 485);
+            this.calendario1.TabIndex = 9;
+            this.calendario1.Load += new System.EventHandler(this.calendario1_Load);
             // 
             // commissioniTotali1
             // 
@@ -184,16 +178,33 @@ namespace ClientManagement
             this.commissioniTotali1.Size = new System.Drawing.Size(764, 485);
             this.commissioniTotali1.TabIndex = 8;
             // 
+            // contatti1
+            // 
+            this.contatti1.Location = new System.Drawing.Point(174, 0);
+            this.contatti1.Name = "contatti1";
+            this.contatti1.Size = new System.Drawing.Size(762, 482);
+            this.contatti1.TabIndex = 6;
+            this.contatti1.Load += new System.EventHandler(this.contatti1_Load);
+            // 
+            // home1
+            // 
+            this.home1.Location = new System.Drawing.Point(174, 0);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(762, 488);
+            this.home1.TabIndex = 10;
+            this.home1.Load += new System.EventHandler(this.home1_Load_2);
+            // 
             // ClientManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(934, 485);
-            this.Controls.Add(this.commissioniTotali1);
             this.Controls.Add(this.pnlSideMenu);
             this.Controls.Add(this.home1);
             this.Controls.Add(this.contatti1);
+            this.Controls.Add(this.calendario1);
+            this.Controls.Add(this.commissioniTotali1);
             this.Name = "ClientManagement";
             this.Text = "ClientManagement";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -213,8 +224,9 @@ namespace ClientManagement
         private System.Windows.Forms.Button btnCommissioni;
         private System.Windows.Forms.Button btnScadenze;
         private Contatti contatti1;
-        private Home home1;
         private CommissioniTotali commissioniTotali1;
+        private Calendario calendario1;
+        private Home home1;
     }
 }
 

@@ -19,7 +19,12 @@ namespace ClientManagement.Resources
         {
             InitializeComponent();
             editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
+            //ListaClienti.OnListaCambia += Clienti_OnListaCambia;
+        }
 
+        private void Appari_OnNuovaCommissione(object sender, EventArgs e)
+        {
+            this.BringToFront();
         }
 
         private void btnIndietro_Click(object sender, EventArgs e)
@@ -68,6 +73,11 @@ namespace ClientManagement.Resources
         private void aggiungiCommissione_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnIndietro_Click_1(object sender, EventArgs e)
+        {
+            this.SendToBack();
         }
     }
 }

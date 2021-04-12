@@ -72,6 +72,7 @@ namespace ClientManagement
         private void BtnScadenze_Click(object sender, EventArgs e)
         {
             editor.ColoreSelezione(btnScadenze, pnlSideMenu);
+            calendario1.BringToFront();
         }
 
         private void btnHome_Leave(object sender, EventArgs e)
@@ -109,5 +110,19 @@ namespace ClientManagement
 
         }
 
+        private void calendario1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlSideMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void home1_Load_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

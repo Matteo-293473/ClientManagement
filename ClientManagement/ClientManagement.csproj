@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calendario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="Commissione.cs" />
     <Compile Include="CommissioniInScadenza.cs">
@@ -99,6 +105,9 @@
     <Compile Include="aggiungiCommissione.Designer.cs">
       <DependentUpon>aggiungiCommissione.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommissioniInScadenza.resx">
       <DependentUpon>CommissioniInScadenza.cs</DependentUpon>
     </EmbeddedResource>
