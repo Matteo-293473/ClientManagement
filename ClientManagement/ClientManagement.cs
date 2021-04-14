@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClientManagement
@@ -18,14 +11,14 @@ namespace ClientManagement
         {
             InitializeComponent();
             editor = new HandlerClientManagement(btnHome, btnRubrica, btnCommissioni, btnScadenze, pnlSideMenu);
-            editor.ColoreSelezione(btnHome,pnlSideMenu);
+            editor.ColoreSelezione(btnHome, pnlSideMenu);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
             home1.BringToFront();
-            
+
         }
 
 
