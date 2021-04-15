@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ClientManagement.Resources
@@ -11,7 +12,7 @@ namespace ClientManagement.Resources
         public aggiungiCommissione()
         {
             InitializeComponent();
-            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
+            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, cmbEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
             //ListaClienti.OnListaCambia += Clienti_OnListaCambia;
         }
 
@@ -40,7 +41,7 @@ namespace ClientManagement.Resources
                 //Entry entry = new Entry();
 
                 Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
-                Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text, cm);
+                Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text, cm);
                 ListaClienti.AggiungiAllaLista(cl);
                 // passiamo la nostra entry tra UserControl attraverso eventi
                 //InviaEntry?.Invoke(this, entry);
@@ -73,9 +74,14 @@ namespace ClientManagement.Resources
             this.SendToBack();
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
+        private void cmbEmail_TextChanged(object sender, EventArgs e)
         {
+            editor.SuggerisciEmail(e);
+        }
 
+        private void cmbEmail_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             
         }
     }
 }

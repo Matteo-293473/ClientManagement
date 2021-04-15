@@ -39,11 +39,11 @@ namespace ClientManagement.Resources
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.lblCognome = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.txtNumeroTelefono = new System.Windows.Forms.TextBox();
             this.btnAggiungiEntry = new System.Windows.Forms.Button();
             this.btnIndietro = new System.Windows.Forms.Button();
+            this.cmbEmail = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // dtpScadenza
@@ -132,14 +132,6 @@ namespace ClientManagement.Resources
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "Email:";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(81, 319);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(147, 20);
-            this.txtEmail.TabIndex = 2;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
-            // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
@@ -183,15 +175,27 @@ namespace ClientManagement.Resources
             this.btnIndietro.UseVisualStyleBackColor = false;
             this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click_1);
             // 
+            // cmbEmail
+            // 
+            this.cmbEmail.FormattingEnabled = true;
+            this.cmbEmail.Location = new System.Drawing.Point(81, 320);
+            this.cmbEmail.Name = "cmbEmail";
+            this.cmbEmail.Size = new System.Drawing.Size(147, 21);
+            this.cmbEmail.TabIndex = 16;
+            this.cmbEmail.SelectedIndexChanged += new System.EventHandler(this.cmbEmail_SelectedIndexChanged);
+            this.cmbEmail.TextChanged += new System.EventHandler(this.cmbEmail_TextChanged);
+            // 
             // aggiungiCommissione
             // 
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.cmbEmail);
             this.Controls.Add(this.btnIndietro);
             this.Controls.Add(this.btnAggiungiEntry);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.txtNumeroTelefono);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblCognome);
             this.Controls.Add(this.lblNomeCliente);
             this.Controls.Add(this.lblDescrizioneCommissione);
@@ -200,6 +204,7 @@ namespace ClientManagement.Resources
             this.Controls.Add(this.txtCognome);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dtpScadenza);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "aggiungiCommissione";
             this.Size = new System.Drawing.Size(764, 485);
             this.Load += new System.EventHandler(this.aggiungiCommissione_Load);
@@ -220,10 +225,10 @@ namespace ClientManagement.Resources
         private System.Windows.Forms.Label lblNomeCliente;
         private System.Windows.Forms.Label lblCognome;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.TextBox txtNumeroTelefono;
         private System.Windows.Forms.Button btnAggiungiEntry;
         private System.Windows.Forms.Button btnIndietro;
+        private System.Windows.Forms.ComboBox cmbEmail;
     }
 }
