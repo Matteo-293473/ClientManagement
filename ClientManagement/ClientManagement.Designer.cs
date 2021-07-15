@@ -37,10 +37,10 @@ namespace ClientManagement
             this.btnHome = new System.Windows.Forms.Button();
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
-            this.calendario1 = new Calendario();
-            this.commissioniTotali1 = new CommissioniTotali();
-            this.contatti1 = new Contatti();
             this.home1 = new Home();
+            this.contatti1 = new Contatti();
+            this.commissioniTotali1 = new CommissioniTotali();
+            this.calendario1 = new Calendario();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBoxLogo)).BeginInit();
@@ -48,7 +48,7 @@ namespace ClientManagement
             // 
             // pnlSideMenu
             // 
-            this.pnlSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.pnlSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.pnlSideMenu.Controls.Add(this.btnScadenze);
             this.pnlSideMenu.Controls.Add(this.btnCommissioni);
             this.pnlSideMenu.Controls.Add(this.btnRubrica);
@@ -57,13 +57,13 @@ namespace ClientManagement
             this.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlSideMenu.Name = "pnlSideMenu";
-            this.pnlSideMenu.Size = new System.Drawing.Size(176, 485);
+            this.pnlSideMenu.Size = new System.Drawing.Size(176, 483);
             this.pnlSideMenu.TabIndex = 1;
             this.pnlSideMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSideMenu_Paint);
             // 
             // btnScadenze
             // 
-            this.btnScadenze.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnScadenze.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.btnScadenze.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnScadenze.FlatAppearance.BorderSize = 0;
             this.btnScadenze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -83,7 +83,7 @@ namespace ClientManagement
             // 
             // btnCommissioni
             // 
-            this.btnCommissioni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnCommissioni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.btnCommissioni.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCommissioni.FlatAppearance.BorderSize = 0;
             this.btnCommissioni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -103,7 +103,7 @@ namespace ClientManagement
             // 
             // btnRubrica
             // 
-            this.btnRubrica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnRubrica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.btnRubrica.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRubrica.FlatAppearance.BorderSize = 0;
             this.btnRubrica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -123,7 +123,7 @@ namespace ClientManagement
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,7 +153,7 @@ namespace ClientManagement
             // 
             // PctBoxLogo
             // 
-            this.PctBoxLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.PctBoxLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.PctBoxLogo.Image = global::ClientManagement.Properties.Resources.clientManagement;
             this.PctBoxLogo.Location = new System.Drawing.Point(12, 0);
             this.PctBoxLogo.Name = "PctBoxLogo";
@@ -163,48 +163,49 @@ namespace ClientManagement
             this.PctBoxLogo.TabStop = false;
             this.PctBoxLogo.Click += new System.EventHandler(this.PctBoxLogo_Click);
             // 
-            // calendario1
+            // home1
             // 
-            this.calendario1.Location = new System.Drawing.Point(172, 3);
-            this.calendario1.Name = "calendario1";
-            this.calendario1.Size = new System.Drawing.Size(764, 485);
-            this.calendario1.TabIndex = 9;
-            this.calendario1.Load += new System.EventHandler(this.calendario1_Load);
-            // 
-            // commissioniTotali1
-            // 
-            this.commissioniTotali1.Location = new System.Drawing.Point(172, 0);
-            this.commissioniTotali1.Name = "commissioniTotali1";
-            this.commissioniTotali1.Size = new System.Drawing.Size(764, 485);
-            this.commissioniTotali1.TabIndex = 8;
+            this.home1.Location = new System.Drawing.Point(172, -2);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(764, 485);
+            this.home1.TabIndex = 2;
             // 
             // contatti1
             // 
-            this.contatti1.Location = new System.Drawing.Point(174, 0);
+            this.contatti1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.contatti1.Location = new System.Drawing.Point(172, 3);
             this.contatti1.Name = "contatti1";
-            this.contatti1.Size = new System.Drawing.Size(762, 482);
-            this.contatti1.TabIndex = 6;
-            this.contatti1.Load += new System.EventHandler(this.contatti1_Load);
+            this.contatti1.Size = new System.Drawing.Size(764, 485);
+            this.contatti1.TabIndex = 3;
             // 
-            // home1
+            // commissioniTotali1
             // 
-            this.home1.Location = new System.Drawing.Point(174, 0);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(762, 488);
-            this.home1.TabIndex = 10;
-            this.home1.Load += new System.EventHandler(this.home1_Load_2);
+            this.commissioniTotali1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.commissioniTotali1.Location = new System.Drawing.Point(172, 0);
+            this.commissioniTotali1.Name = "commissioniTotali1";
+            this.commissioniTotali1.Size = new System.Drawing.Size(764, 485);
+            this.commissioniTotali1.TabIndex = 4;
+            // 
+            // calendario1
+            // 
+            this.calendario1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.calendario1.Location = new System.Drawing.Point(172, -2);
+            this.calendario1.Name = "calendario1";
+            this.calendario1.Size = new System.Drawing.Size(764, 485);
+            this.calendario1.TabIndex = 5;
+            this.calendario1.Load += new System.EventHandler(this.calendario1_Load_1);
             // 
             // ClientManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
-            this.ClientSize = new System.Drawing.Size(934, 485);
-            this.Controls.Add(this.pnlSideMenu);
-            this.Controls.Add(this.home1);
-            this.Controls.Add(this.contatti1);
+            this.ClientSize = new System.Drawing.Size(931, 483);
             this.Controls.Add(this.calendario1);
             this.Controls.Add(this.commissioniTotali1);
+            this.Controls.Add(this.contatti1);
+            this.Controls.Add(this.home1);
+            this.Controls.Add(this.pnlSideMenu);
             this.Name = "ClientManagement";
             this.Text = "ClientManagement";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -223,10 +224,10 @@ namespace ClientManagement
         private System.Windows.Forms.PictureBox PctBoxLogo;
         private System.Windows.Forms.Button btnCommissioni;
         private System.Windows.Forms.Button btnScadenze;
+        private Home home1;
         private Contatti contatti1;
         private CommissioniTotali commissioniTotali1;
         private Calendario calendario1;
-        private Home home1;
     }
 }
 

@@ -32,8 +32,8 @@ namespace ClientManagement
             this.lstContatti = new System.Windows.Forms.ListView();
             this.clmNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCognome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmNumero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstContatti
@@ -63,21 +63,21 @@ namespace ClientManagement
             this.clmCognome.Text = "Cognome";
             this.clmCognome.Width = 111;
             // 
+            // clmNumero
+            // 
+            this.clmNumero.Text = "N. Tel.";
+            this.clmNumero.Width = 143;
+            // 
             // clmEmail
             // 
             this.clmEmail.Text = "Email";
             this.clmEmail.Width = 120;
             // 
-            // clmNumero
-            // 
-            this.clmNumero.DisplayIndex = 3;
-            this.clmNumero.Text = "N. Tel.";
-            this.clmNumero.Width = 143;
-            // 
             // Contatti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.lstContatti);
             this.Name = "Contatti";
             this.Size = new System.Drawing.Size(764, 485);

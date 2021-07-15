@@ -43,5 +43,15 @@ namespace ClientManagement
         {
 
         }
+
+        private void aggiungiCommissione1_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aggiungiCommissione1_Load_3(object sender, EventArgs e)
+        {
+
+        }
     }
 }

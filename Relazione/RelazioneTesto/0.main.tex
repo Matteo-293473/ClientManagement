@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{minted}
+\usemintedstyle{native}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage{pdfpages}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[official]{eurosym}
+\usepackage{longtable}
+\usepackage{csquotes}
+\usepackage{color}
+
+\definecolor{backcolour}{RGB}{240,240,240}
+\definecolor{codegreen}{RGB}{97,181,103}
+\definecolor{keywordscolour}{RGB}{11,196,190}
+\definecolor{codebg}{HTML}{191919}
+
+\setlength{\tabcolsep}{9pt}
+\renewcommand{\arraystretch}{1.5}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+\title{Programmazione ad Oggetti - sessione estiva 2020/2021}
+\date{\today}
+\author{Pulcinelli Matteo}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \includegraphics[width=\textwidth]{../logo.png}
+    \par\vspace{1cm}
+    \vspace{2cm}
+
+    {\huge Programmazione ad Oggetti ed Ingegneria del Software\par}
+    \vspace{0.5cm}
+
+    {\Large Sessione autunnale 2020/2021\par}
+    \vspace{5cm}
+
+    \begin{tabular}{1}
+        \large Matteo Pulcinelli \par \\
+        \large Matricola: 293473 \par \\
+    \end{tabular}
+
+
+    \vfill
+    \vspace{0.3cm}
+    Made with \LaTeX
+\end{titlepage}
+
+\newpage\null\thispagestyle{empty}\newpage
+\pagenumbering{gobble}
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\newpage
+
+\include{1.analisiRequisiti}
+
+\newpage
+
+\include{2.specificaDeiRequisiti}
+
+\newpage
+
+\include{3.AnalisiEProgettazione}
+
+\newpage
+
+\include{4.Implementazione}
+\newpage
+
+\newpage
+\include{5.Testing}
+\newpage
+
+\include{6.CompilazioneEsecuzione}
+
+\end{document}

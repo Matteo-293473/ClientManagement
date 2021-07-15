@@ -1,0 +1,99 @@
+\section{Specifica dei requisiti}
+      \subsection{Diagramma dei casi d'uso}  
+        \vspace{1cm}
+        % \includegraphics[width=13cm, height=16cm]{diagrammi/casi_d_uso.png}
+        
+        \newpage
+        \subsection{Descrizione casi d'uso}
+            \begin{center}
+                \vspace{1cm}
+                \begin{tabular}{ m{10em} | m{20em} }
+                    Caso d'uso & Inizia partita \\
+                    Id & 1 \\
+                    Attori & Musicista \\
+                    Pre-condizioni & N/A \\
+                    Eventi base & L'utente avvia la partita cliccando sull'apposito pulsante \\
+                    Post-condizioni & Viene mostrata la finestra di inserimento nome, inserimento BPM iniziali e selezione della modalità \\
+                    Percorsi alternativi & N/A \\
+                \end{tabular}
+                
+                \vspace{2cm}
+                \begin{tabular}{ m{10em} | m{20em} }
+                    Caso d'uso & Visualizza punteggi \\
+                    Id & 2 \\
+                    Attori & Musicista \\
+                    Pre-condizioni & N/A \\
+                    Eventi base & L'utente dopo aver cliccato sull'apposito pulsante, consulta i punteggi di gioco descritti dal punteggio numerico e dal nome dell'utente che ha totalizzato tale punteggio  \\
+                    Post-condizioni & N/A \\
+                    Percorsi alternativi & N/A \\
+                \end{tabular}
+                
+                \vspace{1cm}
+                \begin{tabular}{ m{10em} | m{20em} }
+                    Caso d'uso & Imposta nome, modalità e BPM iniziali \\
+                    Id & 3 \\
+                    Attori & Musicista \\
+                    Pre-condizioni & L'utente deve aver avviato la partita \\
+                    Eventi base & L'utente inserisce il proprio nome, i BPM iniziali e la modalità di gioco tra quelle proposte \\
+                    Post-condizioni & Il gioco inizia \\
+                    Percorsi alternativi & N/A \\
+                \end{tabular}
+                
+                \vspace{2cm}
+                \begin{tabular}{ m{10em} | m{20em} }
+                    Caso d'uso & Effettua colpo \\
+                    Id & 4 \\
+                    Attori & Musicista \\
+                    Pre-condizioni & La partita deve essere iniziata e devono essere state impostate le condizioni di gioco (nome, BPM iniziali e modalità) \\
+                    Eventi base & L'utente effettua i colpi che appaiono sullo schermo tramite i due tasti impostati \\
+                    Post-condizioni & N/A \\
+                    Percorsi alternativi & N/A \\
+                \end{tabular}
+                
+                \vspace{1cm}
+                \begin{tabular}{ m{10em} | m{20em} }
+                    Caso d'uso & Uscita dal gioco \\
+                    Id & 5 \\
+                    Attori & Musicista \\
+                    Pre-condizioni & N/A \\
+                    Eventi base & L'utente esce dal gioco premendo l'apposito pulsante proposto nel menù iniziale \\
+                    Post-condizioni & Il gioco viene chiuso e il processo terminato \\
+                    Percorsi alternativi & Abbandonare la partita in corso tramite il menù di pausa e poi uscire dalla partita con l'apposito pulsante \\
+                \end{tabular}
+                
+                \vspace{2cm}
+                \begin{tabular}{ m{10em} | m{20em} }
+                    Caso d'uso & Metti in pausa partita \\
+                    Id & 6 \\
+                    Attori & Musicista \\
+                    Pre-condizioni & La partita deve essere iniziata \\
+                    Eventi base & L'utente, durante la partita, ha la possibilità di mettere in pausa il videogioco premendo il tasto \emph{ESC} della tastiera. A quel punto avrà la possibilità di riprendere la partita oppure di abbandonarla, tornando al menù iniziale\\
+                    Post-condizioni & Viene mostrato il menù di pausa del gioco
+                    \\
+                    Percorsi alternativi & N/A \\
+                \end{tabular}
+                
+                \vspace{1cm}
+                \begin{tabular}{ m{10em} | m{20em} }
+                    Caso d'uso & Riprendi partita \\
+                    Id & 7 \\
+                    Attori & Musicista \\
+                    Pre-condizioni & Il gioco deve essere in pausa \\
+                    Eventi base & L'utente, dopo aver messo in pausa la partita, premendo l'apposito tasto riprende la partita, che ricomincia nello stesso stato in cui era precedentemente \\
+                    Post-condizioni & La partita riprende
+                    \\
+                    Percorsi alternativi & N/A \\
+                \end{tabular}
+                
+                \vspace{2cm}
+                \begin{tabular}{ m{10em} | m{20em} }
+                    Caso d'uso & Abbandona partita \\
+                    Id & 8 \\
+                    Attori & Musicista \\
+                    Pre-condizioni & Il gioco deve essere in pausa \\
+                    Eventi base & L'utente, dopo aver messo in pausa la partita, schiacciando l'apposito tasto abbandona la partita. In questo caso il punteggio della partita non viene salvato.\\
+                    Post-condizioni & La partita termina e viene presentato il menù iniziale
+                    \\
+                    Percorsi alternativi & N/A \\
+                \end{tabular}
+            \end{center}

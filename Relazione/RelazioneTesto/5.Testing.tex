@@ -1,0 +1,72 @@
+\section{Testing}
+        Lo sviluppo del software è stato per gran parte effettuato utilizzando la tecnica del \emph{pair-programming}.
+        Tale tecnica ci ha permesso di analizzare ogni scelta implementativa a fondo senza effettuare nessuna scelta in modo approssimativo; il risultato è un software la cui probabilità di presenza di errori è piuttosto bassa.
+        
+        Il testing di tale software è stato effettuato inizialmente in modalità \texttt{whitebox} durante la fase di sviluppo, testando ogni condizione limite che si sarebbe potuta presentare.
+        Ciò ha permesso di arginare in fase iniziale la maggior parte degli errori che sarebbero potuti emergere a lavoro completato.
+        
+        \vspace{0.3cm}
+        In seguito il software, giunti a quella che è la versione finale, è stato testato con le modalità \texttt{blackbox}.
+        Nella sottosezioni seguenti verranno mostrati vari \emph{screenshot} del software corrispondenti ai vari casi d'uso identificati nella sezione corrispondente.
+    
+        \newpage
+        \subsection{Inizio di una partita}
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/menu_iniziale.PNG}
+            \end{figure}
+            Cliccando sul pulsante \emph{Nuova partita} viene mostrata la schermata seguente
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/nuova_partita.PNG}
+            \end{figure}
+        
+        \newpage
+        \subsection{Visualizzazione punteggi}
+            Nel caso l'utente abbia già giocato almeno una partita vengono mostrati i punteggi totalizzati.
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/record_avaiable.PNG}
+            \end{figure}
+            
+            Nel caso invece l'utente non abbia ancora giocato nessuna partita viene mostrato un messaggio che comunica l'assenza di punteggi registrati.
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/record_not_avaiable.PNG}
+            \end{figure}
+            
+        \newpage
+        \subsection{Impostazione di nome, modalità di gioco e BPM iniziali}
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/nuova_partita.PNG}
+            \end{figure}
+            
+            Nel caso l'utente tenti di procedere senza aver inserito il proprio nome la partita non viene iniziata.
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/name_not_set.PNG}
+            \end{figure}
+            
+        \newpage
+        \subsection{Effettuazione colpo}
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/hit_before_end.PNG}
+            \end{figure}
+        
+        \subsection{Fine della partita}
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/end_game.PNG}
+            \end{figure}
+        
+        \newpage    
+        \subsection{Partita in pausa}
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/menu_pausa.PNG}
+            \end{figure}
+        
+        \subsection{Partita ripresa da una pausa}
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/partita_ripresa.PNG}
+            \end{figure}
+            
+        \newpage
+        \subsection{Partita abbandonata da una pausa}
+            \begin{figure}[h!]
+               % \includegraphics[width=\linewidth]{testing/abbandona_partita.PNG}
+            \end{figure}
+    

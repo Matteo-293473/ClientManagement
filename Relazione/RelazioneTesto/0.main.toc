@@ -1,0 +1,62 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {section}{\numberline {1}Specifica del problema}{1}{section.1}%
+\contentsline {section}{\numberline {2}Specifica dei requisiti}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Diagramma dei casi d'uso}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Descrizione casi d'uso}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Analisi e progettazione}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Architettura}{8}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Model}{8}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}View}{9}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Controller}{10}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Utils ed Eccezioni}{11}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Versioning}{11}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Librerie esterne}{11}{subsubsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.2}Diagramma di robustezza}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Diagramma UML delle classi}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Model}{14}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Controller}{16}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}View}{17}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Implementazione}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Model}{18}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}INote.cs}{18}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}StandardNote.cs}{19}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}SpecialNote.cs}{20}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}PauseNote.cs}{21}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}INoteGenerator.cs}{22}{subsubsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.6}AlternatedHandGenerator.cs}{23}{subsubsection.4.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.7}RandomNoteGenerator.cs}{24}{subsubsection.4.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.8}IGame.cs}{25}{subsubsection.4.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.9}Game.cs}{26}{subsubsection.4.1.9}%
+\contentsline {subsection}{\numberline {4.2}Controller}{27}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}IController.cs}{27}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}MainController.cs}{28}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}View}{29}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}IMainView.cs}{29}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}MainView.cs}{30}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}IPlayingView.cs}{31}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}PlayingPanel.cs}{32}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}GamePausePanel.cs}{33}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}HighscoresPanel.cs}{34}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.7}MainMenuPanel.cs}{35}{subsubsection.4.3.7}%
+\contentsline {subsubsection}{\numberline {4.3.8}NewGamePanel.cs}{36}{subsubsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.4}Exception}{37}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}GameEndedException.cs}{37}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}GameOptionException.cs}{38}{subsubsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.5}Utils}{39}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}IObserver.cs}{39}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}ISubject.cs}{40}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}ImageUtils.cs}{41}{subsubsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.4}Triplet.cs}{42}{subsubsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.6}Program}{43}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Program.cs}{43}{subsubsection.4.6.1}%
+\contentsline {section}{\numberline {5}Testing}{44}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Inizio di una partita}{45}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Visualizzazione punteggi}{46}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Impostazione di nome, modalità di gioco e BPM iniziali}{47}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Effettuazione colpo}{48}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Fine della partita}{48}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Partita in pausa}{49}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Partita ripresa da una pausa}{49}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Partita abbandonata da una pausa}{50}{subsection.5.8}%
+\contentsline {section}{\numberline {6}Compilazione ed esecuzione}{51}{section.6}%

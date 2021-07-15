@@ -17,7 +17,7 @@ namespace ClientManagement
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            home1.BringToFront();
+          home1.BringToFront();
 
         }
 
@@ -114,6 +114,16 @@ namespace ClientManagement
         }
 
         private void home1_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aggiungiCommissione1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calendario1_Load_1(object sender, EventArgs e)
         {
 
         }
