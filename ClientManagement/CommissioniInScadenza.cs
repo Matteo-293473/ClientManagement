@@ -43,5 +43,11 @@ namespace ClientManagement
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var formPopup = new ModificaDati();
+            formPopup.Show(this);
+        }
     }
 }

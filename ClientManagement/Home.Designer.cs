@@ -29,33 +29,33 @@ namespace ClientManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.commissioniInScadenza1 = new CommissioniInScadenza();
             this.aggiungiCommissione1 = new Resources.aggiungiCommissione();
+            this.commissioniInScadenza1 = new CommissioniInScadenza();
             this.SuspendLayout();
-            // 
-            // commissioniInScadenza1
-            // 
-            this.commissioniInScadenza1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.commissioniInScadenza1.Location = new System.Drawing.Point(0, 0);
-            this.commissioniInScadenza1.Name = "commissioniInScadenza1";
-            this.commissioniInScadenza1.Size = new System.Drawing.Size(764, 485);
-            this.commissioniInScadenza1.TabIndex = 0;
             // 
             // aggiungiCommissione1
             // 
             this.aggiungiCommissione1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.aggiungiCommissione1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.aggiungiCommissione1.Location = new System.Drawing.Point(3, 3);
+            this.aggiungiCommissione1.Location = new System.Drawing.Point(0, 0);
             this.aggiungiCommissione1.Name = "aggiungiCommissione1";
             this.aggiungiCommissione1.Size = new System.Drawing.Size(764, 485);
             this.aggiungiCommissione1.TabIndex = 1;
+            // 
+            // commissioniInScadenza1
+            // 
+            this.commissioniInScadenza1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.commissioniInScadenza1.Location = new System.Drawing.Point(0, 3);
+            this.commissioniInScadenza1.Name = "commissioniInScadenza1";
+            this.commissioniInScadenza1.Size = new System.Drawing.Size(764, 485);
+            this.commissioniInScadenza1.TabIndex = 2;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.aggiungiCommissione1);
             this.Controls.Add(this.commissioniInScadenza1);
+            this.Controls.Add(this.aggiungiCommissione1);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
@@ -63,8 +63,7 @@ namespace ClientManagement
         }
 
         #endregion
-
-        private CommissioniInScadenza commissioniInScadenza1;
         private Resources.aggiungiCommissione aggiungiCommissione1;
+        private CommissioniInScadenza commissioniInScadenza1;
     }
 }

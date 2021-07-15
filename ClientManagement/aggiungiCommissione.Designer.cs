@@ -220,8 +220,6 @@ namespace ClientManagement.Resources
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpScadenza;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCognome;

@@ -34,5 +34,9 @@ namespace ClientManagement
             commissioniInScadenza1.BringToFront();
         }
 
+        private void aggiungiCommissione1_Load_4(object sender, EventArgs e)
+        {
+
+        }
     }
 }

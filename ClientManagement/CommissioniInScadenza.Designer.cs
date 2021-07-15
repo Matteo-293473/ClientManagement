@@ -36,9 +36,9 @@ namespace ClientManagement
             this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtCommissioniScadenza = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNuovaCommission = new System.Windows.Forms.Button();
+            this.lblCommissioniSettimana = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -94,19 +94,6 @@ namespace ClientManagement
             this.clmScadenza.Text = "Scadenza";
             this.clmScadenza.Width = 68;
             // 
-            // txtCommissioniScadenza
-            // 
-            this.txtCommissioniScadenza.AutoSize = true;
-            this.txtCommissioniScadenza.Enabled = false;
-            this.txtCommissioniScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.txtCommissioniScadenza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCommissioniScadenza.Location = new System.Drawing.Point(45, 167);
-            this.txtCommissioniScadenza.Name = "txtCommissioniScadenza";
-            this.txtCommissioniScadenza.Size = new System.Drawing.Size(245, 19);
-            this.txtCommissioniScadenza.TabIndex = 1;
-            this.txtCommissioniScadenza.Text = "Commissioni di questa settimana:";
-            this.txtCommissioniScadenza.Click += new System.EventHandler(this.txtCommissioniScadenza_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -114,10 +101,11 @@ namespace ClientManagement
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(49, 425);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 38);
+            this.button1.Size = new System.Drawing.Size(104, 38);
             this.button1.TabIndex = 2;
-            this.button1.Text = "EDIT";
+            this.button1.Text = "MODIFICA";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNuovaCommission
             // 
@@ -136,14 +124,25 @@ namespace ClientManagement
             this.btnNuovaCommission.UseVisualStyleBackColor = false;
             this.btnNuovaCommission.Click += new System.EventHandler(this.btnNuovaCommission_Click);
             // 
+            // lblCommissioniSettimana
+            // 
+            this.lblCommissioniSettimana.AutoSize = true;
+            this.lblCommissioniSettimana.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCommissioniSettimana.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCommissioniSettimana.Location = new System.Drawing.Point(45, 167);
+            this.lblCommissioniSettimana.Name = "lblCommissioniSettimana";
+            this.lblCommissioniSettimana.Size = new System.Drawing.Size(245, 19);
+            this.lblCommissioniSettimana.TabIndex = 16;
+            this.lblCommissioniSettimana.Text = "Commissioni di questa settimana:";
+            // 
             // CommissioniInScadenza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.lblCommissioniSettimana);
             this.Controls.Add(this.btnNuovaCommission);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtCommissioniScadenza);
             this.Controls.Add(this.lstCommissioniScadenza);
             this.Name = "CommissioniInScadenza";
             this.Size = new System.Drawing.Size(764, 485);
@@ -156,7 +155,6 @@ namespace ClientManagement
         #endregion
 
         private System.Windows.Forms.ListView lstCommissioniScadenza;
-        private System.Windows.Forms.Label txtCommissioniScadenza;
         private System.Windows.Forms.ColumnHeader clmNome;
         private System.Windows.Forms.ColumnHeader clmCognome;
         private System.Windows.Forms.ColumnHeader clmEmail;
@@ -165,5 +163,6 @@ namespace ClientManagement
         private System.Windows.Forms.ColumnHeader clmScadenza;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnNuovaCommission;
+        private System.Windows.Forms.Label lblCommissioniSettimana;
     }
 }

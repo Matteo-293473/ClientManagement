@@ -77,7 +77,7 @@ namespace ClientManagement.Resources
 
         private void cmbEmail_TextChanged(object sender, EventArgs e)
         {
-            editor.SuggerisciEmail(e);
+            //----editor.SuggerisciEmail(e);
         }
 
         private void cmbEmail_SelectedIndexChanged(object sender, EventArgs e)
