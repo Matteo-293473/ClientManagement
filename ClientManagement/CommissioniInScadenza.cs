@@ -6,11 +6,15 @@ namespace ClientManagement
 {
     public partial class CommissioniInScadenza : UserControl
     {
-        private EditorCommissioniInScadenza editor;
-       
+        private readonly EditorCommissioniInScadenza editor;
+        private readonly ModificaDati popUpModificaDati = new ModificaDati();
+
         public CommissioniInScadenza()
         {
             InitializeComponent();
+
+            
+
             editor = new EditorCommissioniInScadenza();
             //ci mettiamo in ascolto di qualche evento
             //l'evento viene generato quando si aggiunge una nuova commissione
@@ -46,8 +50,13 @@ namespace ClientManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var formPopup = new ModificaDati();
-            formPopup.Show(this);
+            try
+            {
+                popUpModificaDati.Show(this);
+            }
+            catch
+            {
+            }
         }
     }
 }

@@ -15,6 +15,8 @@ namespace ClientManagement
         public ModificaDati()
         {
             InitializeComponent();
+            // aggiungere un editor handler che va a popolare i campi 
+            // editor.PopolaCampi();
         }
     }
 }
