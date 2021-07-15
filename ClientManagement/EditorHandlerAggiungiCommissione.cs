@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -77,12 +78,14 @@ namespace ClientManagement
 
         public void SuggerisciEmail(EventArgs e)
         {
+            
             cmbEmail.Items.Clear();
             cmbEmail.SelectionStart = cmbEmail.Text.Length;
             cmbEmail.DroppedDown = true;
             
+
             // se il testo all'interno non finisce con @ 
-            if(!cmbEmail.Text.Contains("@"))
+            if (!cmbEmail.Text.Contains("@"))
             {
                 foreach (string dominio in domini)
                 {

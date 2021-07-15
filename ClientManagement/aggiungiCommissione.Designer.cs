@@ -160,7 +160,7 @@ namespace ClientManagement.Resources
             this.btnAggiungiEntry.Location = new System.Drawing.Point(591, 340);
             this.btnAggiungiEntry.Name = "btnAggiungiEntry";
             this.btnAggiungiEntry.Size = new System.Drawing.Size(75, 57);
-            this.btnAggiungiEntry.TabIndex = 13;
+            this.btnAggiungiEntry.TabIndex = 6;
             this.btnAggiungiEntry.UseVisualStyleBackColor = false;
             this.btnAggiungiEntry.Click += new System.EventHandler(this.btnAggiungiEntry_Click);
             // 
@@ -171,17 +171,23 @@ namespace ClientManagement.Resources
             this.btnIndietro.Location = new System.Drawing.Point(80, 45);
             this.btnIndietro.Name = "btnIndietro";
             this.btnIndietro.Size = new System.Drawing.Size(77, 57);
-            this.btnIndietro.TabIndex = 15;
+            this.btnIndietro.TabIndex = 7;
             this.btnIndietro.UseVisualStyleBackColor = false;
             this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click_1);
             // 
             // cmbEmail
             // 
+            this.cmbEmail.AutoCompleteCustomSource.AddRange(new string[] {
+            "@yahoo.it",
+            "@gmail.com",
+            "@libero.it"});
+            this.cmbEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbEmail.FormattingEnabled = true;
             this.cmbEmail.Location = new System.Drawing.Point(81, 320);
             this.cmbEmail.Name = "cmbEmail";
             this.cmbEmail.Size = new System.Drawing.Size(147, 21);
-            this.cmbEmail.TabIndex = 16;
+            this.cmbEmail.TabIndex = 2;
             this.cmbEmail.SelectedIndexChanged += new System.EventHandler(this.cmbEmail_SelectedIndexChanged);
             this.cmbEmail.TextChanged += new System.EventHandler(this.cmbEmail_TextChanged);
             // 
