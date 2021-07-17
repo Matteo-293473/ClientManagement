@@ -49,14 +49,8 @@ namespace ClientManagement
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                popUpModificaDati.Show(this);
-            }
-            catch
-            {
-            }
+        { 
+            popUpModificaDati.ShowDialog(this);
         }
     }
 }

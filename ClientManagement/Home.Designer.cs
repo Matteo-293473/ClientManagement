@@ -45,7 +45,7 @@ namespace ClientManagement
             // commissioniInScadenza1
             // 
             this.commissioniInScadenza1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.commissioniInScadenza1.Location = new System.Drawing.Point(0, 3);
+            this.commissioniInScadenza1.Location = new System.Drawing.Point(3, 0);
             this.commissioniInScadenza1.Name = "commissioniInScadenza1";
             this.commissioniInScadenza1.Size = new System.Drawing.Size(764, 485);
             this.commissioniInScadenza1.TabIndex = 2;
