@@ -36,7 +36,7 @@ namespace ClientManagement
             this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnModifica = new System.Windows.Forms.Button();
             this.btnNuovaCommission = new System.Windows.Forms.Button();
             this.lblCommissioniSettimana = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -94,18 +94,18 @@ namespace ClientManagement
             this.clmScadenza.Text = "Scadenza";
             this.clmScadenza.Width = 68;
             // 
-            // button1
+            // btnModifica
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(49, 425);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "MODIFICA";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnModifica.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnModifica.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnModifica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnModifica.Location = new System.Drawing.Point(49, 425);
+            this.btnModifica.Name = "btnModifica";
+            this.btnModifica.Size = new System.Drawing.Size(104, 38);
+            this.btnModifica.TabIndex = 2;
+            this.btnModifica.Text = "MODIFICA";
+            this.btnModifica.UseVisualStyleBackColor = false;
+            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
             // 
             // btnNuovaCommission
             // 
@@ -142,7 +142,7 @@ namespace ClientManagement
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.lblCommissioniSettimana);
             this.Controls.Add(this.btnNuovaCommission);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.lstCommissioniScadenza);
             this.Name = "CommissioniInScadenza";
             this.Size = new System.Drawing.Size(764, 485);
@@ -161,7 +161,7 @@ namespace ClientManagement
         private System.Windows.Forms.ColumnHeader clmNtel;
         private System.Windows.Forms.ColumnHeader clmComm;
         private System.Windows.Forms.ColumnHeader clmScadenza;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Button btnNuovaCommission;
         private System.Windows.Forms.Label lblCommissioniSettimana;
     }

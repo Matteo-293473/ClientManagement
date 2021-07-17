@@ -7,7 +7,7 @@ namespace ClientManagement
     public partial class CommissioniInScadenza : UserControl
     {
         private readonly EditorCommissioniInScadenza editor;
-        private readonly ModificaDati popUpModificaDati = new ModificaDati();
+        private readonly ModificaDati popUpModificaDati;
 
         public CommissioniInScadenza()
         {
@@ -48,8 +48,22 @@ namespace ClientManagement
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        { 
+
+        private void btnModifica_Click(object sender, EventArgs e)
+        {
+
+            //FrmEditBank frm = new FrmEditBank();
+            //frm.txtBankId.Text = gvBankCard.GetFocusedRowCellValue("BankId").ToString();
+            //frm.cmbBankName.Text = gvBankCard.GetFocusedRowCellValue("BankName").ToString();
+            popUpModificaDati = new ModificaDati(/*lstCommissioniScadenza.FocusedItem(clmNome)*/);
+
+
+                //(lstCommissioniScadenza.FocusedItem(clmNome).ToString(),
+                //lstCommissioniScadenza.FocusedItem(clmCognome).ToString(),
+                //lstCommissioniScadenza.FocusedItem(clmEmail).ToString(),
+                //lstCommissioniScadenza.FocusedItem(clmNtel).ToString(),
+                //lstCommissioniScadenza.FocusedItem(clmNome).ToString());
+
             popUpModificaDati.ShowDialog(this);
         }
     }

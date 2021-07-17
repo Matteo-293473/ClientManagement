@@ -12,11 +12,23 @@ namespace ClientManagement
 {
     public partial class ModificaDati : Form
     {
-        public ModificaDati()
+        public ModificaDati(string nome, string cognome, string email, string numeroTelefono, string scadenza, string descrizione)
         {
             InitializeComponent();
+            txtNome.Text = nome;
+            txtCognome.Text = cognome;
+            cmbEmail.Text = email;
+            txtNumeroTelefono.Text = numeroTelefono;
+            dtpScadenza.Text = scadenza;
+            txtDescrizioneCommissione.Text = descrizione;
+
             // aggiungere un editor handler che va a popolare i campi 
             // editor.PopolaCampi();
+        }
+
+        private void ModificaDati_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

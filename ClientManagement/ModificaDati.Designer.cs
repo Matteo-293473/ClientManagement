@@ -62,7 +62,7 @@ namespace ClientManagement
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblNumero.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNumero.Location = new System.Drawing.Point(29, 196);
+            this.lblNumero.Location = new System.Drawing.Point(24, 196);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(151, 19);
             this.lblNumero.TabIndex = 24;
@@ -180,6 +180,7 @@ namespace ClientManagement
             this.Controls.Add(this.dtpScadenza);
             this.Name = "ModificaDati";
             this.Text = "ModificaDati";
+            this.Load += new System.EventHandler(this.ModificaDati_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
