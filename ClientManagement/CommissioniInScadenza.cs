@@ -55,7 +55,7 @@ namespace ClientManagement
             //FrmEditBank frm = new FrmEditBank();
             //frm.txtBankId.Text = gvBankCard.GetFocusedRowCellValue("BankId").ToString();
             //frm.cmbBankName.Text = gvBankCard.GetFocusedRowCellValue("BankName").ToString();
-            popUpModificaDati = new ModificaDati(/*lstCommissioniScadenza.FocusedItem(clmNome)*/);
+            //popUpModificaDati = new ModificaDati(/*lstCommissioniScadenza.FocusedItem(clmNome)*/);
 
 
                 //(lstCommissioniScadenza.FocusedItem(clmNome).ToString(),

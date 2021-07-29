@@ -870,6 +870,24 @@ INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3bac
 INPUT .\0.main.aux
 INPUT 0.main.aux
 INPUT 0.main.aux
+INPUT .\1.analisiRequisiti.aux
+INPUT 1.analisiRequisiti.aux
+INPUT 1.analisiRequisiti.aux
+INPUT .\2.specificaDeiRequisiti.aux
+INPUT 2.specificaDeiRequisiti.aux
+INPUT 2.specificaDeiRequisiti.aux
+INPUT .\3.AnalisiEProgettazione.aux
+INPUT 3.AnalisiEProgettazione.aux
+INPUT 3.AnalisiEProgettazione.aux
+INPUT .\4.Implementazione.aux
+INPUT 4.Implementazione.aux
+INPUT 4.Implementazione.aux
+INPUT .\5.Testing.aux
+INPUT 5.Testing.aux
+INPUT 5.Testing.aux
+INPUT .\6.CompilazioneEsecuzione.aux
+INPUT 6.CompilazioneEsecuzione.aux
+INPUT 6.CompilazioneEsecuzione.aux
 OUTPUT 0.main.aux
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
@@ -959,8 +977,18 @@ INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\tex\generic\gettitlestrin
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\tex\latex\kvoptions\kvoptions.sty
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ltxcmds\ltxcmds.sty
-OUTPUT 0.main.out
+INPUT .\0.main.out
+INPUT 0.main.out
+INPUT .\0.main.out
+INPUT 0.main.out
+INPUT .\0.main.out
+INPUT 0.main.out
+INPUT .\0.main.out
+INPUT 0.main.out
 OUTPUT 0.main.pdf
+INPUT .\0.main.out
+INPUT .\0.main.out
+OUTPUT 0.main.out
 INPUT ..\logo.png
 INPUT ..\logo.png
 INPUT ..\logo.png
@@ -998,6 +1026,10 @@ INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\pulci\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT .\0.main.toc
+INPUT 0.main.toc
+INPUT 0.main.toc
+INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 OUTPUT 0.main.toc
 INPUT .\1.analisiRequisiti.tex
 OUTPUT 1.analisiRequisiti.aux
@@ -1006,9 +1038,7 @@ INPUT .\1.analisiRequisiti.tex
 INPUT 1.analisiRequisiti.tex
 INPUT .\1.analisiRequisiti.tex
 INPUT 1.analisiRequisiti.tex
-INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
 INPUT .\2.specificaDeiRequisiti.tex
 OUTPUT 2.specificaDeiRequisiti.aux
@@ -1018,6 +1048,7 @@ INPUT 2.specificaDeiRequisiti.tex
 INPUT .\2.specificaDeiRequisiti.tex
 INPUT 2.specificaDeiRequisiti.tex
 INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\pulci\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
 INPUT .\3.AnalisiEProgettazione.tex
 OUTPUT 3.AnalisiEProgettazione.aux
 INPUT .\3.AnalisiEProgettazione.tex

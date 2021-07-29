@@ -1,23 +1,24 @@
 \section{Specifica del problema}
-Si richiede di realizzare un videogioco di tipo musicale ispirato all saga di successo \hyperlink{https://it.wikipedia.org/wiki/Guitar_Hero_(serie)}{Guitar Hero} in cui l'utente impersona un musicista.
-Tale videogioco avrà però come strumento utilizzato solamente il rullante (il principale strumento percussivo in una batteria).
-Tale scelta è guidata dal fatto che il videogioco, oltre a sfidare l'utente così da renderne competitivo l'utilizzo, potrà essere utilizzato per imparare e migliorare la propria tecnica sullo strumento.
+Si richiede di realizzare un software con interfaccia grafica per la gestione dei clienti. Il software in questione terrà traccia dei clienti e delle varie commissioni
+associate ad essi. Dei clienti ci interessano nome, cognome, il numero di telefono e email, mentre per ogni commissione ci interessano
+la data di scadenza e la descrizione.
 
-\medskip
-Il videogioco sarà composto da una schermata iniziale in cui l'utente potrà decidere se iniziare una nuova partita, visualizzare i risultati ottenuti dagli utenti del videogioco o chiudere il programma.
-
-\medskip
-Nel caso in cui l'utente voglia iniziare una nuova partita, verrà reindirizzato nell'opportuna schermata dove verrà richiesto l'inserimento del suo nome (necessario per poter poi memorizzare il punteggio totalizzato della partita), la modalità alla quale si desidera giocare e la velocità di esecuzione iniziale (espressa in \emph{BPM}, battiti per minuto).
-
-\medskip
-Le modalità implementate nel videogioco sono due:
+Il software sarà composto da un menù principale con 4 tab 
 \begin{itemize}
-        \item nella prima modalità, chiamata \emph{combinazioni casuali}, le note sono generate, molto intuitivamente, in maniera casuale, senza nessuna forzatura sul numero di note standard o speciali o sulla loro posizione;
-
-        \item nella seconda modalità, chiamata \emph{mani alternate}, le note generate sono alternate, ovvero se una nota è destra, la successiva sarà sinistra, e così via.
+        \item \textbf{Home:} Questa è la schermata principale con cui si apre il software, all'interno
+        troviamo la lista delle commissioni con scadenza in settimana e la possibilità di modificare
+        e aggiungere commissioni.
+        \item \textbf{Rubrica:} In questa schermata troviamo tutti i contatti %aggiungi la possibilià di selezionare un contatto e aggiungere una commissione veloce
+        salvati %possibilità di mandare un'email al volo?
+        \item \textbf{Commissioni:} Qui possiamo visualizzare tutte le commissioni
+        \item \textbf{Scadenze:} In quest'ultima tab verranno mostrate solo le commissioni non ancora completate %??%
 \end{itemize}
 
+
 \medskip
+
+
+
 Una volta compilati opportunamente i campi della schermata di una nuova partita, verrà mostrata la schermata di gioco con la quale l'utente interagirà.
 Essa sarà composta da un rullante e due bacchette inizialmente alzate. Alla pressione del tasto \textbf{c} e \textbf{n} le bacchette (rispettivamente sinistra e destra) reagiranno all'input dell'utente colpendo il rullante.
 La sequenza di colpi da effettuare verrà rappresentata da immagini rappresentanti note che si muovono lungo due linee che congiungono i due angoli superiori dello schermo sino al rullante.

@@ -38,6 +38,9 @@
     <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -58,8 +61,8 @@
     <Compile Include="Calendario.Designer.cs">
       <DependentUpon>Calendario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Commissione.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Commissione.cs" />
     <Compile Include="CommissioniInScadenza.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +81,7 @@
     <Compile Include="Contatti.Designer.cs">
       <DependentUpon>Contatti.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\DBHandler.cs" />
     <Compile Include="EditorCommissioniInScadenza.cs" />
     <Compile Include="EditorCommissioniTotali.cs" />
     <Compile Include="EditorContatti.cs" />
@@ -96,6 +100,7 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\IDatabase.cs" />
     <Compile Include="ListaClienti.cs" />
     <Compile Include="ModificaDati.cs">
       <SubType>Form</SubType>
@@ -172,5 +177,6 @@
   <ItemGroup>
     <Content Include="Resources\clientManagement.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
