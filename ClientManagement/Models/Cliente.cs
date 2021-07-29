@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ClientManagement
+namespace ClientManagement.Models
 {
     public class Cliente
     {

@@ -15,7 +15,7 @@ namespace ClientManagement
 
         }
 
-        private void Clienti_OnListaCambia(object sender, List<Cliente> list)
+        private void Clienti_OnListaCambia(object sender, List<Models.Cliente> list)
         {
             editor.AggiornaListaContatti(lstContatti);
         }

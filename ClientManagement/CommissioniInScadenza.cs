@@ -22,7 +22,7 @@ namespace ClientManagement
             
         }
 
-        private void Commissioni_OnListaCambia(object sender, List<Cliente> list)
+        private void Commissioni_OnListaCambia(object sender, List<Models.Cliente> list)
         {
             editor.AggiornaListView(lstCommissioniScadenza);
         }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClientManagement
+namespace ClientManagement.Models
 {
     public class Commissione
     {

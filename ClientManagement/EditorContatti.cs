@@ -13,7 +13,7 @@ namespace ClientManagement
             lstContatti.Items.Clear();
             ListViewItem lst;
             string[] arr = new string[5];
-            foreach (Cliente cl in ListaClienti.clienti)
+            foreach (Models.Cliente cl in ListaClienti.clienti)
             {
                 arr[0] = cl.Nome;
                 arr[1] = cl.Cognome;

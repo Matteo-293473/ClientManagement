@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClientManagement.Models;
 
-namespace ClientManagement
+namespace ClientManagement.Database
 {
     interface IDatabase
     {
-        IList<> GetData();
-        void SaveData(IList<> commissioni);
+        IList<Commissione> GetData();
+        void SaveData(IList<Models.Commissione> commissioni);
     }
 }

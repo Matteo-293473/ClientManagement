@@ -16,8 +16,8 @@ namespace ClientManagement
             lstCommissioniScadenza.Items.Clear();
             ListViewItem lst;
             string[] arr = new string[6];
-            foreach (Cliente cl in ListaClienti.clienti)
-                foreach (Commissione cm in cl.Commissioni)
+            foreach (Models.Cliente cl in ListaClienti.clienti)
+                foreach (Models.Commissione cm in cl.Commissioni)
                 {
                     arr[0] = cl.Nome;
                     arr[1] = cl.Cognome;

@@ -41,8 +41,8 @@ namespace ClientManagement.Resources
                 //Cliente = new Cliente(txtNome,txtCognome,txtEmail,txt)
                 //Entry entry = new Entry();
 
-                Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
-                Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text, cm);
+                Models.Commissione cm = new Models.Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
+                Models.Cliente cl = new Models.Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text, cm);
                 ListaClienti.AggiungiAllaLista(cl);
                 // passiamo la nostra entry tra UserControl attraverso eventi
                 //InviaEntry?.Invoke(this, entry);

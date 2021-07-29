@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClientManagement.Models;
 
-namespace ClientManagement.DataBase
+namespace ClientManagement.Database
 {
     class DBHandler : IDatabase
     {
@@ -18,12 +18,15 @@ namespace ClientManagement.DataBase
         {
             if (instance == null)
             {
-                instance = new DBHandler(databaseFile);
+                instance = new DBHandler(databaseFilePath);
             }
 
             return instance;
         }
 
+
+        // Qui applichiamo il pattern Singleton.
+        // Non vogliamo istanziare due volte DBHandler
         protected DBHandler(string datafile)
         {
             DBPath = datafile;
@@ -35,6 +38,8 @@ namespace ClientManagement.DataBase
             try
             {
                 JArray jsonArray = JArray.Parse(File.ReadAllText(DBPath));
+
+                // trasformiamo l'array Json in una lista di commissioni
                 commissioni = jsonArray.ToObject<IList<Commissione>>();
             }
             catch (Exception)
@@ -48,11 +53,10 @@ namespace ClientManagement.DataBase
         public void SaveData(IList<Models.Commissione> commissioni)
         {
             JArray commissioniArray = new JArray(
-                commissioni.Select(i => new JObject
+                commissioni.Select(c => new JObject
                 {
-                    {" "},
-                    {" "},
-                    {" "},
+                    {"Descrizione", c.Descrizione},
+                    {"Scadenza", c.Scadenza},
                 })
             );
 

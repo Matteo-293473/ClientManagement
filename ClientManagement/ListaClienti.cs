@@ -6,9 +6,9 @@ namespace ClientManagement
     public static class ListaClienti
     {
         // sistemare con proprieta
-        public static List<Cliente> clienti = new List<Cliente>();
-        public static event EventHandler<List<Cliente>> OnListaCambia;
-        public static void AggiungiAllaLista(Cliente cl)
+        public static List<Models.Cliente> clienti = new List<Models.Cliente>();
+        public static event EventHandler<List<Models.Cliente>> OnListaCambia;
+        public static void AggiungiAllaLista(Models.Cliente cl)
         {
             clienti.Add(cl);
 
