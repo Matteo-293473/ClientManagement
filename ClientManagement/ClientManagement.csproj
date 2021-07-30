@@ -102,6 +102,7 @@
     </Compile>
     <Compile Include="Database\IDatabase.cs" />
     <Compile Include="ListaClienti.cs" />
+    <Compile Include="Models\CommissionManger.cs" />
     <Compile Include="ModificaDati.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +176,7 @@
     <None Include="Resources\appbar.home.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="db.txt" />
     <Content Include="Resources\clientManagement.png" />
   </ItemGroup>
   <ItemGroup />

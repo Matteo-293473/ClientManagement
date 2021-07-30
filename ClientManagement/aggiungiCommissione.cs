@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Windows.Forms;
+using ClientManagement.Models;
 
 namespace ClientManagement.Resources
 {
@@ -42,8 +44,14 @@ namespace ClientManagement.Resources
                 //Entry entry = new Entry();
 
                 Models.Commissione cm = new Models.Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
-                Models.Cliente cl = new Models.Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text, cm);
-                ListaClienti.AggiungiAllaLista(cl);
+                Models.Cliente cl = new Models.Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text);
+
+                
+                // aggiungo commissione e cliente al managerCommissioni al cliente
+                Models.CommissionManager.AggiungiClienteCommissione(cl,cm);
+              
+
+                
                 // passiamo la nostra entry tra UserControl attraverso eventi
                 //InviaEntry?.Invoke(this, entry);
                 editor.ResetFields();

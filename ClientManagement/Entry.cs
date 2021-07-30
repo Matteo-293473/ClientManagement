@@ -2,9 +2,9 @@
 {
     public class Entry
     {
-        private Cliente cl;
+        private Models.Cliente cl;
 
-        public Entry(Cliente cl)
+        public Entry(Models.Cliente cl)
         {
            // this.cl = cl;
            // this.cm = cm;

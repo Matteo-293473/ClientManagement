@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ClientManagement.Database;
 
 namespace ClientManagement
 {
@@ -7,8 +8,10 @@ namespace ClientManagement
     {
 
         private HandlerClientManagement editor;
-        public ClientManagement()
+        private readonly IDatabase db;
+        public ClientManagement(IDatabase db)
         {
+            this.db = db;
             InitializeComponent();
             editor = new HandlerClientManagement(btnHome, btnRubrica, btnCommissioni, btnScadenze, pnlSideMenu);
             editor.ColoreSelezione(btnHome, pnlSideMenu);

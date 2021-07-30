@@ -1,4 +1,6 @@
 ﻿
+using ClientManagement.Models;
+
 namespace ClientManagement
 {
     partial class CommissioniInScadenza

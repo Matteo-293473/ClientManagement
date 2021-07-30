@@ -7,7 +7,7 @@ using ClientManagement.Models;
 
 namespace ClientManagement.Database
 {
-    interface IDatabase
+    public interface IDatabase
     {
         IList<Commissione> GetData();
         void SaveData(IList<Models.Commissione> commissioni);

@@ -13,7 +13,8 @@ namespace ClientManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClientManagement());
+            Application.Run(new ClientManagement(
+                Database.DBHandler.GetInstance(@"C:\Users\pulci\Documents\progetto oop\ClientManagement\ClientManagement\db.txt")));
         }
     }
 }

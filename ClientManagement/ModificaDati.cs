@@ -7,20 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientManagement.Models;
 
 namespace ClientManagement
 {
     public partial class ModificaDati : Form
     {
-        public ModificaDati(string nome, string cognome, string email, string numeroTelefono, string scadenza, string descrizione)
+        public ModificaDati(Commissione commissione)
         {
             InitializeComponent();
-            txtNome.Text = nome;
-            txtCognome.Text = cognome;
-            cmbEmail.Text = email;
-            txtNumeroTelefono.Text = numeroTelefono;
-            dtpScadenza.Text = scadenza;
-            txtDescrizioneCommissione.Text = descrizione;
+            //txtNome.Text = cliente.Nome;
+            //txtCognome.Text = cliente.Cognome;
+            //cmbEmail.Text = cliente.Email;
+            //txtNumeroTelefono.Text = cliente.Numero;
+            //dtpScadenza.Value = cliente.Commissioni[numeroCommissione].Scadenza;
+            //txtDescrizioneCommissione.Text = cliente.Commissioni[numeroCommissione].Descrizione;
 
             // aggiungere un editor handler che va a popolare i campi 
             // editor.PopolaCampi();
