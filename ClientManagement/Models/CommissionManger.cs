@@ -10,7 +10,7 @@ namespace ClientManagement.Models
     {
         //private static CommissionManager instance = null;
         public static Dictionary<Cliente, List<Commissione>> clienteCommissioni = new Dictionary<Cliente, List<Commissione>>();
-        private static List<Commissione> commissioni = new List<Commissione>();
+        //private static List<Commissione> commissioni = new List<Commissione>();
 
         public static event EventHandler<Dictionary<Cliente, List<Commissione>>> OnClienteCommissioniCambia;
 
@@ -33,14 +33,17 @@ namespace ClientManagement.Models
 
         public static void AggiungiClienteCommissione(Cliente cl, Commissione cm)
         {
+            List<Commissione> commissioni = new List<Commissione>();
+
             if (clienteCommissioni.ContainsKey(cl))
             {
-                commissioni.Add(cm);
-                clienteCommissioni.Add(cl, commissioni);
+                
+                //clienteCommissioni.Add(cl, commissioni);
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
             }
             else
             {
+                
                 commissioni.Add(cm);
                 clienteCommissioni.Add(cl, commissioni);
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
