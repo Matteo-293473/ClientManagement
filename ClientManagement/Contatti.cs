@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ClientManagement.Models;
 
 namespace ClientManagement
 {
@@ -10,12 +11,12 @@ namespace ClientManagement
         public Contatti()
         {
             InitializeComponent();
-            ListaClienti.OnListaCambia += Clienti_OnListaCambia;
+            CommissionManager.OnClienteCommissioniCambia += Clienti_OnListaCambia;
             editor = new EditorContatti();
 
         }
 
-        private void Clienti_OnListaCambia(object sender, List<Models.Cliente> list)
+        private void Clienti_OnListaCambia(object sender, Dictionary<Cliente, List<Commissione>> clienteCommissioni)
         {
             editor.AggiornaListaContatti(lstContatti);
         }

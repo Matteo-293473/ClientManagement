@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using ClientManagement.Models;
 
 namespace ClientManagement
 {
@@ -13,12 +14,12 @@ namespace ClientManagement
             lstContatti.Items.Clear();
             ListViewItem lst;
             string[] arr = new string[5];
-            foreach (Models.Cliente cl in ListaClienti.clienti)
+            foreach (var i in CommissionManager.clienteCommissioni)
             {
-                arr[0] = cl.Nome;
-                arr[1] = cl.Cognome;
-                arr[2] = cl.Email;
-                arr[3] = cl.Numero;
+                arr[0] = i.Key.Nome;
+                arr[1] = i.Key.Cognome;
+                arr[2] = i.Key.Email;
+                arr[3] = i.Key.Numero;
                 lst = new ListViewItem(arr);
                 //se l'item non esiste allora lo inseriamo
                 //if (!lstCommissioniScadenza.Items.ContainsKey(cl.Numero.ToString()))
@@ -28,3 +29,4 @@ namespace ClientManagement
         }
     }
 }
+

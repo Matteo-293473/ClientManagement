@@ -9,10 +9,6 @@ namespace ClientManagement
     {
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {
-            // rimuoviamo gli elementi presenti
-            //lstCommissioniScadenza.Items.Clear();
-            var date = DateTime.Now;
-            var nextSunday = date.AddDays(7 - (int)date.DayOfWeek);
 
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
@@ -31,7 +27,7 @@ namespace ClientManagement
                     arr[4] = cm.Descrizione;
                     arr[5] = cm.Scadenza.ToString();
                     lst = new ListViewItem(arr);
-
+                    lstCommissioniScadenza.Items.Add(lst);
 
                 }
             }
