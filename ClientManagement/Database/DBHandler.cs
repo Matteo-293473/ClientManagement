@@ -32,31 +32,37 @@ namespace ClientManagement.Database
             DBPath = datafile;
         }
 
-        public IList<Models.Commissione> GetData()
+        public IDictionary<Cliente, List<Commissione>> GetData()
         {
-            IList<Commissione> commissioni = null;
+            IDictionary<Cliente, List<Commissione>> clienteCommissioni = null;
             try
             {
                 JArray jsonArray = JArray.Parse(File.ReadAllText(DBPath));
 
-                // trasformiamo l'array Json in una lista di commissioni
-                commissioni = jsonArray.ToObject<IList<Commissione>>();
+                // trasformiamo l'array Json in un dizionario cliente, commissioni
+                clienteCommissioni = jsonArray.ToObject<IDictionary<Cliente, List<Commissione>>>();
             }
             catch (Exception)
             {
-                commissioni = new List<Commissione>();
+                clienteCommissioni = new Dictionary<Cliente, List<Commissione>>();
             }
 
-            return commissioni;
+            return clienteCommissioni;
         }
 
-        public void SaveData(IList<Models.Commissione> commissioni)
+        public void SaveData(IDictionary<Cliente, List<Commissione>> clienteCommissioni)
         {
             JArray commissioniArray = new JArray(
-                commissioni.Select(c => new JObject
+                clienteCommissioni.Select(c => new JObject
                 {
-                    {"Descrizione", c.Descrizione},
-                    {"Scadenza", c.Scadenza},
+
+                        {"Nome", c.Key.Nome},
+                        {"Cognome",c.Key.Cognome},
+                        {"Email",c.Key.Email},
+                        {"Numero",c.Key.Numero},
+                        //{"Descrizione", c.Descrizione},
+                        //{"Scadenza", c.Scadenza},
+
                 })
             );
 
@@ -64,3 +70,5 @@ namespace ClientManagement.Database
         }
     }
 }
+
+

@@ -9,7 +9,7 @@ namespace ClientManagement.Database
 {
     public interface IDatabase
     {
-        IList<Commissione> GetData();
-        void SaveData(IList<Models.Commissione> commissioni);
+        IDictionary<Cliente,List<Commissione>> GetData();
+        void SaveData(IDictionary<Cliente, List<Commissione>> commissioni);
     }
 }
