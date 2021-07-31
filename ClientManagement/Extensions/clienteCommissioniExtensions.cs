@@ -38,8 +38,8 @@ namespace ClientManagement.Extensions
                     lst = new ListViewItem(arr);
 
                     //se l'item non esiste allora lo inseriamo
-                    if (cm.Scadenza < nextSunday)
-                        //lstCommissioniScadenza.Items.Add(lst);
+                    if (cm.Scadenza < nextSunday) ;
+                    //lstCommissioniScadenza.Items.Add(lst);
 
                 }
             }
