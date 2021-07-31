@@ -64,29 +64,29 @@
     <Compile Include="Extensions\clienteCommissioniExtensions.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Commissione.cs" />
-    <Compile Include="CommissioniInScadenza.cs">
+    <Compile Include="Home\CommissioniInScadenza.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CommissioniInScadenza.Designer.cs">
+    <Compile Include="Home\CommissioniInScadenza.Designer.cs">
       <DependentUpon>CommissioniInScadenza.cs</DependentUpon>
     </Compile>
-    <Compile Include="CommissioniTotali.cs">
+    <Compile Include="CommissioniTotali\CommissioniTotali.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CommissioniTotali.Designer.cs">
+    <Compile Include="CommissioniTotali\CommissioniTotali.Designer.cs">
       <DependentUpon>CommissioniTotali.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contatti.cs">
+    <Compile Include="Contatti\Contatti.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Contatti.Designer.cs">
+    <Compile Include="Contatti\Contatti.Designer.cs">
       <DependentUpon>Contatti.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DBHandler.cs" />
-    <Compile Include="EditorCommissioniInScadenza.cs" />
-    <Compile Include="EditorCommissioniTotali.cs" />
-    <Compile Include="EditorContatti.cs" />
-    <Compile Include="EditorHandlerAggiungiCommissione.cs" />
+    <Compile Include="Home\EditorCommissioniInScadenza.cs" />
+    <Compile Include="CommissioniTotali\EditorCommissioniTotali.cs" />
+    <Compile Include="Contatti\EditorContatti.cs" />
+    <Compile Include="Home\EditorHandlerAggiungiCommissione.cs" />
     <Compile Include="ClientManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,10 +94,10 @@
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="HandlerClientManagement.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="Home\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Home\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\IDatabase.cs" />
@@ -111,28 +111,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="aggiungiCommissione.cs">
+    <Compile Include="Home\aggiungiCommissione.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="aggiungiCommissione.Designer.cs">
+    <Compile Include="Home\aggiungiCommissione.Designer.cs">
       <DependentUpon>aggiungiCommissione.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Calendario.resx">
       <DependentUpon>Calendario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CommissioniInScadenza.resx">
+    <EmbeddedResource Include="Home\CommissioniInScadenza.resx">
       <DependentUpon>CommissioniInScadenza.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CommissioniTotali.resx">
+    <EmbeddedResource Include="CommissioniTotali\CommissioniTotali.resx">
       <DependentUpon>CommissioniTotali.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Contatti.resx">
+    <EmbeddedResource Include="Contatti\Contatti.resx">
       <DependentUpon>Contatti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="Home\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificaDati.resx">
@@ -143,7 +143,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="aggiungiCommissione.resx">
+    <EmbeddedResource Include="Home\aggiungiCommissione.resx">
       <DependentUpon>aggiungiCommissione.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DiagrammaClassi.cd" />
