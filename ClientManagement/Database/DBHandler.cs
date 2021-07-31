@@ -50,21 +50,30 @@ namespace ClientManagement.Database
             return clienteCommissioni;
         }
 
+
+
         public void SaveData(IDictionary<Cliente, List<Commissione>> clienteCommissioni)
         {
-            JArray commissioniArray = new JArray(
-                clienteCommissioni.Select(c => new JObject
+            JArray commissioniArray = new JArray();
+
+            foreach (var i in Models.CommissionManager.clienteCommissioni)
+            {
+                List<Commissione> temp = i.Value;
+                foreach (Commissione cm in temp)
                 {
+                    commissioniArray.Add(new JObject
+                    {
 
-                        {"Nome", c.Key.Nome},
-                        {"Cognome",c.Key.Cognome},
-                        {"Email",c.Key.Email},
-                        {"Numero",c.Key.Numero},
-                        //{"Descrizione", c.Descrizione},
-                        //{"Scadenza", c.Scadenza},
+                        {"Nome", i.Key.Nome},
+                        {"Cognome", i.Key.Cognome},
+                        {"Email", i.Key.Email},
+                        {"Numero", i.Key.Numero},
+                        {"Descrizione", cm.Descrizione},
+                        {"Scadenza", cm.Scadenza},
 
-                })
-            );
+                    });
+                }
+            }
 
             File.WriteAllText(DBPath, commissioniArray.ToString());
         }

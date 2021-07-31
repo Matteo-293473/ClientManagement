@@ -10,38 +10,39 @@ namespace ClientManagement.Extensions
 {
     public static class clienteCommissioniExtensions
     {
+        // prendiamo il dizionario, scorporiamo ogni singola commissione e la inseriamo all'interno della listview
         public static ListViewItem ToListViewItem(Dictionary<Cliente, List<Commissione>> clienteCommissioni)
         {
-            //ListViewItem lstCommissioniScadenza = new ListViewItem();
-            //// rimuoviamo gli elementi presenti
-            ////lstCommissioniScadenza.Items.Clear();
-            //var date = DateTime.Now;
-            //var nextSunday = date.AddDays(7 - (int)date.DayOfWeek);
+            ListViewItem lstCommissioniScadenza = new ListViewItem();
+            // rimuoviamo gli elementi presenti
+            //lstCommissioniScadenza.Items.Clear();
+            var date = DateTime.Now;
+            var nextSunday = date.AddDays(7 - (int)date.DayOfWeek);
 
-            //// inseriamo ogni commissione all'interno della tabella
-            //ListViewItem lst;
-            //string[] arr = new string[6];
+            // inseriamo ogni commissione all'interno della tabella
+            ListViewItem lst;
+            string[] arr = new string[6];
 
-            //foreach (var i in Models.CommissionManager.clienteCommissioni)
-            //{
-            //    List<Commissione> temp = i.Value;
-            //    foreach (Commissione cm in temp)
-            //    {
+            foreach (var i in Models.CommissionManager.clienteCommissioni)
+            {
+                List<Commissione> temp = i.Value;
+                foreach (Commissione cm in temp)
+                {
 
-            //        arr[0] = i.Key.Nome;
-            //        arr[1] = i.Key.Cognome;
-            //        arr[2] = i.Key.Email;
-            //        arr[3] = i.Key.Numero;
-            //        arr[4] = cm.Descrizione;
-            //        arr[5] = cm.Scadenza.ToString();
-            //        lst = new ListViewItem(arr);
+                    arr[0] = i.Key.Nome;
+                    arr[1] = i.Key.Cognome;
+                    arr[2] = i.Key.Email;
+                    arr[3] = i.Key.Numero;
+                    arr[4] = cm.Descrizione;
+                    arr[5] = cm.Scadenza.ToString();
+                    lst = new ListViewItem(arr);
 
-            //        //se l'item non esiste allora lo inseriamo
-            //        if (cm.Scadenza < nextSunday)
-            //            lstCommissioniScadenza.Items.Add(lst);
+                    //se l'item non esiste allora lo inseriamo
+                    if (cm.Scadenza < nextSunday)
+                        //lstCommissioniScadenza.Items.Add(lst);
 
-            //    }
-            //}
+                }
+            }
             return new ListViewItem();
 
         }
