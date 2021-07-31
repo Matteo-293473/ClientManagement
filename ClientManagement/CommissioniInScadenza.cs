@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
+using ClientManagement.Database;
 using ClientManagement.Models;
 
 namespace ClientManagement
 {
     public partial class CommissioniInScadenza : UserControl
     {
-        private readonly EditorCommissioniInScadenza editor;
+        //private IDictionary<Cliente, List<Commissione>> clienteCommissioni = new Dictionary<Cliente, List<Commissione>>();
+        //private readonly IDatabase db;
 
+        private readonly EditorCommissioniInScadenza editor;
+       
         public CommissioniInScadenza()
         {
             InitializeComponent();
 
-            
+            //this.db = db;
+            //LoadStorage();
 
             editor = new EditorCommissioniInScadenza();
             //ci mettiamo in ascolto di qualche evento
@@ -22,6 +28,35 @@ namespace ClientManagement
             CommissionManager.OnClienteCommissioniCambia += Commissioni_OnListaCambia;
             
         }
+
+
+        //private void LoadStorage()
+        //{
+        //    clienteCommissioni = db.GetData();
+        //    this.lstCommissioniScadenza.Clear();
+        //    string[] arr = new string[6];
+        //    ListViewItem lst;
+        //    foreach (var i in Models.CommissionManager.clienteCommissioni)
+        //    {
+        //        List<Commissione> temp = i.Value;
+        //        foreach (Commissione cm in temp)
+        //        {
+
+        //            arr[0] = i.Key.Nome;
+        //            arr[1] = i.Key.Cognome;
+        //            arr[2] = i.Key.Email;
+        //            arr[3] = i.Key.Numero;
+        //            arr[4] = cm.Descrizione;
+        //            arr[5] = cm.Scadenza.ToString();
+        //            lst = new ListViewItem(arr);
+
+                   
+        //           lstCommissioniScadenza.Items.Add(lst);
+
+        //        }
+        //    }
+        //}
+
 
         private void Commissioni_OnListaCambia(object sender, Dictionary<Cliente, List<Commissione>> clienteCommissioni)
         {

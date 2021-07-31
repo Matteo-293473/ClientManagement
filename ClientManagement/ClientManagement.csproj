@@ -61,6 +61,7 @@
     <Compile Include="Calendario.Designer.cs">
       <DependentUpon>Calendario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\clienteCommissioniExtensions.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Commissione.cs" />
     <Compile Include="CommissioniInScadenza.cs">
@@ -92,7 +93,6 @@
     <Compile Include="ClientManagement.Designer.cs">
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entry.cs" />
     <Compile Include="HandlerClientManagement.cs" />
     <Compile Include="Home.cs">
       <SubType>UserControl</SubType>

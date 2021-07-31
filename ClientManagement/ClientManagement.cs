@@ -1,21 +1,23 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ClientManagement.Database;
+using ClientManagement.Models;
 
 namespace ClientManagement
 {
     public partial class ClientManagement : Form
     {
-
         private HandlerClientManagement editor;
-        private readonly IDatabase db;
-        public ClientManagement(IDatabase db)
+        public ClientManagement()
         {
-            this.db = db;
             InitializeComponent();
             editor = new HandlerClientManagement(btnHome, btnRubrica, btnCommissioni, btnScadenze, pnlSideMenu);
             editor.ColoreSelezione(btnHome, pnlSideMenu);
         }
+
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
