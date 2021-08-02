@@ -17,7 +17,15 @@ namespace ClientManagement.Resources
             InitializeComponent();
             editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, cmbEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
             //ListaClienti.OnListaCambia += Clienti_OnListaCambia;
+            CommissionManager.OnClienteCommissioniCambia += AggiungiCommissione_OnListaCambia;
         }
+
+        private void AggiungiCommissione_OnListaCambia(object sender, Dictionary<Cliente, List<Commissione>> clienteCommissioni)
+        {
+            cmbCliente.Items.Clear();
+            editor.CaricaCmbox(cmbCliente);
+        }
+
 
         private void Appari_OnNuovaCommissione(object sender, EventArgs e)
         {
@@ -91,6 +99,16 @@ namespace ClientManagement.Resources
         private void cmbEmail_SelectedIndexChanged(object sender, EventArgs e)
         {
              
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            editor.FillFields(cmbCliente.SelectedItem.ToString());
         }
     }
 }

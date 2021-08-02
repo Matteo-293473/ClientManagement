@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Windows.Forms;
+using ClientManagement.Models;
 
 namespace ClientManagement
 {
@@ -74,6 +75,42 @@ namespace ClientManagement
             else
                 return false;
             
+        }
+
+
+        internal void CaricaCmbox(ComboBox cmb)
+        {
+            foreach (var i in Models.CommissionManager.clienteCommissioni)
+            {
+
+                cmb.Items.Add((i.Key.Nome +" "+ i.Key.Cognome));
+
+            }
+            
+        }
+
+
+        internal void FillFields(string nomeCognome)
+        {
+            // prima resettiamo i campi
+            ResetFields();
+
+            string[] nomeCognomeSplit = nomeCognome.Split(' ');
+            
+            // popoliamo i campi 
+            var clienteFiltrato = CommissionManager.clienteCommissioni.Where(i => (
+                i.Key.Nome == nomeCognomeSplit[0] &&
+                i.Key.Cognome == nomeCognomeSplit[1]))
+                .Select(i => i.Key).First(); //PROBLEMA NON FUNZIONA CON GLI OMONIMI
+            
+                txtNome.Text = clienteFiltrato.Nome;
+                txtCognome.Text = clienteFiltrato.Cognome;
+                cmbEmail.Text = clienteFiltrato.Email;
+                txtNumeroTelefono.Text = clienteFiltrato.Numero;
+
+
+
+
         }
 
         //public void SuggerisciEmail(EventArgs e)
