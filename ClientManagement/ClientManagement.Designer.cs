@@ -38,9 +38,9 @@ namespace ClientManagement
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
             this.home1 = new Home();
-            this.contatti1 = new Contatti();
             this.commissioniTotali1 = new CommissioniTotali();
             this.calendario1 = new Calendario();
+            this.contatti1 = new Contatti.Contatti();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBoxLogo)).BeginInit();
@@ -170,14 +170,6 @@ namespace ClientManagement
             this.home1.Size = new System.Drawing.Size(764, 485);
             this.home1.TabIndex = 2;
             // 
-            // contatti1
-            // 
-            this.contatti1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.contatti1.Location = new System.Drawing.Point(172, 3);
-            this.contatti1.Name = "contatti1";
-            this.contatti1.Size = new System.Drawing.Size(764, 485);
-            this.contatti1.TabIndex = 3;
-            // 
             // commissioniTotali1
             // 
             this.commissioniTotali1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -195,15 +187,23 @@ namespace ClientManagement
             this.calendario1.TabIndex = 5;
             this.calendario1.Load += new System.EventHandler(this.calendario1_Load_1);
             // 
+            // contatti1
+            // 
+            this.contatti1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.contatti1.Location = new System.Drawing.Point(172, 3);
+            this.contatti1.Name = "contatti1";
+            this.contatti1.Size = new System.Drawing.Size(764, 485);
+            this.contatti1.TabIndex = 6;
+            // 
             // ClientManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(931, 483);
+            this.Controls.Add(this.contatti1);
             this.Controls.Add(this.calendario1);
             this.Controls.Add(this.commissioniTotali1);
-            this.Controls.Add(this.contatti1);
             this.Controls.Add(this.home1);
             this.Controls.Add(this.pnlSideMenu);
             this.Name = "ClientManagement";
@@ -225,9 +225,9 @@ namespace ClientManagement
         private System.Windows.Forms.Button btnCommissioni;
         private System.Windows.Forms.Button btnScadenze;
         private Home home1;
-        private Contatti contatti1;
         private CommissioniTotali commissioniTotali1;
         private Calendario calendario1;
+        private Contatti.Contatti contatti1;
     }
 }
 

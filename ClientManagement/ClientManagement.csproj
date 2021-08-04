@@ -61,6 +61,25 @@
     <Compile Include="Calendario.Designer.cs">
       <DependentUpon>Calendario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contatti\AggiungiContatto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contatti\AggiungiContatto.Designer.cs">
+      <DependentUpon>AggiungiContatto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contatti\Contatti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contatti\Contatti.Designer.cs">
+      <DependentUpon>Contatti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contatti\EditorAggiungiContatto.cs" />
+    <Compile Include="Contatti\ListaContatti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contatti\ListaContatti.Designer.cs">
+      <DependentUpon>ListaContatti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\clienteCommissioniExtensions.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Commissione.cs" />
@@ -75,12 +94,6 @@
     </Compile>
     <Compile Include="CommissioniTotali\CommissioniTotali.Designer.cs">
       <DependentUpon>CommissioniTotali.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Contatti\Contatti.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Contatti\Contatti.Designer.cs">
-      <DependentUpon>Contatti.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DBHandler.cs" />
     <Compile Include="Home\EditorCommissioniInScadenza.cs" />
@@ -120,14 +133,20 @@
     <EmbeddedResource Include="Calendario.resx">
       <DependentUpon>Calendario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contatti\AggiungiContatto.resx">
+      <DependentUpon>AggiungiContatto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contatti\Contatti.resx">
+      <DependentUpon>Contatti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contatti\ListaContatti.resx">
+      <DependentUpon>ListaContatti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\CommissioniInScadenza.resx">
       <DependentUpon>CommissioniInScadenza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommissioniTotali\CommissioniTotali.resx">
       <DependentUpon>CommissioniTotali.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Contatti\Contatti.resx">
-      <DependentUpon>Contatti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>

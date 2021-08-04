@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ClientManagement.Contatti
 {
-    public partial class Contatti : UserControl
+    public partial class AggiungiContatto : UserControl
     {
-        public Contatti()
+        public AggiungiContatto()
         {
             InitializeComponent();
+        }
+
+        private void btnIndietro_Click(object sender, EventArgs e)
+        {
+            this.SendToBack();
         }
     }
 }

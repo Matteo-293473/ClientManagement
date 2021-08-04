@@ -72,6 +72,7 @@ namespace ClientManagement.Resources
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(148, 20);
             this.txtCognome.TabIndex = 1;
+            this.txtCognome.TextChanged += new System.EventHandler(this.txtCognome_TextChanged);
             this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCognome_KeyPress);
             // 
             // lblDataScadenza
@@ -114,6 +115,7 @@ namespace ClientManagement.Resources
             this.lblNomeCliente.Size = new System.Drawing.Size(56, 19);
             this.lblNomeCliente.TabIndex = 7;
             this.lblNomeCliente.Text = "Nome:";
+            this.lblNomeCliente.Click += new System.EventHandler(this.lblNomeCliente_Click);
             // 
             // lblCognome
             // 
@@ -125,6 +127,7 @@ namespace ClientManagement.Resources
             this.lblCognome.Size = new System.Drawing.Size(80, 19);
             this.lblCognome.TabIndex = 8;
             this.lblCognome.Text = "Cognome:";
+            this.lblCognome.Click += new System.EventHandler(this.lblCognome_Click);
             // 
             // lblEmail
             // 
@@ -136,6 +139,7 @@ namespace ClientManagement.Resources
             this.lblEmail.Size = new System.Drawing.Size(51, 19);
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "Email:";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblNumero
             // 
@@ -147,6 +151,7 @@ namespace ClientManagement.Resources
             this.lblNumero.Size = new System.Drawing.Size(151, 19);
             this.lblNumero.TabIndex = 12;
             this.lblNumero.Text = "Numero di telefono:";
+            this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
             // 
             // txtNumeroTelefono
             // 

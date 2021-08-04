@@ -117,6 +117,29 @@ namespace ClientManagement.Resources
             editor.ResetFields();
         }
 
-        
+        private void lblCognome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCognome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumero_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNomeCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

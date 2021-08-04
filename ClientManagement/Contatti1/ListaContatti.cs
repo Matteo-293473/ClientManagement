@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ClientManagement.Contatti
 {
-    public partial class Contatti : UserControl
+    public partial class ListaContatti : UserControl
     {
-        public Contatti()
+        public ListaContatti()
         {
             InitializeComponent();
         }
