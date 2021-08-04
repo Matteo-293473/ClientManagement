@@ -54,28 +54,58 @@ namespace ClientManagement
 
         }
 
-        internal void ControllaNumeroTelefono(KeyPressEventArgs e)
+        internal void ControllaNumeri(KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar); 
         }
 
-        internal void ControllaNome(KeyPressEventArgs e)
+        internal void ControllaCaratteri(KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        internal bool ControllaValiditaInput()
+        internal void ControllaValiditaInput()
         {
+            // eliminiamo degli spazi e caratteri indesiderati alla fine dei nomi
+            var nome = txtNome.Text.Split(' ');
+            var cognome = txtCognome.Text.Split(' ');
+            txtNome.Text = nome[0];
+            txtCognome.Text = cognome[0];
+
+
             // controllo degli input
-            if ((txtNumeroTelefono.Text.All(char.IsDigit)) && 
-                (txtNome.Text.All(char.IsLetter))          && 
-                (txtCognome.Text.All(char.IsLetter))       &&
-                (dtpScadenza.Value > DateTime.Now))  // controlliamo che non sia una data passata
-                return true;
-            else
-                return false;
-            
+            if (!txtNumeroTelefono.Text.All(char.IsDigit))
+                throw new Exception("Numero di telefono non valido");
+
+            if (!txtNome.Text.All(char.IsLetter))
+                throw new Exception("Nome non valido, ci sono caratteri errati");
+
+
+            if (!txtCognome.Text.All(char.IsLetter))
+                throw new Exception("Cognome non valido, ci sono caratteri errati");
+
+            if(dtpScadenza.Value < DateTime.Now)  // controlliamo che non sia una data passata
+                throw new Exception("La data non può essere una passata");
+
+
         }
+
+
+        internal void InserisciCommissioneCliente()
+        {
+            // creazione della commissione cm e del cliente cl
+            Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
+            Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text);
+
+            // aggiungo commissione e cliente al managerCommissioni al cliente
+            CommissionManager.AggiungiClienteCommissione(cl, cm);
+        }
+
+
+
+
+
+
 
 
         internal void CaricaCmbox(ComboBox cmb)
@@ -83,30 +113,37 @@ namespace ClientManagement
             foreach (var i in Models.CommissionManager.clienteCommissioni)
             {
 
-                cmb.Items.Add((i.Key.Nome +" "+ i.Key.Cognome));
+                cmb.Items.Add((i.Key.Nome +" "+ i.Key.Cognome +" "+ i.Key.Numero ));
 
             }
             
         }
 
 
-        internal void FillFields(string nomeCognome)
+        internal void FillFields(string nomeCognomeNumero)
         {
             // prima resettiamo i campi
             ResetFields();
 
-            string[] nomeCognomeSplit = nomeCognome.Split(' ');
+            string[] nomeCognomeNumeroSplit = nomeCognomeNumero.Split(' ');
+            
             
             // popoliamo i campi 
+
+            // seleziono la chiave che mi interessa
             var clienteFiltrato = CommissionManager.clienteCommissioni.Where(i => (
-                i.Key.Nome == nomeCognomeSplit[0] &&
-                i.Key.Cognome == nomeCognomeSplit[1]))
-                .Select(i => i.Key).First(); //PROBLEMA NON FUNZIONA CON GLI OMONIMI
+                i.Key.Nome == nomeCognomeNumeroSplit[0] &&
+                i.Key.Cognome == nomeCognomeNumeroSplit[1] && 
+                i.Key.Numero == nomeCognomeNumeroSplit[2]))
+                .Select(i => i.Key).First(); 
+            // al fine di risolvere i problemi con gli omonimi, il cliente viene identificato
+            // da tre campi che ne determinano una sorta di superchiave.
             
-                txtNome.Text = clienteFiltrato.Nome;
-                txtCognome.Text = clienteFiltrato.Cognome;
-                cmbEmail.Text = clienteFiltrato.Email;
-                txtNumeroTelefono.Text = clienteFiltrato.Numero;
+            // popolo i campi attraverso il cliente ricavato
+            txtNome.Text = clienteFiltrato.Nome;
+            txtCognome.Text = clienteFiltrato.Cognome;
+            cmbEmail.Text = clienteFiltrato.Email;
+            txtNumeroTelefono.Text = clienteFiltrato.Numero;
 
 
 

@@ -46,6 +46,7 @@ namespace ClientManagement.Resources
             this.cmbEmail = new System.Windows.Forms.ComboBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dtpScadenza
@@ -53,7 +54,7 @@ namespace ClientManagement.Resources
             this.dtpScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.dtpScadenza.Location = new System.Drawing.Point(277, 367);
             this.dtpScadenza.Name = "dtpScadenza";
-            this.dtpScadenza.Size = new System.Drawing.Size(261, 25);
+            this.dtpScadenza.Size = new System.Drawing.Size(259, 25);
             this.dtpScadenza.TabIndex = 5;
             // 
             // txtNome
@@ -63,6 +64,7 @@ namespace ClientManagement.Resources
             this.txtNome.Size = new System.Drawing.Size(148, 20);
             this.txtNome.TabIndex = 0;
             this.txtNome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtCognome
             // 
@@ -70,13 +72,14 @@ namespace ClientManagement.Resources
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(148, 20);
             this.txtCognome.TabIndex = 1;
+            this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCognome_KeyPress);
             // 
             // lblDataScadenza
             // 
             this.lblDataScadenza.AutoSize = true;
             this.lblDataScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblDataScadenza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDataScadenza.Location = new System.Drawing.Point(273, 345);
+            this.lblDataScadenza.Location = new System.Drawing.Point(273, 340);
             this.lblDataScadenza.Name = "lblDataScadenza";
             this.lblDataScadenza.Size = new System.Drawing.Size(73, 19);
             this.lblDataScadenza.TabIndex = 4;
@@ -84,10 +87,10 @@ namespace ClientManagement.Resources
             // 
             // txtDescrizioneCommissione
             // 
-            this.txtDescrizioneCommissione.Location = new System.Drawing.Point(277, 178);
+            this.txtDescrizioneCommissione.Location = new System.Drawing.Point(277, 154);
             this.txtDescrizioneCommissione.Multiline = true;
             this.txtDescrizioneCommissione.Name = "txtDescrizioneCommissione";
-            this.txtDescrizioneCommissione.Size = new System.Drawing.Size(389, 141);
+            this.txtDescrizioneCommissione.Size = new System.Drawing.Size(389, 162);
             this.txtDescrizioneCommissione.TabIndex = 4;
             // 
             // lblDescrizioneCommissione
@@ -95,7 +98,7 @@ namespace ClientManagement.Resources
             this.lblDescrizioneCommissione.AutoSize = true;
             this.lblDescrizioneCommissione.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblDescrizioneCommissione.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDescrizioneCommissione.Location = new System.Drawing.Point(273, 156);
+            this.lblDescrizioneCommissione.Location = new System.Drawing.Point(273, 132);
             this.lblDescrizioneCommissione.Name = "lblDescrizioneCommissione";
             this.lblDescrizioneCommissione.Size = new System.Drawing.Size(226, 19);
             this.lblDescrizioneCommissione.TabIndex = 6;
@@ -159,9 +162,9 @@ namespace ClientManagement.Resources
             this.btnAggiungiEntry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAggiungiEntry.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAggiungiEntry.Image = global::ClientManagement.Properties.Resources.appbar_add;
-            this.btnAggiungiEntry.Location = new System.Drawing.Point(591, 340);
+            this.btnAggiungiEntry.Location = new System.Drawing.Point(563, 340);
             this.btnAggiungiEntry.Name = "btnAggiungiEntry";
-            this.btnAggiungiEntry.Size = new System.Drawing.Size(75, 57);
+            this.btnAggiungiEntry.Size = new System.Drawing.Size(103, 57);
             this.btnAggiungiEntry.TabIndex = 6;
             this.btnAggiungiEntry.UseVisualStyleBackColor = false;
             this.btnAggiungiEntry.Click += new System.EventHandler(this.btnAggiungiEntry_Click);
@@ -195,12 +198,8 @@ namespace ClientManagement.Resources
             // 
             // cmbCliente
             // 
-            this.cmbCliente.AutoCompleteCustomSource.AddRange(new string[] {
-            "@yahoo.it",
-            "@gmail.com",
-            "@libero.it"});
-            this.cmbCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cmbCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(80, 154);
             this.cmbCliente.Name = "cmbCliente";
@@ -220,11 +219,25 @@ namespace ClientManagement.Resources
             this.lblCliente.Text = "Cliente:";
             this.lblCliente.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReset.Location = new System.Drawing.Point(81, 416);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(94, 38);
+            this.btnReset.TabIndex = 15;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // aggiungiCommissione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.cmbEmail);
@@ -267,5 +280,6 @@ namespace ClientManagement.Resources
         private System.Windows.Forms.ComboBox cmbEmail;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Button btnReset;
     }
 }

@@ -46,27 +46,18 @@ namespace ClientManagement.Resources
         {
             try
             {
-                if (!editor.ControllaValiditaInput())
-                    throw new Exception();
-                //Cliente = new Cliente(txtNome,txtCognome,txtEmail,txt)
-                //Entry entry = new Entry();
+                // controllo input
+                editor.ControllaValiditaInput();
 
-                Models.Commissione cm = new Models.Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
-                Models.Cliente cl = new Models.Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text);
+                // funzione che crea una nuova commissione, nuovo cliente e l'associazione nel dizionario
+                editor.InserisciCommissioneCliente();
 
-                
-                // aggiungo commissione e cliente al managerCommissioni al cliente
-                Models.CommissionManager.AggiungiClienteCommissione(cl,cm);
-              
-
-                
-                // passiamo la nostra entry tra UserControl attraverso eventi
-                //InviaEntry?.Invoke(this, entry);
+                // ripuliamo i campi
                 editor.ResetFields();
             }
             catch(Exception err)
             {
-                System.Windows.Forms.MessageBox.Show("Input errati " + err.Message);
+                MessageBox.Show("Input errati: " + err.Message);
             }
             
         }
@@ -78,7 +69,16 @@ namespace ClientManagement.Resources
 
         private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editor.ControllaNumeroTelefono(e);
+            editor.ControllaNumeri(e);
+        }
+
+        private void txtCognome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            editor.ControllaCaratteri(e);
+        }
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            editor.ControllaCaratteri(e);
         }
 
         private void aggiungiCommissione_Load(object sender, EventArgs e)
@@ -108,7 +108,15 @@ namespace ClientManagement.Resources
 
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // passo l'item selezionato all'interno della comboBox
             editor.FillFields(cmbCliente.SelectedItem.ToString());
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            editor.ResetFields();
+        }
+
+        
     }
 }
