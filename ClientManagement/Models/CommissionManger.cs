@@ -45,15 +45,29 @@ namespace ClientManagement.Models
         {
             List<Commissione> commissioni = new List<Commissione>();
 
-            if (clienteCommissioni.ContainsKey(cl))
+            Cliente c = confrontaChiave(cl);
+
+            if (c == null)
+            {
+                c = new Cliente("nome","cognome","123","123");
+            }
+
+
+            if (c.Nome == cl.Nome && c.Cognome == cl.Cognome && c.Email == cl.Email)
             {
                 
                 // aggiungi cm alla lista delle commissioni del cliente
                 //clienteCommissioni.Add(cl, commissioni);
+                commissioni = clienteCommissioni.Where(s => s.Key.Nome == cl.Nome && 
+                                                            s.Key.Cognome == cl.Cognome && 
+                                                            s.Key.Email == cl.Email)
+                    .Select(s => s.Value)
+                    .First();
+                commissioni.Add(cm);
+                clienteCommissioni[cl] = commissioni;
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
             }
-
-
+            
             else
             {
                 
@@ -61,11 +75,21 @@ namespace ClientManagement.Models
                 clienteCommissioni.Add(cl, commissioni);
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
             }
+            
         }
 
 
+        // PROBLEMA 
+        private static Cliente confrontaChiave(Cliente cl)
+        {
+            return CommissionManager.clienteCommissioni.Where(s =>
+                s.Key.Nome == cl.Nome &&
+                s.Key.Cognome == cl.Cognome &&
+                s.Key.Email == cl.Email).Select(s => s.Key).FirstOrDefault();
 
+            //clienteCommissioni.ContainsKey(cl);
 
+        }
 
         //public class MyClass
         //{
