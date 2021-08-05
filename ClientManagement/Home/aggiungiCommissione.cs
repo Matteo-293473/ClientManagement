@@ -18,7 +18,7 @@ namespace ClientManagement.Resources
             CommissionManager.OnClienteCommissioniCambia += AggiungiCommissione_OnListaCambia;
         }
 
-        private void AggiungiCommissione_OnListaCambia(object sender, Dictionary<Cliente, List<Commissione>> clienteCommissioni)
+        private void AggiungiCommissione_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
         {
             cmbCliente.Items.Clear();
             editor.CaricaCmbox(cmbCliente);

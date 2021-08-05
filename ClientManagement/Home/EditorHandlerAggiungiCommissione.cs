@@ -80,12 +80,11 @@ namespace ClientManagement
             foreach (var i in Models.CommissionManager.clienteCommissioni)
             {
 
-                cmb.Items.Add((i.Key.Nome +" "+ i.Key.Cognome +" "+ i.Key.Numero ));
+                cmb.Items.Add((CommissionManager.clienti[i.Key].Nome + " " + CommissionManager.clienti[i.Key].Cognome + " "+ CommissionManager.clienti[i.Key].Numero));
 
             }
             
         }
-
 
         internal void FillFields(string nomeCognomeNumero)
         {
@@ -99,18 +98,18 @@ namespace ClientManagement
 
             // seleziono la chiave che mi interessa
             var clienteFiltrato = CommissionManager.clienteCommissioni.Where(i => (
-                i.Key.Nome == nomeCognomeNumeroSplit[0] &&
-                i.Key.Cognome == nomeCognomeNumeroSplit[1] && 
-                i.Key.Numero == nomeCognomeNumeroSplit[2]))
+                    CommissionManager.clienti[i.Key].Nome == nomeCognomeNumeroSplit[0] &&
+                    CommissionManager.clienti[i.Key].Cognome == nomeCognomeNumeroSplit[1] &&
+                    CommissionManager.clienti[i.Key].Email == nomeCognomeNumeroSplit[2]))
                 .Select(i => i.Key).First(); 
             // al fine di risolvere i problemi con gli omonimi, il cliente viene identificato
             // da tre campi che ne determinano una sorta di superchiave.
             
             // popolo i campi attraverso il cliente trovato
-            txtNome.Text = clienteFiltrato.Nome;
-            txtCognome.Text = clienteFiltrato.Cognome;
-            cmbEmail.Text = clienteFiltrato.Email;
-            txtNumeroTelefono.Text = clienteFiltrato.Numero;
+            txtNome.Text = CommissionManager.clienti[clienteFiltrato].Nome;
+            txtCognome.Text = CommissionManager.clienti[clienteFiltrato].Cognome;
+            cmbEmail.Text = CommissionManager.clienti[clienteFiltrato].Email;
+            txtNumeroTelefono.Text = CommissionManager.clienti[clienteFiltrato].Numero;
 
 
 

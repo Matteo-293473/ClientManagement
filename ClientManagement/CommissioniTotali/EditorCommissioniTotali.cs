@@ -20,10 +20,10 @@ namespace ClientManagement
                 foreach (Commissione cm in temp)
                 {
 
-                    arr[0] = i.Key.Nome;
-                    arr[1] = i.Key.Cognome;
-                    arr[2] = i.Key.Email;
-                    arr[3] = i.Key.Numero;
+                    arr[0] = CommissionManager.clienti[i.Key].Nome;
+                    arr[1] = CommissionManager.clienti[i.Key].Cognome;
+                    arr[2] = CommissionManager.clienti[i.Key].Email;
+                    arr[3] = CommissionManager.clienti[i.Key].Numero;
                     arr[4] = cm.Descrizione;
                     arr[5] = cm.Scadenza.ToString();
                     lst = new ListViewItem(arr);

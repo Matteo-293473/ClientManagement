@@ -16,10 +16,10 @@ namespace ClientManagement
             string[] arr = new string[5];
             foreach (var i in CommissionManager.clienteCommissioni)
             {
-                arr[0] = i.Key.Nome;
-                arr[1] = i.Key.Cognome;
-                arr[2] = i.Key.Email;
-                arr[3] = i.Key.Numero;
+                arr[0] = CommissionManager.clienti[i.Key].Nome;
+                arr[1] = CommissionManager.clienti[i.Key].Cognome;
+                arr[2] = CommissionManager.clienti[i.Key].Email;
+                arr[3] = CommissionManager.clienti[i.Key].Numero;
                 lst = new ListViewItem(arr);
                 //se l'item non esiste allora lo inseriamo
                 //if (!lstCommissioniScadenza.Items.ContainsKey(cl.Numero.ToString()))

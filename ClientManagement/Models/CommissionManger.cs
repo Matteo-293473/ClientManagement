@@ -9,11 +9,16 @@ namespace ClientManagement.Models
     static class CommissionManager
     {
         //private static CommissionManager instance = null;
-        public static Dictionary<Cliente, List<Commissione>> clienteCommissioni = new Dictionary<Cliente, List<Commissione>>();
+        public static Dictionary<int, List<Commissione>> clienteCommissioni = new Dictionary<int, List<Commissione>>();
+
+        public static Dictionary<int, Cliente> clienti = new Dictionary<int, Cliente>();
+        
         //private static List<Commissione> commissioni = new List<Commissione>();
 
-        public static event EventHandler<Dictionary<Cliente, List<Commissione>>> OnClienteCommissioniCambia;
 
+        public static event EventHandler<Dictionary<int, List<Commissione>>> OnClienteCommissioniCambia;
+
+        public static event EventHandler<Dictionary<int, Cliente>> OnClientiCambia;
 
         //public static CommissionManager GetInstance()
         //{
@@ -30,14 +35,17 @@ namespace ClientManagement.Models
         //{
 
         //}
+        private static int value = 0;
 
         //applichiamo l'overload
         public static void AggiungiEntry(Cliente cl)
         {
-            List<Commissione> cm = new List<Commissione>();
-            // aggiungo il cliente ma senza valore
-            clienteCommissioni.Add(cl, cm);
-            OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
+
+            // aggiungo il cliente
+            clienti.Add(value,cl);
+            value += 1;
+            OnClientiCambia?.Invoke(cl, clienti);
+            //OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
         }
 
 
@@ -45,15 +53,11 @@ namespace ClientManagement.Models
         {
             List<Commissione> commissioni = new List<Commissione>();
 
-            Cliente c = confrontaChiave(cl);
+            var c = confrontaChiave(cl);
 
-            if (c == null)
-            {
-                c = new Cliente("nome","cognome","123","123");
-            }
+            
 
-
-            if (c.Nome == cl.Nome && c.Cognome == cl.Cognome && c.Email == cl.Email)
+            if (clienteCommissioni != null)
             {
                 
                 // aggiungi cm alla lista delle commissioni del cliente
@@ -64,6 +68,7 @@ namespace ClientManagement.Models
                     .Select(s => s.Value)
                     .First();
                 commissioni.Add(cm);
+                clienti.Add(value, cl);
                 clienteCommissioni[cl] = commissioni;
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
             }
@@ -72,20 +77,23 @@ namespace ClientManagement.Models
             {
                 
                 commissioni.Add(cm);
-                clienteCommissioni.Add(cl, commissioni);
+                clienti.Add(value, cl);
+                OnClientiCambia?.Invoke(cl, clienti);
+                clienteCommissioni.Add(value, commissioni);
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
+                value += 1;
             }
             
         }
 
 
         // PROBLEMA 
-        private static Cliente confrontaChiave(Cliente cl)
+        private static int confrontaChiave(Cliente cl)
         {
             return CommissionManager.clienteCommissioni.Where(s =>
-                s.Key.Nome == cl.Nome &&
-                s.Key.Cognome == cl.Cognome &&
-                s.Key.Email == cl.Email).Select(s => s.Key).FirstOrDefault();
+                clienti[s.Key].Nome == cl.Nome &&
+                clienti[s.Key].Cognome == cl.Cognome &&
+                clienti[s.Key].Email == cl.Email).Select(s => s.Key).FirstOrDefault();
 
             //clienteCommissioni.ContainsKey(cl);
 
