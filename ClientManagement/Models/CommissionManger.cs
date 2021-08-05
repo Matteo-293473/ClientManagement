@@ -57,19 +57,15 @@ namespace ClientManagement.Models
 
             
 
-            if (clienteCommissioni != null)
+            if (clienteCommissioni.ContainsKey(c))
             {
                 
                 // aggiungi cm alla lista delle commissioni del cliente
                 //clienteCommissioni.Add(cl, commissioni);
-                commissioni = clienteCommissioni.Where(s => s.Key.Nome == cl.Nome && 
-                                                            s.Key.Cognome == cl.Cognome && 
-                                                            s.Key.Email == cl.Email)
-                    .Select(s => s.Value)
-                    .First();
+                commissioni = clienteCommissioni[c];
                 commissioni.Add(cm);
                 clienti.Add(value, cl);
-                clienteCommissioni[cl] = commissioni;
+                clienteCommissioni[c] = commissioni;
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
             }
             
@@ -81,7 +77,7 @@ namespace ClientManagement.Models
                 OnClientiCambia?.Invoke(cl, clienti);
                 clienteCommissioni.Add(value, commissioni);
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
-                value += 1;
+                value += 1; // aggiorno il valore. Autoincrement
             }
             
         }

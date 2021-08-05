@@ -64,10 +64,10 @@ namespace ClientManagement.Database
                     commissioniArray.Add(new JObject
                     {
 
-                        {"Nome", i.Key.Nome},
-                        {"Cognome", i.Key.Cognome},
-                        {"Email", i.Key.Email},
-                        {"Numero", i.Key.Numero},
+                        {"Nome", CommissionManager.clienti[i.Key].Nome},
+                        {"Cognome", CommissionManager.clienti[i.Key].Cognome},
+                        {"Email", CommissionManager.clienti[i.Key].Email},
+                        {"Numero", CommissionManager.clienti[i.Key].Numero},
                         {"Descrizione", cm.Descrizione},
                         {"Scadenza", cm.Scadenza},
 

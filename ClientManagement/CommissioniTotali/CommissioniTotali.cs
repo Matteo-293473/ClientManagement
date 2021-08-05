@@ -17,7 +17,7 @@ namespace ClientManagement
             CommissionManager.OnClienteCommissioniCambia += CommissioniTotali_OnListaCambia;
         }
 
-        private void CommissioniTotali_OnListaCambia(object sender, Dictionary<Cliente, List<Commissione>> clienteCommissioni)
+        private void CommissioniTotali_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
         {
             editor.AggiornaListView(lstCommissioniScadenza);
         }

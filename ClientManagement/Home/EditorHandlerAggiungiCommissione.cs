@@ -100,7 +100,7 @@ namespace ClientManagement
             var clienteFiltrato = CommissionManager.clienteCommissioni.Where(i => (
                     CommissionManager.clienti[i.Key].Nome == nomeCognomeNumeroSplit[0] &&
                     CommissionManager.clienti[i.Key].Cognome == nomeCognomeNumeroSplit[1] &&
-                    CommissionManager.clienti[i.Key].Email == nomeCognomeNumeroSplit[2]))
+                    CommissionManager.clienti[i.Key].Numero == nomeCognomeNumeroSplit[2]))
                 .Select(i => i.Key).First(); 
             // al fine di risolvere i problemi con gli omonimi, il cliente viene identificato
             // da tre campi che ne determinano una sorta di superchiave.
