@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientManagement.Models;
 
 namespace ClientManagement.Contatti
 {
@@ -57,6 +58,17 @@ namespace ClientManagement.Contatti
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+
+        internal virtual void InserisciEntry()
+        {
+            // inserisco il cliente
+            Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text);
+
+            // aggiungo il cliente al dizionario usufruendo dell'overload
+            CommissionManager.AggiungiEntry(cl);
+        }
+
 
 
         // OK

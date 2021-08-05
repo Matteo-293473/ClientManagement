@@ -1,9 +1,7 @@
-﻿using System;
+﻿using ClientManagement.Models;
+using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Drawing;
 using System.Windows.Forms;
-using ClientManagement.Models;
 
 namespace ClientManagement.Resources
 {
@@ -50,21 +48,21 @@ namespace ClientManagement.Resources
                 editor.ControllaValiditaInput();
 
                 // funzione che crea una nuova commissione, nuovo cliente e l'associazione nel dizionario
-                editor.InserisciCommissioneCliente();
+                editor.InserisciEntry();
 
                 // ripuliamo i campi
                 editor.ResetFields();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 MessageBox.Show("Input errati: " + err.Message);
             }
-            
+
         }
 
         private void txtNumeroTelefono_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -98,12 +96,12 @@ namespace ClientManagement.Resources
 
         private void cmbEmail_SelectedIndexChanged(object sender, EventArgs e)
         {
-             
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)

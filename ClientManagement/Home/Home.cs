@@ -14,7 +14,7 @@ namespace ClientManagement
         private void BtnNuovaCommissione(object sender, EventArgs e)
         {
             //btnNuovaCommission.Hide();
-           
+
             aggiungiCommissione1.BringToFront();
         }
 

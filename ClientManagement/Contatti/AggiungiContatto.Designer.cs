@@ -96,6 +96,7 @@ namespace ClientManagement.Contatti
             this.btnAggiungiEntry.Size = new System.Drawing.Size(165, 56);
             this.btnAggiungiEntry.TabIndex = 20;
             this.btnAggiungiEntry.UseVisualStyleBackColor = false;
+            this.btnAggiungiEntry.Click += new System.EventHandler(this.btnAggiungiEntry_Click);
             // 
             // lblNumero
             // 
@@ -110,10 +111,11 @@ namespace ClientManagement.Contatti
             // 
             // txtNumeroTelefono
             // 
-            this.txtNumeroTelefono.Location = new System.Drawing.Point(96, 319);
+            this.txtNumeroTelefono.Location = new System.Drawing.Point(97, 319);
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(148, 20);
             this.txtNumeroTelefono.TabIndex = 19;
+            this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTelefono_KeyPress);
             // 
             // lblEmail
             // 
@@ -154,6 +156,7 @@ namespace ClientManagement.Contatti
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(148, 20);
             this.txtCognome.TabIndex = 17;
+            this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCognome_KeyPress);
             // 
             // txtNome
             // 
@@ -161,6 +164,7 @@ namespace ClientManagement.Contatti
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(148, 20);
             this.txtNome.TabIndex = 16;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // lstContatti
             // 

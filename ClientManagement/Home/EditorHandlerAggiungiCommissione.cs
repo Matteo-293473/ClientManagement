@@ -60,14 +60,14 @@ namespace ClientManagement
 
 
 
-        internal void InserisciCommissioneCliente()
+        internal override void InserisciEntry()
         {
             // creazione della commissione cm e del cliente cl
             Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
             Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text);
 
             // aggiungo commissione e cliente al managerCommissioni al cliente
-            CommissionManager.AggiungiClienteCommissione(cl, cm);
+            CommissionManager.AggiungiEntry(cl, cm);
         }
 
 

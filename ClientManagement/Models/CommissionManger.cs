@@ -31,16 +31,29 @@ namespace ClientManagement.Models
 
         //}
 
-        public static void AggiungiClienteCommissione(Cliente cl, Commissione cm)
+        //applichiamo l'overload
+        public static void AggiungiEntry(Cliente cl)
+        {
+            List<Commissione> cm = new List<Commissione>();
+            // aggiungo il cliente ma senza valore
+            clienteCommissioni.Add(cl, cm);
+            OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
+        }
+
+
+        public static void AggiungiEntry(Cliente cl, Commissione cm)
         {
             List<Commissione> commissioni = new List<Commissione>();
 
             if (clienteCommissioni.ContainsKey(cl))
             {
                 
+                // aggiungi cm alla lista delle commissioni del cliente
                 //clienteCommissioni.Add(cl, commissioni);
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
             }
+
+
             else
             {
                 
