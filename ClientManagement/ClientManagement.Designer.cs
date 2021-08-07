@@ -206,6 +206,8 @@ namespace ClientManagement
             this.Controls.Add(this.commissioniTotali1);
             this.Controls.Add(this.home1);
             this.Controls.Add(this.pnlSideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ClientManagement";
             this.Text = "ClientManagement";
             this.Load += new System.EventHandler(this.Form1_Load);

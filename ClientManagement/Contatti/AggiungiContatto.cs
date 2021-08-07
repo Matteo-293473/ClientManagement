@@ -25,9 +25,9 @@ namespace ClientManagement.Contatti
             
             // il secondo permette di richiamare il metodo aggiornaListaContatti
             editorContatti = new EditorContatti();
-            CommissionManager.OnClienteCommissioniCambia += AggiungiContatto_OnListaCambia;
+            CommissionManager.OnClientiCambia += AggiungiContatto_OnListaCambia;
         }
-        private void AggiungiContatto_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
+        private void AggiungiContatto_OnListaCambia(object sender, Dictionary<int, Cliente> clienteCommissioni)
         {
             editorContatti.AggiornaListaContatti(lstContatti);
         }

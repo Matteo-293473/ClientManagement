@@ -17,11 +17,12 @@ namespace ClientManagement.Contatti
         public ListaContatti()
         {
             InitializeComponent();
-            CommissionManager.OnClienteCommissioniCambia += Clienti_OnListaCambia;
+            // ci iscriviamo all'evento della lista clienti
+            CommissionManager.OnClientiCambia += Clienti_OnListaCambia;
             editor = new EditorContatti();
         }
 
-        private void Clienti_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
+        private void Clienti_OnListaCambia(object sender, Dictionary<int, Cliente> clienti)
         {
             editor.AggiornaListaContatti(lstContatti);
         }

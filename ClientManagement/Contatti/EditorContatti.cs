@@ -14,12 +14,12 @@ namespace ClientManagement
             lstContatti.Items.Clear();
             ListViewItem lst;
             string[] arr = new string[5];
-            foreach (var i in CommissionManager.clienteCommissioni)
+            foreach (var i in CommissionManager.clienti)
             {
                 arr[0] = CommissionManager.clienti[i.Key].Nome;
                 arr[1] = CommissionManager.clienti[i.Key].Cognome;
-                arr[2] = CommissionManager.clienti[i.Key].Email;
-                arr[3] = CommissionManager.clienti[i.Key].Numero;
+                arr[2] = CommissionManager.clienti[i.Key].Numero;
+                arr[3] = CommissionManager.clienti[i.Key].Email;
                 lst = new ListViewItem(arr);
                 //se l'item non esiste allora lo inseriamo
                 //if (!lstCommissioniScadenza.Items.ContainsKey(cl.Numero.ToString()))
