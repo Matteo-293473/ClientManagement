@@ -13,12 +13,12 @@ namespace ClientManagement.Resources
         public aggiungiCommissione()
         {
             InitializeComponent();
-            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, cmbEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
+            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
             //ListaClienti.OnListaCambia += Clienti_OnListaCambia;
-            CommissionManager.OnClienteCommissioniCambia += AggiungiCommissione_OnListaCambia;
+            CommissionManager.OnClientiCambia += AggiungiContatto_OnListaCambia;
         }
 
-        private void AggiungiCommissione_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
+        private void AggiungiContatto_OnListaCambia(object sender, Dictionary<int, Cliente> clienteCommissioni)
         {
             cmbCliente.Items.Clear();
             editor.CaricaCmbox(cmbCliente);

@@ -21,7 +21,7 @@ namespace ClientManagement.Contatti
             
             // carico due editor che alleggeriscono il codice della classe
             // il primo si occupa della verifica e inserimento dei dati
-            editorAggiungiContatti = new EditorAggiungiContatto(txtNome, txtCognome, cmbEmail, txtNumeroTelefono);
+            editorAggiungiContatti = new EditorAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
             
             // il secondo permette di richiamare il metodo aggiornaListaContatti
             editorContatti = new EditorContatti();
@@ -71,5 +71,7 @@ namespace ClientManagement.Contatti
                 MessageBox.Show("Input errati: " + err.Message);
             }
         }
+
+
     }
 }

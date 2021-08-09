@@ -31,7 +31,6 @@ namespace ClientManagement.Contatti
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AggiungiContatto));
             this.btnReset = new System.Windows.Forms.Button();
-            this.cmbEmail = new System.Windows.Forms.ComboBox();
             this.btnIndietro = new System.Windows.Forms.Button();
             this.btnAggiungiEntry = new System.Windows.Forms.Button();
             this.lblNumero = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@ namespace ClientManagement.Contatti
             this.clmNumero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnModifica = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnReset
@@ -57,23 +57,9 @@ namespace ClientManagement.Contatti
             this.btnReset.Location = new System.Drawing.Point(91, 373);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(95, 56);
-            this.btnReset.TabIndex = 26;
+            this.btnReset.TabIndex = 5;
             this.btnReset.Text = "RESET";
             this.btnReset.UseVisualStyleBackColor = false;
-            // 
-            // cmbEmail
-            // 
-            this.cmbEmail.AutoCompleteCustomSource.AddRange(new string[] {
-            "@yahoo.it",
-            "@gmail.com",
-            "@libero.it"});
-            this.cmbEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cmbEmail.FormattingEnabled = true;
-            this.cmbEmail.Location = new System.Drawing.Point(97, 263);
-            this.cmbEmail.Name = "cmbEmail";
-            this.cmbEmail.Size = new System.Drawing.Size(147, 21);
-            this.cmbEmail.TabIndex = 18;
             // 
             // btnIndietro
             // 
@@ -82,7 +68,7 @@ namespace ClientManagement.Contatti
             this.btnIndietro.Location = new System.Drawing.Point(91, 38);
             this.btnIndietro.Name = "btnIndietro";
             this.btnIndietro.Size = new System.Drawing.Size(77, 57);
-            this.btnIndietro.TabIndex = 21;
+            this.btnIndietro.TabIndex = 7;
             this.btnIndietro.UseVisualStyleBackColor = false;
             this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click);
             // 
@@ -94,7 +80,7 @@ namespace ClientManagement.Contatti
             this.btnAggiungiEntry.Location = new System.Drawing.Point(573, 373);
             this.btnAggiungiEntry.Name = "btnAggiungiEntry";
             this.btnAggiungiEntry.Size = new System.Drawing.Size(165, 56);
-            this.btnAggiungiEntry.TabIndex = 20;
+            this.btnAggiungiEntry.TabIndex = 4;
             this.btnAggiungiEntry.UseVisualStyleBackColor = false;
             this.btnAggiungiEntry.Click += new System.EventHandler(this.btnAggiungiEntry_Click);
             // 
@@ -114,7 +100,7 @@ namespace ClientManagement.Contatti
             this.txtNumeroTelefono.Location = new System.Drawing.Point(97, 319);
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(148, 20);
-            this.txtNumeroTelefono.TabIndex = 19;
+            this.txtNumeroTelefono.TabIndex = 3;
             this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTelefono_KeyPress);
             // 
             // lblEmail
@@ -155,7 +141,7 @@ namespace ClientManagement.Contatti
             this.txtCognome.Location = new System.Drawing.Point(97, 205);
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(148, 20);
-            this.txtCognome.TabIndex = 17;
+            this.txtCognome.TabIndex = 1;
             this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCognome_KeyPress);
             // 
             // txtNome
@@ -163,7 +149,7 @@ namespace ClientManagement.Contatti
             this.txtNome.Location = new System.Drawing.Point(97, 146);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(148, 20);
-            this.txtNome.TabIndex = 16;
+            this.txtNome.TabIndex = 0;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // lstContatti
@@ -211,19 +197,26 @@ namespace ClientManagement.Contatti
             this.btnModifica.Location = new System.Drawing.Point(288, 373);
             this.btnModifica.Name = "btnModifica";
             this.btnModifica.Size = new System.Drawing.Size(259, 56);
-            this.btnModifica.TabIndex = 28;
+            this.btnModifica.TabIndex = 6;
             this.btnModifica.Text = "MODIFICA";
             this.btnModifica.UseVisualStyleBackColor = false;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(97, 263);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(148, 20);
+            this.txtEmail.TabIndex = 2;
             // 
             // AggiungiContatto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.lstContatti);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.cmbEmail);
             this.Controls.Add(this.btnIndietro);
             this.Controls.Add(this.btnAggiungiEntry);
             this.Controls.Add(this.lblNumero);
@@ -243,7 +236,6 @@ namespace ClientManagement.Contatti
         #endregion
 
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.ComboBox cmbEmail;
         private System.Windows.Forms.Button btnIndietro;
         private System.Windows.Forms.Button btnAggiungiEntry;
         private System.Windows.Forms.Label lblNumero;
@@ -259,5 +251,6 @@ namespace ClientManagement.Contatti
         private System.Windows.Forms.ColumnHeader clmNumero;
         private System.Windows.Forms.ColumnHeader clmEmail;
         private System.Windows.Forms.Button btnModifica;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

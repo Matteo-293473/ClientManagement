@@ -20,13 +20,13 @@ namespace ClientManagement
 
 
         public EditorHandlerAggiungiCommissione(TextBox txtNome, 
-            TextBox txtCognome, 
-            ComboBox cmbEmail, 
+            TextBox txtCognome,
+            TextBox txtEmail, 
             TextBox txtNumeroTelefono, 
             TextBox txtDescrizioneCommissione, 
             DateTimePicker dtpScadenza) : base(txtNome,
             txtCognome,
-            cmbEmail,
+            txtEmail,
             txtNumeroTelefono)
         {
             this.txtDescrizioneCommissione = txtDescrizioneCommissione;
@@ -50,10 +50,11 @@ namespace ClientManagement
         {
             base.ControllaValiditaInput();
 
-            if (!txtCognome.Text.All(char.IsLetter))
-                throw new Exception("Cognome non valido, ci sono caratteri errati");
 
-            if (dtpScadenza.Value < DateTime.Now)  // controlliamo che non sia una data passata
+            if (String.IsNullOrEmpty(txtDescrizioneCommissione.Text))
+                throw new Exception("Il campo \"descrizione della commissione\" non può essere vuoto");
+
+            if (dtpScadenza.Value <= DateTime.Now)  // controlliamo che non sia una data passata
                 throw new Exception("La data non può essere una passata");
         }
 
@@ -64,7 +65,7 @@ namespace ClientManagement
         {
             // creazione della commissione cm e del cliente cl
             Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
-            Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text);
+            Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text);
 
             // aggiungo commissione e cliente al managerCommissioni al cliente
             CommissionManager.AggiungiEntry(cl, cm);
@@ -77,7 +78,7 @@ namespace ClientManagement
 
         internal void CaricaCmbox(ComboBox cmb)
         {
-            foreach (var i in Models.CommissionManager.clienteCommissioni)
+            foreach (var i in CommissionManager.clienti)
             {
 
                 cmb.Items.Add((CommissionManager.clienti[i.Key].Nome + " " + CommissionManager.clienti[i.Key].Cognome + " "+ CommissionManager.clienti[i.Key].Numero));
@@ -108,7 +109,7 @@ namespace ClientManagement
             // popolo i campi attraverso il cliente trovato
             txtNome.Text = CommissionManager.clienti[clienteFiltrato].Nome;
             txtCognome.Text = CommissionManager.clienti[clienteFiltrato].Cognome;
-            cmbEmail.Text = CommissionManager.clienti[clienteFiltrato].Email;
+            txtEmail.Text = CommissionManager.clienti[clienteFiltrato].Email;
             txtNumeroTelefono.Text = CommissionManager.clienti[clienteFiltrato].Numero;
 
 

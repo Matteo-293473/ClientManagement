@@ -13,12 +13,12 @@ namespace ClientManagement.Contatti
         // diamo la visibilità anche alle classi derivate
         protected TextBox txtNome;
         protected TextBox txtCognome;
-        protected readonly ComboBox cmbEmail;
+        protected TextBox txtEmail;
         protected TextBox txtNumeroTelefono;
 
         public string Nome { get => txtNome.Text; }
         public string Cognome { get => txtCognome.Text; }
-        public string Email { get => cmbEmail.Text; }
+        public string Email { get => txtEmail.Text; }
         public string NumeroTelefono { get => txtNumeroTelefono.Text; }
 
         public List<String> domini = new List<String>()
@@ -31,11 +31,11 @@ namespace ClientManagement.Contatti
         };
 
         //OK
-        public EditorAggiungiContatto(TextBox txtNome, TextBox txtCognome, ComboBox cmbEmail, TextBox txtNumeroTelefono)
+        public EditorAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono)
         {
             this.txtNome = txtNome;
             this.txtCognome = txtCognome;
-            this.cmbEmail = cmbEmail;
+            this.txtEmail = txtEmail;
             this.txtNumeroTelefono = txtNumeroTelefono;
         }
 
@@ -44,7 +44,7 @@ namespace ClientManagement.Contatti
         {
             txtNome.Text = "";
             txtCognome.Text = "";
-            cmbEmail.Text = "";
+            txtEmail.Text = "";
             txtNumeroTelefono.Text = "";
 
         }
@@ -63,7 +63,7 @@ namespace ClientManagement.Contatti
         internal virtual void InserisciEntry()
         {
             // inserisco il cliente
-            Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, cmbEmail.Text);
+            Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text);
 
             // aggiungo il cliente al dizionario usufruendo dell'overload
             CommissionManager.AggiungiEntry(cl);
@@ -80,8 +80,15 @@ namespace ClientManagement.Contatti
             txtNome.Text = nome[0];
             txtCognome.Text = cognome[0];
 
-
             // controllo degli input
+            if (String.IsNullOrEmpty(txtNome.Text) || String.IsNullOrEmpty(txtCognome.Text) ||
+                String.IsNullOrEmpty(txtNumeroTelefono.Text))
+                throw new Exception("Uno dei campi è vuoto");
+
+            if (!txtCognome.Text.All(char.IsLetter))
+                throw new Exception("Cognome non valido, ci sono caratteri errati");
+
+            
             if (!txtNumeroTelefono.Text.All(char.IsDigit))
                 throw new Exception("Numero di telefono non valido");
 

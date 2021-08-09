@@ -86,7 +86,7 @@ namespace ClientManagement.Models
         // PROBLEMA 
         private static int confrontaChiave(Cliente cl)
         {
-            return CommissionManager.clienteCommissioni.Where(s =>
+            return clienteCommissioni.Where(s =>
                 clienti[s.Key].Nome == cl.Nome &&
                 clienti[s.Key].Cognome == cl.Cognome &&
                 clienti[s.Key].Email == cl.Email).Select(s => s.Key).FirstOrDefault();

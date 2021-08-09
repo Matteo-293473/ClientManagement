@@ -43,10 +43,10 @@ namespace ClientManagement.Resources
             this.txtNumeroTelefono = new System.Windows.Forms.TextBox();
             this.btnAggiungiEntry = new System.Windows.Forms.Button();
             this.btnIndietro = new System.Windows.Forms.Button();
-            this.cmbEmail = new System.Windows.Forms.ComboBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dtpScadenza
@@ -181,25 +181,9 @@ namespace ClientManagement.Resources
             this.btnIndietro.Location = new System.Drawing.Point(80, 45);
             this.btnIndietro.Name = "btnIndietro";
             this.btnIndietro.Size = new System.Drawing.Size(77, 57);
-            this.btnIndietro.TabIndex = 7;
+            this.btnIndietro.TabIndex = 8;
             this.btnIndietro.UseVisualStyleBackColor = false;
             this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click_1);
-            // 
-            // cmbEmail
-            // 
-            this.cmbEmail.AutoCompleteCustomSource.AddRange(new string[] {
-            "@yahoo.it",
-            "@gmail.com",
-            "@libero.it"});
-            this.cmbEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cmbEmail.FormattingEnabled = true;
-            this.cmbEmail.Location = new System.Drawing.Point(80, 319);
-            this.cmbEmail.Name = "cmbEmail";
-            this.cmbEmail.Size = new System.Drawing.Size(147, 21);
-            this.cmbEmail.TabIndex = 2;
-            this.cmbEmail.SelectedIndexChanged += new System.EventHandler(this.cmbEmail_SelectedIndexChanged);
-            this.cmbEmail.TextChanged += new System.EventHandler(this.cmbEmail_TextChanged);
             // 
             // cmbCliente
             // 
@@ -209,7 +193,7 @@ namespace ClientManagement.Resources
             this.cmbCliente.Location = new System.Drawing.Point(80, 154);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(147, 21);
-            this.cmbCliente.TabIndex = 13;
+            this.cmbCliente.TabIndex = 9;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
             // 
             // lblCliente
@@ -232,20 +216,27 @@ namespace ClientManagement.Resources
             this.btnReset.Location = new System.Drawing.Point(81, 416);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(94, 38);
-            this.btnReset.TabIndex = 15;
+            this.btnReset.TabIndex = 7;
             this.btnReset.Text = "RESET";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(81, 319);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(148, 20);
+            this.txtEmail.TabIndex = 2;
             // 
             // aggiungiCommissione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cmbCliente);
-            this.Controls.Add(this.cmbEmail);
             this.Controls.Add(this.btnIndietro);
             this.Controls.Add(this.btnAggiungiEntry);
             this.Controls.Add(this.lblNumero);
@@ -282,9 +273,9 @@ namespace ClientManagement.Resources
         private System.Windows.Forms.TextBox txtNumeroTelefono;
         private System.Windows.Forms.Button btnAggiungiEntry;
         private System.Windows.Forms.Button btnIndietro;
-        private System.Windows.Forms.ComboBox cmbEmail;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
