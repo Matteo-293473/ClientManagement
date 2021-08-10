@@ -62,6 +62,9 @@ namespace ClientManagement
 
         internal override void InserisciEntry()
         {
+            // Controllo i caratteri delle textBox nome e cognome
+            CorreggiCaratteri();
+
             // creazione della commissione cm e del cliente cl
             Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
             Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text);

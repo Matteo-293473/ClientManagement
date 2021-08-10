@@ -44,24 +44,15 @@ namespace ClientManagement.Models
         public static void AggiungiEntry(Cliente cl)
         {
             var c = confrontaChiave(cl);
-            try
-            {
-                if (clienti.ContainsKey(c))
-                    throw new Exception("Il cliente è già presente");
 
-                // aggiungo il cliente
-                clienti.Add(value, cl);
-                value += 1;
-                OnClientiCambia?.Invoke(cl, clienti);
-            }
-            catch (Exception)
-            {
+            if (clienti.ContainsKey(c))
+                throw new Exception("Il cliente è già presente");
 
-            }
-
-
-
-            //OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
+            // aggiungo il cliente
+            clienti.Add(value, cl);
+            value += 1;
+            OnClientiCambia?.Invoke(cl, clienti);
+            
         }
 
 
@@ -73,19 +64,29 @@ namespace ClientManagement.Models
 
             if (clienteCommissioni.ContainsKey(c))
             {
-                
+                // se il cliente non esiste nè tra le commissioni nè nella rubrica
+
                 // aggiungi cm alla lista delle commissioni del cliente
                 //clienteCommissioni.Add(cl, commissioni);
                 commissioni = clienteCommissioni[c];
                 commissioni.Add(cm);
-                clienti.Add(value, cl);
                 clienteCommissioni[c] = commissioni;
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
             }
             
-            else
+            else if(clienti.ContainsKey(c))
             {
                 
+                // se il cliente non esiste tra le commissioni ma esiste nella rubrica
+
+                commissioni.Add(cm);
+                clienteCommissioni.Add(c, commissioni);
+                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
+            }
+            else
+            {
+                // se il cliente non esiste
+
                 commissioni.Add(cm);
                 clienti.Add(value, cl);
                 OnClientiCambia?.Invoke(cl, clienti);

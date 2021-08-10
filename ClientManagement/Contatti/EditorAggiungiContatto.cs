@@ -53,14 +53,29 @@ namespace ClientManagement.Contatti
 
         internal virtual void InserisciEntry()
         {
+
+            CorreggiCaratteri();
+
             // inserisco il cliente
             Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text);
 
             // aggiungo il cliente al dizionario usufruendo dell'overload
             CommissionManager.AggiungiEntry(cl);
+            
         }
 
 
+        internal void CorreggiCaratteri()
+        {
+            // Prima lettere maiuscola il resto in minuscolo
+            txtNome.Text = txtNome.Text.ToLower();
+            txtNome.Text = char.ToUpper(txtNome.Text[0])+ txtNome.Text.Substring(1);
+
+            // Stessa cosa per il cognome
+            txtCognome.Text = txtCognome.Text.ToLower();
+            txtCognome.Text = char.ToUpper(txtCognome.Text[0]) + txtCognome.Text.Substring(1);
+
+        }
 
         // OK
         internal virtual void ControllaValiditaInput()
