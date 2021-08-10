@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 
 namespace ClientManagement.Contatti
 {
-    class EditorAggiungiContatto
+    class EditorAggiungiContatto : ControlloCaratteri
     {
         // diamo la visibilità anche alle classi derivate
         protected TextBox txtNome;
@@ -47,16 +48,6 @@ namespace ClientManagement.Contatti
             txtEmail.Text = "";
             txtNumeroTelefono.Text = "";
 
-        }
-
-        internal void ControllaNumeri(KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        internal void ControllaCaratteri(KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
 

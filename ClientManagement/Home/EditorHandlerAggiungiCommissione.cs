@@ -45,7 +45,6 @@ namespace ClientManagement
         }
 
 
-
         internal override void ControllaValiditaInput()
         {
             base.ControllaValiditaInput();
@@ -98,7 +97,7 @@ namespace ClientManagement
             // popoliamo i campi 
 
             // seleziono la chiave che mi interessa
-            var clienteFiltrato = CommissionManager.clienteCommissioni.Where(i => (
+            var clienteFiltrato = CommissionManager.clienti.Where(i => (
                     CommissionManager.clienti[i.Key].Nome == nomeCognomeNumeroSplit[0] &&
                     CommissionManager.clienti[i.Key].Cognome == nomeCognomeNumeroSplit[1] &&
                     CommissionManager.clienti[i.Key].Numero == nomeCognomeNumeroSplit[2]))

@@ -139,5 +139,10 @@ namespace ClientManagement.Resources
         {
 
         }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            editor.ControllaSpazi(e);
+        }
     }
 }

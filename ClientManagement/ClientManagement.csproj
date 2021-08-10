@@ -81,6 +81,7 @@
       <DependentUpon>ListaContatti.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\clienteCommissioniExtensions.cs" />
+    <Compile Include="Extensions\ControlloCaratteri.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Commissione.cs" />
     <Compile Include="Home\CommissioniInScadenza.cs">

@@ -43,11 +43,24 @@ namespace ClientManagement.Models
         //applichiamo l'overload
         public static void AggiungiEntry(Cliente cl)
         {
+            var c = confrontaChiave(cl);
+            try
+            {
+                if (clienti.ContainsKey(c))
+                    throw new Exception("Il cliente è già presente");
 
-            // aggiungo il cliente
-            clienti.Add(value,cl);
-            value += 1;
-            OnClientiCambia?.Invoke(cl, clienti);
+                // aggiungo il cliente
+                clienti.Add(value, cl);
+                value += 1;
+                OnClientiCambia?.Invoke(cl, clienti);
+            }
+            catch (Exception)
+            {
+
+            }
+
+
+
             //OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
         }
 
@@ -84,13 +97,13 @@ namespace ClientManagement.Models
         }
 
 
-        // PROBLEMA 
+
         private static int confrontaChiave(Cliente cl)
         {
-            return clienteCommissioni.Where(s =>
+            return clienti.Where(s =>
                 clienti[s.Key].Nome == cl.Nome &&
                 clienti[s.Key].Cognome == cl.Cognome &&
-                clienti[s.Key].Email == cl.Email).Select(s => s.Key).FirstOrDefault();
+                clienti[s.Key].Numero == cl.Numero).Select(s => s.Key).FirstOrDefault();
             // nel caso in cui il cliente non si trova nella lista clienteCommissioni, viene restituito il valore 0
 
 

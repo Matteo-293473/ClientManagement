@@ -72,6 +72,9 @@ namespace ClientManagement.Contatti
             }
         }
 
-
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            editorAggiungiContatti.ControllaSpazi(e);
+        }
     }
 }
