@@ -35,7 +35,10 @@ namespace ClientManagement.Models
         //{
 
         //}
-        private static int value = 0;
+
+        // facciamo iniziare il valore a 1 perché quando ritorna un valore non trovato il valore è 0
+        private static int value = 1; 
+
 
         //applichiamo l'overload
         public static void AggiungiEntry(Cliente cl)
@@ -54,8 +57,6 @@ namespace ClientManagement.Models
             List<Commissione> commissioni = new List<Commissione>();
 
             var c = confrontaChiave(cl);
-
-            
 
             if (clienteCommissioni.ContainsKey(c))
             {
@@ -90,32 +91,11 @@ namespace ClientManagement.Models
                 clienti[s.Key].Nome == cl.Nome &&
                 clienti[s.Key].Cognome == cl.Cognome &&
                 clienti[s.Key].Email == cl.Email).Select(s => s.Key).FirstOrDefault();
+            // nel caso in cui il cliente non si trova nella lista clienteCommissioni, viene restituito il valore 0
 
-            //clienteCommissioni.ContainsKey(cl);
 
         }
 
-        //public class MyClass
-        //{
-        //    //..attributi membro di istanza....
-        //    private static MyClass _instance = null;
-
-        //    protected MyClass()
-        //    {
-        //        //...inizializzazione istanza...
-        //    }
-
-        //    public static MyClass Instance
-        //    {
-        //        get
-        //        {
-        //            if (_instance == null) _instance = new MyClass();
-        //            return _instance;
-        //        }
-        //    }
-
-        //    //...eventuali metodi pubblici, privati e protetti di istanza....
-        //}
 
     }
 }

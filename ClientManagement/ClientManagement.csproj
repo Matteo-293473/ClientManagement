@@ -115,7 +115,7 @@
     </Compile>
     <Compile Include="Database\IDatabase.cs" />
     <Compile Include="ListaClienti.cs" />
-    <Compile Include="Models\CommissionManger.cs" />
+    <Compile Include="Models\CommissionManager.cs" />
     <Compile Include="ModificaDati.cs">
       <SubType>Form</SubType>
     </Compile>
