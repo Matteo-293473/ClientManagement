@@ -65,7 +65,7 @@ namespace ClientManagement
             // Controllo i caratteri delle textBox nome e cognome
             CorreggiCaratteri();
 
-            // creazione della commissione cm e del cliente cl
+            // creazione della commissione cm e del cliente cl 
             Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
             Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text);
 
@@ -83,7 +83,7 @@ namespace ClientManagement
             foreach (var i in CommissionManager.clienti)
             {
 
-                cmb.Items.Add((CommissionManager.clienti[i.Key].Nome + " " + CommissionManager.clienti[i.Key].Cognome + " "+ CommissionManager.clienti[i.Key].Numero));
+                cmb.Items.Add((CommissionManager.clienti[i.Key].Nome + " " + CommissionManager.clienti[i.Key].Cognome + " " + CommissionManager.clienti[i.Key].Numero));
 
             }
             

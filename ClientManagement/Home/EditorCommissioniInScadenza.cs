@@ -36,7 +36,7 @@ namespace ClientManagement
                     arr[2] = CommissionManager.clienti[i.Key].Email;
                     arr[3] = CommissionManager.clienti[i.Key].Numero;
                     arr[4] = cm.Descrizione;
-                    arr[5] = cm.Scadenza.ToString();
+                    arr[5] = cm.Scadenza.ToString().Substring(0,10); // mostriamo solo la data
                     lst = new ListViewItem(arr);
 
                     //se l'item non esiste allora lo inseriamo
