@@ -10,9 +10,6 @@ namespace ClientManagement.Models
         //public Cliente Cliente { set; get; }
         public DateTime Scadenza { get; set; }
         public string Descrizione { set; get; }
-        
-        private int CodiceCommissione { set; get; }
-
         private bool TaskCompletato { set; get; }
         // identifichiamo il cliente con questi due campi che fungono da chiavi esterne
 

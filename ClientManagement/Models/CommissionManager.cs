@@ -21,15 +21,6 @@ namespace ClientManagement.Models
         public static event EventHandler<Dictionary<int, Cliente>> OnClientiCambia;
 
 
-        //----------------------------------------------------------------
-        // Implementiamo il pattern Memento che ci permette di aggiungere i tasti undo e redo
-        //public CommissionManager creaStato()
-        //{
-
-        //}
-        //----------------------------------------------------------------
-
-
 
         // facciamo iniziare il valore a 1 perché quando ritorna un valore non trovato il valore è 0
         private static int value = 1; 
