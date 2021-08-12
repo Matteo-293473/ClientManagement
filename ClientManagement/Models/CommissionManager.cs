@@ -93,7 +93,23 @@ namespace ClientManagement.Models
                 clienti[s.Key].Numero == cl.Numero).Select(s => s.Key).FirstOrDefault();
             // nel caso in cui il cliente non si trova nella lista clienteCommissioni, viene restituito il valore 0
 
+        }
 
+        public static void ModificaCommissione(int idCommissione, string descrizione, DateTime scadenza)
+        {
+            foreach (var listaCommissioni in CommissionManager.clienteCommissioni.Values)
+            {
+                foreach (var cm in listaCommissioni)
+                {
+                    if (cm.IdCommissione == idCommissione)
+                    {
+                        cm.Scadenza = scadenza;
+                        cm.Descrizione = descrizione;
+                        OnClienteCommissioniCambia?.Invoke(CommissionManager.clienteCommissioni, clienteCommissioni);
+                    }
+
+                }
+            }
         }
 
 

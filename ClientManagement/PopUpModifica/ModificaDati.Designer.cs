@@ -35,6 +35,7 @@ namespace ClientManagement
             this.lblDataScadenza = new System.Windows.Forms.Label();
             this.dtpScadenza = new System.Windows.Forms.DateTimePicker();
             this.cbxTask = new System.Windows.Forms.CheckBox();
+            this.btnModifica = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTaskCompletato
@@ -95,18 +96,33 @@ namespace ClientManagement
             this.cbxTask.TabIndex = 22;
             this.cbxTask.UseVisualStyleBackColor = true;
             // 
+            // btnModifica
+            // 
+            this.btnModifica.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnModifica.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnModifica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnModifica.Location = new System.Drawing.Point(172, 261);
+            this.btnModifica.Name = "btnModifica";
+            this.btnModifica.Size = new System.Drawing.Size(91, 34);
+            this.btnModifica.TabIndex = 23;
+            this.btnModifica.Text = "MODIFICA";
+            this.btnModifica.UseVisualStyleBackColor = false;
+            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
+            // 
             // ModificaDati
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(275, 312);
+            this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.cbxTask);
             this.Controls.Add(this.lblTaskCompletato);
             this.Controls.Add(this.lblDescrizioneCommissione);
             this.Controls.Add(this.txtDescrizioneCommissione);
             this.Controls.Add(this.lblDataScadenza);
             this.Controls.Add(this.dtpScadenza);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ModificaDati";
@@ -126,5 +142,6 @@ namespace ClientManagement
         private System.Windows.Forms.Label lblDataScadenza;
         private System.Windows.Forms.DateTimePicker dtpScadenza;
         private System.Windows.Forms.CheckBox cbxTask;
+        private System.Windows.Forms.Button btnModifica;
     }
 }

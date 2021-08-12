@@ -117,10 +117,11 @@
     <Compile Include="Database\IDatabase.cs" />
     <Compile Include="ListaClienti.cs" />
     <Compile Include="Models\CommissionManager.cs" />
-    <Compile Include="ModificaDati.cs">
+    <Compile Include="PopUpModifica\EditorModificaDati.cs" />
+    <Compile Include="PopUpModifica\ModificaDati.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModificaDati.Designer.cs">
+    <Compile Include="PopUpModifica\ModificaDati.Designer.cs">
       <DependentUpon>ModificaDati.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -155,7 +156,7 @@
     <EmbeddedResource Include="Home\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModificaDati.resx">
+    <EmbeddedResource Include="PopUpModifica\ModificaDati.resx">
       <DependentUpon>ModificaDati.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

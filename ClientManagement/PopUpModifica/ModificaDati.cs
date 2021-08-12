@@ -8,32 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Models;
+using ClientManagement.PopUpModifica;
 
 namespace ClientManagement
 {
     public partial class ModificaDati : Form
     {
+        private EditorModificaDati editor;
+        private int idCommissione;
         public ModificaDati(int idCommissione)
         {
             InitializeComponent();
-
-            //var cm = CommissionManager.clienteCommissioni.Where(s =>
-            //     CommissionManager.clienteCommissioni[s.key] ).Select(s => s.Key).FirstOrDefault();
-
-            foreach (var listaCommissioni in CommissionManager.clienteCommissioni.Values)
-            {
-                foreach (var cm in listaCommissioni)
-                {
-                    if (cm.IdCommissione == idCommissione)
-                    {
-                        dtpScadenza.Value = cm.Scadenza;
-                        txtDescrizioneCommissione.Text = cm.Descrizione;
-                    }
-
-                }
-            }
-
-
+            this.idCommissione = idCommissione;
+            editor = new EditorModificaDati(txtDescrizioneCommissione, dtpScadenza);
+            editor.CaricaDati(idCommissione);
 
             // aggiungere un editor handler che va a popolare i campi 
             // editor.PopolaCampi();
@@ -42,6 +30,12 @@ namespace ClientManagement
         private void ModificaDati_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnModifica_Click(object sender, EventArgs e)
+        {
+            editor.AggiornaCommissione(idCommissione);
+            Close();
         }
     }
 }
