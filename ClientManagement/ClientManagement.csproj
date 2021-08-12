@@ -117,6 +117,13 @@
     <Compile Include="Database\IDatabase.cs" />
     <Compile Include="ListaClienti.cs" />
     <Compile Include="Models\CommissionManager.cs" />
+    <Compile Include="PopUp\ModificaCliente\EditorModificaCliente.cs" />
+    <Compile Include="PopUp\ModificaCliente\ModificaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\ModificaCliente\ModificaCliente.Designer.cs">
+      <DependentUpon>ModificaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUp\ModificaCommissione\EditorModificaCommissione.cs" />
     <Compile Include="PopUp\ModificaCommissione\ModificaCommissione.cs">
       <SubType>Form</SubType>
@@ -155,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\ModificaCliente\ModificaCliente.resx">
+      <DependentUpon>ModificaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp\ModificaCommissione\ModificaCommissione.resx">
       <DependentUpon>ModificaCommissione.cs</DependentUpon>
@@ -200,8 +210,6 @@
     <Content Include="db.txt" />
     <Content Include="Resources\clientManagement.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PopUp\ModificaCliente\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

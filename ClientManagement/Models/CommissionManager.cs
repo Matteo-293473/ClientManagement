@@ -95,16 +95,16 @@ namespace ClientManagement.Models
 
         }
 
-        public static void ModificaCommissione(int idCommissione, string descrizione, DateTime scadenza)
+        public static void ModificaCommissione(Commissione commissione)
         {
             foreach (var listaCommissioni in CommissionManager.clienteCommissioni.Values)
             {
                 foreach (var cm in listaCommissioni)
                 {
-                    if (cm.IdCommissione == idCommissione)
+                    if (cm.IdCommissione == commissione.IdCommissione)
                     {
-                        cm.Scadenza = scadenza;
-                        cm.Descrizione = descrizione;
+                        cm.Scadenza = commissione.Scadenza;
+                        cm.Descrizione = commissione.Descrizione;
                         OnClienteCommissioniCambia?.Invoke(CommissionManager.clienteCommissioni, clienteCommissioni);
                     }
 
@@ -130,5 +130,24 @@ namespace ClientManagement.Models
         }
 
 
+        internal static void ModificaCliente(Cliente cliente)
+        {
+            foreach (var cliente in CommissionManager.clienti.Values)
+            {
+                if (cliente.idCliente == idCliente)
+                {
+                    cliente.Nome = commissione.Scadenza;
+                    cliente.Cognome = commissione.Descrizione;
+                    cliente.Email =
+                        OnClienteCommissioniCambia?.Invoke(CommissionManager.clienti, clienti);
+                }
+            }
+        }
+        public static Cliente RestituisciCliente(int idCliente)
+        {
+            return clienti.Where(c => c.Key == idCliente)
+                .Select(c => c.Value)
+                .FirstOrDefault();
+        }
     }
 }

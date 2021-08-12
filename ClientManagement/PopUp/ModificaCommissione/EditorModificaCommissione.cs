@@ -12,7 +12,7 @@ namespace ClientManagement.PopUpModifica
     {
         private TextBox txtDescrizioneCommissione;
         private DateTimePicker dtpScadenza;
-
+        private Commissione cm;
 
         public string DescrizioneCommissione { get => txtDescrizioneCommissione.Text; }
         public DateTime Scadenza { get => dtpScadenza.Value; }
@@ -28,17 +28,17 @@ namespace ClientManagement.PopUpModifica
         {
 
             // Ci viene restituita la commissione che selezionata
-            Commissione cm = CommissionManager.RestituisciCommissione(idCommissione);
-
+            this.cm = CommissionManager.RestituisciCommissione(idCommissione);
+            
             txtDescrizioneCommissione.Text = cm.Descrizione;
             dtpScadenza.Value = cm.Scadenza;
 
 
         }
 
-        public void AggiornaCommissione(int idCommissione)
+        public void AggiornaCommissione()
         {
-           CommissionManager.ModificaCommissione(idCommissione,txtDescrizioneCommissione.Text, dtpScadenza.Value);
+           CommissionManager.ModificaCommissione(cm);
         }
 
     }

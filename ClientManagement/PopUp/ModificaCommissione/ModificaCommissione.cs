@@ -12,11 +12,11 @@ using ClientManagement.PopUpModifica;
 
 namespace ClientManagement
 {
-    public partial class ModificaDati : Form
+    public partial class ModificaCommissione : Form
     {
         private EditorModificaDati editor;
         private int idCommissione;
-        public ModificaDati(int idCommissione)
+        public ModificaCommissione(int idCommissione)
         {
             InitializeComponent();
             this.idCommissione = idCommissione;
@@ -34,7 +34,7 @@ namespace ClientManagement
 
         private void btnModifica_Click(object sender, EventArgs e)
         {
-            editor.AggiornaCommissione(idCommissione);
+            editor.AggiornaCommissione();
             Close();
         }
     }

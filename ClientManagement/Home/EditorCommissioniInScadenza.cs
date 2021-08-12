@@ -25,7 +25,7 @@ namespace ClientManagement
 
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
-            var popUpModificaDati = new ModificaDati(idCommissione);
+            var popUpModificaDati = new ModificaCommissione(idCommissione);
 
             popUpModificaDati.ShowDialog(commissioniInScadenza);
         }

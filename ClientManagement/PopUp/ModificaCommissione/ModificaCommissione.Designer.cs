@@ -1,7 +1,7 @@
 ﻿
 namespace ClientManagement
 {
-    partial class ModificaDati
+    partial class ModificaCommissione
     {
         /// <summary>
         /// Required designer variable.
@@ -84,7 +84,7 @@ namespace ClientManagement
             this.dtpScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.dtpScadenza.Location = new System.Drawing.Point(16, 41);
             this.dtpScadenza.Name = "dtpScadenza";
-            this.dtpScadenza.Size = new System.Drawing.Size(226, 25);
+            this.dtpScadenza.Size = new System.Drawing.Size(245, 25);
             this.dtpScadenza.TabIndex = 19;
             // 
             // cbxTask
@@ -109,7 +109,7 @@ namespace ClientManagement
             this.btnModifica.UseVisualStyleBackColor = false;
             this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
             // 
-            // ModificaDati
+            // ModificaCommissione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +125,7 @@ namespace ClientManagement
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ModificaDati";
+            this.Name = "ModificaCommissione";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modifica Dati";
