@@ -13,6 +13,24 @@ namespace ClientManagement
 
         }
 
+
+        internal void MostraPopUpModifica(ListView lstCommissioniScadenza, CommissioniInScadenza commissioniInScadenza)
+        {
+            if (lstCommissioniScadenza.Items.Count == 0)
+                throw new Exception("non ci sono elementi da modificare");
+            if (lstCommissioniScadenza.SelectedItems[0] == null)
+                throw new Exception("seleziona una riga");
+            //var descrizione = lstCommissioniScadenza.SelectedItems[0].SubItems[4].Text;
+            //var cm = new Commissione(descrizione, DateTime.Now);
+
+            // recupero l'id della commissione
+            var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
+            var popUpModificaDati = new ModificaDati(idCommissione);
+
+            popUpModificaDati.ShowDialog(commissioniInScadenza);
+        }
+
+
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {
             // rimuoviamo gli elementi presenti
@@ -23,7 +41,7 @@ namespace ClientManagement
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
             ListViewItem lst;
-            string[] arr = new string[6];
+            string[] arr = new string[7];
 
             foreach (var i in Models.CommissionManager.clienteCommissioni)
             {
@@ -37,6 +55,7 @@ namespace ClientManagement
                     arr[3] = CommissionManager.clienti[i.Key].Numero;
                     arr[4] = cm.Descrizione;
                     arr[5] = cm.Scadenza.ToString().Substring(0,10); // mostriamo solo la data
+                    arr[6] = cm.IdCommissione.ToString();
                     lst = new ListViewItem(arr);
 
                     //se l'item non esiste allora lo inseriamo

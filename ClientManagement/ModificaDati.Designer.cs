@@ -107,7 +107,11 @@ namespace ClientManagement
             this.Controls.Add(this.txtDescrizioneCommissione);
             this.Controls.Add(this.lblDataScadenza);
             this.Controls.Add(this.dtpScadenza);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ModificaDati";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ModificaDati";
             this.Load += new System.EventHandler(this.ModificaDati_Load);
             this.ResumeLayout(false);

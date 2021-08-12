@@ -41,6 +41,7 @@ namespace ClientManagement
             this.btnModifica = new System.Windows.Forms.Button();
             this.btnNuovaCommission = new System.Windows.Forms.Button();
             this.lblCommissioniSettimana = new System.Windows.Forms.Label();
+            this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -52,7 +53,8 @@ namespace ClientManagement
             this.clmEmail,
             this.clmNtel,
             this.clmComm,
-            this.clmScadenza});
+            this.clmScadenza,
+            this.clmId});
             this.lstCommissioniScadenza.FullRowSelect = true;
             this.lstCommissioniScadenza.GridLines = true;
             this.lstCommissioniScadenza.HideSelection = false;
@@ -89,7 +91,7 @@ namespace ClientManagement
             // clmComm
             // 
             this.clmComm.Text = "Commissione";
-            this.clmComm.Width = 150;
+            this.clmComm.Width = 122;
             // 
             // clmScadenza
             // 
@@ -137,6 +139,10 @@ namespace ClientManagement
             this.lblCommissioniSettimana.TabIndex = 16;
             this.lblCommissioniSettimana.Text = "Commissioni di questa settimana:";
             // 
+            // clmId
+            // 
+            this.clmId.Text = "IdCommissione";
+            // 
             // CommissioniInScadenza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,5 +172,6 @@ namespace ClientManagement
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Button btnNuovaCommission;
         private System.Windows.Forms.Label lblCommissioniSettimana;
+        private System.Windows.Forms.ColumnHeader clmId;
     }
 }

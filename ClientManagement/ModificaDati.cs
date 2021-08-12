@@ -13,15 +13,27 @@ namespace ClientManagement
 {
     public partial class ModificaDati : Form
     {
-        public ModificaDati(Commissione commissione)
+        public ModificaDati(int idCommissione)
         {
             InitializeComponent();
-            //txtNome.Text = cliente.Nome;
-            //txtCognome.Text = cliente.Cognome;
-            //cmbEmail.Text = cliente.Email;
-            //txtNumeroTelefono.Text = cliente.Numero;
-            //dtpScadenza.Value = cliente.Commissioni[numeroCommissione].Scadenza;
-            //txtDescrizioneCommissione.Text = cliente.Commissioni[numeroCommissione].Descrizione;
+
+            //var cm = CommissionManager.clienteCommissioni.Where(s =>
+            //     CommissionManager.clienteCommissioni[s.key] ).Select(s => s.Key).FirstOrDefault();
+
+            foreach (var listaCommissioni in CommissionManager.clienteCommissioni.Values)
+            {
+                foreach (var cm in listaCommissioni)
+                {
+                    if (cm.IdCommissione == idCommissione)
+                    {
+                        dtpScadenza.Value = cm.Scadenza;
+                        txtDescrizioneCommissione.Text = cm.Descrizione;
+                    }
+
+                }
+            }
+
+
 
             // aggiungere un editor handler che va a popolare i campi 
             // editor.PopolaCampi();

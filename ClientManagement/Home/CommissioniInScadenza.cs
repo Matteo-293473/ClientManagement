@@ -105,9 +105,14 @@ namespace ClientManagement
 
         private void btnModifica_Click(object sender, EventArgs e)
         {
-
-            //var popUpModificaDati = new ModificaDati(, 0);
-            //popUpModificaDati.ShowDialog(this);
+            try
+            {
+                editor.MostraPopUpModifica(lstCommissioniScadenza,this);
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }
