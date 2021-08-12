@@ -47,6 +47,7 @@ namespace ClientManagement.Contatti
             this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnModifica = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.clmIdCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnReset
@@ -158,7 +159,8 @@ namespace ClientManagement.Contatti
             this.clmNome,
             this.clmCognome,
             this.clmNumero,
-            this.clmEmail});
+            this.clmEmail,
+            this.clmIdCliente});
             this.lstContatti.FullRowSelect = true;
             this.lstContatti.GridLines = true;
             this.lstContatti.HideSelection = false;
@@ -182,12 +184,12 @@ namespace ClientManagement.Contatti
             // clmNumero
             // 
             this.clmNumero.Text = "N. Tel.";
-            this.clmNumero.Width = 143;
+            this.clmNumero.Width = 104;
             // 
             // clmEmail
             // 
             this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 120;
+            this.clmEmail.Width = 103;
             // 
             // btnModifica
             // 
@@ -200,6 +202,7 @@ namespace ClientManagement.Contatti
             this.btnModifica.TabIndex = 6;
             this.btnModifica.Text = "MODIFICA";
             this.btnModifica.UseVisualStyleBackColor = false;
+            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
             // 
             // txtEmail
             // 
@@ -208,6 +211,10 @@ namespace ClientManagement.Contatti
             this.txtEmail.Size = new System.Drawing.Size(148, 20);
             this.txtEmail.TabIndex = 2;
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
+            // 
+            // clmIdCliente
+            // 
+            this.clmIdCliente.Text = "id Cliente";
             // 
             // AggiungiContatto
             // 
@@ -253,5 +260,6 @@ namespace ClientManagement.Contatti
         private System.Windows.Forms.ColumnHeader clmEmail;
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.ColumnHeader clmIdCliente;
     }
 }

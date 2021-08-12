@@ -76,5 +76,17 @@ namespace ClientManagement.Contatti
         {
             editorAggiungiContatti.ControllaSpazi(e);
         }
+
+        private void btnModifica_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                editorAggiungiContatti.MostraPopUpModifica(lstContatti, this);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
     }
 }

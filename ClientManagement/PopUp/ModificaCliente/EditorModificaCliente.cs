@@ -43,7 +43,7 @@ namespace ClientManagement.PopUp.ModificaCliente
 
         internal void AggiornaCommissione(int idCliente)
         {
-            CommissionManager.ModificaCliente(idCliente);
+            //CommissionManager.ModificaCliente(idCliente);
         }
     }
 }

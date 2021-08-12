@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 using ClientManagement.Models;
+using ClientManagement.PopUp.ModificaCliente;
 
 namespace ClientManagement.Contatti
 {
@@ -22,14 +23,6 @@ namespace ClientManagement.Contatti
         public string Email { get => txtEmail.Text; }
         public string NumeroTelefono { get => txtNumeroTelefono.Text; }
 
-        public List<String> domini = new List<String>()
-        {
-                "gmail.com",
-                "outlook.com",
-                "live.com",
-                "libero.it",
-                "alice.it.com"
-        };
 
         //OK
         public EditorAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono)
@@ -102,11 +95,22 @@ namespace ClientManagement.Contatti
                 throw new Exception("Nome non valido, ci sono caratteri errati");
 
 
-            
-
         }
 
+        internal void MostraPopUpModifica(ListView lstContatti, AggiungiContatto aggiungiContatto)
+        {
+            if (lstContatti.Items.Count == 0)
+                throw new Exception("non ci sono elementi da modificare");
+            if (lstContatti.SelectedItems[0] == null)
+                throw new Exception("seleziona una riga");
+            //var descrizione = lstCommissioniScadenza.SelectedItems[0].SubItems[4].Text;
+            //var cm = new Commissione(descrizione, DateTime.Now);
 
+            // recupero l'id della commissione
+            var idCliente = Convert.ToInt32(lstContatti.SelectedItems[0].SubItems[5].Text);
+            var popUpModificaCliente = new ModificaCliente(idCliente);
 
+            popUpModificaCliente.ShowDialog(lstContatti);
+        }
     }
 }

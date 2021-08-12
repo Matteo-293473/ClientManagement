@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using ClientManagement.Models;
 
 namespace ClientManagement
@@ -20,6 +21,7 @@ namespace ClientManagement
                 arr[1] = CommissionManager.clienti[i.Key].Cognome;
                 arr[2] = CommissionManager.clienti[i.Key].Numero;
                 arr[3] = CommissionManager.clienti[i.Key].Email;
+                arr[4] = i.Key.ToString(); 
                 lst = new ListViewItem(arr);
                 //se l'item non esiste allora lo inseriamo
                 //if (!lstCommissioniScadenza.Items.ContainsKey(cl.Numero.ToString()))

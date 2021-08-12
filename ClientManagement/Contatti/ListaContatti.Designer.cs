@@ -35,6 +35,7 @@ namespace ClientManagement.Contatti
             this.clmNumero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnNuovoCliente = new System.Windows.Forms.Button();
+            this.clmIdCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstContatti
@@ -43,11 +44,12 @@ namespace ClientManagement.Contatti
             this.clmNome,
             this.clmCognome,
             this.clmNumero,
-            this.clmEmail});
+            this.clmEmail,
+            this.clmIdCliente});
             this.lstContatti.FullRowSelect = true;
             this.lstContatti.GridLines = true;
             this.lstContatti.HideSelection = false;
-            this.lstContatti.Location = new System.Drawing.Point(49, 135);
+            this.lstContatti.Location = new System.Drawing.Point(40, 136);
             this.lstContatti.Name = "lstContatti";
             this.lstContatti.Size = new System.Drawing.Size(660, 291);
             this.lstContatti.TabIndex = 2;
@@ -57,22 +59,22 @@ namespace ClientManagement.Contatti
             // clmNome
             // 
             this.clmNome.Text = "Nome";
-            this.clmNome.Width = 73;
+            this.clmNome.Width = 104;
             // 
             // clmCognome
             // 
             this.clmCognome.Text = "Cognome";
-            this.clmCognome.Width = 111;
+            this.clmCognome.Width = 137;
             // 
             // clmNumero
             // 
             this.clmNumero.Text = "N. Tel.";
-            this.clmNumero.Width = 143;
+            this.clmNumero.Width = 186;
             // 
             // clmEmail
             // 
             this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 120;
+            this.clmEmail.Width = 132;
             // 
             // btnNuovoCliente
             // 
@@ -82,7 +84,7 @@ namespace ClientManagement.Contatti
             this.btnNuovoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuovoCliente.Image = global::ClientManagement.Properties.Resources.appbar_add;
             this.btnNuovoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuovoCliente.Location = new System.Drawing.Point(49, 46);
+            this.btnNuovoCliente.Location = new System.Drawing.Point(40, 45);
             this.btnNuovoCliente.Name = "btnNuovoCliente";
             this.btnNuovoCliente.Size = new System.Drawing.Size(188, 49);
             this.btnNuovoCliente.TabIndex = 15;
@@ -90,6 +92,11 @@ namespace ClientManagement.Contatti
             this.btnNuovoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuovoCliente.UseVisualStyleBackColor = false;
             this.btnNuovoCliente.Click += new System.EventHandler(this.btnNuovoCliente_Click);
+            // 
+            // clmIdCliente
+            // 
+            this.clmIdCliente.Text = "Id Cliente";
+            this.clmIdCliente.Width = 80;
             // 
             // ListaContatti
             // 
@@ -112,5 +119,6 @@ namespace ClientManagement.Contatti
         private System.Windows.Forms.ColumnHeader clmNumero;
         private System.Windows.Forms.ColumnHeader clmEmail;
         private System.Windows.Forms.Button btnNuovoCliente;
+        private System.Windows.Forms.ColumnHeader clmIdCliente;
     }
 }
