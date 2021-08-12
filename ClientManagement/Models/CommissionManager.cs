@@ -112,6 +112,23 @@ namespace ClientManagement.Models
             }
         }
 
+        public static Commissione RestituisciCommissione(int idCommissione)
+        {
+            foreach (var listaCommissioni in CommissionManager.clienteCommissioni.Values)
+            {
+                foreach (var cm in listaCommissioni)
+                {
+                    if (cm.IdCommissione == idCommissione)
+                    {
+                        return cm;
+                    }
+
+                }
+            }
+
+            return null;
+        }
+
 
     }
 }

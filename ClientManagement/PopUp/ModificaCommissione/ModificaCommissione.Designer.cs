@@ -128,7 +128,7 @@ namespace ClientManagement
             this.Name = "ModificaDati";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ModificaDati";
+            this.Text = "Modifica Dati";
             this.Load += new System.EventHandler(this.ModificaDati_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

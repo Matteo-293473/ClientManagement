@@ -37,10 +37,10 @@ namespace ClientManagement
             this.btnHome = new System.Windows.Forms.Button();
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
-            this.home1 = new Home();
-            this.commissioniTotali1 = new CommissioniTotali();
-            this.calendario1 = new Calendario();
             this.contatti1 = new Contatti.Contatti();
+            this.calendario1 = new Calendario();
+            this.commissioniTotali1 = new CommissioniTotali();
+            this.home1 = new Home();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBoxLogo)).BeginInit();
@@ -163,20 +163,13 @@ namespace ClientManagement
             this.PctBoxLogo.TabStop = false;
             this.PctBoxLogo.Click += new System.EventHandler(this.PctBoxLogo_Click);
             // 
-            // home1
+            // contatti1
             // 
-            this.home1.Location = new System.Drawing.Point(172, -2);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(764, 485);
-            this.home1.TabIndex = 2;
-            // 
-            // commissioniTotali1
-            // 
-            this.commissioniTotali1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.commissioniTotali1.Location = new System.Drawing.Point(172, 0);
-            this.commissioniTotali1.Name = "commissioniTotali1";
-            this.commissioniTotali1.Size = new System.Drawing.Size(764, 485);
-            this.commissioniTotali1.TabIndex = 4;
+            this.contatti1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.contatti1.Location = new System.Drawing.Point(172, 3);
+            this.contatti1.Name = "contatti1";
+            this.contatti1.Size = new System.Drawing.Size(764, 485);
+            this.contatti1.TabIndex = 6;
             // 
             // calendario1
             // 
@@ -187,13 +180,20 @@ namespace ClientManagement
             this.calendario1.TabIndex = 5;
             this.calendario1.Load += new System.EventHandler(this.calendario1_Load_1);
             // 
-            // contatti1
+            // commissioniTotali1
             // 
-            this.contatti1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.contatti1.Location = new System.Drawing.Point(172, 3);
-            this.contatti1.Name = "contatti1";
-            this.contatti1.Size = new System.Drawing.Size(764, 485);
-            this.contatti1.TabIndex = 6;
+            this.commissioniTotali1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.commissioniTotali1.Location = new System.Drawing.Point(172, 0);
+            this.commissioniTotali1.Name = "commissioniTotali1";
+            this.commissioniTotali1.Size = new System.Drawing.Size(764, 485);
+            this.commissioniTotali1.TabIndex = 4;
+            // 
+            // home1
+            // 
+            this.home1.Location = new System.Drawing.Point(172, -2);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(764, 485);
+            this.home1.TabIndex = 2;
             // 
             // ClientManagement
             // 
@@ -207,9 +207,10 @@ namespace ClientManagement
             this.Controls.Add(this.home1);
             this.Controls.Add(this.pnlSideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ClientManagement";
-            this.Text = "ClientManagement";
+            this.Text = "Client Management";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.PnlLogo.ResumeLayout(false);

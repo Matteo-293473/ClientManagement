@@ -26,18 +26,14 @@ namespace ClientManagement.PopUpModifica
 
         public void CaricaDati(int idCommissione)
         {
-            foreach (var listaCommissioni in CommissionManager.clienteCommissioni.Values)
-            {
-                foreach (var cm in listaCommissioni)
-                {
-                    if (cm.IdCommissione == idCommissione)
-                    {
-                        dtpScadenza.Value = cm.Scadenza;
-                        txtDescrizioneCommissione.Text = cm.Descrizione;
-                    }
 
-                }
-            }
+            // Ci viene restituita la commissione che selezionata
+            Commissione cm = CommissionManager.RestituisciCommissione(idCommissione);
+
+            txtDescrizioneCommissione.Text = cm.Descrizione;
+            dtpScadenza.Value = cm.Scadenza;
+
+
         }
 
         public void AggiornaCommissione(int idCommissione)
