@@ -107,7 +107,7 @@ namespace ClientManagement.Contatti
             //var cm = new Commissione(descrizione, DateTime.Now);
 
             // recupero l'id della commissione
-            var idCliente = Convert.ToInt32(lstContatti.SelectedItems[0].SubItems[5].Text);
+            var idCliente = Convert.ToInt32(lstContatti.SelectedItems[0].SubItems[4].Text);
             var popUpModificaCliente = new ModificaCliente(idCliente);
 
             popUpModificaCliente.ShowDialog(lstContatti);

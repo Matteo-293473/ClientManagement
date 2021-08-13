@@ -130,24 +130,23 @@ namespace ClientManagement.Models
         }
 
 
-        //internal static void ModificaCliente(Cliente cliente)
-        //{
-        //    foreach (var cliente in CommissionManager.clienti.Values)
-        //    {
-                //if (cliente.idCliente == idCliente)
-                //{
-                //    cliente.Nome = commissione.Scadenza;
-                //    cliente.Cognome = commissione.Descrizione;
-                //    cliente.Email = ;
-                //        OnClienteCommissioniCambia?.Invoke(CommissionManager.clienti, clienti);
-                //}
-        //    }
-        //}
+        internal static void ModificaCliente(Cliente cliente,int idCliente)
+        {
+            clienti[idCliente].Nome = cliente.Nome;
+            clienti[idCliente].Cognome = cliente.Cognome;
+            clienti[idCliente].Email = cliente.Email;
+            clienti[idCliente].Numero = cliente.Numero;
+            OnClientiCambia?.Invoke(cliente, clienti);
+        }
+
+
         public static Cliente RestituisciCliente(int idCliente)
         {
             return clienti.Where(c => c.Key == idCliente)
                 .Select(c => c.Value)
                 .FirstOrDefault();
         }
+
+
     }
 }

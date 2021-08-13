@@ -14,13 +14,13 @@ namespace ClientManagement
 {
     public partial class ModificaCommissione : Form
     {
-        private EditorModificaDati editor;
+        private EditorModificaCommissione editor;
         private int idCommissione;
         public ModificaCommissione(int idCommissione)
         {
             InitializeComponent();
             this.idCommissione = idCommissione;
-            editor = new EditorModificaDati(txtDescrizioneCommissione, dtpScadenza);
+            editor = new EditorModificaCommissione(txtDescrizioneCommissione, dtpScadenza);
             editor.CaricaDati(idCommissione);
 
             // aggiungere un editor handler che va a popolare i campi 

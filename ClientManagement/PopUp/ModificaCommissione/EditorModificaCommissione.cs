@@ -8,7 +8,7 @@ using ClientManagement.Models;
 
 namespace ClientManagement.PopUpModifica
 {
-    class EditorModificaDati
+    class EditorModificaCommissione
     {
         private TextBox txtDescrizioneCommissione;
         private DateTimePicker dtpScadenza;
@@ -18,7 +18,7 @@ namespace ClientManagement.PopUpModifica
         public DateTime Scadenza { get => dtpScadenza.Value; }
 
 
-        public EditorModificaDati(TextBox txtDescrizioneCommissione, DateTimePicker dtpScadenza) 
+        public EditorModificaCommissione(TextBox txtDescrizioneCommissione, DateTimePicker dtpScadenza) 
         {
             this.txtDescrizioneCommissione = txtDescrizioneCommissione;
             this.dtpScadenza = dtpScadenza;
@@ -27,7 +27,7 @@ namespace ClientManagement.PopUpModifica
         public void CaricaDati(int idCommissione)
         {
 
-            // Ci viene restituita la commissione che selezionata
+            // Ci viene restituita la commissione selezionata
             this.cm = CommissionManager.RestituisciCommissione(idCommissione);
             
             txtDescrizioneCommissione.Text = cm.Descrizione;

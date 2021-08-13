@@ -22,6 +22,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             InitializeComponent();
             this.idCliente = idCliente;
             editorAggiungiContatti = new EditorAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
+            editor = new EditorModificaCliente(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
             editor.CaricaDati(idCliente);
         }
 
