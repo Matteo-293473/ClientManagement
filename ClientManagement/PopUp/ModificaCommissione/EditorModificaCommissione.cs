@@ -38,7 +38,10 @@ namespace ClientManagement.PopUpModifica
 
         public void AggiornaCommissione()
         {
-           CommissionManager.ModificaCommissione(cm);
+            // aggiorno i campi
+            cm.Descrizione = txtDescrizioneCommissione.Text;
+            cm.Scadenza = dtpScadenza.Value;
+            CommissionManager.ModificaCommissione(cm);
         }
 
     }

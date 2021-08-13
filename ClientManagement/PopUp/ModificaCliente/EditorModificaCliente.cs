@@ -43,6 +43,11 @@ namespace ClientManagement.PopUp.ModificaCliente
 
         internal void AggiornaCommissione(int idCliente)
         {
+            // aggiorno i campi
+            cl.Nome = txtNome.Text;
+            cl.Cognome = txtCognome.Text;
+            cl.Email = txtEmail.Text;
+            cl.Numero = txtNumeroTelefono.Text;
             CommissionManager.ModificaCliente(cl, idCliente);
         }
     }
