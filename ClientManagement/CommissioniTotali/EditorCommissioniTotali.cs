@@ -13,7 +13,7 @@ namespace ClientManagement
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
             ListViewItem lst;
-            string[] arr = new string[6];
+            string[] arr = new string[8];
             foreach (var i in Models.CommissionManager.clienteCommissioni)
             {
                 List<Commissione> temp = i.Value;
@@ -25,7 +25,9 @@ namespace ClientManagement
                     arr[2] = CommissionManager.clienti[i.Key].Email;
                     arr[3] = CommissionManager.clienti[i.Key].Numero;
                     arr[4] = cm.Descrizione;
-                    arr[5] = cm.Scadenza.ToString();
+                    arr[5] = cm.Scadenza.ToString().Substring(0, 10); // mostriamo solo la data
+                    arr[6] = cm.IdCommissione.ToString();
+                    arr[7] = cm.TaskCompletato? "sì" : "no";
                     lst = new ListViewItem(arr);
                     lstCommissioniScadenza.Items.Add(lst);
 

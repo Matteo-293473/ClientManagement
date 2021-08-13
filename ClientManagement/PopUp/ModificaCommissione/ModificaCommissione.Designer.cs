@@ -95,6 +95,7 @@ namespace ClientManagement
             this.cbxTask.Size = new System.Drawing.Size(15, 14);
             this.cbxTask.TabIndex = 22;
             this.cbxTask.UseVisualStyleBackColor = true;
+            this.cbxTask.CheckedChanged += new System.EventHandler(this.cbxTask_CheckedChanged);
             // 
             // btnModifica
             // 

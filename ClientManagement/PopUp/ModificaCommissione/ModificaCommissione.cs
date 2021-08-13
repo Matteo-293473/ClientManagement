@@ -20,7 +20,7 @@ namespace ClientManagement
         {
             InitializeComponent();
             this.idCommissione = idCommissione;
-            editor = new EditorModificaCommissione(txtDescrizioneCommissione, dtpScadenza);
+            editor = new EditorModificaCommissione(txtDescrizioneCommissione, dtpScadenza,cbxTask);
             editor.CaricaDati(idCommissione);
 
             // aggiungere un editor handler che va a popolare i campi 
@@ -36,6 +36,11 @@ namespace ClientManagement
         {
             editor.AggiornaCommissione();
             Close();
+        }
+
+        private void cbxTask_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

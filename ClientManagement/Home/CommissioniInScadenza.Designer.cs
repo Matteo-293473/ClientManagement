@@ -38,10 +38,10 @@ namespace ClientManagement
             this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnModifica = new System.Windows.Forms.Button();
             this.btnNuovaCommission = new System.Windows.Forms.Button();
             this.lblCommissioniSettimana = new System.Windows.Forms.Label();
-            this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -91,12 +91,16 @@ namespace ClientManagement
             // clmComm
             // 
             this.clmComm.Text = "Commissione";
-            this.clmComm.Width = 122;
+            this.clmComm.Width = 106;
             // 
             // clmScadenza
             // 
             this.clmScadenza.Text = "Scadenza";
-            this.clmScadenza.Width = 68;
+            this.clmScadenza.Width = 62;
+            // 
+            // clmId
+            // 
+            this.clmId.Text = "Id";
             // 
             // btnModifica
             // 
@@ -138,10 +142,6 @@ namespace ClientManagement
             this.lblCommissioniSettimana.Size = new System.Drawing.Size(245, 19);
             this.lblCommissioniSettimana.TabIndex = 16;
             this.lblCommissioniSettimana.Text = "Commissioni di questa settimana:";
-            // 
-            // clmId
-            // 
-            this.clmId.Text = "IdCommissione";
             // 
             // CommissioniInScadenza
             // 

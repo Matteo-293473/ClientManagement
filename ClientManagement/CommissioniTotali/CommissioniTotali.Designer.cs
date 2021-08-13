@@ -36,6 +36,8 @@ namespace ClientManagement
             this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmCompletato = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -47,13 +49,15 @@ namespace ClientManagement
             this.clmEmail,
             this.clmNtel,
             this.clmComm,
-            this.clmScadenza});
+            this.clmScadenza,
+            this.clmId,
+            this.clmCompletato});
             this.lstCommissioniScadenza.FullRowSelect = true;
             this.lstCommissioniScadenza.GridLines = true;
             this.lstCommissioniScadenza.HideSelection = false;
-            this.lstCommissioniScadenza.Location = new System.Drawing.Point(50, 132);
+            this.lstCommissioniScadenza.Location = new System.Drawing.Point(40, 94);
             this.lstCommissioniScadenza.Name = "lstCommissioniScadenza";
-            this.lstCommissioniScadenza.Size = new System.Drawing.Size(650, 314);
+            this.lstCommissioniScadenza.Size = new System.Drawing.Size(678, 313);
             this.lstCommissioniScadenza.TabIndex = 1;
             this.lstCommissioniScadenza.UseCompatibleStateImageBehavior = false;
             this.lstCommissioniScadenza.View = System.Windows.Forms.View.Details;
@@ -61,34 +65,44 @@ namespace ClientManagement
             // clmNome
             // 
             this.clmNome.Text = "Nome";
-            this.clmNome.Width = 80;
+            this.clmNome.Width = 77;
             // 
             // clmCognome
             // 
             this.clmCognome.Text = "Cognome";
-            this.clmCognome.Width = 100;
+            this.clmCognome.Width = 95;
             // 
             // clmEmail
             // 
             this.clmEmail.DisplayIndex = 3;
             this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 120;
+            this.clmEmail.Width = 92;
             // 
             // clmNtel
             // 
             this.clmNtel.DisplayIndex = 2;
             this.clmNtel.Text = "N. Tel.";
-            this.clmNtel.Width = 125;
+            this.clmNtel.Width = 93;
             // 
             // clmComm
             // 
             this.clmComm.Text = "Commissione";
-            this.clmComm.Width = 150;
+            this.clmComm.Width = 125;
             // 
             // clmScadenza
             // 
             this.clmScadenza.Text = "Scadenza";
-            this.clmScadenza.Width = 68;
+            this.clmScadenza.Width = 70;
+            // 
+            // clmId
+            // 
+            this.clmId.Text = "id";
+            this.clmId.Width = 54;
+            // 
+            // clmCompletato
+            // 
+            this.clmCompletato.Text = "Completato";
+            this.clmCompletato.Width = 70;
             // 
             // CommissioniTotali
             // 
@@ -112,5 +126,7 @@ namespace ClientManagement
         private System.Windows.Forms.ColumnHeader clmNtel;
         private System.Windows.Forms.ColumnHeader clmComm;
         private System.Windows.Forms.ColumnHeader clmScadenza;
+        private System.Windows.Forms.ColumnHeader clmId;
+        private System.Windows.Forms.ColumnHeader clmCompletato;
     }
 }

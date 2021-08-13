@@ -12,16 +12,18 @@ namespace ClientManagement.PopUpModifica
     {
         private TextBox txtDescrizioneCommissione;
         private DateTimePicker dtpScadenza;
+        private CheckBox cbxTask;
         private Commissione cm;
 
         public string DescrizioneCommissione { get => txtDescrizioneCommissione.Text; }
         public DateTime Scadenza { get => dtpScadenza.Value; }
 
 
-        public EditorModificaCommissione(TextBox txtDescrizioneCommissione, DateTimePicker dtpScadenza) 
+        public EditorModificaCommissione(TextBox txtDescrizioneCommissione, DateTimePicker dtpScadenza,CheckBox cbxTask) 
         {
             this.txtDescrizioneCommissione = txtDescrizioneCommissione;
             this.dtpScadenza = dtpScadenza;
+            this.cbxTask = cbxTask;
         }
 
         public void CaricaDati(int idCommissione)
@@ -41,6 +43,7 @@ namespace ClientManagement.PopUpModifica
             // aggiorno i campi
             cm.Descrizione = txtDescrizioneCommissione.Text;
             cm.Scadenza = dtpScadenza.Value;
+            cm.TaskCompletato = cbxTask.Checked;
             CommissionManager.ModificaCommissione(cm);
         }
 
