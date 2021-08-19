@@ -38,9 +38,9 @@ namespace ClientManagement
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
             this.contatti1 = new Contatti.Contatti();
-            this.calendario1 = new Calendario();
             this.commissioniTotali1 = new CommissioniTotali();
             this.home1 = new Home();
+            this.listaCommissioniDaFare1 = new Scadenze.ListaCommissioniDaFare();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctBoxLogo)).BeginInit();
@@ -171,15 +171,6 @@ namespace ClientManagement
             this.contatti1.Size = new System.Drawing.Size(764, 485);
             this.contatti1.TabIndex = 6;
             // 
-            // calendario1
-            // 
-            this.calendario1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.calendario1.Location = new System.Drawing.Point(172, -2);
-            this.calendario1.Name = "calendario1";
-            this.calendario1.Size = new System.Drawing.Size(764, 485);
-            this.calendario1.TabIndex = 5;
-            this.calendario1.Load += new System.EventHandler(this.calendario1_Load_1);
-            // 
             // commissioniTotali1
             // 
             this.commissioniTotali1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -195,14 +186,22 @@ namespace ClientManagement
             this.home1.Size = new System.Drawing.Size(764, 485);
             this.home1.TabIndex = 2;
             // 
+            // listaCommissioniDaFare1
+            // 
+            this.listaCommissioniDaFare1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.listaCommissioniDaFare1.Location = new System.Drawing.Point(172, 0);
+            this.listaCommissioniDaFare1.Name = "listaCommissioniDaFare1";
+            this.listaCommissioniDaFare1.Size = new System.Drawing.Size(764, 485);
+            this.listaCommissioniDaFare1.TabIndex = 7;
+            // 
             // ClientManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(931, 483);
+            this.Controls.Add(this.listaCommissioniDaFare1);
             this.Controls.Add(this.contatti1);
-            this.Controls.Add(this.calendario1);
             this.Controls.Add(this.commissioniTotali1);
             this.Controls.Add(this.home1);
             this.Controls.Add(this.pnlSideMenu);
@@ -229,8 +228,8 @@ namespace ClientManagement
         private System.Windows.Forms.Button btnScadenze;
         private Home home1;
         private CommissioniTotali commissioniTotali1;
-        private Calendario calendario1;
         private Contatti.Contatti contatti1;
+        private Scadenze.ListaCommissioniDaFare listaCommissioniDaFare1;
     }
 }
 

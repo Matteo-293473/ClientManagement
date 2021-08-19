@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ClientManagement.Models;
+using ClientManagement.PopUp.VisualizzaCommissione;
 
 namespace ClientManagement
 {
@@ -10,11 +11,12 @@ namespace ClientManagement
         public EditorCommissioniInScadenza()
         {
 
-
         }
 
 
-        internal void MostraPopUpModifica(ListView lstCommissioniScadenza, CommissioniInScadenza commissioniInScadenza)
+        // invece di scrivere due volte la stessa funzione, viene aggiunto un nuovo parametro che serve 
+        // a distinguere tra modifica e visualizzazione
+        internal void MostraPopUp(ListView lstCommissioniScadenza, CommissioniInScadenza commissioniInScadenza, string opzione)
         {
             if (lstCommissioniScadenza.Items.Count == 0)
                 throw new Exception("non ci sono elementi da modificare");
@@ -25,9 +27,22 @@ namespace ClientManagement
 
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
-            var popUpModificaDati = new ModificaCommissione(idCommissione);
+            
 
-            popUpModificaDati.ShowDialog(commissioniInScadenza);
+            if(opzione == "modifica")
+            {
+                var popUpModificaDati = new ModificaCommissione(idCommissione);
+                popUpModificaDati.ShowDialog(commissioniInScadenza);
+            }
+            else if (opzione == "visualizza")
+            {
+                var popUpVisualizzaDati = new VisualizzaCommissione(idCommissione);
+                popUpVisualizzaDati.ShowDialog(commissioniInScadenza);
+            }
+                
+
+                
+
         }
 
 

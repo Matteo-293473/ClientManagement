@@ -1,5 +1,11 @@
 \section{Analisi e progettazione}
 \subsection{Architettura}
+Per lo sviluppo del software, sono stati creati gli oggetti commissione e cliente in modo da avere un basso accoppiamento (loose coupling) 
+è si è creata una nuova classe statica che va a separare la parte dello storage dei dati più come sono legati. 
+Per farlo, la classe statica contiene due dizionari, uno con un identificativo e il cliente associato e l'altro composto da un identificativo 
+che indica il cliente liste di commissioni.
+
+
 Per lo sviluppo del gioco è stato utilizzato il design pattern \texttt{MVC} che permette la separazione della logica del gioco dal codice che si occupa della presentazione all'utente.
 
 Il pattern consiste in 3 componenti principali:

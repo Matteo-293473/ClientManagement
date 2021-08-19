@@ -5,19 +5,11 @@ namespace ClientManagement
 {
     class HandlerClientManagement
     {
-        private Button btnHome;
-        private Button btnRubrica;
-        private Button btnCommissioni;
-        private Button btnScadenze;
-        private Panel  pnlSideMenu;
 
-        public HandlerClientManagement(Button btnHome, Button btnRubrica, Button btnCommissioni, Button btnScadenze, Panel pnlSideMenu)
+
+        public HandlerClientManagement()
         {
-            this.btnHome = btnHome;
-            this.btnRubrica = btnRubrica;
-            this.btnCommissioni = btnCommissioni;
-            this.btnScadenze= btnScadenze;
-            this.pnlSideMenu = pnlSideMenu;
+
         }
 
         internal void ColoreSelezione(Button btn, Panel pnl)

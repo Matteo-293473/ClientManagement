@@ -107,9 +107,21 @@ namespace ClientManagement
         {
             try
             {
-                editor.MostraPopUpModifica(lstCommissioniScadenza,this);
+                editor.MostraPopUp(lstCommissioniScadenza,this, "modifica");
             }
             catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void btnVisualizza_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                editor.MostraPopUp(lstCommissioniScadenza, this,"visualizza");
+            }
+            catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }

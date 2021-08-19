@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClientManagement.ClientManagement">
+    <Position X="16.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAGBAAAKFAhAAADACKQAFCQBCAAAACQAxBAAAAIAA=</HashCode>
+      <FileName>ClientManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.CommissioniTotali" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAACgAAAAAAAiAAAAKAQAAQAABAIAAAUBAAAA=</HashCode>
+      <FileName>Commissioni\CommissioniTotali.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.HandlerCommissioniTotali" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commissioni\HandlerCommissioniTotali.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.EditorContatti" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contatti\EditorContatti.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.HandlerClientManagement" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HandlerClientManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.CommissioniInScadenza" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARhAAAABACjAAAAAAAiAAAAKAAAAQAAAAIEAIUAAAAA=</HashCode>
+      <FileName>Home\CommissioniInScadenza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.EditorCommissioniInScadenza">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Home\EditorCommissioniInScadenza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.EditorHandlerAggiungiCommissione">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgCAAQAAAQAAAAAAACAgACAAAAIAAAEAAAAAAA=</HashCode>
+      <FileName>Home\EditorHandlerAggiungiCommissione.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Home">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAAAAAAACAAAACIAAABAAAAIAUAAAAACA=</HashCode>
+      <FileName>Home\Home.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.ListaClienti" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ListaClienti.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.ModificaCommissione" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAaRABAAAAAKAAAACAgQAQAAIAAAAIAAAAAA=</HashCode>
+      <FileName>PopUp\ModificaCommissione\ModificaCommissione.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Program" Collapsed="true">
+    <Position X="19.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Contatti.AggiungiContatto" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCBQAAAAASgNYAAAAACAIAAuAAIAQIAQFIhAoAAgCAA=</HashCode>
+      <FileName>Contatti\AggiungiContatto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Contatti.Contatti" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAAAAAAAACAAAADAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contatti\Contatti.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Contatti.EditorAggiungiContatto" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAQAAAAACAAAAQAAAAAJACEgAAAAIAAAACAAAEAAAA=</HashCode>
+      <FileName>Contatti\EditorAggiungiContatto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Contatti.ListaContatti" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAChIAAAAAICAAAAKAAAEQAAAAAAgggAgAAA=</HashCode>
+      <FileName>Contatti\ListaContatti.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Database.DBHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAQBABAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Database\DBHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClientManagement.Extensions.clienteCommissioniExtensions">
+    <Position X="14.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Extensions\clienteCommissioniExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Extensions.ControlloCaratteri" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Extensions\ControlloCaratteri.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Resources.aggiungiCommissione" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oCAQAgQAASRtYgEAAACAIAA2ihQEAIAYBIxQAAACCAA=</HashCode>
+      <FileName>Home\aggiungiCommissione.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Models.Cliente" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAEBAAA=</HashCode>
+      <FileName>Models\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Models.Commissione" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAEAAAAAAAAAAAAAAAAAAAAAAAIAAAEQAAAAAA=</HashCode>
+      <FileName>Models\Commissione.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Models.CommissionManager" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIIACAAAAAAAAAAAAAAAAAIACAAAADEAAAAAAEAAAIA=</HashCode>
+      <FileName>Models\CommissionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.PopUp.ModificaCliente.EditorModificaCliente" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQBAAAAAAAAAAAAQAAAAAEAAAAAIAAAAAAAAAgAAA=</HashCode>
+      <FileName>PopUp\ModificaCliente\EditorModificaCliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.PopUp.ModificaCliente.ModificaCliente">
+    <Position X="14.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBQAAAAACBAAAAAAACAIAAGAAIAAIAUBABAIAAAAAA=</HashCode>
+      <FileName>PopUp\ModificaCliente\ModificaCliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.PopUpModifica.EditorModificaCommissione" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAQAAAQAAQIAAAAAAACAAAAIAAAEAAAAAAA=</HashCode>
+      <FileName>PopUp\ModificaCommissione\EditorModificaCommissione.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Properties.Resources" Collapsed="true">
+    <Position X="19.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQIABEAAAAQAAABAAAAAAAAAAQIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManagement.Properties.Settings" Collapsed="true">
+    <Position X="19.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ClientManagement.Database.IDatabase" Collapsed="true">
+    <Position X="19.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\IDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

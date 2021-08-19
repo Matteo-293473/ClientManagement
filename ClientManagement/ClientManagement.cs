@@ -13,7 +13,7 @@ namespace ClientManagement
         public ClientManagement()
         {
             InitializeComponent();
-            editor = new HandlerClientManagement(btnHome, btnRubrica, btnCommissioni, btnScadenze, pnlSideMenu);
+            editor = new HandlerClientManagement();
             editor.ColoreSelezione(btnHome, pnlSideMenu);
         }
 
@@ -70,7 +70,7 @@ namespace ClientManagement
         private void BtnScadenze_Click(object sender, EventArgs e)
         {
             editor.ColoreSelezione(btnScadenze, pnlSideMenu);
-            calendario1.BringToFront();
+            listaCommissioniDaFare1.BringToFront();
         }
 
         private void btnHome_Leave(object sender, EventArgs e)
@@ -93,40 +93,13 @@ namespace ClientManagement
             editor.ColoreDeselezione(btnScadenze);
         }
 
-        private void home1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void contatti1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void home1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void calendario1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void pnlSideMenu_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void home1_Load_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void aggiungiCommissione1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void calendario1_Load_1(object sender, EventArgs e)
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -70,7 +71,7 @@ namespace ClientManagement.Contatti
 
         }
 
-        // OK
+
         internal virtual void ControllaValiditaInput()
         {
             // eliminiamo degli spazi e caratteri indesiderati alla fine dei nomi
@@ -84,6 +85,17 @@ namespace ClientManagement.Contatti
                 String.IsNullOrEmpty(txtNumeroTelefono.Text))
                 throw new Exception("Uno dei campi è vuoto");
 
+            // usiamo una libreria per controllare la validà dell'email
+            // nel caso in cui l'email sia in un formata sbagliato, viene
+            // generata un'eccezione
+            MailAddress mail = new MailAddress(txtEmail.Text);
+
+            // il numero di telefono in genere ha tra le 10 e le 15 cifre
+            if (!txtNumeroTelefono.Text.Any(char.IsLetter) && (txtNumeroTelefono.Text.Length > 15 
+                                                              || txtNumeroTelefono.Text.Length < 10))
+                throw new Exception("Numero di telefono non valido");
+
+           
             if (!txtCognome.Text.All(char.IsLetter))
                 throw new Exception("Cognome non valido, ci sono caratteri errati");
 

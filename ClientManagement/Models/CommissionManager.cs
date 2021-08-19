@@ -8,25 +8,20 @@ namespace ClientManagement.Models
 {
     static class CommissionManager
     {
-        //private static CommissionManager instance = null;
+        // dizionari nei quali vengono archiviati i dati
         public static Dictionary<int, List<Commissione>> clienteCommissioni = new Dictionary<int, List<Commissione>>();
-
         public static Dictionary<int, Cliente> clienti = new Dictionary<int, Cliente>();
-        
-        //private static List<Commissione> commissioni = new List<Commissione>();
 
-
+        // creiamo due eventi
         public static event EventHandler<Dictionary<int, List<Commissione>>> OnClienteCommissioniCambia;
-
         public static event EventHandler<Dictionary<int, Cliente>> OnClientiCambia;
-
 
 
         // facciamo iniziare il valore a 1 perché quando ritorna un valore non trovato il valore è 0
         private static int value = 1; 
 
 
-        //applichiamo l'overload
+        // usufruiamo dell'overload
         public static void AggiungiEntry(Cliente cl)
         {
             var c = confrontaChiave(cl);
@@ -50,14 +45,14 @@ namespace ClientManagement.Models
 
             if (clienteCommissioni.ContainsKey(c))
             {
-                // se il cliente non esiste nè tra le commissioni nè nella rubrica
-
+                // se il cliente è giò presente e ha delle commissioni
+                
                 // aggiungi cm alla lista delle commissioni del cliente
                 //clienteCommissioni.Add(cl, commissioni);
                 commissioni = clienteCommissioni[c];
                 commissioni.Add(cm);
                 clienteCommissioni[c] = commissioni;
-                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
+                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
             }
             
             else if(clienti.ContainsKey(c))
@@ -67,24 +62,26 @@ namespace ClientManagement.Models
 
                 commissioni.Add(cm);
                 clienteCommissioni.Add(c, commissioni);
-                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
+                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
             }
             else
             {
-                // se il cliente non esiste
+                // se il cliente non esiste nè tra le commissioni nè nella rubrica
 
-                commissioni.Add(cm);
-                clienti.Add(value, cl);
-                OnClientiCambia?.Invoke(cl, clienti);
-                clienteCommissioni.Add(value, commissioni);
-                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // aggiungo l'evento
-                value += 1; // aggiorno il valore. Autoincrement
+                commissioni.Add(cm); // aggiungo la commissione
+                clienti.Add(value, cl); // aggiungo il cliente nella rubrica
+                OnClientiCambia?.Invoke(cl, clienti);  // invoco l'evento
+                clienteCommissioni.Add(value, commissioni); // aggiungo la commissione associata al cliente
+                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
+                value += 1; // aggiorno il valore
             }
             
         }
 
 
-
+        
+        // Per il confronto del cliente usiamo Nome Cognome e Numero come superchiave. Se questi 3 valori sono
+        // uguali, significa che ci stiamo riferendo allo stesso cliente
         private static int confrontaChiave(Cliente cl)
         {
             return clienti.Where(s =>
@@ -94,6 +91,9 @@ namespace ClientManagement.Models
             // nel caso in cui il cliente non si trova nella lista clienteCommissioni, viene restituito il valore 0
 
         }
+
+
+
 
         public static void ModificaCommissione(Commissione commissione)
         {
@@ -105,7 +105,7 @@ namespace ClientManagement.Models
                     {
                         cm.Scadenza = commissione.Scadenza;
                         cm.Descrizione = commissione.Descrizione;
-                        OnClienteCommissioniCambia?.Invoke(CommissionManager.clienteCommissioni, clienteCommissioni);
+                        OnClienteCommissioniCambia?.Invoke(clienteCommissioni, clienteCommissioni);
                     }
 
                 }
@@ -114,18 +114,17 @@ namespace ClientManagement.Models
 
         public static Commissione RestituisciCommissione(int idCommissione)
         {
-            foreach (var listaCommissioni in CommissionManager.clienteCommissioni.Values)
+            foreach (var listaCommissioni in clienteCommissioni.Values)
             {
                 foreach (var cm in listaCommissioni)
                 {
                     if (cm.IdCommissione == idCommissione)
-                    {
                         return cm;
-                    }
+                    
 
                 }
             }
-
+            // se la commissione non c'è, viene restituito null
             return null;
         }
 

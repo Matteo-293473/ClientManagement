@@ -38,10 +38,11 @@ namespace ClientManagement
             this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmIdComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnModifica = new System.Windows.Forms.Button();
             this.btnNuovaCommission = new System.Windows.Forms.Button();
             this.lblCommissioniSettimana = new System.Windows.Forms.Label();
+            this.btnVisualizza = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -54,7 +55,7 @@ namespace ClientManagement
             this.clmNtel,
             this.clmComm,
             this.clmScadenza,
-            this.clmId});
+            this.clmIdComm});
             this.lstCommissioniScadenza.FullRowSelect = true;
             this.lstCommissioniScadenza.GridLines = true;
             this.lstCommissioniScadenza.HideSelection = false;
@@ -98,16 +99,16 @@ namespace ClientManagement
             this.clmScadenza.Text = "Scadenza";
             this.clmScadenza.Width = 62;
             // 
-            // clmId
+            // clmIdComm
             // 
-            this.clmId.Text = "Id";
+            this.clmIdComm.Text = "Id Comm.";
             // 
             // btnModifica
             // 
             this.btnModifica.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnModifica.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.btnModifica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnModifica.Location = new System.Drawing.Point(49, 425);
+            this.btnModifica.Location = new System.Drawing.Point(170, 425);
             this.btnModifica.Name = "btnModifica";
             this.btnModifica.Size = new System.Drawing.Size(104, 38);
             this.btnModifica.TabIndex = 2;
@@ -143,11 +144,25 @@ namespace ClientManagement
             this.lblCommissioniSettimana.TabIndex = 16;
             this.lblCommissioniSettimana.Text = "Commissioni di questa settimana:";
             // 
+            // btnVisualizza
+            // 
+            this.btnVisualizza.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVisualizza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnVisualizza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVisualizza.Location = new System.Drawing.Point(49, 425);
+            this.btnVisualizza.Name = "btnVisualizza";
+            this.btnVisualizza.Size = new System.Drawing.Size(115, 38);
+            this.btnVisualizza.TabIndex = 17;
+            this.btnVisualizza.Text = "VISUALIZZA";
+            this.btnVisualizza.UseVisualStyleBackColor = false;
+            this.btnVisualizza.Click += new System.EventHandler(this.btnVisualizza_Click);
+            // 
             // CommissioniInScadenza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.btnVisualizza);
             this.Controls.Add(this.lblCommissioniSettimana);
             this.Controls.Add(this.btnNuovaCommission);
             this.Controls.Add(this.btnModifica);
@@ -172,6 +187,7 @@ namespace ClientManagement
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Button btnNuovaCommission;
         private System.Windows.Forms.Label lblCommissioniSettimana;
-        private System.Windows.Forms.ColumnHeader clmId;
+        private System.Windows.Forms.ColumnHeader clmIdComm;
+        private System.Windows.Forms.Button btnVisualizza;
     }
 }

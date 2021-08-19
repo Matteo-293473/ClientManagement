@@ -25,7 +25,7 @@ namespace ClientManagement
 
         /// <summary> 
         /// Metodo necessario per il supporto della finestra di progettazione. Non modificare 
-        /// il contenuto del metodo con l'editor di codice.
+        /// il contenuto del metodo con l'handler di codice.
         /// </summary>
         private void InitializeComponent()
         {

@@ -5,7 +5,7 @@ using ClientManagement.Models;
 
 namespace ClientManagement
 {
-    class EditorCommissioniTotali
+    class HandlerCommissioniTotali
     {
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {
