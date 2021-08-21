@@ -53,7 +53,7 @@ namespace ClientManagement
             if (String.IsNullOrEmpty(txtDescrizioneCommissione.Text))
                 throw new Exception("Il campo \"descrizione della commissione\" non può essere vuoto");
 
-            if (dtpScadenza.Value <= DateTime.Now)  // controlliamo che non sia una data passata
+            if (dtpScadenza.Value < DateTime.Now.Date)  // controlliamo che non sia una data passata
                 throw new Exception("La data non può essere una passata");
         }
 

@@ -24,7 +24,7 @@ namespace ClientManagement.Models
         // usufruiamo dell'overload
         public static void AggiungiEntry(Cliente cl)
         {
-            var c = confrontaChiave(cl);
+            var c = recuperaChaiveCliente(cl);
 
             if (clienti.ContainsKey(c))
                 throw new Exception("Il cliente è già presente");
@@ -41,7 +41,7 @@ namespace ClientManagement.Models
         {
             List<Commissione> commissioni = new List<Commissione>();
 
-            var c = confrontaChiave(cl);
+            var c = recuperaChaiveCliente(cl);
 
             if (clienteCommissioni.ContainsKey(c))
             {
@@ -82,7 +82,7 @@ namespace ClientManagement.Models
         
         // Per il confronto del cliente usiamo Nome Cognome e Numero come superchiave. Se questi 3 valori sono
         // uguali, significa che ci stiamo riferendo allo stesso cliente
-        private static int confrontaChiave(Cliente cl)
+        public static int recuperaChaiveCliente(Cliente cl)
         {
             return clienti.Where(s =>
                 clienti[s.Key].Nome == cl.Nome &&

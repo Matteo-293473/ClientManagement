@@ -27,16 +27,26 @@ namespace ClientManagement
 
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
-            
 
-            if(opzione == "modifica")
+            // recupero l'id del cliente attraverso la funzione recuperaChaiveCliente
+            var idCliente = CommissionManager.recuperaChaiveCliente(new Cliente(
+                lstCommissioniScadenza.SelectedItems[0].SubItems[0].Text,
+                lstCommissioniScadenza.SelectedItems[0].SubItems[1].Text,
+                lstCommissioniScadenza.SelectedItems[0].SubItems[3].Text,
+                lstCommissioniScadenza.SelectedItems[0].SubItems[2].Text
+            ));
+
+             // cognome
+             // email
+
+            if (opzione == "modifica")
             {
                 var popUpModificaDati = new ModificaCommissione(idCommissione);
                 popUpModificaDati.ShowDialog(commissioniInScadenza);
             }
             else if (opzione == "visualizza")
             {
-                var popUpVisualizzaDati = new VisualizzaCommissione(idCommissione);
+                var popUpVisualizzaDati = new VisualizzaCommissione(idCommissione,idCliente);
                 popUpVisualizzaDati.ShowDialog(commissioniInScadenza);
             }
                 

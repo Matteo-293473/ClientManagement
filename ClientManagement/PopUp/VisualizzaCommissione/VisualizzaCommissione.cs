@@ -14,13 +14,11 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
     public partial class VisualizzaCommissione : Form
     {
         private HandlerVisualizzaCommissione editor;
-        private int idCommissione;
-        public VisualizzaCommissione(int idCommissione)
+        public VisualizzaCommissione(int idCommissione,int idCliente)
         {
             InitializeComponent();
-            this.idCommissione = idCommissione;
-            //editor = new HandlerVisualizzaCommissione(lblTextNome, lblTextCognome, lblTextEmail, txtNumeroTelefono);
-            //editor.CaricaDati(idCommissione);
+            editor = new HandlerVisualizzaCommissione(lblTxtNome, lblTxtCognome, lblTxtEmail, lblTxtNumeroTel,lblTxtDescrizioneCommissione,lblTxtScadenza, lblTxtCompletato);
+            editor.CaricaDati(idCommissione,idCliente);
 
             // aggiungere un editor handler che va a popolare i campi 
             // editor.PopolaCampi();

@@ -29,30 +29,32 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTextNumeroTel = new System.Windows.Forms.Label();
+            this.lblTxtNumeroTel = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblCognome = new System.Windows.Forms.Label();
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.lblDescrizioneCommissione = new System.Windows.Forms.Label();
             this.lblDataScadenza = new System.Windows.Forms.Label();
-            this.lblTextNome = new System.Windows.Forms.Label();
-            this.lblTextCognome = new System.Windows.Forms.Label();
-            this.lblTextEmail = new System.Windows.Forms.Label();
+            this.lblTxtNome = new System.Windows.Forms.Label();
+            this.lblTxtCognome = new System.Windows.Forms.Label();
+            this.lblTxtEmail = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTxtScadenza = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblTxtCompletato = new System.Windows.Forms.Label();
+            this.lblTxtDescrizioneCommissione = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblTextNumeroTel
+            // lblTxtNumeroTel
             // 
-            this.lblTextNumeroTel.AutoSize = true;
-            this.lblTextNumeroTel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTextNumeroTel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTextNumeroTel.Location = new System.Drawing.Point(12, 219);
-            this.lblTextNumeroTel.Name = "lblTextNumeroTel";
-            this.lblTextNumeroTel.Size = new System.Drawing.Size(108, 19);
-            this.lblTextNumeroTel.TabIndex = 18;
-            this.lblTextNumeroTel.Text = "txtNumeroTel";
+            this.lblTxtNumeroTel.AutoSize = true;
+            this.lblTxtNumeroTel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTxtNumeroTel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTxtNumeroTel.Location = new System.Drawing.Point(12, 219);
+            this.lblTxtNumeroTel.Name = "lblTxtNumeroTel";
+            this.lblTxtNumeroTel.Size = new System.Drawing.Size(108, 19);
+            this.lblTxtNumeroTel.TabIndex = 18;
+            this.lblTxtNumeroTel.Text = "txtNumeroTel";
             // 
             // lblEmail
             // 
@@ -109,38 +111,38 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblDataScadenza.TabIndex = 13;
             this.lblDataScadenza.Text = "Scadenza";
             // 
-            // lblTextNome
+            // lblTxtNome
             // 
-            this.lblTextNome.AutoSize = true;
-            this.lblTextNome.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTextNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTextNome.Location = new System.Drawing.Point(12, 34);
-            this.lblTextNome.Name = "lblTextNome";
-            this.lblTextNome.Size = new System.Drawing.Size(72, 19);
-            this.lblTextNome.TabIndex = 19;
-            this.lblTextNome.Text = "txtNome";
+            this.lblTxtNome.AutoSize = true;
+            this.lblTxtNome.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTxtNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTxtNome.Location = new System.Drawing.Point(12, 34);
+            this.lblTxtNome.Name = "lblTxtNome";
+            this.lblTxtNome.Size = new System.Drawing.Size(72, 19);
+            this.lblTxtNome.TabIndex = 19;
+            this.lblTxtNome.Text = "txtNome";
             // 
-            // lblTextCognome
+            // lblTxtCognome
             // 
-            this.lblTextCognome.AutoSize = true;
-            this.lblTextCognome.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTextCognome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTextCognome.Location = new System.Drawing.Point(12, 97);
-            this.lblTextCognome.Name = "lblTextCognome";
-            this.lblTextCognome.Size = new System.Drawing.Size(96, 19);
-            this.lblTextCognome.TabIndex = 20;
-            this.lblTextCognome.Text = "txtCognome";
+            this.lblTxtCognome.AutoSize = true;
+            this.lblTxtCognome.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTxtCognome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTxtCognome.Location = new System.Drawing.Point(12, 97);
+            this.lblTxtCognome.Name = "lblTxtCognome";
+            this.lblTxtCognome.Size = new System.Drawing.Size(96, 19);
+            this.lblTxtCognome.TabIndex = 20;
+            this.lblTxtCognome.Text = "txtCognome";
             // 
-            // lblTextEmail
+            // lblTxtEmail
             // 
-            this.lblTextEmail.AutoSize = true;
-            this.lblTextEmail.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTextEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTextEmail.Location = new System.Drawing.Point(12, 158);
-            this.lblTextEmail.Name = "lblTextEmail";
-            this.lblTextEmail.Size = new System.Drawing.Size(67, 19);
-            this.lblTextEmail.TabIndex = 21;
-            this.lblTextEmail.Text = "txtEmail";
+            this.lblTxtEmail.AutoSize = true;
+            this.lblTxtEmail.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTxtEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTxtEmail.Location = new System.Drawing.Point(12, 158);
+            this.lblTxtEmail.Name = "lblTxtEmail";
+            this.lblTxtEmail.Size = new System.Drawing.Size(67, 19);
+            this.lblTxtEmail.TabIndex = 21;
+            this.lblTxtEmail.Text = "txtEmail";
             // 
             // lblNumero
             // 
@@ -153,16 +155,16 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblNumero.TabIndex = 22;
             this.lblNumero.Text = "Numero di telefono:";
             // 
-            // label1
+            // lblTxtScadenza
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(343, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Scadenza";
+            this.lblTxtScadenza.AutoSize = true;
+            this.lblTxtScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTxtScadenza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTxtScadenza.Location = new System.Drawing.Point(343, 158);
+            this.lblTxtScadenza.Name = "lblTxtScadenza";
+            this.lblTxtScadenza.Size = new System.Drawing.Size(93, 19);
+            this.lblTxtScadenza.TabIndex = 23;
+            this.lblTxtScadenza.Text = "txtScadenza";
             // 
             // label2
             // 
@@ -175,19 +177,42 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.label2.TabIndex = 24;
             this.label2.Text = "Completato: ";
             // 
+            // lblTxtCompletato
+            // 
+            this.lblTxtCompletato.AutoSize = true;
+            this.lblTxtCompletato.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTxtCompletato.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTxtCompletato.Location = new System.Drawing.Point(349, 200);
+            this.lblTxtCompletato.Name = "lblTxtCompletato";
+            this.lblTxtCompletato.Size = new System.Drawing.Size(111, 19);
+            this.lblTxtCompletato.TabIndex = 25;
+            this.lblTxtCompletato.Text = "txtCompletato";
+            // 
+            // lblTxtDescrizioneCommissione
+            // 
+            this.lblTxtDescrizioneCommissione.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTxtDescrizioneCommissione.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTxtDescrizioneCommissione.Location = new System.Drawing.Point(244, 34);
+            this.lblTxtDescrizioneCommissione.Name = "lblTxtDescrizioneCommissione";
+            this.lblTxtDescrizioneCommissione.Size = new System.Drawing.Size(314, 113);
+            this.lblTxtDescrizioneCommissione.TabIndex = 26;
+            this.lblTxtDescrizioneCommissione.Text = "txtDescrizioneCommissione";
+            // 
             // VisualizzaCommissione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(584, 284);
+            this.Controls.Add(this.lblTxtDescrizioneCommissione);
+            this.Controls.Add(this.lblTxtCompletato);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTxtScadenza);
             this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.lblTextEmail);
-            this.Controls.Add(this.lblTextCognome);
-            this.Controls.Add(this.lblTextNome);
-            this.Controls.Add(this.lblTextNumeroTel);
+            this.Controls.Add(this.lblTxtEmail);
+            this.Controls.Add(this.lblTxtCognome);
+            this.Controls.Add(this.lblTxtNome);
+            this.Controls.Add(this.lblTxtNumeroTel);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblCognome);
             this.Controls.Add(this.lblNomeCliente);
@@ -207,17 +232,19 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
 
         #endregion
 
-        private System.Windows.Forms.Label lblTextNumeroTel;
+        private System.Windows.Forms.Label lblTxtNumeroTel;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblCognome;
         private System.Windows.Forms.Label lblNomeCliente;
         private System.Windows.Forms.Label lblDescrizioneCommissione;
         private System.Windows.Forms.Label lblDataScadenza;
-        private System.Windows.Forms.Label lblTextNome;
-        private System.Windows.Forms.Label lblTextCognome;
-        private System.Windows.Forms.Label lblTextEmail;
+        private System.Windows.Forms.Label lblTxtNome;
+        private System.Windows.Forms.Label lblTxtCognome;
+        private System.Windows.Forms.Label lblTxtEmail;
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTxtScadenza;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTxtCompletato;
+        private System.Windows.Forms.Label lblTxtDescrizioneCommissione;
     }
 }

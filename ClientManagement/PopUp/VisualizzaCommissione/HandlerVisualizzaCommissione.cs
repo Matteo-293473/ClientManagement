@@ -4,36 +4,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientManagement.Models;
 
 namespace ClientManagement.PopUp.VisualizzaCommissione
 {
     class HandlerVisualizzaCommissione
     {
-        private string nome;
-        private string cognome;
-        private string email;
-        private string numeroTelefono;
-        private string descrizione;
-        private string dataScadenza;
-        private string completato;
+        private Label lblNome;
+        private Label lblCognome;
+        private Label lblEmail;
+        private Label lblNumeroTelefono;
+        private Label lblDescrizione;
+        private Label lblDataScadenza;
+        private Label lblCompletato;
 
 
         public HandlerVisualizzaCommissione(
-            TextBox txtNome,
-            TextBox txtCognome,
-            TextBox txtEmail,
-            TextBox txtNumero,
-            TextBox txtDescrizioneCommissione, 
-            DateTimePicker dtpScadenza, 
-            CheckBox cbxTask)
+            Label txtNome,
+            Label txtCognome,
+            Label txtEmail,
+            Label txtNumero,
+            Label txtDescrizioneCommissione,
+            Label dtpScadenza,
+            Label cbxTask)
         {
-            this.nome = txtNome.Text;
-            this.cognome = txtCognome.Text;
-            this.email = txtEmail.Text;
-            this.numeroTelefono = txtNumero.Text;
-            this.descrizione = txtDescrizioneCommissione.Text;
-            this.dataScadenza = dtpScadenza.Value.ToString().Substring(0,10);
-            this.completato = cbxTask.Checked ? "Sì" : "No";
+            this.lblNome = txtNome;
+            this.lblCognome = txtCognome;
+            this.lblEmail= txtEmail;
+            this.lblNumeroTelefono = txtNumero;
+            this.lblDescrizione = txtDescrizioneCommissione;
+            this.lblDataScadenza = dtpScadenza;
+            this.lblCompletato = cbxTask;
+        }
+
+        public void CaricaDati(int idCommissione, int idCliente)
+        {
+            // cerchiamo cliente e commissione
+            Cliente cl = CommissionManager.RestituisciCliente(idCliente);
+            Commissione cm = CommissionManager.RestituisciCommissione(idCommissione);
+
+            // aggiorniamo i dati
+            this.lblNome.Text = cl.Nome;
+            this.lblCognome.Text = cl.Cognome;
+            this.lblEmail.Text = cl.Email;
+            this.lblNumeroTelefono.Text = cl.Numero;
+            this.lblDescrizione.Text = cm.Descrizione;
+            this.lblDataScadenza.Text = cm.Scadenza.ToString().Substring(0, 10);
+            this.lblCompletato.Text = cm.TaskCompletato? "Sì" : "No";
         }
     }
 }
