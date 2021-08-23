@@ -24,6 +24,9 @@ namespace ClientManagement
             if (lstCommissioniScadenza.SelectedItems.Count == 0)
                 throw new Exception("seleziona un elemento dell lista");
 
+            if (lstCommissioniScadenza.SelectedItems.Count > 1)
+                throw new Exception("seleziona un solo elemento dell lista");
+
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
 
