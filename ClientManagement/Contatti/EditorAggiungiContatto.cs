@@ -19,11 +19,7 @@ namespace ClientManagement.Contatti
         protected TextBox txtEmail;
         protected TextBox txtNumeroTelefono;
 
-        public string Nome { get => txtNome.Text; }
-        public string Cognome { get => txtCognome.Text; }
-        public string Email { get => txtEmail.Text; }
-        public string NumeroTelefono { get => txtNumeroTelefono.Text; }
-
+        private ControlloListView controlloList = new ControlloListView();
 
         public EditorAggiungiContatto()
         {
@@ -116,11 +112,7 @@ namespace ClientManagement.Contatti
 
         internal void MostraPopUpModifica(ListView lstContatti)
         {
-            if (lstContatti.Items.Count == 0)
-                throw new Exception("non ci sono elementi");
-
-            if (lstContatti.SelectedItems.Count == 0)
-                throw new Exception("seleziona un elemento dell lista");
+            controlloList.ControlloSelezione(lstContatti);
 
             // recupero l'id della commissione
             var idCliente = Convert.ToInt32(lstContatti.SelectedItems[0].SubItems[4].Text);

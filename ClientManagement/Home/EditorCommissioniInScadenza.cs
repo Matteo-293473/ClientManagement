@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 using ClientManagement.PopUp.VisualizzaCommissione;
 
@@ -8,6 +9,7 @@ namespace ClientManagement
 {
     class EditorCommissioniInScadenza
     {
+        private ControlloListView controlloList = new ControlloListView();
         public EditorCommissioniInScadenza()
         {
 
@@ -18,14 +20,11 @@ namespace ClientManagement
         // a distinguere tra modifica e visualizzazione
         internal void MostraPopUp(ListView lstCommissioniScadenza, CommissioniInScadenza commissioniInScadenza, string opzione)
         {
-            if (lstCommissioniScadenza.Items.Count == 0)
-                throw new Exception("non ci sono elementi da modificare");
 
-            if (lstCommissioniScadenza.SelectedItems.Count == 0)
-                throw new Exception("seleziona un elemento dell lista");
-
-            if (lstCommissioniScadenza.SelectedItems.Count > 1)
-                throw new Exception("seleziona un solo elemento dell lista");
+            // controlliamo che la listview non sia vuota
+            // oppure che ci sia un elemento selezionato
+            // oppure che ci sia un solo elemento selezionato 
+            controlloList.ControlloSelezione(lstCommissioniScadenza);
 
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);

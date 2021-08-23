@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 
 namespace ClientManagement.Contatti
@@ -15,9 +16,11 @@ namespace ClientManagement.Contatti
     {
         private EditorAggiungiContatto editorAggiungiContatti;
         private EditorContatti editorContatti;
+
         public AggiungiContatto()
         {
             InitializeComponent();
+
             
             // carico due editor che alleggeriscono il codice della classe
             // il primo si occupa della verifica e inserimento dei dati
