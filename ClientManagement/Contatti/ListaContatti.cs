@@ -14,9 +14,11 @@ namespace ClientManagement.Contatti
     public partial class ListaContatti : UserControl
     {
         private EditorContatti editor;
+        private EditorAggiungiContatto editorAggiungiContatti;
         public ListaContatti()
         {
             InitializeComponent();
+            editorAggiungiContatti = new EditorAggiungiContatto();
             // ci iscriviamo all'evento della lista clienti
             CommissionManager.OnClientiCambia += Clienti_OnListaCambia;
             editor = new EditorContatti();
@@ -35,6 +37,19 @@ namespace ClientManagement.Contatti
         private void btnNuovoCliente_Click(object sender, EventArgs e)
         {
             this.SendToBack();
+        }
+
+
+        private void btnModifica_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                editorAggiungiContatti.MostraPopUpModifica(lstContatti);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }

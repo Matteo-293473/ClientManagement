@@ -203,7 +203,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(584, 284);
+            this.ClientSize = new System.Drawing.Size(583, 286);
             this.Controls.Add(this.lblTxtDescrizioneCommissione);
             this.Controls.Add(this.lblTxtCompletato);
             this.Controls.Add(this.label2);

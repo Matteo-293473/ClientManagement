@@ -34,8 +34,10 @@ namespace ClientManagement.Contatti
             this.clmCognome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmNumero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnNuovoCliente = new System.Windows.Forms.Button();
             this.clmIdCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnNuovoCliente = new System.Windows.Forms.Button();
+            this.btnModifica = new System.Windows.Forms.Button();
+            this.lblClienti = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstContatti
@@ -49,9 +51,9 @@ namespace ClientManagement.Contatti
             this.lstContatti.FullRowSelect = true;
             this.lstContatti.GridLines = true;
             this.lstContatti.HideSelection = false;
-            this.lstContatti.Location = new System.Drawing.Point(40, 136);
+            this.lstContatti.Location = new System.Drawing.Point(49, 154);
             this.lstContatti.Name = "lstContatti";
-            this.lstContatti.Size = new System.Drawing.Size(660, 291);
+            this.lstContatti.Size = new System.Drawing.Size(677, 225);
             this.lstContatti.TabIndex = 2;
             this.lstContatti.UseCompatibleStateImageBehavior = false;
             this.lstContatti.View = System.Windows.Forms.View.Details;
@@ -76,6 +78,11 @@ namespace ClientManagement.Contatti
             this.clmEmail.Text = "Email";
             this.clmEmail.Width = 132;
             // 
+            // clmIdCliente
+            // 
+            this.clmIdCliente.Text = "Id Cliente";
+            this.clmIdCliente.Width = 80;
+            // 
             // btnNuovoCliente
             // 
             this.btnNuovoCliente.BackColor = System.Drawing.Color.Black;
@@ -84,7 +91,7 @@ namespace ClientManagement.Contatti
             this.btnNuovoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuovoCliente.Image = global::ClientManagement.Properties.Resources.appbar_add;
             this.btnNuovoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuovoCliente.Location = new System.Drawing.Point(40, 45);
+            this.btnNuovoCliente.Location = new System.Drawing.Point(49, 48);
             this.btnNuovoCliente.Name = "btnNuovoCliente";
             this.btnNuovoCliente.Size = new System.Drawing.Size(188, 49);
             this.btnNuovoCliente.TabIndex = 15;
@@ -93,21 +100,43 @@ namespace ClientManagement.Contatti
             this.btnNuovoCliente.UseVisualStyleBackColor = false;
             this.btnNuovoCliente.Click += new System.EventHandler(this.btnNuovoCliente_Click);
             // 
-            // clmIdCliente
+            // btnModifica
             // 
-            this.clmIdCliente.Text = "Id Cliente";
-            this.clmIdCliente.Width = 80;
+            this.btnModifica.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnModifica.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnModifica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnModifica.Location = new System.Drawing.Point(49, 400);
+            this.btnModifica.Name = "btnModifica";
+            this.btnModifica.Size = new System.Drawing.Size(128, 38);
+            this.btnModifica.TabIndex = 16;
+            this.btnModifica.Text = "MODIFICA";
+            this.btnModifica.UseVisualStyleBackColor = false;
+            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
+            // 
+            // lblClienti
+            // 
+            this.lblClienti.AutoSize = true;
+            this.lblClienti.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblClienti.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblClienti.Location = new System.Drawing.Point(45, 132);
+            this.lblClienti.Name = "lblClienti";
+            this.lblClienti.Size = new System.Drawing.Size(57, 19);
+            this.lblClienti.TabIndex = 17;
+            this.lblClienti.Text = "Clienti:";
             // 
             // ListaContatti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.lblClienti);
+            this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.btnNuovoCliente);
             this.Controls.Add(this.lstContatti);
             this.Name = "ListaContatti";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,5 +149,7 @@ namespace ClientManagement.Contatti
         private System.Windows.Forms.ColumnHeader clmEmail;
         private System.Windows.Forms.Button btnNuovoCliente;
         private System.Windows.Forms.ColumnHeader clmIdCliente;
+        private System.Windows.Forms.Button btnModifica;
+        private System.Windows.Forms.Label lblClienti;
     }
 }

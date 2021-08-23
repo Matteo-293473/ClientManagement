@@ -77,11 +77,12 @@ namespace ClientManagement.Contatti
             editorAggiungiContatti.ControllaSpazi(e);
         }
 
+
         private void btnModifica_Click(object sender, EventArgs e)
         {
             try
             {
-                editorAggiungiContatti.MostraPopUpModifica(lstContatti, this);
+                editorAggiungiContatti.MostraPopUpModifica(lstContatti);
             }
             catch (Exception err)
             {

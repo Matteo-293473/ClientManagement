@@ -10,6 +10,7 @@ namespace ClientManagement.Extensions
     // classe che permette di controllare i caratteri all'interno delle textbox
     class ControlloCaratteri
     {
+
         internal void ControllaNumeri(KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);

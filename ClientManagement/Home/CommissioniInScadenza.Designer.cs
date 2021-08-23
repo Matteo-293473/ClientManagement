@@ -59,9 +59,9 @@ namespace ClientManagement
             this.lstCommissioniScadenza.FullRowSelect = true;
             this.lstCommissioniScadenza.GridLines = true;
             this.lstCommissioniScadenza.HideSelection = false;
-            this.lstCommissioniScadenza.Location = new System.Drawing.Point(49, 189);
+            this.lstCommissioniScadenza.Location = new System.Drawing.Point(49, 154);
             this.lstCommissioniScadenza.Name = "lstCommissioniScadenza";
-            this.lstCommissioniScadenza.Size = new System.Drawing.Size(660, 213);
+            this.lstCommissioniScadenza.Size = new System.Drawing.Size(661, 231);
             this.lstCommissioniScadenza.TabIndex = 0;
             this.lstCommissioniScadenza.UseCompatibleStateImageBehavior = false;
             this.lstCommissioniScadenza.View = System.Windows.Forms.View.Details;
@@ -108,7 +108,7 @@ namespace ClientManagement
             this.btnModifica.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnModifica.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.btnModifica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnModifica.Location = new System.Drawing.Point(170, 425);
+            this.btnModifica.Location = new System.Drawing.Point(170, 405);
             this.btnModifica.Name = "btnModifica";
             this.btnModifica.Size = new System.Drawing.Size(104, 38);
             this.btnModifica.TabIndex = 2;
@@ -124,7 +124,7 @@ namespace ClientManagement
             this.btnNuovaCommission.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuovaCommission.Image = global::ClientManagement.Properties.Resources.appbar_add;
             this.btnNuovaCommission.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuovaCommission.Location = new System.Drawing.Point(49, 49);
+            this.btnNuovaCommission.Location = new System.Drawing.Point(49, 48);
             this.btnNuovaCommission.Name = "btnNuovaCommission";
             this.btnNuovaCommission.Size = new System.Drawing.Size(239, 49);
             this.btnNuovaCommission.TabIndex = 14;
@@ -138,7 +138,7 @@ namespace ClientManagement
             this.lblCommissioniSettimana.AutoSize = true;
             this.lblCommissioniSettimana.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblCommissioniSettimana.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCommissioniSettimana.Location = new System.Drawing.Point(45, 167);
+            this.lblCommissioniSettimana.Location = new System.Drawing.Point(45, 132);
             this.lblCommissioniSettimana.Name = "lblCommissioniSettimana";
             this.lblCommissioniSettimana.Size = new System.Drawing.Size(245, 19);
             this.lblCommissioniSettimana.TabIndex = 16;
@@ -149,7 +149,7 @@ namespace ClientManagement
             this.btnVisualizza.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnVisualizza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.btnVisualizza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVisualizza.Location = new System.Drawing.Point(49, 425);
+            this.btnVisualizza.Location = new System.Drawing.Point(49, 405);
             this.btnVisualizza.Name = "btnVisualizza";
             this.btnVisualizza.Size = new System.Drawing.Size(115, 38);
             this.btnVisualizza.TabIndex = 17;

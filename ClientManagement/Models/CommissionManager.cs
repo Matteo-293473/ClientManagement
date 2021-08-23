@@ -136,6 +136,7 @@ namespace ClientManagement.Models
             clienti[idCliente].Email = cliente.Email;
             clienti[idCliente].Numero = cliente.Numero;
             OnClientiCambia?.Invoke(cliente, clienti);
+            OnClienteCommissioniCambia?.Invoke(cliente,clienteCommissioni);
         }
 
 

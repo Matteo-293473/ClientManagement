@@ -20,13 +20,13 @@ namespace ClientManagement
         {
             if (lstCommissioniScadenza.Items.Count == 0)
                 throw new Exception("non ci sono elementi da modificare");
-            if (lstCommissioniScadenza.SelectedItems[0] == null)
-                throw new Exception("seleziona una riga");
-            //var descrizione = lstCommissioniScadenza.SelectedItems[0].SubItems[4].Text;
-            //var cm = new Commissione(descrizione, DateTime.Now);
+
+            if (lstCommissioniScadenza.SelectedItems.Count == 0)
+                throw new Exception("seleziona un elemento dell lista");
 
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
+
 
             // recupero l'id del cliente attraverso la funzione recuperaChaiveCliente
             var idCliente = CommissionManager.recuperaChaiveCliente(new Cliente(

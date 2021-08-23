@@ -25,6 +25,11 @@ namespace ClientManagement.Contatti
         public string NumeroTelefono { get => txtNumeroTelefono.Text; }
 
 
+        public EditorAggiungiContatto()
+        {
+
+        }
+
         //OK
         public EditorAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono)
         {
@@ -109,17 +114,18 @@ namespace ClientManagement.Contatti
 
         }
 
-        internal void MostraPopUpModifica(ListView lstContatti, AggiungiContatto aggiungiContatto)
+        internal void MostraPopUpModifica(ListView lstContatti)
         {
             if (lstContatti.Items.Count == 0)
-                throw new Exception("non ci sono elementi da modificare");
-            if (lstContatti.SelectedItems[0] == null)
-                throw new Exception("seleziona una riga");
-            //var descrizione = lstCommissioniScadenza.SelectedItems[0].SubItems[4].Text;
-            //var cm = new Commissione(descrizione, DateTime.Now);
+                throw new Exception("non ci sono elementi");
+
+            if (lstContatti.SelectedItems.Count == 0)
+                throw new Exception("seleziona un elemento dell lista");
 
             // recupero l'id della commissione
             var idCliente = Convert.ToInt32(lstContatti.SelectedItems[0].SubItems[4].Text);
+
+
             var popUpModificaCliente = new ModificaCliente(idCliente);
 
             popUpModificaCliente.ShowDialog(lstContatti);
