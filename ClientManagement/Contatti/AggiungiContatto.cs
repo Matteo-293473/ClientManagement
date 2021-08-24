@@ -43,17 +43,17 @@ namespace ClientManagement.Contatti
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editorAggiungiContatti.ControllaCaratteri(e);
+            Controllo.ControllaCaratteri(e);
         }
 
         private void txtCognome_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editorAggiungiContatti.ControllaCaratteri(e);
+            Controllo.ControllaCaratteri(e);
         }
 
         private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editorAggiungiContatti.ControllaNumeri(e);
+            Controllo.ControllaNumeri(e);
         }
 
         private void btnAggiungiEntry_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace ClientManagement.Contatti
 
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editorAggiungiContatti.ControllaSpazi(e);
+            Controllo.ControllaSpazi(e);
         }
 
 

@@ -11,15 +11,14 @@ using ClientManagement.PopUp.ModificaCliente;
 
 namespace ClientManagement.Contatti
 {
-    class EditorAggiungiContatto : ControlloCaratteri
+    class EditorAggiungiContatto 
     {
         // diamo la visibilità anche alle classi derivate
         protected TextBox txtNome;
         protected TextBox txtCognome;
         protected TextBox txtEmail;
         protected TextBox txtNumeroTelefono;
-
-        private ControlloListView controlloList = new ControlloListView();
+        
 
         public EditorAggiungiContatto()
         {
@@ -112,7 +111,8 @@ namespace ClientManagement.Contatti
 
         internal void MostraPopUpModifica(ListView lstContatti)
         {
-            controlloList.ControlloSelezione(lstContatti);
+            // usiamo la classe statica dedicata per il controllo
+            Controllo.ControlloListViewSelezione(lstContatti);
 
             // recupero l'id della commissione
             var idCliente = Convert.ToInt32(lstContatti.SelectedItems[0].SubItems[4].Text);

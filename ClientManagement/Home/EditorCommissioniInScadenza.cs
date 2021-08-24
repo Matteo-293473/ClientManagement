@@ -9,7 +9,6 @@ namespace ClientManagement
 {
     class EditorCommissioniInScadenza
     {
-        private ControlloListView controlloList = new ControlloListView();
         public EditorCommissioniInScadenza()
         {
 
@@ -24,7 +23,7 @@ namespace ClientManagement
             // controlliamo che la listview non sia vuota
             // oppure che ci sia un elemento selezionato
             // oppure che ci sia un solo elemento selezionato 
-            controlloList.ControlloSelezione(lstCommissioniScadenza);
+            Controllo.ControlloListViewSelezione(lstCommissioniScadenza);
 
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);

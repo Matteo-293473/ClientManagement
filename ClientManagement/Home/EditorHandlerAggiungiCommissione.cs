@@ -119,22 +119,5 @@ namespace ClientManagement
 
         }
 
-        //public void SuggerisciEmail(EventArgs e)
-        //{
-            
-        //    cmbEmail.Items.Clear();
-        //    cmbEmail.SelectionStart = cmbEmail.Text.Length;
-        //    cmbEmail.DroppedDown = true;
-            
-
-        //    // se il testo all'interno non finisce con @ 
-        //    if (!cmbEmail.Text.Contains("@"))
-        //    {
-        //        foreach (string dominio in domini)
-        //        {
-        //            cmbEmail.Items.Add(cmbEmail.Text + "@" + dominio);
-        //        }
-        //    }
-        //}
     }
 }

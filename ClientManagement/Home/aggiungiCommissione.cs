@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 
 namespace ClientManagement.Resources
 {
@@ -67,16 +68,16 @@ namespace ClientManagement.Resources
 
         private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editor.ControllaNumeri(e);
+            Controllo.ControllaNumeri(e);
         }
 
         private void txtCognome_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editor.ControllaCaratteri(e);
+            Controllo.ControllaCaratteri(e);
         }
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editor.ControllaCaratteri(e);
+            Controllo.ControllaCaratteri(e);
         }
 
         private void aggiungiCommissione_Load(object sender, EventArgs e)
@@ -142,7 +143,7 @@ namespace ClientManagement.Resources
 
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            editor.ControllaSpazi(e);
+            Controllo.ControllaSpazi(e);
         }
     }
 }
