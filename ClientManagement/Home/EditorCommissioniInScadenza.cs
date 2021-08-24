@@ -29,8 +29,8 @@ namespace ClientManagement
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
 
 
-            // recupero l'id del cliente attraverso la funzione recuperaChaiveCliente
-            var idCliente = CommissionManager.recuperaChaiveCliente(new Cliente(
+            // recupero l'id del cliente attraverso la funzione recuperaChiaveCliente
+            var idCliente = CommissionManager.RecuperaChiaveCliente(new Cliente(
                 lstCommissioniScadenza.SelectedItems[0].SubItems[0].Text,
                 lstCommissioniScadenza.SelectedItems[0].SubItems[1].Text,
                 lstCommissioniScadenza.SelectedItems[0].SubItems[3].Text,

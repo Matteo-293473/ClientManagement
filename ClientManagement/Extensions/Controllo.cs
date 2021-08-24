@@ -42,5 +42,9 @@ namespace ClientManagement.Extensions
             if (listView.SelectedItems.Count > 1)
                 throw new Exception("Seleziona un solo elemento dalla lista");
         }
+
+
+
+        public static void ControlloInput(string nome,string cognome,string email, string numero){}
     }
 }

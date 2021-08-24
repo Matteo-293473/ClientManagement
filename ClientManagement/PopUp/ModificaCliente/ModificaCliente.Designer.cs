@@ -77,6 +77,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(185, 20);
             this.txtNumeroTelefono.TabIndex = 29;
+            this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTelefono_KeyPress);
             // 
             // lblEmail
             // 
@@ -117,6 +118,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(185, 20);
             this.txtCognome.TabIndex = 27;
+            this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCognome_KeyPress);
             // 
             // txtNome
             // 
@@ -124,6 +126,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(185, 20);
             this.txtNome.TabIndex = 26;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // ModificaCliente
             // 

@@ -14,14 +14,15 @@ namespace ClientManagement
 {
     public partial class ModificaCommissione : Form
     {
-        private EditorModificaCommissione editor;
+        private EditorModificaCommissione editorModificaCommissione;
+        private EditorHandlerAggiungiCommissione editorAggiungiCommissione;
         private int idCommissione;
         public ModificaCommissione(int idCommissione)
         {
             InitializeComponent();
             this.idCommissione = idCommissione;
-            editor = new EditorModificaCommissione(txtDescrizioneCommissione, dtpScadenza,cbxTask);
-            editor.CaricaDati(idCommissione);
+            editorModificaCommissione = new EditorModificaCommissione(txtDescrizioneCommissione, dtpScadenza,cbxTask);
+            editorModificaCommissione.CaricaDati(idCommissione);
 
             // aggiungere un editor handler che va a popolare i campi 
             // editor.PopolaCampi();
@@ -34,8 +35,28 @@ namespace ClientManagement
 
         private void btnModifica_Click(object sender, EventArgs e)
         {
-            editor.AggiornaCommissione();
-            Close();
+
+            try
+            {
+                // controllo input
+                editorAggiungiCommissione.ControllaValiditaInput();
+
+                // funzione che aggiorna la commissione all'interno del dizionario
+                editorModificaCommissione.AggiornaCommissione();
+
+                // ripuliamo i campi
+                editorAggiungiCommissione.ResetFields();
+
+                Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Input errati: " + err.Message);
+            }
+
+
+            
+            
         }
 
         private void cbxTask_CheckedChanged(object sender, EventArgs e)

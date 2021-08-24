@@ -85,10 +85,10 @@ namespace ClientManagement.Contatti
                 String.IsNullOrEmpty(txtNumeroTelefono.Text))
                 throw new Exception("Uno dei campi è vuoto");
 
-            // usiamo una libreria per controllare la validà dell'email
-            // nel caso in cui l'email sia in un formata sbagliato, viene
+            // usiamo una libreria per controllare la validità dell'email
+            // nel caso in cui l'email sia in un formato sbagliato, viene
             // generata un'eccezione
-            MailAddress mail = new MailAddress(txtEmail.Text);
+            var mail = new MailAddress(txtEmail.Text);
 
             // il numero di telefono in genere ha tra le 10 e le 15 cifre
             if (!txtNumeroTelefono.Text.Any(char.IsLetter) && (txtNumeroTelefono.Text.Length > 15 
