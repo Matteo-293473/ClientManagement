@@ -140,13 +140,21 @@ namespace ClientManagement.Models
         }
 
 
-        public static Cliente RestituisciCliente(int idCliente)
-        {
-            return clienti.Where(c => c.Key == idCliente)
+        public static Cliente RestituisciCliente(int idCliente) =>
+            clienti.Where(c => c.Key == idCliente)
                 .Select(c => c.Value)
                 .FirstOrDefault();
+
+
+        public static void Salva()
+        {
+
         }
 
+        public static void Carica()
+        {
+
+        }
 
     }
 }

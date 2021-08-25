@@ -15,7 +15,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
         private Label lblCognome;
         private Label lblEmail;
         private Label lblNumeroTelefono;
-        private Label lblDescrizione;
+        private TextBox txtDescrizioneCommissione;
         private Label lblDataScadenza;
         private Label lblCompletato;
 
@@ -25,7 +25,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             Label txtCognome,
             Label txtEmail,
             Label txtNumero,
-            Label txtDescrizioneCommissione,
+            TextBox txtDescrizioneCommissione,
             Label dtpScadenza,
             Label cbxTask)
         {
@@ -33,7 +33,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblCognome = txtCognome;
             this.lblEmail= txtEmail;
             this.lblNumeroTelefono = txtNumero;
-            this.lblDescrizione = txtDescrizioneCommissione;
+            this.txtDescrizioneCommissione = txtDescrizioneCommissione;
             this.lblDataScadenza = dtpScadenza;
             this.lblCompletato = cbxTask;
         }
@@ -49,7 +49,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblCognome.Text = cl.Cognome;
             this.lblEmail.Text = cl.Email;
             this.lblNumeroTelefono.Text = cl.Numero;
-            this.lblDescrizione.Text = cm.Descrizione;
+            this.txtDescrizioneCommissione.Text = cm.Descrizione;
             this.lblDataScadenza.Text = cm.Scadenza.ToString().Substring(0, 10);
             this.lblCompletato.Text = cm.TaskCompletato? "Sì" : "No";
             RegolaFont();
@@ -57,15 +57,8 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
 
         private void RegolaFont()
         {
-            int i = 10;
-            //if (lblEmail.Text.Length < 20)
-            //    i = 10;
-            //else
-            //    i = 8;
-            
-
-            // qualcosa di simile
-            lblEmail.Font = new Font("Microsoft YaHei", (lblEmail.Text.Length/i) *10, FontStyle.Bold);
+            var i = lblEmail.Text.Length < 20 ? 10 : 8;
+            lblEmail.Font = new Font("Microsoft YaHei", i, FontStyle.Bold);
         }
     }
 }

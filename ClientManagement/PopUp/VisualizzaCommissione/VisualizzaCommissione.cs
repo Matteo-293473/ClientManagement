@@ -17,7 +17,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
         public VisualizzaCommissione(int idCommissione,int idCliente)
         {
             InitializeComponent();
-            editor = new HandlerVisualizzaCommissione(lblTxtNome, lblTxtCognome, lblTxtEmail, lblTxtNumeroTel,lblTxtDescrizioneCommissione,lblTxtScadenza, lblTxtCompletato);
+            editor = new HandlerVisualizzaCommissione(lblTxtNome, lblTxtCognome, lblTxtEmail, lblTxtNumeroTel,txtDescrizioneCommissione,lblTxtScadenza, lblTxtCompletato);
             editor.CaricaDati(idCommissione,idCliente);
 
             // aggiungere un editor handler che va a popolare i campi 
