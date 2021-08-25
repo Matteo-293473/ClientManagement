@@ -67,5 +67,10 @@ namespace ClientManagement.PopUp.ModificaCliente
         {
             Controllo.ControllaNumeri(e);
         }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Controllo.ControllaSpazi(e);
+        }
     }
 }

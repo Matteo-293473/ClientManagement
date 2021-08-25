@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,20 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblDescrizione.Text = cm.Descrizione;
             this.lblDataScadenza.Text = cm.Scadenza.ToString().Substring(0, 10);
             this.lblCompletato.Text = cm.TaskCompletato? "Sì" : "No";
+            RegolaFont();
+        }
+
+        private void RegolaFont()
+        {
+            int i = 10;
+            //if (lblEmail.Text.Length < 20)
+            //    i = 10;
+            //else
+            //    i = 8;
+            
+
+            // qualcosa di simile
+            lblEmail.Font = new Font("Microsoft YaHei", (lblEmail.Text.Length/i) *10, FontStyle.Bold);
         }
     }
 }

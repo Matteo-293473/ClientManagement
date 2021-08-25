@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 using ClientManagement.PopUpModifica;
 
@@ -15,7 +16,6 @@ namespace ClientManagement
     public partial class ModificaCommissione : Form
     {
         private EditorModificaCommissione editorModificaCommissione;
-        private EditorHandlerAggiungiCommissione editorAggiungiCommissione;
         private int idCommissione;
         public ModificaCommissione(int idCommissione)
         {
@@ -39,13 +39,13 @@ namespace ClientManagement
             try
             {
                 // controllo input
-                editorAggiungiCommissione.ControllaValiditaInput();
+                Controllo.ControlloInputCommissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
 
                 // funzione che aggiorna la commissione all'interno del dizionario
                 editorModificaCommissione.AggiornaCommissione();
 
                 // ripuliamo i campi
-                editorAggiungiCommissione.ResetFields();
+                editorModificaCommissione.ResetFields();
 
                 Close();
             }

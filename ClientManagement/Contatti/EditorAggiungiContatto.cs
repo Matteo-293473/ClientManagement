@@ -80,31 +80,8 @@ namespace ClientManagement.Contatti
             txtNome.Text = nome[0];
             txtCognome.Text = cognome[0];
 
-            // controllo degli input
-            if (String.IsNullOrEmpty(txtNome.Text) || String.IsNullOrEmpty(txtCognome.Text) ||
-                String.IsNullOrEmpty(txtNumeroTelefono.Text))
-                throw new Exception("Uno dei campi è vuoto");
-
-            // usiamo una libreria per controllare la validità dell'email
-            // nel caso in cui l'email sia in un formato sbagliato, viene
-            // generata un'eccezione
-            var mail = new MailAddress(txtEmail.Text);
-
-            // il numero di telefono in genere ha tra le 10 e le 15 cifre
-            if (!txtNumeroTelefono.Text.Any(char.IsLetter) && (txtNumeroTelefono.Text.Length > 15 
-                                                              || txtNumeroTelefono.Text.Length < 10))
-                throw new Exception("Numero di telefono non valido");
-
-           
-            if (!txtCognome.Text.All(char.IsLetter))
-                throw new Exception("Cognome non valido, ci sono caratteri errati");
-
-            
-            if (!txtNumeroTelefono.Text.All(char.IsDigit))
-                throw new Exception("Numero di telefono non valido");
-
-            if (!txtNome.Text.All(char.IsLetter))
-                throw new Exception("Nome non valido, ci sono caratteri errati");
+            // usiamo la classe statica per controllare se ci sono errori negli input delle textbox
+            Controllo.ControlloInputCliente(txtNome.Text, txtCognome.Text, txtEmail.Text, txtNumeroTelefono.Text);
 
 
         }
@@ -119,7 +96,6 @@ namespace ClientManagement.Contatti
 
 
             var popUpModificaCliente = new ModificaCliente(idCliente);
-
             popUpModificaCliente.ShowDialog(lstContatti);
         }
     }

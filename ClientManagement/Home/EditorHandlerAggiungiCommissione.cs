@@ -4,6 +4,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Windows.Forms;
 using ClientManagement.Contatti;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 
 namespace ClientManagement
@@ -32,7 +33,9 @@ namespace ClientManagement
             this.txtDescrizioneCommissione = txtDescrizioneCommissione;
             this.dtpScadenza = dtpScadenza;
         }
-        
+
+
+
         internal override void ResetFields() 
         {
             // richiamo il metodo della classe padre
@@ -48,13 +51,8 @@ namespace ClientManagement
         internal override void ControllaValiditaInput()
         {
             base.ControllaValiditaInput();
+            Controllo.ControlloInputCommissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
 
-
-            if (String.IsNullOrEmpty(txtDescrizioneCommissione.Text))
-                throw new Exception("Il campo \"descrizione della commissione\" non può essere vuoto");
-
-            if (dtpScadenza.Value < DateTime.Now.Date)  // controlliamo che non sia una data passata
-                throw new Exception("La data non può essere una passata");
         }
 
 

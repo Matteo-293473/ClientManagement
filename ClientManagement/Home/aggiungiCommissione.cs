@@ -45,7 +45,7 @@ namespace ClientManagement.Resources
         {
             try
             {
-                // controllo input
+                // controllo input 
                 editor.ControllaValiditaInput();
 
                 // funzione che crea una nuova commissione, nuovo cliente e l'associazione nel dizionario

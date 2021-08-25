@@ -46,6 +46,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(185, 20);
             this.txtEmail.TabIndex = 28;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // btnModifica
             // 

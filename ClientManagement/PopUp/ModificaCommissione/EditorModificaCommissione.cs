@@ -26,6 +26,13 @@ namespace ClientManagement.PopUpModifica
             this.cbxTask = cbxTask;
         }
 
+        public void ResetFields()
+        {
+            txtDescrizioneCommissione.Text = "";
+            dtpScadenza.ResetText();
+            cbxTask.Checked = false;
+        }
+
         public void CaricaDati(int idCommissione)
         {
 

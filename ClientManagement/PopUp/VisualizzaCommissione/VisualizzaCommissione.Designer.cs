@@ -94,7 +94,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblDescrizioneCommissione.AutoSize = true;
             this.lblDescrizioneCommissione.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblDescrizioneCommissione.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDescrizioneCommissione.Location = new System.Drawing.Point(244, 15);
+            this.lblDescrizioneCommissione.Location = new System.Drawing.Point(267, 15);
             this.lblDescrizioneCommissione.Name = "lblDescrizioneCommissione";
             this.lblDescrizioneCommissione.Size = new System.Drawing.Size(226, 19);
             this.lblDescrizioneCommissione.TabIndex = 14;
@@ -105,11 +105,11 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblDataScadenza.AutoSize = true;
             this.lblDataScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblDataScadenza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDataScadenza.Location = new System.Drawing.Point(244, 158);
+            this.lblDataScadenza.Location = new System.Drawing.Point(15, 267);
             this.lblDataScadenza.Name = "lblDataScadenza";
-            this.lblDataScadenza.Size = new System.Drawing.Size(73, 19);
+            this.lblDataScadenza.Size = new System.Drawing.Size(77, 19);
             this.lblDataScadenza.TabIndex = 13;
-            this.lblDataScadenza.Text = "Scadenza";
+            this.lblDataScadenza.Text = "Scadenza:";
             // 
             // lblTxtNome
             // 
@@ -160,7 +160,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblTxtScadenza.AutoSize = true;
             this.lblTxtScadenza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblTxtScadenza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTxtScadenza.Location = new System.Drawing.Point(343, 158);
+            this.lblTxtScadenza.Location = new System.Drawing.Point(119, 267);
             this.lblTxtScadenza.Name = "lblTxtScadenza";
             this.lblTxtScadenza.Size = new System.Drawing.Size(93, 19);
             this.lblTxtScadenza.TabIndex = 23;
@@ -171,7 +171,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(244, 200);
+            this.label2.Location = new System.Drawing.Point(14, 286);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 19);
             this.label2.TabIndex = 24;
@@ -182,7 +182,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblTxtCompletato.AutoSize = true;
             this.lblTxtCompletato.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.lblTxtCompletato.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTxtCompletato.Location = new System.Drawing.Point(349, 200);
+            this.lblTxtCompletato.Location = new System.Drawing.Point(118, 286);
             this.lblTxtCompletato.Name = "lblTxtCompletato";
             this.lblTxtCompletato.Size = new System.Drawing.Size(111, 19);
             this.lblTxtCompletato.TabIndex = 25;
@@ -190,11 +190,11 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             // 
             // lblTxtDescrizioneCommissione
             // 
-            this.lblTxtDescrizioneCommissione.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTxtDescrizioneCommissione.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold);
             this.lblTxtDescrizioneCommissione.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTxtDescrizioneCommissione.Location = new System.Drawing.Point(244, 34);
+            this.lblTxtDescrizioneCommissione.Location = new System.Drawing.Point(268, 34);
             this.lblTxtDescrizioneCommissione.Name = "lblTxtDescrizioneCommissione";
-            this.lblTxtDescrizioneCommissione.Size = new System.Drawing.Size(314, 113);
+            this.lblTxtDescrizioneCommissione.Size = new System.Drawing.Size(444, 271);
             this.lblTxtDescrizioneCommissione.TabIndex = 26;
             this.lblTxtDescrizioneCommissione.Text = "txtDescrizioneCommissione";
             // 
@@ -203,7 +203,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(583, 286);
+            this.ClientSize = new System.Drawing.Size(736, 328);
             this.Controls.Add(this.lblTxtDescrizioneCommissione);
             this.Controls.Add(this.lblTxtCompletato);
             this.Controls.Add(this.label2);
