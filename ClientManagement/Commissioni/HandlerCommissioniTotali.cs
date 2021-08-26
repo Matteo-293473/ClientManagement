@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
+using System.Linq;
 
 namespace ClientManagement
 {
-    class HandlerCommissioniTotali
+    class HandlerCommissioniTotali : HandlerCommissioni
     {
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {

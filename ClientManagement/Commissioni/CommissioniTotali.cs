@@ -8,6 +8,7 @@ namespace ClientManagement
     public partial class CommissioniTotali : UserControl
     {
         private HandlerCommissioniTotali handler;
+
         public CommissioniTotali()
         {
             InitializeComponent();
@@ -25,6 +26,18 @@ namespace ClientManagement
         private void CommissioniTotali_Load(object sender, EventArgs e)
         {
             handler.AggiornaListView(lstCommissioniScadenza);
+        }
+
+        private void btnVisualizza_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                handler.MostraPopUp(lstCommissioniScadenza, this, "visualizza");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }
