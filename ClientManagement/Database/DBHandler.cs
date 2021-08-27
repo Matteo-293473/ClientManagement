@@ -11,73 +11,116 @@ namespace ClientManagement.Database
 {
     class DBHandler : IDatabase
     {
-        private readonly string DBPath;
+        private readonly string DBPathClienti;
+        private readonly string DBPathCommissioni;
         private static DBHandler instance;
 
-        public static DBHandler GetInstance(string databaseFilePath)
+        // Design Pattern : Singleton
+        public static DBHandler GetInstance(string databaseFilePathClienti,string databaseFilePathCommissioni)
         {
             if (instance == null)
             {
-                instance = new DBHandler(databaseFilePath);
+                instance = new DBHandler(databaseFilePathClienti, databaseFilePathCommissioni);
             }
 
             return instance;
         }
+        //1:04 DEL VIDEO
 
 
         // Qui applichiamo il pattern Singleton.
         // Non vogliamo istanziare due volte DBHandler
-        protected DBHandler(string datafile)
+        protected DBHandler(string datafileClienti,string datafileCommissioni)
         {
-            DBPath = datafile;
+            DBPathClienti = datafileClienti;
+            DBPathCommissioni = datafileCommissioni;
         }
 
-        public IDictionary<Cliente, List<Commissione>> GetData()
+        public IDictionary<int, Cliente> GetDataClienti()
         {
-            IDictionary<Cliente, List<Commissione>> clienteCommissioni = null;
+            IDictionary<int, Cliente> clienti = null;
             try
             {
-                JArray jsonArray = JArray.Parse(File.ReadAllText(DBPath));
+                JArray jsonArray = JArray.Parse(File.ReadAllText(DBPathClienti));
 
                 // trasformiamo l'array Json in un dizionario cliente, commissioni
-                clienteCommissioni = jsonArray.ToObject<IDictionary<Cliente, List<Commissione>>>();
+                clienti = jsonArray.ToObject<IDictionary<int, Cliente>>();
             }
             catch (Exception)
             {
-                clienteCommissioni = new Dictionary<Cliente, List<Commissione>>();
+                clienti = new Dictionary<int, Cliente>();
             }
 
-            return clienteCommissioni;
+            return clienti;
         }
 
 
-
-        public void SaveData(IDictionary<Cliente, List<Commissione>> clienteCommissioni)
+        public IDictionary<int, List<Commissione>> GetDataCommissioni()
         {
-            JArray commissioniArray = new JArray();
-
-            foreach (var i in Models.CommissionManager.clienteCommissioni)
+            IDictionary<int, List<Commissione>> commissioni = null;
+            try
             {
-                List<Commissione> temp = i.Value;
+                JArray jsonArray = JArray.Parse(File.ReadAllText(DBPathCommissioni));
+
+                // trasformiamo l'array Json in un dizionario cliente, commissioni
+                commissioni = jsonArray.ToObject<IDictionary<int, List<Commissione>>>();
+            }
+            catch (Exception)
+            {
+                commissioni = new Dictionary<int, List<Commissione>>();
+            }
+
+            return commissioni;
+        }
+
+        public void SaveDataClienti(IDictionary<int, Cliente> cliente)
+        {
+            var clientiJArray = new JArray();
+
+            foreach (var i in from i in cliente
+                let temp = i.Value
+                select i)
+            {
+                clientiJArray.Add(new JObject
+                {
+
+                    {"Nome", cliente[i.Key].Nome},
+                    {"Cognome", cliente[i.Key].Cognome},
+                    {"Email", cliente[i.Key].Email},
+                    {"Numero", cliente[i.Key].Numero},
+
+                });
+            }
+
+            File.WriteAllText(DBPathClienti, clientiJArray.ToString());
+        }
+
+        public void SaveDataCommissioni(IDictionary<int, List<Commissione>> commissioni)
+        {
+            var commissioniJArray = new JArray();
+
+            foreach (var i in commissioni)
+            {
+                var temp = i.Value;
                 foreach (Commissione cm in temp)
                 {
-                    commissioniArray.Add(new JObject
+
+                    commissioniJArray.Add(new JObject
                     {
 
-                        {"Nome", CommissionManager.clienti[i.Key].Nome},
-                        {"Cognome", CommissionManager.clienti[i.Key].Cognome},
-                        {"Email", CommissionManager.clienti[i.Key].Email},
-                        {"Numero", CommissionManager.clienti[i.Key].Numero},
                         {"Descrizione", cm.Descrizione},
                         {"Scadenza", cm.Scadenza},
+                        {"TaskCompletato", cm.TaskCompletato},
+                        {"IdCommissione", cm.IdCommissione},
 
                     });
                 }
             }
 
-            File.WriteAllText(DBPath, commissioniArray.ToString());
+            File.WriteAllText(DBPathCommissioni, commissioniJArray.ToString());
         }
     }
+
 }
 
 

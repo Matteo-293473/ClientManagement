@@ -10,14 +10,27 @@ namespace ClientManagement
     public partial class ClientManagement : Form
     {
         private HandlerClientManagement editor;
-        public ClientManagement()
+        private readonly IDatabase db;
+        public ClientManagement(IDatabase database)
         {
             InitializeComponent();
+
+            db = database;
             editor = new HandlerClientManagement();
             editor.ColoreSelezione(btnHome, pnlSideMenu);
+
+            LoadStorage();
         }
 
-        
+        private void LoadStorage()
+        {
+            var clienti = db.GetDataClienti();
+            var commissioni = db.GetDataCommissioni();
+
+            CommissionManager.Load(clienti,commissioni);
+
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {

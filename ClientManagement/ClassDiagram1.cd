@@ -3,14 +3,14 @@
   <Class Name="ClientManagement.ClientManagement">
     <Position X="16.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CQAAGBAAAKFAhAAADACKQAFCQBCAAAACAAxBAAAAIAA=</HashCode>
+      <HashCode>CQAAGBAAAKFQjAAADACKQAFCQBCAAAACAAxBAAAAIAA=</HashCode>
       <FileName>ClientManagement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.CommissioniTotali" Collapsed="true">
     <Position X="6.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAgAACgAAAAAAAiAAAAKAQAAQAABAIAAAUBAAAA=</HashCode>
+      <HashCode>AAAACAgAACgAAAAAAAiAAAAKAQAgQAABAIAAAUBAEAA=</HashCode>
       <FileName>Commissioni\CommissioniTotali.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -38,14 +38,14 @@
   <Class Name="ClientManagement.CommissioniInScadenza" Collapsed="true">
     <Position X="4.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ARhAAAABACjAAAAAAAiAAAAKAAAgQAAAAIEAIUAAEAA=</HashCode>
+      <HashCode>ARjAAAABASjQAAAAAAiAAAAKAAAgQAAAAIEAIUAAEAA=</HashCode>
       <FileName>Home\CommissioniInScadenza.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.EditorCommissioniInScadenza">
     <Position X="3" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Home\EditorCommissioniInScadenza.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,7 +73,7 @@
   <Class Name="ClientManagement.ModificaCommissione" Collapsed="true">
     <Position X="10" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAAaRABAAAAAKAAAACAgQAQAAIAAAAIAAAAAA=</HashCode>
+      <HashCode>AABAAAAAAaQABAAAAAKAAAACAgQAQAAIABAAIAAAAAA=</HashCode>
       <FileName>PopUp\ModificaCommissione\ModificaCommissione.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -101,7 +101,7 @@
   <Class Name="ClientManagement.Contatti.EditorAggiungiContatto" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AiAQAAAAAAAAAgQAAAAAIACEgAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AiAQAAAAAAAAAAQAAAAAIACEgAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Contatti\EditorAggiungiContatto.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -115,7 +115,7 @@
   <Class Name="ClientManagement.Database.DBHandler" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="19.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAQBABAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAABEAAABABBgAAAAAAAEAAAAAA=</HashCode>
       <FileName>Database\DBHandler.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -123,7 +123,7 @@
   <Class Name="ClientManagement.Extensions.clienteCommissioniExtensions">
     <Position X="14.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAQCAAA=</HashCode>
       <FileName>Extensions\clienteCommissioniExtensions.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -155,13 +155,6 @@
       <FileName>Models\Commissione.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClientManagement.Models.CommissionManager" Collapsed="true">
-    <Position X="8.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IIIACAAAAAAAAAAAAAAAAAIACAAAADEAAAAAAAAQAIA=</HashCode>
-      <FileName>Models\CommissionManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ClientManagement.PopUp.ModificaCliente.EditorModificaCliente" Collapsed="true">
     <Position X="8.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
@@ -172,14 +165,14 @@
   <Class Name="ClientManagement.PopUp.ModificaCliente.ModificaCliente">
     <Position X="14.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACBQAAAAACBAAAAAAACAIAAGAAIAAIAUBABAIAAAAAA=</HashCode>
+      <HashCode>gCFQAAAAACAAIAAAAACAIAAmAAIAAIAUBABAIAAACAA=</HashCode>
       <FileName>PopUp\ModificaCliente\ModificaCliente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.PopUpModifica.EditorModificaCommissione" Collapsed="true">
     <Position X="10" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAQAAAQAAQIAAAAAAACAAAAIAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAABAAAAAQAAAQAAQIAAAAAgACAAAAIAAAEAAAAAAA=</HashCode>
       <FileName>PopUp\ModificaCommissione\EditorModificaCommissione.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -195,10 +188,17 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
+  <Class Name="ClientManagement.Models.CommissionManager" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IJIAiAAAAAAAAAACAAAAAAIACAAAADEAAAAAAAAAAIA=</HashCode>
+      <FileName>Models\CommissionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="ClientManagement.Database.IDatabase" Collapsed="true">
     <Position X="19.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAABAAAAAAABgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Database\IDatabase.cs</FileName>
     </TypeIdentifier>
   </Interface>

@@ -13,13 +13,14 @@ namespace ClientManagement
         //private readonly IDatabase db;
 
         private readonly EditorCommissioniInScadenza editor;
-       
-        public CommissioniInScadenza()
+
+        private readonly IDatabase db;
+
+        public CommissioniInScadenza(IDatabase database)
         {
             InitializeComponent();
 
-            //this.db = db;
-            //LoadStorage();
+            db = database;
 
             editor = new EditorCommissioniInScadenza();
             //ci mettiamo in ascolto di qualche evento
@@ -29,33 +30,6 @@ namespace ClientManagement
             
         }
 
-
-        //private void LoadStorage()
-        //{
-        //    clienteCommissioni = db.GetData();
-        //    this.lstCommissioniScadenza.Clear();
-        //    string[] arr = new string[6];
-        //    ListViewItem lst;
-        //    foreach (var i in Models.CommissionManager.clienteCommissioni)
-        //    {
-        //        List<Commissione> temp = i.Value;
-        //        foreach (Commissione cm in temp)
-        //        {
-
-        //            arr[0] = i.Key.Nome;
-        //            arr[1] = i.Key.Cognome;
-        //            arr[2] = i.Key.Email;
-        //            arr[3] = i.Key.Numero;
-        //            arr[4] = cm.Descrizione;
-        //            arr[5] = cm.Scadenza.ToString();
-        //            lst = new ListViewItem(arr);
-
-                   
-        //           lstCommissioniScadenza.Items.Add(lst);
-
-        //        }
-        //    }
-        //}
 
 
         private void Commissioni_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
@@ -85,23 +59,6 @@ namespace ClientManagement
         }
 
 
-        //private void BtnModifica_Click(object sender, EventArgs e,Cliente c)
-        //{
-
-        //    //FrmEditBank frm = new FrmEditBank();
-        //    //frm.txtBankId.Text = gvBankCard.GetFocusedRowCellValue("BankId").ToString();
-        //    //frm.cmbBankName.Text = gvBankCard.GetFocusedRowCellValue("BankName").ToString();
-        //    //popUpModificaDati = new ModificaCommissione(/*lstCommissioniScadenza.FocusedItem(clmNome)*/);
-
-
-        //    //(lstCommissioniScadenza.FocusedItem(clmNome).ToString(),
-        //    //lstCommissioniScadenza.FocusedItem(clmCognome).ToString(),
-        //    //lstCommissioniScadenza.FocusedItem(clmEmail).ToString(),
-        //    //lstCommissioniScadenza.FocusedItem(clmNtel).ToString(),
-        //    //lstCommissioniScadenza.FocusedItem(clmNome).ToString());
-            
-          
-        //}
 
         private void btnModifica_Click(object sender, EventArgs e)
         {
@@ -125,6 +82,12 @@ namespace ClientManagement
             {
                 MessageBox.Show(err.Message);
             }
+        }
+
+        private void btnSalva_Click(object sender, EventArgs e)
+        {
+            db.SaveDataClienti(CommissionManager.clienti);
+            db.SaveDataCommissioni(CommissionManager.clienteCommissioni);
         }
     }
 }

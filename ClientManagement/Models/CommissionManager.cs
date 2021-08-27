@@ -18,7 +18,7 @@ namespace ClientManagement.Models
 
 
         // facciamo iniziare il valore a 1 perché quando ritorna un valore non trovato il valore è 0
-        private static int value = 1; 
+        private static int value = 1;
 
 
         // usufruiamo dell'overload
@@ -33,7 +33,7 @@ namespace ClientManagement.Models
             clienti.Add(value, cl);
             value += 1;
             OnClientiCambia?.Invoke(cl, clienti);
-            
+
         }
 
 
@@ -46,7 +46,7 @@ namespace ClientManagement.Models
             if (clienteCommissioni.ContainsKey(c))
             {
                 // se il cliente è giò presente e ha delle commissioni
-                
+
                 // aggiungi cm alla lista delle commissioni del cliente
                 //clienteCommissioni.Add(cl, commissioni);
                 commissioni = clienteCommissioni[c];
@@ -54,10 +54,10 @@ namespace ClientManagement.Models
                 clienteCommissioni[c] = commissioni;
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
             }
-            
-            else if(clienti.ContainsKey(c))
+
+            else if (clienti.ContainsKey(c))
             {
-                
+
                 // se il cliente non esiste tra le commissioni ma esiste nella rubrica
 
                 commissioni.Add(cm);
@@ -70,16 +70,16 @@ namespace ClientManagement.Models
 
                 commissioni.Add(cm); // aggiungo la commissione
                 clienti.Add(value, cl); // aggiungo il cliente nella rubrica
-                OnClientiCambia?.Invoke(cl, clienti);  // invoco l'evento
+                OnClientiCambia?.Invoke(cl, clienti); // invoco l'evento
                 clienteCommissioni.Add(value, commissioni); // aggiungo la commissione associata al cliente
                 OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
                 value += 1; // aggiorno il valore
             }
-            
+
         }
 
 
-        
+
         // Per il confronto del cliente usiamo Nome Cognome e Numero come superchiave. Se questi 3 valori sono
         // uguali, significa che ci stiamo riferendo allo stesso cliente
         public static int RecuperaChiaveCliente(Cliente cl)
@@ -97,46 +97,33 @@ namespace ClientManagement.Models
 
         public static void ModificaCommissione(Commissione commissione)
         {
-            foreach (var listaCommissioni in CommissionManager.clienteCommissioni.Values)
+            foreach (var cm in clienteCommissioni.Values.SelectMany(listaCommissioni =>
+                listaCommissioni.Where(cm => cm.IdCommissione == commissione.IdCommissione)))
             {
-                foreach (var cm in listaCommissioni)
-                {
-                    if (cm.IdCommissione == commissione.IdCommissione)
-                    {
-                        cm.Scadenza = commissione.Scadenza;
-                        cm.Descrizione = commissione.Descrizione;
-                        OnClienteCommissioniCambia?.Invoke(clienteCommissioni, clienteCommissioni);
-                    }
-
-                }
+                cm.Scadenza = commissione.Scadenza;
+                cm.Descrizione = commissione.Descrizione;
+                OnClienteCommissioniCambia?.Invoke(clienteCommissioni, clienteCommissioni);
             }
         }
 
         public static Commissione RestituisciCommissione(int idCommissione)
         {
-            foreach (var listaCommissioni in clienteCommissioni.Values)
-            {
-                foreach (var cm in listaCommissioni)
-                {
-                    if (cm.IdCommissione == idCommissione)
-                        return cm;
-                    
-
-                }
-            }
+            return clienteCommissioni.Values
+                .SelectMany(listaCommissioni => listaCommissioni
+                    .Where(cm => cm.IdCommissione == idCommissione))
+                .FirstOrDefault();
             // se la commissione non c'è, viene restituito null
-            return null;
         }
 
 
-        internal static void ModificaCliente(Cliente cliente,int idCliente)
+        internal static void ModificaCliente(Cliente cliente, int idCliente)
         {
             clienti[idCliente].Nome = cliente.Nome;
             clienti[idCliente].Cognome = cliente.Cognome;
             clienti[idCliente].Email = cliente.Email;
             clienti[idCliente].Numero = cliente.Numero;
             OnClientiCambia?.Invoke(cliente, clienti);
-            OnClienteCommissioniCambia?.Invoke(cliente,clienteCommissioni);
+            OnClienteCommissioniCambia?.Invoke(cliente, clienteCommissioni);
         }
 
 
@@ -151,10 +138,23 @@ namespace ClientManagement.Models
 
         }
 
-        public static void Carica()
+        public static void Load(IDictionary<int, Cliente> clDictionary,
+                                IDictionary<int, List<Commissione>> cmDictionary)
         {
+            clienti.Clear();
+            clienteCommissioni.Clear();
+            foreach (var cl in clDictionary)
+            {
+                clienti.Add(cl.Key,cl.Value);
+                
+            }
+
+            foreach (var cm in cmDictionary)
+            {
+                clienteCommissioni.Add(cm.Key,cm.Value);
+            }
+
 
         }
-
     }
 }
