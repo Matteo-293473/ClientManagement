@@ -88,6 +88,7 @@ namespace ClientManagement
         {
             db.SaveDataClienti(CommissionManager.clienti);
             db.SaveDataCommissioni(CommissionManager.clienteCommissioni);
+            MessageBox.Show("Salvato con successo!");
         }
     }
 }

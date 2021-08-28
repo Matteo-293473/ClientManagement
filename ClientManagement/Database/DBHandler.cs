@@ -63,7 +63,7 @@ namespace ClientManagement.Database
                 JArray jsonArray = JArray.Parse(File.ReadAllText(DBPathCommissioni));
 
                 // trasformiamo l'array Json in un dizionario cliente, commissioni
-                commissioni = jsonArray.ToObject<IDictionary<int, List<Commissione>>>();
+                commissioni = jsonArray.ToObject<IDictionary<int, List<Commissione>>>(); //PROBLEMA
             }
             catch (Exception)
             {
