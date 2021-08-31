@@ -38,24 +38,29 @@ namespace ClientManagement.Models
 
         private static void AggiungiEntry(int cl, Commissione cm)
         {
-            if (clienti.ContainsKey(cl))
+            var commissioni = new List<Commissione>();
+            if (clienteCommissioni.ContainsKey(cl))
             {
                 // se il cliente è già presente e ha delle commissioni
+                commissioni = clienteCommissioni[cl];
+                commissioni.Add(cm);
+                clienteCommissioni[cl] = commissioni;
+                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
+
             }
             else if (clienti.ContainsKey(cl))
             {
                 // se il cliente non esiste tra le commissioni ma esiste nella rubrica
-            }
-            else
-            {
-                // se il cliente non esiste nè tra le commissioni nè nella rubrica
+                commissioni.Add(cm);
+                clienteCommissioni.Add(cl, commissioni);
+                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
             }
 
         }
 
-            public static void AggiungiEntry(Cliente cl, Commissione cm)
+        public static void AggiungiEntry(Cliente cl, Commissione cm)
         {
-            List<Commissione> commissioni = new List<Commissione>();
+            var commissioni = new List<Commissione>();
 
             var c = RecuperaChiaveCliente(cl);
 
@@ -169,8 +174,10 @@ namespace ClientManagement.Models
             
 
             // trasferiamo il dizionario cmDictionary delle commissioni nel dizionario del programma
-            foreach (var cm in newCmDictionary)
-                AggiungiEntry(cm.Key, cm.Value);
+            foreach (var listCm in newCmDictionary)
+                foreach (var cm in listCm.Value) 
+                    AggiungiEntry(listCm.Key, cm);
+            
 
             
         }
