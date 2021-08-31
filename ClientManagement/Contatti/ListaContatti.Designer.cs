@@ -51,7 +51,7 @@ namespace ClientManagement.Contatti
             this.lstContatti.FullRowSelect = true;
             this.lstContatti.GridLines = true;
             this.lstContatti.HideSelection = false;
-            this.lstContatti.Location = new System.Drawing.Point(49, 154);
+            this.lstContatti.Location = new System.Drawing.Point(50, 154);
             this.lstContatti.Name = "lstContatti";
             this.lstContatti.Size = new System.Drawing.Size(677, 225);
             this.lstContatti.TabIndex = 2;
@@ -105,9 +105,9 @@ namespace ClientManagement.Contatti
             this.btnModifica.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnModifica.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.btnModifica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnModifica.Location = new System.Drawing.Point(49, 400);
+            this.btnModifica.Location = new System.Drawing.Point(50, 405);
             this.btnModifica.Name = "btnModifica";
-            this.btnModifica.Size = new System.Drawing.Size(128, 38);
+            this.btnModifica.Size = new System.Drawing.Size(115, 38);
             this.btnModifica.TabIndex = 16;
             this.btnModifica.Text = "MODIFICA";
             this.btnModifica.UseVisualStyleBackColor = false;
