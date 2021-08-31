@@ -55,9 +55,9 @@ namespace ClientManagement.Scadenze
             this.lstCommissioniScadenza.FullRowSelect = true;
             this.lstCommissioniScadenza.GridLines = true;
             this.lstCommissioniScadenza.HideSelection = false;
-            this.lstCommissioniScadenza.Location = new System.Drawing.Point(43, 86);
+            this.lstCommissioniScadenza.Location = new System.Drawing.Point(50, 86);
             this.lstCommissioniScadenza.Name = "lstCommissioniScadenza";
-            this.lstCommissioniScadenza.Size = new System.Drawing.Size(678, 313);
+            this.lstCommissioniScadenza.Size = new System.Drawing.Size(680, 313);
             this.lstCommissioniScadenza.TabIndex = 2;
             this.lstCommissioniScadenza.UseCompatibleStateImageBehavior = false;
             this.lstCommissioniScadenza.View = System.Windows.Forms.View.Details;
