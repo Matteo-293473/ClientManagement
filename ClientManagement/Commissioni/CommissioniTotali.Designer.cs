@@ -56,9 +56,9 @@ namespace ClientManagement
             this.lstCommissioniScadenza.FullRowSelect = true;
             this.lstCommissioniScadenza.GridLines = true;
             this.lstCommissioniScadenza.HideSelection = false;
-            this.lstCommissioniScadenza.Location = new System.Drawing.Point(40, 94);
+            this.lstCommissioniScadenza.Location = new System.Drawing.Point(49, 47);
             this.lstCommissioniScadenza.Name = "lstCommissioniScadenza";
-            this.lstCommissioniScadenza.Size = new System.Drawing.Size(678, 313);
+            this.lstCommissioniScadenza.Size = new System.Drawing.Size(661, 338);
             this.lstCommissioniScadenza.TabIndex = 1;
             this.lstCommissioniScadenza.UseCompatibleStateImageBehavior = false;
             this.lstCommissioniScadenza.View = System.Windows.Forms.View.Details;
@@ -110,7 +110,7 @@ namespace ClientManagement
             this.btnVisualizza.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnVisualizza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
             this.btnVisualizza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVisualizza.Location = new System.Drawing.Point(40, 423);
+            this.btnVisualizza.Location = new System.Drawing.Point(49, 405);
             this.btnVisualizza.Name = "btnVisualizza";
             this.btnVisualizza.Size = new System.Drawing.Size(115, 38);
             this.btnVisualizza.TabIndex = 18;
