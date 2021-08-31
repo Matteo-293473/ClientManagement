@@ -11,8 +11,8 @@ namespace ClientManagement.Models
     static class CommissionManager
     {
         // dizionari nei quali vengono archiviati i dati
-        public static readonly Dictionary<int, List<Commissione>> clienteCommissioni = new Dictionary<int, List<Commissione>>();
-        public static readonly Dictionary<int, Cliente> clienti = new Dictionary<int, Cliente>();
+        public static readonly Dictionary<int, List<Commissione>> ClienteCommissioni = new Dictionary<int, List<Commissione>>();
+        public static readonly Dictionary<int, Cliente> Clienti = new Dictionary<int, Cliente>();
 
         // creiamo due eventi
         public static event EventHandler<Dictionary<int, List<Commissione>>> OnClienteCommissioniCambia;
@@ -20,43 +20,21 @@ namespace ClientManagement.Models
 
 
         // facciamo iniziare il valore a 1 perché quando ritorna un valore non trovato il valore è 0
-        private static int value = 1;
+        private static int _value = 1;
 
 
         // usufruiamo dell'overload
         public static void AggiungiEntry(Cliente cl)
         {
-            var c = RecuperaChiaveCliente(cl);
+            var c = RecuperaChiaveDaCliente(cl);
 
-            if (clienti.ContainsKey(c))
+            if (Clienti.ContainsKey(c))
                 throw new Exception("Il cliente è già presente");
 
             // aggiungo il cliente
-            clienti.Add(value, cl);
-            value += 1;
-            OnClientiCambia?.Invoke(cl, clienti);
-
-        }
-
-        private static void AggiungiEntry(int cl, Commissione cm)
-        {
-            var commissioni = new List<Commissione>();
-            if (clienteCommissioni.ContainsKey(cl))
-            {
-                // se il cliente è già presente e ha delle commissioni
-                commissioni = clienteCommissioni[cl];
-                commissioni.Add(cm);
-                clienteCommissioni[cl] = commissioni;
-                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
-
-            }
-            else if (clienti.ContainsKey(cl))
-            {
-                // se il cliente non esiste tra le commissioni ma esiste nella rubrica
-                commissioni.Add(cm);
-                clienteCommissioni.Add(cl, commissioni);
-                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
-            }
+            Clienti.Add(_value, cl);
+            _value += 1;
+            OnClientiCambia?.Invoke(cl, Clienti);
 
         }
 
@@ -65,39 +43,39 @@ namespace ClientManagement.Models
         {
             var commissioni = new List<Commissione>();
 
-            var c = RecuperaChiaveCliente(cl);
+            var c = RecuperaChiaveDaCliente(cl);
 
-            if (clienteCommissioni.ContainsKey(c))
+            if (ClienteCommissioni.ContainsKey(c))
             {
                 // se il cliente è già presente e ha delle commissioni
 
                 // aggiungi cm alla lista delle commissioni del cliente
-                //clienteCommissioni.Add(cl, commissioni);
-                commissioni = clienteCommissioni[c];
+                //ClienteCommissioni.Add(cl, commissioni);
+                commissioni = ClienteCommissioni[c];
                 commissioni.Add(cm);
-                clienteCommissioni[c] = commissioni;
-                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
+                ClienteCommissioni[c] = commissioni;
+                OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
             }
 
-            else if (clienti.ContainsKey(c))
+            else if (Clienti.ContainsKey(c))
             {
 
                 // se il cliente non esiste tra le commissioni ma esiste nella rubrica
 
                 commissioni.Add(cm);
-                clienteCommissioni.Add(c, commissioni);
-                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
+                ClienteCommissioni.Add(c, commissioni);
+                OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
             }
             else
             {
                 // se il cliente non esiste nè tra le commissioni nè nella rubrica
 
                 commissioni.Add(cm); // aggiungo la commissione
-                clienti.Add(value, cl); // aggiungo il cliente nella rubrica
-                OnClientiCambia?.Invoke(cl, clienti); // invoco l'evento
-                clienteCommissioni.Add(value, commissioni); // aggiungo la commissione associata al cliente
-                OnClienteCommissioniCambia?.Invoke(cl, clienteCommissioni); // invoco l'evento
-                value += 1; // aggiorno il valore
+                Clienti.Add(_value, cl); // aggiungo il cliente nella rubrica
+                OnClientiCambia?.Invoke(cl, Clienti); // invoco l'evento
+                ClienteCommissioni.Add(_value, commissioni); // aggiungo la commissione associata al cliente
+                OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+                _value += 1; // aggiorno il valore
             }
 
         }
@@ -106,13 +84,13 @@ namespace ClientManagement.Models
 
         // Per il confronto del cliente usiamo Nome Cognome e Numero come superchiave. Se questi 3 valori sono
         // uguali, significa che ci stiamo riferendo allo stesso cliente
-        public static int RecuperaChiaveCliente(Cliente cl)
+        public static int RecuperaChiaveDaCliente(Cliente cl)
         {
-            return clienti.Where(s =>
-                clienti[s.Key].Nome == cl.Nome &&
-                clienti[s.Key].Cognome == cl.Cognome &&
-                clienti[s.Key].Numero == cl.Numero).Select(s => s.Key).FirstOrDefault();
-            // nel caso in cui il cliente non si trova nella lista clienteCommissioni, viene restituito il valore 0
+            return Clienti.Where(s =>
+                Clienti[s.Key].Nome == cl.Nome &&
+                Clienti[s.Key].Cognome == cl.Cognome &&
+                Clienti[s.Key].Numero == cl.Numero).Select(s => s.Key).FirstOrDefault();
+            // nel caso in cui il cliente non si trova nella lista ClienteCommissioni, viene restituito il valore 0
 
         }
 
@@ -121,18 +99,18 @@ namespace ClientManagement.Models
 
         public static void ModificaCommissione(Commissione commissione)
         {
-            foreach (var cm in clienteCommissioni.Values.SelectMany(listaCommissioni =>
+            foreach (var cm in ClienteCommissioni.Values.SelectMany(listaCommissioni =>
                 listaCommissioni.Where(cm => cm.IdCommissione == commissione.IdCommissione)))
             {
                 cm.Scadenza = commissione.Scadenza;
                 cm.Descrizione = commissione.Descrizione;
-                OnClienteCommissioniCambia?.Invoke(clienteCommissioni, clienteCommissioni);
+                OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
             }
         }
 
         public static Commissione RestituisciCommissione(int idCommissione)
         {
-            return clienteCommissioni.Values
+            return ClienteCommissioni.Values
                 .SelectMany(listaCommissioni => listaCommissioni
                     .Where(cm => cm.IdCommissione == idCommissione))
                 .FirstOrDefault(); // se la commissione non c'è, viene restituito null
@@ -142,26 +120,26 @@ namespace ClientManagement.Models
 
         internal static void ModificaCliente(Cliente cliente, int idCliente)
         {
-            clienti[idCliente].Nome = cliente.Nome;
-            clienti[idCliente].Cognome = cliente.Cognome;
-            clienti[idCliente].Email = cliente.Email;
-            clienti[idCliente].Numero = cliente.Numero;
-            OnClientiCambia?.Invoke(cliente, clienti);
-            OnClienteCommissioniCambia?.Invoke(cliente, clienteCommissioni);
+            Clienti[idCliente].Nome = cliente.Nome;
+            Clienti[idCliente].Cognome = cliente.Cognome;
+            Clienti[idCliente].Email = cliente.Email;
+            Clienti[idCliente].Numero = cliente.Numero;
+            OnClientiCambia?.Invoke(cliente, Clienti);
+            OnClienteCommissioniCambia?.Invoke(cliente, ClienteCommissioni);
         }
 
 
         public static Cliente RestituisciCliente(int idCliente) =>
-            clienti.Where(c => c.Key == idCliente)
+            Clienti.Where(c => c.Key == idCliente)
                 .Select(c => c.Value)
                 .FirstOrDefault();
 
 
-        // metodo che prende il db, salva clienti commissioni e mostra il messaggio di salvataggio
+        // metodo che prende il db, salva Clienti commissioni e mostra il messaggio di salvataggio
         public static void Salva(IDatabase db)
         {
-            db.SaveDataClienti(clienti);
-            db.SaveDataCommissioni(clienteCommissioni);
+            db.SaveDataClienti(Clienti);
+            db.SaveDataCommissioni(ClienteCommissioni);
             MessageBox.Show("Salvato con successo!");
         }
 
@@ -175,10 +153,10 @@ namespace ClientManagement.Models
             var newCmDictionary = new Dictionary<int, List<Commissione>>(cmDictionary);
 
             // pulisco i due dizionari locali
-            clienti.Clear();
-            clienteCommissioni.Clear();
+            Clienti.Clear();
+            ClienteCommissioni.Clear();
 
-            // trasferiamo il dizionario clDictionary dei clienti nel dizionario del programma
+            // trasferiamo il dizionario clDictionary dei Clienti nel dizionario del programma
             foreach (var cl in newClDictionary)
                 AggiungiEntry(cl.Value);
             
@@ -186,7 +164,7 @@ namespace ClientManagement.Models
             // trasferiamo il dizionario cmDictionary delle commissioni nel dizionario del programma
             foreach (var listCm in newCmDictionary)
                 foreach (var cm in listCm.Value) 
-                    AggiungiEntry(listCm.Key, cm);
+                    AggiungiEntry(Clienti[listCm.Key], cm);
             
 
             

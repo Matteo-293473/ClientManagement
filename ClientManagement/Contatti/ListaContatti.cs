@@ -19,7 +19,7 @@ namespace ClientManagement.Contatti
         {
             InitializeComponent();
             editorAggiungiContatti = new EditorAggiungiContatto();
-            // ci iscriviamo all'evento della lista clienti
+            // ci iscriviamo all'evento della lista Clienti
             CommissionManager.OnClientiCambia += Clienti_OnListaCambia;
             editor = new EditorContatti();
         }

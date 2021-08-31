@@ -9,7 +9,7 @@ namespace ClientManagement
 {
     public partial class CommissioniInScadenza : UserControl
     {
-        //private IDictionary<Cliente, List<Commissione>> clienteCommissioni = new Dictionary<Cliente, List<Commissione>>();
+        //private IDictionary<Cliente, List<Commissione>> ClienteCommissioni = new Dictionary<Cliente, List<Commissione>>();
         //private readonly IDatabase db;
 
         private readonly EditorCommissioniInScadenza editor;
