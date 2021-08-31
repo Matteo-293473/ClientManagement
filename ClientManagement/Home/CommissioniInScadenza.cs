@@ -86,9 +86,7 @@ namespace ClientManagement
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-            db.SaveDataClienti(CommissionManager.clienti);
-            db.SaveDataCommissioni(CommissionManager.clienteCommissioni);
-            MessageBox.Show("Salvato con successo!");
+            CommissionManager.Salva(db);
         }
     }
 }

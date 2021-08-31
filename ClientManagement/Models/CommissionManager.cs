@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using ClientManagement.Database;
 
 namespace ClientManagement.Models
 {
     static class CommissionManager
     {
         // dizionari nei quali vengono archiviati i dati
-        public static Dictionary<int, List<Commissione>> clienteCommissioni = new Dictionary<int, List<Commissione>>();
-        public static Dictionary<int, Cliente> clienti = new Dictionary<int, Cliente>();
+        public static readonly Dictionary<int, List<Commissione>> clienteCommissioni = new Dictionary<int, List<Commissione>>();
+        public static readonly Dictionary<int, Cliente> clienti = new Dictionary<int, Cliente>();
 
         // creiamo due eventi
         public static event EventHandler<Dictionary<int, List<Commissione>>> OnClienteCommissioniCambia;
@@ -57,6 +59,7 @@ namespace ClientManagement.Models
             }
 
         }
+
 
         public static void AggiungiEntry(Cliente cl, Commissione cm)
         {
@@ -132,8 +135,8 @@ namespace ClientManagement.Models
             return clienteCommissioni.Values
                 .SelectMany(listaCommissioni => listaCommissioni
                     .Where(cm => cm.IdCommissione == idCommissione))
-                .FirstOrDefault();
-            // se la commissione non c'è, viene restituito null
+                .FirstOrDefault(); // se la commissione non c'è, viene restituito null
+
         }
 
 
@@ -154,17 +157,24 @@ namespace ClientManagement.Models
                 .FirstOrDefault();
 
 
-        public static void Salva()
+        // metodo che prende il db, salva clienti commissioni e mostra il messaggio di salvataggio
+        public static void Salva(IDatabase db)
         {
-
+            db.SaveDataClienti(clienti);
+            db.SaveDataCommissioni(clienteCommissioni);
+            MessageBox.Show("Salvato con successo!");
         }
 
+        // Caricamento dei dizionari attraverso i due dizionari ricavati dai file
         public static void Load(IDictionary<int, Cliente> clDictionary,
                                 IDictionary<int, List<Commissione>> cmDictionary)
         {
+
+            // trasformo i due IDictionary in Dictionary
             var newClDictionary = new Dictionary<int, Cliente>(clDictionary);
             var newCmDictionary = new Dictionary<int, List<Commissione>>(cmDictionary);
 
+            // pulisco i due dizionari locali
             clienti.Clear();
             clienteCommissioni.Clear();
 

@@ -33,5 +33,12 @@
     "Scadenza": "2021-09-03T12:48:18",
     "TaskCompletato": false,
     "IdCommissione": 5
+  },
+  {
+    "IdCliente": 4,
+    "Descrizione": "Sostituire cpu",
+    "Scadenza": "2021-09-04T18:01:25",
+    "TaskCompletato": false,
+    "IdCommissione": 6
   }
 ]
