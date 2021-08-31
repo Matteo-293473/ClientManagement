@@ -57,7 +57,6 @@ namespace ClientManagement
 
 
 
-
         internal override void InserisciEntry()
         {
             // Controllo i caratteri delle textBox nome e cognome
@@ -70,8 +69,6 @@ namespace ClientManagement
             // aggiungo commissione e cliente al managerCommissioni al cliente
             CommissionManager.AggiungiEntry(cl, cm);
         }
-
-
 
 
 
