@@ -111,7 +111,7 @@ namespace ClientManagement.Database
                         {
                             listCommissioniTemp = commissioni[(int)listaCommissioni[i][j]];
                             listCommissioniTemp.Add((Commissione)listaCommissioni[i][j + 1]);
-                            commissioni.Add((int)listaCommissioni[i][j], listCommissioniTemp);
+                            commissioni[(int)listaCommissioni[i][j]] =  listCommissioniTemp;
                         }
                         else
                         {
@@ -123,7 +123,7 @@ namespace ClientManagement.Database
 
 
             }
-            catch (Exception err)
+            catch (Exception)
             {
                 commissioni = new Dictionary<int, List<Commissione>>();
             }

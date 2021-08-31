@@ -36,8 +36,24 @@ namespace ClientManagement.Models
 
         }
 
+        private static void AggiungiEntry(int cl, Commissione cm)
+        {
+            if (clienti.ContainsKey(cl))
+            {
+                // se il cliente è già presente e ha delle commissioni
+            }
+            else if (clienti.ContainsKey(cl))
+            {
+                // se il cliente non esiste tra le commissioni ma esiste nella rubrica
+            }
+            else
+            {
+                // se il cliente non esiste nè tra le commissioni nè nella rubrica
+            }
 
-        public static void AggiungiEntry(Cliente cl, Commissione cm)
+        }
+
+            public static void AggiungiEntry(Cliente cl, Commissione cm)
         {
             List<Commissione> commissioni = new List<Commissione>();
 
@@ -45,7 +61,7 @@ namespace ClientManagement.Models
 
             if (clienteCommissioni.ContainsKey(c))
             {
-                // se il cliente è giò presente e ha delle commissioni
+                // se il cliente è già presente e ha delle commissioni
 
                 // aggiungi cm alla lista delle commissioni del cliente
                 //clienteCommissioni.Add(cl, commissioni);
@@ -141,33 +157,24 @@ namespace ClientManagement.Models
         public static void Load(IDictionary<int, Cliente> clDictionary,
                                 IDictionary<int, List<Commissione>> cmDictionary)
         {
-            var newClDicitonary = new Dictionary<int, Cliente>(clDictionary);
-            var newCmDicitonary = new Dictionary<int, List<Commissione>>(cmDictionary);
+            var newClDictionary = new Dictionary<int, Cliente>(clDictionary);
+            var newCmDictionary = new Dictionary<int, List<Commissione>>(cmDictionary);
 
             clienti.Clear();
             clienteCommissioni.Clear();
-            foreach (var cl in newClDicitonary)
-            {
+
+            // trasferiamo il dizionario clDictionary dei clienti nel dizionario del programma
+            foreach (var cl in newClDictionary)
                 AggiungiEntry(cl.Value);
-
-                foreach (var cmLista in newCmDicitonary)
-                {
-                    
-                    foreach (var cm in cmLista.Value)
-                    {
-                        
-                        AggiungiEntry(cl.Value, cm);
-
-                    }
-                }
-
-            }
-
-            
-                
             
 
+            // trasferiamo il dizionario cmDictionary delle commissioni nel dizionario del programma
+            foreach (var cm in newCmDictionary)
+                AggiungiEntry(cm.Key, cm.Value);
 
+            
         }
+
+        
     }
 }
