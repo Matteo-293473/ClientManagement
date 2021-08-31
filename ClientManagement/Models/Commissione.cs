@@ -16,12 +16,24 @@ namespace ClientManagement.Models
 
         private static int globalId = 1;
 
+        // questo costruttore 
         public Commissione(string descrizione, DateTime scadenza)
         {
             this.IdCommissione = globalId; // ogni Commissione è identificata da un numero
             this.Descrizione = descrizione;
             this.Scadenza = scadenza;
             this.TaskCompletato = false;
+            globalId++;
+        }
+
+
+        // questo costruttore viene usato solo nel caso di caricamento dei dati, sfruttiamo il meccanismo di overloading
+        public Commissione(string descrizione, DateTime scadenza, bool taskCompletato, int idCommissione)
+        {
+            this.IdCommissione = idCommissione; // ogni Commissione è identificata da un numero
+            this.Descrizione = descrizione;
+            this.Scadenza = scadenza;
+            this.TaskCompletato = taskCompletato;
             globalId++;
         }
     }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClientManagement.Models;
+using Newtonsoft.Json;
 
 namespace ClientManagement.Database
 {
@@ -25,7 +26,6 @@ namespace ClientManagement.Database
 
             return instance;
         }
-        //1:04 DEL VIDEO
 
 
         // Qui applichiamo il pattern Singleton.
@@ -41,10 +41,19 @@ namespace ClientManagement.Database
             IDictionary<int, Cliente> clienti = null;
             try
             {
-                JArray jsonArray = JArray.Parse(File.ReadAllText(DBPathClienti));
+                var jsonObject = JArray.Parse(File.ReadAllText(DBPathClienti));
 
-                // trasformiamo l'array Json in un dizionario cliente, commissioni
-                clienti = jsonArray.ToObject<IDictionary<int, Cliente>>();
+                
+                var lista = jsonObject
+                    .Cast<JObject>()
+                    .Select(o => new KeyValuePair<int, Cliente>(
+                        (int) o.PropertyValues().ElementAtOrDefault(0),
+                        new Cliente((string) o.PropertyValues().ElementAtOrDefault(1),
+                            (string) o.PropertyValues().ElementAtOrDefault(2),
+                            (string) o.PropertyValues().ElementAtOrDefault(3),
+                            (string) o.PropertyValues().ElementAtOrDefault(4))))
+                    .ToList();
+                clienti = lista.ToDictionary(p => p.Key, p => p.Value);
             }
             catch (Exception)
             {
@@ -60,12 +69,61 @@ namespace ClientManagement.Database
             IDictionary<int, List<Commissione>> commissioni = null;
             try
             {
-                JArray jsonArray = JArray.Parse(File.ReadAllText(DBPathCommissioni));
+                commissioni = new Dictionary<int, List<Commissione>>();
 
-                // trasformiamo l'array Json in un dizionario cliente, commissioni
-                commissioni = jsonArray.ToObject<IDictionary<int, List<Commissione>>>(); //PROBLEMA
+                var jsonObject = JArray.Parse(File.ReadAllText(DBPathCommissioni));
+
+
+                // ci creiamo prima una lista generica contenente id e commissione
+                //var listaCommissioni = jsonObject
+                //    .Cast<JObject>()
+                //    .Select(o => new List<object>
+                //    {
+                //        (int) o.PropertyValues().ElementAtOrDefault(0),
+                //        new Commissione((string) o.PropertyValues().ElementAtOrDefault(1),
+                //            (DateTime) o.PropertyValues().ElementAtOrDefault(2),
+                //            (bool) o.PropertyValues().ElementAtOrDefault(3),
+                //            (int) o.PropertyValues().ElementAtOrDefault(4))
+                //    }).ToList();
+
+                var listaCommissioni = jsonObject
+                    .Cast<JObject>()
+                    .Select(o => new object[]
+                    {
+                        (int) o.PropertyValues().ElementAtOrDefault(0),
+                        new Commissione((string) o.PropertyValues().ElementAtOrDefault(1),
+                            (DateTime) o.PropertyValues().ElementAtOrDefault(2),
+                            (bool) o.PropertyValues().ElementAtOrDefault(3),
+                            (int) o.PropertyValues().ElementAtOrDefault(4))
+                    }).ToArray();
+
+                
+
+
+
+                for (var i = 0; i < listaCommissioni.LongLength; i++)
+                {
+                    for (var j = 0; j < listaCommissioni.Length; j += listaCommissioni.Length)
+                    {
+                        var listCommissioniTemp = new List<Commissione>();
+
+                        if (commissioni.ContainsKey((int) listaCommissioni[i][j]))
+                        {
+                            listCommissioniTemp = commissioni[(int)listaCommissioni[i][j]];
+                            listCommissioniTemp.Add((Commissione)listaCommissioni[i][j + 1]);
+                            commissioni.Add((int)listaCommissioni[i][j], listCommissioniTemp);
+                        }
+                        else
+                        {
+                            listCommissioniTemp.Add((Commissione) listaCommissioni[i][j + 1]);
+                            commissioni.Add((int) listaCommissioni[i][j], listCommissioniTemp);
+                        }
+                    }
+                }
+
+
             }
-            catch (Exception)
+            catch (Exception err)
             {
                 commissioni = new Dictionary<int, List<Commissione>>();
             }
@@ -83,11 +141,11 @@ namespace ClientManagement.Database
             {
                 clientiJArray.Add(new JObject
                 {
-
+                    {"Id", i.Key},
                     {"Nome", cliente[i.Key].Nome},
                     {"Cognome", cliente[i.Key].Cognome},
-                    {"Email", cliente[i.Key].Email},
                     {"Numero", cliente[i.Key].Numero},
+                    {"Email", cliente[i.Key].Email},
 
                 });
             }
@@ -107,7 +165,7 @@ namespace ClientManagement.Database
 
                     commissioniJArray.Add(new JObject
                     {
-
+                        {"IdCliente", i.Key},
                         {"Descrizione", cm.Descrizione},
                         {"Scadenza", cm.Scadenza},
                         {"TaskCompletato", cm.TaskCompletato},

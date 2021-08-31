@@ -25,7 +25,7 @@ namespace ClientManagement
         private void LoadStorage()
         {
             var clienti = db.GetDataClienti();
-            var commissioni = db.GetDataCommissioni();
+            var commissioni = db.GetDataCommissioni(); 
 
             CommissionManager.Load(clienti,commissioni);
 

@@ -1,8 +1,16 @@
 [
   {
+    "Id": 1,
     "Nome": "Matteo",
     "Cognome": "Pulcinelli",
-    "Email": "m.pulcinelli@campus.uniurb.it",
-    "Numero": "3334445555"
+    "Numero": "3334445555",
+    "Email": "m.pulcinelli@campus.uniurb.it"
+  },
+  {
+    "Id": 2,
+    "Nome": "Niccolò",
+    "Cognome": "Cenci",
+    "Numero": "3334445666",
+    "Email": "n.cenci@gmail.com"
   }
 ]

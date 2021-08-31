@@ -141,18 +141,31 @@ namespace ClientManagement.Models
         public static void Load(IDictionary<int, Cliente> clDictionary,
                                 IDictionary<int, List<Commissione>> cmDictionary)
         {
+            var newClDicitonary = new Dictionary<int, Cliente>(clDictionary);
+            var newCmDicitonary = new Dictionary<int, List<Commissione>>(cmDictionary);
+
             clienti.Clear();
             clienteCommissioni.Clear();
-            foreach (var cl in clDictionary)
+            foreach (var cl in newClDicitonary)
             {
-                clienti.Add(cl.Key,cl.Value);
-                
+                AggiungiEntry(cl.Value);
+
+                foreach (var cmLista in newCmDicitonary)
+                {
+                    
+                    foreach (var cm in cmLista.Value)
+                    {
+                        
+                        AggiungiEntry(cl.Value, cm);
+
+                    }
+                }
+
             }
 
-            foreach (var cm in cmDictionary)
-            {
-                clienteCommissioni.Add(cm.Key,cm.Value);
-            }
+            
+                
+            
 
 
         }
