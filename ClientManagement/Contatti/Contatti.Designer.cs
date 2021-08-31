@@ -29,9 +29,17 @@ namespace ClientManagement.Contatti
         /// </summary>
         private void InitializeComponent()
         {
-            this.listaContatti1 = new ListaContatti();
             this.aggiungiContatto1 = new AggiungiContatto();
+            this.listaContatti1 = new ListaContatti();
             this.SuspendLayout();
+            // 
+            // aggiungiContatto1
+            // 
+            this.aggiungiContatto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.aggiungiContatto1.Location = new System.Drawing.Point(0, 0);
+            this.aggiungiContatto1.Name = "aggiungiContatto1";
+            this.aggiungiContatto1.Size = new System.Drawing.Size(764, 485);
+            this.aggiungiContatto1.TabIndex = 1;
             // 
             // listaContatti1
             // 
@@ -40,14 +48,6 @@ namespace ClientManagement.Contatti
             this.listaContatti1.Name = "listaContatti1";
             this.listaContatti1.Size = new System.Drawing.Size(764, 485);
             this.listaContatti1.TabIndex = 0;
-            // 
-            // aggiungiContatto1
-            // 
-            this.aggiungiContatto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.aggiungiContatto1.Location = new System.Drawing.Point(3, 3);
-            this.aggiungiContatto1.Name = "aggiungiContatto1";
-            this.aggiungiContatto1.Size = new System.Drawing.Size(764, 485);
-            this.aggiungiContatto1.TabIndex = 1;
             // 
             // Contatti
             // 
