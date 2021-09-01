@@ -9,7 +9,7 @@ using ClientManagement.Models;
 
 namespace ClientManagement
 {
-    class EditorHandlerAggiungiCommissione : EditorAggiungiContatto
+    class EditorHandlerAggiungiCommissione : EditorHandlerAggiungiContatto
     {
 
         private TextBox txtDescrizioneCommissione;

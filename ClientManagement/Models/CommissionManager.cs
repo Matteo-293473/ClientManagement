@@ -95,8 +95,6 @@ namespace ClientManagement.Models
         }
 
 
-
-
         public static void ModificaCommissione(Commissione commissione)
         {
             foreach (var cm in ClienteCommissioni.Values.SelectMany(listaCommissioni =>

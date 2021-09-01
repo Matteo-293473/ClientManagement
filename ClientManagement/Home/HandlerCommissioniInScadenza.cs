@@ -10,13 +10,10 @@ namespace ClientManagement
 {
     class EditorCommissioniInScadenza : HandlerCommissioni
     {
-
-
-
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {
             // rimuoviamo gli elementi presenti
-            //lstCommissioniScadenza.Items.Clear();
+            // lstCommissioniScadenza.Items.Clear();
             var date = DateTime.Now;
             var nextSunday = date.AddDays(7 - (int) date.DayOfWeek);
 

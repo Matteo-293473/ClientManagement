@@ -11,7 +11,7 @@ using ClientManagement.PopUp.ModificaCliente;
 
 namespace ClientManagement.Contatti
 {
-    class EditorAggiungiContatto 
+    class EditorHandlerAggiungiContatto 
     {
         // diamo la visibilità anche alle classi derivate
         protected TextBox txtNome;
@@ -20,13 +20,13 @@ namespace ClientManagement.Contatti
         protected TextBox txtNumeroTelefono;
         
 
-        public EditorAggiungiContatto()
+        public EditorHandlerAggiungiContatto()
         {
 
         }
 
         //OK
-        public EditorAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono)
+        public EditorHandlerAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono)
         {
             this.txtNome = txtNome;
             this.txtCognome = txtCognome;

@@ -46,7 +46,7 @@
     <Position X="3" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Home\EditorCommissioniInScadenza.cs</FileName>
+      <FileName>Home\HandlerCommissioniInScadenza.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.EditorHandlerAggiungiCommissione">
@@ -98,11 +98,11 @@
       <FileName>Contatti\Contatti.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClientManagement.Contatti.EditorAggiungiContatto" Collapsed="true">
+  <Class Name="ClientManagement.Contatti.EditorHandlerAggiungiContatto" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AiAQAAAAAAAAAAQAAAAAIACEgAAAAIAAAAAAAAAAAAA=</HashCode>
-      <FileName>Contatti\EditorAggiungiContatto.cs</FileName>
+      <FileName>Contatti\EditorHandlerAggiungiContatto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.Contatti.ListaContatti" Collapsed="true">
@@ -191,7 +191,7 @@
   <Class Name="ClientManagement.Models.CommissionManager" Collapsed="true">
     <Position X="8.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IJIAiAAAAAAAAAACAAAAAAIACAAAADEAAAAAAAAAAIA=</HashCode>
+      <HashCode>AJIAiAAAAAAAAAACAAAIAAIAAAAAABEAAAEACAAAAIA=</HashCode>
       <FileName>Models\CommissionManager.cs</FileName>
     </TypeIdentifier>
   </Class>

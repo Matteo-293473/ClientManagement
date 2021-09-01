@@ -15,14 +15,14 @@ namespace ClientManagement.PopUp.ModificaCliente
     
     public partial class ModificaCliente : Form
     {
-        private EditorAggiungiContatto editorAggiungiContatti;
+        private EditorHandlerAggiungiContatto editorAggiungiContatti;
         private EditorModificaCliente editorModificaCliente;
         private int idCliente;
         public ModificaCliente(int idCliente)
         {
             InitializeComponent();
             this.idCliente = idCliente;
-            editorAggiungiContatti = new EditorAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
+            editorAggiungiContatti = new EditorHandlerAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
             editorModificaCliente = new EditorModificaCliente(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
             editorModificaCliente.CaricaDati(idCliente);
         }

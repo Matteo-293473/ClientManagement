@@ -67,7 +67,7 @@
     <Compile Include="Contatti\Contatti.Designer.cs">
       <DependentUpon>Contatti.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contatti\EditorAggiungiContatto.cs" />
+    <Compile Include="Contatti\EditorHandlerAggiungiContatto.cs" />
     <Compile Include="Contatti\ListaContatti.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,7 +92,7 @@
       <DependentUpon>CommissioniTotali.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DBHandler.cs" />
-    <Compile Include="Home\EditorCommissioniInScadenza.cs" />
+    <Compile Include="Home\HandlerCommissioniInScadenza.cs" />
     <Compile Include="Commissioni\HandlerCommissioniTotali.cs" />
     <Compile Include="Contatti\EditorContatti.cs" />
     <Compile Include="Home\EditorHandlerAggiungiCommissione.cs" />

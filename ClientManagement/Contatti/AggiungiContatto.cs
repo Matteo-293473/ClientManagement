@@ -14,7 +14,7 @@ namespace ClientManagement.Contatti
 {
     public partial class AggiungiContatto : UserControl
     {
-        private EditorAggiungiContatto editorAggiungiContatti;
+        private EditorHandlerAggiungiContatto editorAggiungiContatti;
         private EditorContatti editorContatti;
 
         public AggiungiContatto()
@@ -24,7 +24,7 @@ namespace ClientManagement.Contatti
             
             // carico due editor che alleggeriscono il codice della classe
             // il primo si occupa della verifica e inserimento dei dati
-            editorAggiungiContatti = new EditorAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
+            editorAggiungiContatti = new EditorHandlerAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
             
             // il secondo permette di richiamare il metodo aggiornaListaContatti
             editorContatti = new EditorContatti();

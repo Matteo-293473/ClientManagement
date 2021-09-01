@@ -14,11 +14,11 @@ namespace ClientManagement.Contatti
     public partial class ListaContatti : UserControl
     {
         private EditorContatti editor;
-        private EditorAggiungiContatto editorAggiungiContatti;
+        private EditorHandlerAggiungiContatto editorAggiungiContatti;
         public ListaContatti()
         {
             InitializeComponent();
-            editorAggiungiContatti = new EditorAggiungiContatto();
+            editorAggiungiContatti = new EditorHandlerAggiungiContatto();
             // ci iscriviamo all'evento della lista Clienti
             CommissionManager.OnClientiCambia += Clienti_OnListaCambia;
             editor = new EditorContatti();
