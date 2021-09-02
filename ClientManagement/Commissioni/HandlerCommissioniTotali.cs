@@ -12,6 +12,8 @@ namespace ClientManagement
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {
 
+            Composite.Composite clientiCommissioni = new Composite.Composite();
+
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
             ListViewItem lst;
@@ -22,16 +24,13 @@ namespace ClientManagement
                 foreach (Commissione cm in temp)
                 {
 
-                    arr[0] = CommissionManager.Clienti[i.Key].Nome;
-                    arr[1] = CommissionManager.Clienti[i.Key].Cognome;
-                    arr[2] = CommissionManager.Clienti[i.Key].Email;
-                    arr[3] = CommissionManager.Clienti[i.Key].Numero;
-                    arr[4] = cm.Descrizione;
-                    arr[5] = cm.Scadenza.ToString().Substring(0, 10); // mostriamo solo la data
-                    arr[6] = cm.IdCommissione.ToString();
-                    arr[7] = cm.TaskCompletato? "sì" : "no";
-                    lst = new ListViewItem(arr);
+                    clientiCommissioni.Add(cm);
+                    clientiCommissioni.Add(CommissionManager.Clienti[i.Key]);
+                    lst = new ListViewItem(clientiCommissioni.ToArrayString());
+
                     lstCommissioniScadenza.Items.Add(lst);
+
+                    clientiCommissioni.Clear();
 
                 }
             }

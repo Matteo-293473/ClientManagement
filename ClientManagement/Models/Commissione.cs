@@ -40,14 +40,15 @@ namespace ClientManagement.Models
         }
 
 
-        public ListViewItem ToListView()
+        public string[] ToArrayString()
         {
             string[] row = { 
                 this.Descrizione, 
-                this.Scadenza.ToString().Substring(0, 10), 
-                this.TaskCompletato ? "Sì" : "No", 
-                this.IdCommissione.ToString() };
-            return new ListViewItem(row);
+                this.Scadenza.ToString().Substring(0, 10),
+                this.IdCommissione.ToString(),
+                this.TaskCompletato ? "Sì" : "No"
+            }; 
+            return row;
         }
 
     }

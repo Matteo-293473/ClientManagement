@@ -10,6 +10,6 @@ namespace ClientManagement.Composite
 {
     interface IComponent
     {
-        ListViewItem ToListView();
+        string[] ToArrayString();
     }
 }

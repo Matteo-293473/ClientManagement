@@ -26,10 +26,10 @@ namespace ClientManagement.Models
 
         
 
-        public ListViewItem ToListView()
+        public string[] ToArrayString()
         {
             string[] row = { this.Nome, this.Cognome, this.Numero, this.Email };
-            return new ListViewItem(row);
+            return row;
         }
 
 

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace ClientManagement.Composite
 {
+    // classe che funge da gruppo di oggetti
     class Composite : IComponent
     {
         private List<IComponent> components = new List<IComponent>();
@@ -16,22 +17,30 @@ namespace ClientManagement.Composite
             components.Add(leaf);
         }
 
-        public ListViewItem ToListView()
+        public void Clear()
         {
-            ListViewItem lstItem = new ListViewItem();
-            foreach (var component in components)
-            {
-                //lstItem. component.ToListView();
-            }
-
-            return new ListViewItem(/*inserisci elemento*/);
+            components.Clear();
         }
 
-        public static ListViewItem ToListViewCommissione(IComponent commissione)
+        public string[] ToArrayString()
         {
+            var j = 0;
+            var rowList = components.Select(component => component.ToArrayString()).ToList();
 
-            //string[] row = { commissione.Descrizione, commissione.Scadenza.ToString().Substring(0, 10), commissione.TaskCompletato ? "Sì" : "No", commissione.IdCommissione.ToString() };
-            return new ListViewItem();
+            var row = new string[rowList.Capacity]; // non so se è corretto
+            foreach (var s in rowList.SelectMany(arrayString => arrayString))
+            {
+                row[j] = s;
+                j++;
+            }
+
+            return row;
+        }
+
+        public static ListViewItem ToListView(IComponent item)
+        {
+            var row = item.ToArrayString();
+            return new ListViewItem(row);
         }
     }
 }

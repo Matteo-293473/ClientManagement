@@ -17,9 +17,11 @@ namespace ClientManagement
             var date = DateTime.Now;
             var nextSunday = date.AddDays(7 - (int) date.DayOfWeek);
 
+            Composite.Composite clientiCommissioni = new Composite.Composite();
+
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
-            string[] arr = new string[7];
+            string[] arr = new string[8]; //era 7
 
             foreach (var i in CommissionManager.ClienteCommissioni)
             {
@@ -31,18 +33,13 @@ namespace ClientManagement
                     //lst.SubItems.Add(clienteCommissioniExtensions.ToListViewCliente(CommissionManager.Clienti[i.Key]));
                     //lst.SubItems.Add(clienteCommissioniExtensions.ToListViewCommissione(cm));
 
+                    clientiCommissioni.Add(cm);
+                    clientiCommissioni.Add(CommissionManager.Clienti[i.Key]);
+                    lst = new ListViewItem(clientiCommissioni.ToArrayString());
 
-
-                    // QUESTO SI PUO' CONVERTIRE CON UNA FUNZIONE
-                    arr[0] = CommissionManager.Clienti[i.Key].Nome;
-                    arr[1] = CommissionManager.Clienti[i.Key].Cognome;
-                    arr[2] = CommissionManager.Clienti[i.Key].Email;
-                    arr[3] = CommissionManager.Clienti[i.Key].Numero;
-                    arr[4] = cm.Descrizione;
-                    arr[5] = cm.Scadenza.ToString().Substring(0, 10); // mostriamo solo la data
-                    arr[6] = cm.IdCommissione.ToString();
-                    lst = new ListViewItem(arr);
                     lstCommissioniScadenza.Items.Add(lst);
+
+                    clientiCommissioni.Clear();
                 }
             }
 
