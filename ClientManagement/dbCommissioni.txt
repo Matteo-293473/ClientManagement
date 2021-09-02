@@ -4,21 +4,21 @@
     "Descrizione": "sistemare pc\r\ninstallare antivirus",
     "Scadenza": "2021-08-31T15:23:47",
     "TaskCompletato": false,
-    "IdCommissione": 2
+    "IdCommissione": 1
   },
   {
     "IdCliente": 1,
     "Descrizione": "Sistemare computer\r\nsistemare cellulare",
     "Scadenza": "2021-08-30T15:24:04.3888773+02:00",
     "TaskCompletato": false,
-    "IdCommissione": 3
+    "IdCommissione": 2
   },
   {
     "IdCliente": 1,
     "Descrizione": "fare backup",
     "Scadenza": "2021-09-02T15:24:17",
     "TaskCompletato": false,
-    "IdCommissione": 4
+    "IdCommissione": 3
   },
   {
     "IdCliente": 3,

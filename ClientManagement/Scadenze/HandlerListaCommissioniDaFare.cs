@@ -24,8 +24,8 @@ namespace ClientManagement.Scadenze
                 var temp = i.Value;
                 foreach (var cm in temp)
                 {
-                    clientiCommissioni.Add(cm);
                     clientiCommissioni.Add(CommissionManager.Clienti[i.Key]);
+                    clientiCommissioni.Add(cm);
 
                     if (!cm.TaskCompletato)
                     {

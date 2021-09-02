@@ -30,11 +30,9 @@ namespace ClientManagement
                 {
                     ListViewItem lst;
                     lst = new ListViewItem();
-                    //lst.SubItems.Add(clienteCommissioniExtensions.ToListViewCliente(CommissionManager.Clienti[i.Key]));
-                    //lst.SubItems.Add(clienteCommissioniExtensions.ToListViewCommissione(cm));
-
-                    clientiCommissioni.Add(cm);
+                    
                     clientiCommissioni.Add(CommissionManager.Clienti[i.Key]);
+                    clientiCommissioni.Add(cm);
                     lst = new ListViewItem(clientiCommissioni.ToArrayString());
 
                     lstCommissioniScadenza.Items.Add(lst);

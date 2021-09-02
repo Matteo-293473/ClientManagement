@@ -27,7 +27,7 @@ namespace ClientManagement.Composite
             var j = 0;
             var rowList = components.Select(component => component.ToArrayString()).ToList();
 
-            var row = new string[rowList.Capacity]; // non so se è corretto
+            var row = new string[rowList.Capacity*rowList.Count]; 
             foreach (var s in rowList.SelectMany(arrayString => arrayString))
             {
                 row[j] = s;

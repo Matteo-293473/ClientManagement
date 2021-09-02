@@ -24,8 +24,8 @@ namespace ClientManagement
                 foreach (Commissione cm in temp)
                 {
 
-                    clientiCommissioni.Add(cm);
                     clientiCommissioni.Add(CommissionManager.Clienti[i.Key]);
+                    clientiCommissioni.Add(cm);
                     lst = new ListViewItem(clientiCommissioni.ToArrayString());
 
                     lstCommissioniScadenza.Items.Add(lst);

@@ -36,7 +36,8 @@ namespace ClientManagement.Models
             this.Descrizione = descrizione;
             this.Scadenza = scadenza;
             this.TaskCompletato = taskCompletato;
-            globalId++;
+            if (idCommissione > globalId)
+                globalId = idCommissione+1;
         }
 
 
