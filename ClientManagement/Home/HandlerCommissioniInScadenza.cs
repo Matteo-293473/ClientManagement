@@ -19,7 +19,6 @@ namespace ClientManagement
 
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
-            ListViewItem lst;
             string[] arr = new string[7];
 
             foreach (var i in CommissionManager.ClienteCommissioni)
@@ -27,6 +26,13 @@ namespace ClientManagement
                 List<Commissione> temp = i.Value;
                 foreach (var cm in temp.Where(cm => cm.TaskCompletato == false && cm.Scadenza < nextSunday))
                 {
+                    ListViewItem lst;
+                    lst = new ListViewItem();
+                    //lst.SubItems.Add(clienteCommissioniExtensions.ToListViewCliente(CommissionManager.Clienti[i.Key]));
+                    //lst.SubItems.Add(clienteCommissioniExtensions.ToListViewCommissione(cm));
+
+
+
                     // QUESTO SI PUO' CONVERTIRE CON UNA FUNZIONE
                     arr[0] = CommissionManager.Clienti[i.Key].Nome;
                     arr[1] = CommissionManager.Clienti[i.Key].Cognome;

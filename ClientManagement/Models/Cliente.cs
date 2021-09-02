@@ -1,20 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using ClientManagement.Composite;
 
 namespace ClientManagement.Models
 {
-    public class Cliente
+    // usiamo il design pattern composite. Cliente è una foglia del pattern
+    public class Cliente : IComponent
     {
         public string Nome { get; set; }
         public string Cognome { get; set; }
         public string Numero { get; set; }
         public string Email { get; set; }
-
-        // numero di istanze totali che prenderemo come id
-        // private int globalId = 0;
-        // public int totAcquisti { get; set; }
-
-        // Ogni cliente avrà una lista di commissioni
-        // public List<Commissione> Commissioni = new List<Commissione>();
 
         public Cliente(string nome, string cognome, string numero, string email)
         {
@@ -26,7 +23,15 @@ namespace ClientManagement.Models
 
         }
 
+
         
+
+        public ListViewItem ToListView()
+        {
+            string[] row = { this.Nome, this.Cognome, this.Numero, this.Email };
+            return new ListViewItem(row);
+        }
+
 
     }
 }

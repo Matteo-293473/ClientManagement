@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Composite\Composite.cs" />
+    <Compile Include="Composite\IComponent.cs" />
     <Compile Include="Contatti\AggiungiContatto.cs">
       <SubType>UserControl</SubType>
     </Compile>

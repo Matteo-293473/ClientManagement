@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
+using ClientManagement.Composite;
 
 namespace ClientManagement.Models
 {
-    public class Commissione
+    public class Commissione : IComponent
     {
         //protected string stato;
 
@@ -36,5 +38,17 @@ namespace ClientManagement.Models
             this.TaskCompletato = taskCompletato;
             globalId++;
         }
+
+
+        public ListViewItem ToListView()
+        {
+            string[] row = { 
+                this.Descrizione, 
+                this.Scadenza.ToString().Substring(0, 10), 
+                this.TaskCompletato ? "Sì" : "No", 
+                this.IdCommissione.ToString() };
+            return new ListViewItem(row);
+        }
+
     }
 }

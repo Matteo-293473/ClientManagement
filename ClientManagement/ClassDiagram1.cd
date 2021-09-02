@@ -144,16 +144,18 @@
   <Class Name="ClientManagement.Models.Cliente" Collapsed="true">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAEBAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAgAAAAAABAAAAAAAAAAAAAAAAAEBAAA=</HashCode>
       <FileName>Models\Cliente.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ClientManagement.Models.Commissione" Collapsed="true">
     <Position X="3" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAEAAAAAAAAAAAAAAAAAAAAAAAIAAAEQAAAAAA=</HashCode>
+      <HashCode>ABAAAAAEAAAAAgAAAAAAAAAAAAAAAAAIAAAEQAAAAAA=</HashCode>
       <FileName>Models\Commissione.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ClientManagement.PopUp.ModificaCliente.EditorModificaCliente" Collapsed="true">
     <Position X="8.25" Y="2.5" Width="1.5" />

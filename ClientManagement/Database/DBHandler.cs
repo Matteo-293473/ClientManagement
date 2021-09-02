@@ -73,19 +73,6 @@ namespace ClientManagement.Database
 
                 var jsonObject = JArray.Parse(File.ReadAllText(DBPathCommissioni));
 
-
-                // ci creiamo prima una lista generica contenente id e commissione
-                //var listaCommissioni = jsonObject
-                //    .Cast<JObject>()
-                //    .Select(o => new List<object>
-                //    {
-                //        (int) o.PropertyValues().ElementAtOrDefault(0),
-                //        new Commissione((string) o.PropertyValues().ElementAtOrDefault(1),
-                //            (DateTime) o.PropertyValues().ElementAtOrDefault(2),
-                //            (bool) o.PropertyValues().ElementAtOrDefault(3),
-                //            (int) o.PropertyValues().ElementAtOrDefault(4))
-                //    }).ToList();
-
                 var listaCommissioni = jsonObject
                     .Cast<JObject>()
                     .Select(o => new object[]
@@ -96,9 +83,6 @@ namespace ClientManagement.Database
                             (bool) o.PropertyValues().ElementAtOrDefault(3),
                             (int) o.PropertyValues().ElementAtOrDefault(4))
                     }).ToArray();
-
-                
-
 
 
                 for (var i = 0; i < listaCommissioni.LongLength; i++)
