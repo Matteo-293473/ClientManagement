@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 
 namespace ClientManagement.Scadenze
@@ -31,12 +33,17 @@ namespace ClientManagement.Scadenze
                     {
 
                         lst = new ListViewItem(clientiCommissioni.ToArrayString());
+                        lst.BackColor = Color.PaleVioletRed;
                         lstCommissioniScadenza.Items.Add(lst);
                     }
 
                     clientiCommissioni.Clear();
                 }
             }
+
+            // dispongo gli elementi in ordine di data
+            lstCommissioniScadenza.ListViewItemSorter = new DateComparer(5);
+            lstCommissioniScadenza.Sort();
         }
     }
 }

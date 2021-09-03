@@ -15,6 +15,11 @@ namespace ClientManagement.PopUpModifica
         private CheckBox cbxTask;
         private Commissione cm;
 
+        // nel caso in cui segniamo il task completo, potrebbe succedere che
+        // non si possa modificare poiché la data è passata. La data quindi viene segnata
+        // e viene aggiunta come eccezione 
+        public DateTime DtScadenzaOld;
+
         public string DescrizioneCommissione { get => txtDescrizioneCommissione.Text; }
         public DateTime Scadenza { get => dtpScadenza.Value; }
 
@@ -41,6 +46,7 @@ namespace ClientManagement.PopUpModifica
             
             txtDescrizioneCommissione.Text = cm.Descrizione;
             dtpScadenza.Value = cm.Scadenza;
+            DtScadenzaOld = cm.Scadenza;
 
 
         }

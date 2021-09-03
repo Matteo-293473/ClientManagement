@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
@@ -35,11 +36,19 @@ namespace ClientManagement
                     clientiCommissioni.Add(cm);
                     lst = new ListViewItem(clientiCommissioni.ToArrayString());
 
+                    lst.BackColor = cm.TaskCompletato ? Color.Aquamarine : Color.PaleVioletRed;
+
                     lstCommissioniScadenza.Items.Add(lst);
+
+
 
                     clientiCommissioni.Clear();
                 }
             }
+
+            // dispongo gli elementi in ordine di data
+            lstCommissioniScadenza.ListViewItemSorter = new DateComparer(5);
+            lstCommissioniScadenza.Sort();
 
         }
     }

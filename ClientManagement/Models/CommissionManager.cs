@@ -106,6 +106,8 @@ namespace ClientManagement.Models
             }
         }
 
+        
+
         public static Commissione RestituisciCommissione(int idCommissione)
         {
             return ClienteCommissioni.Values

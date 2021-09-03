@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 using ClientManagement.Models;
@@ -23,10 +24,13 @@ namespace ClientManagement
                 List<Commissione> temp = i.Value;
                 foreach (Commissione cm in temp)
                 {
-
+                    // aggiungo le due "foglie" al composite
                     clientiCommissioni.Add(CommissionManager.Clienti[i.Key]);
                     clientiCommissioni.Add(cm);
+
                     lst = new ListViewItem(clientiCommissioni.ToArrayString());
+
+                    lst.BackColor = cm.TaskCompletato ? Color.Aquamarine : Color.PaleVioletRed;
 
                     lstCommissioniScadenza.Items.Add(lst);
 
@@ -34,6 +38,10 @@ namespace ClientManagement
 
                 }
             }
+
+            // disponiamo gli elementi in ordine di data 
+            lstCommissioniScadenza.ListViewItemSorter = new DateComparer(5);
+            lstCommissioniScadenza.Sort();
         }
     }
 }

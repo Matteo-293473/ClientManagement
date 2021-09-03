@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 
 namespace ClientManagement
@@ -21,6 +22,7 @@ namespace ClientManagement
         private void CommissioniTotali_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
         {
             handler.AggiornaListView(lstCommissioniScadenza);
+          
         }
 
         private void CommissioniTotali_Load(object sender, EventArgs e)

@@ -93,11 +93,26 @@ namespace ClientManagement.Extensions
             if (String.IsNullOrEmpty(descrizione))
                 throw new Exception("Il campo \"descrizione della commissione\" non può essere vuoto");
 
-            //if (descrizione.Length > 200)
-            //    throw new Exception("La descrizione è troppo lunga, Max 200 caratteri");
-
-            if (data < DateTime.Now.Date)  // controlliamo che non sia una data passata
+            if (data.Date < DateTime.Now.Date)  // controlliamo che non sia una data passata
                 throw new Exception("La data non può essere una passata");
         }
+
+
+
+        // usiamo questo metodo per la modifica delle commissioni
+        public static void ControlloInputCommissione(string descrizione, DateTime dataScelta, DateTime oldData)
+        {
+            if (String.IsNullOrEmpty(descrizione))
+                throw new Exception("Il campo \"descrizione della commissione\" non può essere vuoto");
+
+            // Non si può scegliere una data passata diversa da quella che era stata inserita
+            if (dataScelta.Date != oldData.Date && oldData.Date < DateTime.Now.Date && dataScelta.Date < DateTime.Now.Date)
+                throw new Exception("Non puoi scegliere una data passata differente da quella che già c'era");
+
+            if (oldData.Date >= DateTime.Now.Date && dataScelta.Date < DateTime.Now.Date)
+                throw new Exception("La data non può essere una passata");
+
+        }
+
     }
 }

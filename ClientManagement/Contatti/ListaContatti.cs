@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 
 namespace ClientManagement.Contatti
@@ -50,6 +51,7 @@ namespace ClientManagement.Contatti
             {
                 MessageBox.Show(err.Message);
             }
+
         }
     }
 }

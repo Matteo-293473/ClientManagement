@@ -98,7 +98,7 @@ namespace ClientManagement
             // clmScadenza
             // 
             this.clmScadenza.Text = "Scadenza";
-            this.clmScadenza.Width = 62;
+            this.clmScadenza.Width = 83;
             // 
             // clmIdComm
             // 

@@ -13,11 +13,11 @@ namespace ClientManagement.Scadenze
 {
     public partial class ListaCommissioniDaFare : UserControl
     {
-        private HandlerCommissioniTotali handler;
+        private HandlerListaCommissioniDaFare handler;
         public ListaCommissioniDaFare()
         {
             InitializeComponent();
-            handler = new HandlerCommissioniTotali();
+            handler = new HandlerListaCommissioniDaFare();
             //ci mettiamo in ascolto di qualche evento
             //l'evento viene generato quando si aggiunge una nuova commissione
             CommissionManager.OnClienteCommissioniCambia += CommissioniTotali_OnListaCambia;

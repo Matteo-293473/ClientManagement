@@ -39,7 +39,7 @@ namespace ClientManagement
             try
             {
                 // controllo input
-                Controllo.ControlloInputCommissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
+                Controllo.ControlloInputCommissione(txtDescrizioneCommissione.Text, dtpScadenza.Value, editorModificaCommissione.DtScadenzaOld);
 
                 // funzione che aggiorna la commissione all'interno del dizionario
                 editorModificaCommissione.AggiornaCommissione();

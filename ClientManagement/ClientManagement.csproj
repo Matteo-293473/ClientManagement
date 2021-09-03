@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Extensions\clienteCommissioniExtensions.cs" />
     <Compile Include="Extensions\Controllo.cs" />
+    <Compile Include="Extensions\DateComparer.cs" />
     <Compile Include="Extensions\HandlerCommissioni.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Commissione.cs" />
