@@ -36,18 +36,28 @@ namespace ClientManagement.Extensions
             // cognome
             // email
 
-            if (opzione == "modifica")
+            switch (opzione)
             {
-                var popUpModificaDati = new ModificaCommissione(idCommissione);
-                popUpModificaDati.ShowDialog(userControl);
-            }
-            else if (opzione == "visualizza")
-            {
-                var popUpVisualizzaDati = new VisualizzaCommissione(idCommissione, idCliente);
-                popUpVisualizzaDati.ShowDialog(userControl);
+                case "modifica":
+                {
+                    var popUpModificaDati = new ModificaCommissione(idCommissione);
+                    popUpModificaDati.ShowDialog(userControl);
+                    break;
+                }
+                case "visualizza":
+                {
+                    var popUpVisualizzaDati = new VisualizzaCommissione(idCommissione, idCliente);
+                    popUpVisualizzaDati.ShowDialog(userControl);
+                    break;
+                }
             }
 
 
+        }
+
+        internal void Elimina(ListView lstCommissioniScadenza)
+        {
+            // ELIMINARE ELEMENTO
         }
     }
 }

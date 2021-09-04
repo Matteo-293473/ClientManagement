@@ -39,6 +39,8 @@ namespace ClientManagement
             this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCompletato = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnVisualizza = new System.Windows.Forms.Button();
+            this.btnModifica = new System.Windows.Forms.Button();
+            this.btnElimina = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -58,7 +60,7 @@ namespace ClientManagement
             this.lstCommissioniScadenza.HideSelection = false;
             this.lstCommissioniScadenza.Location = new System.Drawing.Point(49, 47);
             this.lstCommissioniScadenza.Name = "lstCommissioniScadenza";
-            this.lstCommissioniScadenza.Size = new System.Drawing.Size(661, 338);
+            this.lstCommissioniScadenza.Size = new System.Drawing.Size(680, 338);
             this.lstCommissioniScadenza.TabIndex = 1;
             this.lstCommissioniScadenza.UseCompatibleStateImageBehavior = false;
             this.lstCommissioniScadenza.View = System.Windows.Forms.View.Details;
@@ -118,11 +120,39 @@ namespace ClientManagement
             this.btnVisualizza.UseVisualStyleBackColor = false;
             this.btnVisualizza.Click += new System.EventHandler(this.btnVisualizza_Click);
             // 
+            // btnModifica
+            // 
+            this.btnModifica.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnModifica.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnModifica.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnModifica.Location = new System.Drawing.Point(170, 405);
+            this.btnModifica.Name = "btnModifica";
+            this.btnModifica.Size = new System.Drawing.Size(104, 38);
+            this.btnModifica.TabIndex = 19;
+            this.btnModifica.Text = "MODIFICA";
+            this.btnModifica.UseVisualStyleBackColor = false;
+            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
+            // 
+            // btnElimina
+            // 
+            this.btnElimina.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnElimina.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnElimina.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnElimina.Location = new System.Drawing.Point(280, 405);
+            this.btnElimina.Name = "btnElimina";
+            this.btnElimina.Size = new System.Drawing.Size(104, 38);
+            this.btnElimina.TabIndex = 20;
+            this.btnElimina.Text = "ELIMINA";
+            this.btnElimina.UseVisualStyleBackColor = false;
+            this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
+            // 
             // CommissioniTotali
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.btnElimina);
+            this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.btnVisualizza);
             this.Controls.Add(this.lstCommissioniScadenza);
             this.Name = "CommissioniTotali";
@@ -144,5 +174,7 @@ namespace ClientManagement
         private System.Windows.Forms.ColumnHeader clmId;
         private System.Windows.Forms.ColumnHeader clmCompletato;
         private System.Windows.Forms.Button btnVisualizza;
+        private System.Windows.Forms.Button btnModifica;
+        private System.Windows.Forms.Button btnElimina;
     }
 }

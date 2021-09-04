@@ -26,5 +26,26 @@
     "Cognome": "Federici",
     "Numero": "5556667777",
     "Email": "l.federici@gmail.com"
+  },
+  {
+    "Id": 5,
+    "Nome": "Alessandro",
+    "Cognome": "Bogliolo",
+    "Numero": "4445556666",
+    "Email": "a.bogliolo@gmail.com"
+  },
+  {
+    "Id": 6,
+    "Nome": "Stefano",
+    "Cognome": "Ferretti",
+    "Numero": "4453556666",
+    "Email": "s.ferretti@outlook.it"
+  },
+  {
+    "Id": 7,
+    "Nome": "Saverio",
+    "Cognome": "Delpriori",
+    "Numero": "5556667777",
+    "Email": "s.delPriori@gmail.com"
   }
 ]

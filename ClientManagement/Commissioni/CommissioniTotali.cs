@@ -41,5 +41,28 @@ namespace ClientManagement
                 MessageBox.Show(err.Message);
             }
         }
+
+
+        private void btnModifica_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                handler.MostraPopUp(lstCommissioniScadenza, this, "modifica");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void btnElimina_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Sei sicuro di voler eliminare la commissione?", "Eliminare commissione", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                handler.Elimina(lstCommissioniScadenza);
+            }
+
+        }
     }
 }
