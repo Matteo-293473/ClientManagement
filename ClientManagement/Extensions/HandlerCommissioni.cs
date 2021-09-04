@@ -26,15 +26,8 @@ namespace ClientManagement.Extensions
 
 
             // recupero l'id del cliente attraverso la funzione recuperaChiaveCliente
-            var idCliente = CommissionManager.RecuperaChiaveDaCliente(new Cliente(
-                lstCommissioniScadenza.SelectedItems[0].SubItems[0].Text,
-                lstCommissioniScadenza.SelectedItems[0].SubItems[1].Text,
-                lstCommissioniScadenza.SelectedItems[0].SubItems[3].Text,
-                lstCommissioniScadenza.SelectedItems[0].SubItems[2].Text
-            ));
+            var idCliente = RecuperaIdClienteSelezionato(lstCommissioniScadenza);
 
-            // cognome
-            // email
 
             switch (opzione)
             {
@@ -55,9 +48,29 @@ namespace ClientManagement.Extensions
 
         }
 
+        // Eliminare una commissione
         internal void Elimina(ListView lstCommissioniScadenza)
         {
-            // ELIMINARE ELEMENTO
+
+            Controllo.ControlloListViewSelezione(lstCommissioniScadenza);
+
+            // recupero l'id della commissione
+            var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
+            // recupero l'id del cliente attraverso la funzione recuperaChiaveCliente
+            var idCliente = RecuperaIdClienteSelezionato(lstCommissioniScadenza);
+
+            CommissionManager.EliminaCommissione(idCommissione,idCliente);
+
+        }
+
+        private static int RecuperaIdClienteSelezionato(ListView lstCommissioniScadenza)
+        {
+            return CommissionManager.RecuperaChiaveDaCliente(new Cliente(
+                lstCommissioniScadenza.SelectedItems[0].SubItems[0].Text,
+                lstCommissioniScadenza.SelectedItems[0].SubItems[1].Text,
+                lstCommissioniScadenza.SelectedItems[0].SubItems[3].Text,
+                lstCommissioniScadenza.SelectedItems[0].SubItems[2].Text
+            ));
         }
     }
 }

@@ -129,6 +129,13 @@ namespace ClientManagement.Models
         }
 
 
+
+        public static void EliminaCommissione(int idCommissione, int idCliente)
+        {
+            ClienteCommissioni[idCliente].RemoveAll((x => x.IdCommissione == idCommissione));
+            OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+        }
+
         public static Cliente RestituisciCliente(int idCliente) =>
             Clienti.Where(c => c.Key == idCliente)
                 .Select(c => c.Value)
@@ -169,6 +176,8 @@ namespace ClientManagement.Models
 
             
         }
+
+
 
         
     }
