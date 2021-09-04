@@ -59,8 +59,6 @@ namespace ClientManagement.Extensions
             var idCliente = RecuperaIdClienteSelezionato(lstCommissioniScadenza);
 
             CommissionManager.EliminaCommissione(idCommissione, idCliente);
-            
-
 
         }
 

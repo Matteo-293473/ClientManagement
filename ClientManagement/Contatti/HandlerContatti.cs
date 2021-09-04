@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using ClientManagement.Extensions;
 using ClientManagement.Models;
 
 namespace ClientManagement
 {
-    class EditorContatti
+    class HandlerContatti
     {
 
         internal void AggiornaListaContatti(ListView lstContatti)
@@ -29,6 +30,21 @@ namespace ClientManagement
             }
 
         }
+
+        public void Elimina(ListView lstContatti)
+        {
+            Controllo.ControlloListViewSelezione(lstContatti);
+
+            // recupero l'id del cliente
+            var idCliente = CommissionManager.RecuperaChiaveDaCliente(new Cliente(
+                lstContatti.SelectedItems[0].SubItems[0].Text,
+                lstContatti.SelectedItems[0].SubItems[1].Text,
+                lstContatti.SelectedItems[0].SubItems[2].Text,
+                lstContatti.SelectedItems[0].SubItems[3].Text));
+
+            CommissionManager.EliminaCliente(idCliente);
+        }
+
     }
 }
 

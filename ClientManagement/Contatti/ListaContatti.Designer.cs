@@ -25,7 +25,7 @@ namespace ClientManagement.Contatti
 
         /// <summary> 
         /// Metodo necessario per il supporto della finestra di progettazione. Non modificare 
-        /// il contenuto del metodo con l'editor di codice.
+        /// il contenuto del metodo con l'handler di codice.
         /// </summary>
         private void InitializeComponent()
         {
@@ -38,6 +38,7 @@ namespace ClientManagement.Contatti
             this.btnNuovoCliente = new System.Windows.Forms.Button();
             this.btnModifica = new System.Windows.Forms.Button();
             this.lblClienti = new System.Windows.Forms.Label();
+            this.btnElimina = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstContatti
@@ -124,11 +125,25 @@ namespace ClientManagement.Contatti
             this.lblClienti.TabIndex = 17;
             this.lblClienti.Text = "Clienti:";
             // 
+            // btnElimina
+            // 
+            this.btnElimina.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnElimina.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnElimina.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnElimina.Location = new System.Drawing.Point(171, 405);
+            this.btnElimina.Name = "btnElimina";
+            this.btnElimina.Size = new System.Drawing.Size(115, 38);
+            this.btnElimina.TabIndex = 18;
+            this.btnElimina.Text = "ELIMINA";
+            this.btnElimina.UseVisualStyleBackColor = false;
+            this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
+            // 
             // ListaContatti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.btnElimina);
             this.Controls.Add(this.lblClienti);
             this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.btnNuovoCliente);
@@ -151,5 +166,6 @@ namespace ClientManagement.Contatti
         private System.Windows.Forms.ColumnHeader clmIdCliente;
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Label lblClienti;
+        private System.Windows.Forms.Button btnElimina;
     }
 }

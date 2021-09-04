@@ -69,7 +69,6 @@ namespace ClientManagement
             {
                 MessageBox.Show(err.Message);
             }
-            
 
         }
     }

@@ -97,7 +97,7 @@
     <Compile Include="Database\DBHandler.cs" />
     <Compile Include="Home\HandlerCommissioniInScadenza.cs" />
     <Compile Include="Commissioni\HandlerCommissioniTotali.cs" />
-    <Compile Include="Contatti\EditorContatti.cs" />
+    <Compile Include="Contatti\HandlerContatti.cs" />
     <Compile Include="Home\EditorHandlerAggiungiCommissione.cs" />
     <Compile Include="ClientManagement.cs">
       <SubType>Form</SubType>

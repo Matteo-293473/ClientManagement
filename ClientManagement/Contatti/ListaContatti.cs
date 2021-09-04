@@ -14,7 +14,7 @@ namespace ClientManagement.Contatti
 {
     public partial class ListaContatti : UserControl
     {
-        private EditorContatti editor;
+        private HandlerContatti handler;
         private EditorHandlerAggiungiContatto editorAggiungiContatti;
         public ListaContatti()
         {
@@ -22,17 +22,17 @@ namespace ClientManagement.Contatti
             editorAggiungiContatti = new EditorHandlerAggiungiContatto();
             // ci iscriviamo all'evento della lista Clienti
             CommissionManager.OnClientiCambia += Clienti_OnListaCambia;
-            editor = new EditorContatti();
+            handler = new HandlerContatti();
         }
 
         private void Clienti_OnListaCambia(object sender, Dictionary<int, Cliente> clienti)
         {
-            editor.AggiornaListaContatti(lstContatti);
+            handler.AggiornaListaContatti(lstContatti);
         }
 
         private void Contatti_Load(object sender, EventArgs e)
         {
-            editor.AggiornaListaContatti(lstContatti);
+            handler.AggiornaListaContatti(lstContatti);
         }
 
         private void btnNuovoCliente_Click(object sender, EventArgs e)
@@ -52,6 +52,24 @@ namespace ClientManagement.Contatti
                 MessageBox.Show(err.Message);
             }
 
+        }
+
+        private void btnElimina_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Sei sicuro di voler eliminare il cliente?"+
+                                                            "\nVerranno rimosse tutte le commissioni associate." +"" +
+                                                            "\nL'operazione non è reversibile.", "Eliminare cliente", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    handler.Elimina(lstContatti);
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }

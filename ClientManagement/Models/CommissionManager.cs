@@ -129,12 +129,22 @@ namespace ClientManagement.Models
         }
 
 
-
+        // rimuoviamo la commissione selezionata
         public static void EliminaCommissione(int idCommissione, int idCliente)
         {
             ClienteCommissioni[idCliente].RemoveAll((x => x.IdCommissione == idCommissione));
             OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
         }
+
+        // rimuoviamo il cliente e tutte le commissioni ad esso associate
+        public static void EliminaCliente(int idCliente)
+        {
+            ClienteCommissioni.Remove(idCliente);
+            Clienti.Remove(idCliente);
+            OnClientiCambia?.Invoke(ClienteCommissioni, Clienti);
+            OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+        }
+
 
         public static Cliente RestituisciCliente(int idCliente) =>
             Clienti.Where(c => c.Key == idCliente)

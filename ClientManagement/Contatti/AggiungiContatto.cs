@@ -15,24 +15,24 @@ namespace ClientManagement.Contatti
     public partial class AggiungiContatto : UserControl
     {
         private EditorHandlerAggiungiContatto editorAggiungiContatti;
-        private EditorContatti editorContatti;
+        private HandlerContatti handlerContatti;
 
         public AggiungiContatto()
         {
             InitializeComponent();
 
             
-            // carico due editor che alleggeriscono il codice della classe
+            // carico due handler che alleggeriscono il codice della classe
             // il primo si occupa della verifica e inserimento dei dati
             editorAggiungiContatti = new EditorHandlerAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
             
             // il secondo permette di richiamare il metodo aggiornaListaContatti
-            editorContatti = new EditorContatti();
+            handlerContatti = new HandlerContatti();
             CommissionManager.OnClientiCambia += AggiungiContatto_OnListaCambia;
         }
         private void AggiungiContatto_OnListaCambia(object sender, Dictionary<int, Cliente> clienteCommissioni)
         {
-            editorContatti.AggiornaListaContatti(lstContatti);
+            handlerContatti.AggiornaListaContatti(lstContatti);
         }
 
 
