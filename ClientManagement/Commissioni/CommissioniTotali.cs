@@ -57,11 +57,19 @@ namespace ClientManagement
 
         private void btnElimina_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Sei sicuro di voler eliminare la commissione?", "Eliminare commissione", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            try
             {
-                handler.Elimina(lstCommissioniScadenza);
+                DialogResult dialogResult = MessageBox.Show("Sei sicuro di voler eliminare la commissione?", "Eliminare commissione", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    handler.Elimina(lstCommissioniScadenza);
+                }
             }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            
 
         }
     }

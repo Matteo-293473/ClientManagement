@@ -53,13 +53,14 @@ namespace ClientManagement.Extensions
         {
 
             Controllo.ControlloListViewSelezione(lstCommissioniScadenza);
-
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
             // recupero l'id del cliente attraverso la funzione recuperaChiaveCliente
             var idCliente = RecuperaIdClienteSelezionato(lstCommissioniScadenza);
 
-            CommissionManager.EliminaCommissione(idCommissione,idCliente);
+            CommissionManager.EliminaCommissione(idCommissione, idCliente);
+            
+
 
         }
 
