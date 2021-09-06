@@ -113,7 +113,7 @@ namespace ClientManagement
 
         private void ClientManagement_FormClosing(object sender, FormClosingEventArgs e)
         {
-            handler.ControllaSalvataggio(this);
+            handler.ControllaSalvataggio(e);
         }
     }
 }

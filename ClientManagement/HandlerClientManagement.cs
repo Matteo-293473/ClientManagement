@@ -28,14 +28,14 @@ namespace ClientManagement
             btn.BackColor = Color.FromArgb(13, 8, 20);
         }
 
-        internal void ControllaSalvataggio(Form form)
+        internal void ControllaSalvataggio(FormClosingEventArgs e)
         {
             if (CommissionManager.Salvato == false)
             {
-                DialogResult dialogResult = MessageBox.Show("Ci sono dati non salvati, uscire lo stesso", "Uscire", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Ci sono dati non salvati, uscire lo stesso?", "Uscire", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.No)
                 {
-                    form.Close(); //sistema
+                    e.Cancel = true;
                 }
 
             }

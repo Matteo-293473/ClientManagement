@@ -21,6 +21,13 @@
     "IdCommissione": 3
   },
   {
+    "IdCliente": 1,
+    "Descrizione": "hard reset smartphone",
+    "Scadenza": "2021-09-06T18:24:44.7218022+02:00",
+    "TaskCompletato": false,
+    "IdCommissione": 7
+  },
+  {
     "IdCliente": 3,
     "Descrizione": "Aggiornare drivers",
     "Scadenza": "2021-09-02T12:47:34",

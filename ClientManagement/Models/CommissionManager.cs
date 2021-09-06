@@ -208,9 +208,10 @@ namespace ClientManagement.Models
             foreach (var listCm in newCmDictionary)
                 foreach (var cm in listCm.Value) 
                     AggiungiEntry(Clienti[listCm.Key], cm);
-            
 
-            
+
+            // Appena caricato il file non dobbiamo segnare che bisogna salvare
+            Salvato = true;
         }
 
 
