@@ -38,6 +38,7 @@ namespace ClientManagement.Contatti
             this.btnModifica = new System.Windows.Forms.Button();
             this.lblClienti = new System.Windows.Forms.Label();
             this.btnElimina = new System.Windows.Forms.Button();
+            this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstContatti
@@ -45,8 +46,9 @@ namespace ClientManagement.Contatti
             this.lstContatti.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmNome,
             this.clmCognome,
+            this.clmNumero,
             this.clmEmail,
-            this.clmNumero});
+            this.clmId});
             this.lstContatti.FullRowSelect = true;
             this.lstContatti.GridLines = true;
             this.lstContatti.HideSelection = false;
@@ -60,24 +62,24 @@ namespace ClientManagement.Contatti
             // clmNome
             // 
             this.clmNome.Text = "Nome";
-            this.clmNome.Width = 104;
+            this.clmNome.Width = 122;
             // 
             // clmCognome
             // 
             this.clmCognome.Text = "Cognome";
-            this.clmCognome.Width = 137;
+            this.clmCognome.Width = 160;
             // 
             // clmNumero
             // 
             this.clmNumero.DisplayIndex = 2;
             this.clmNumero.Text = "N. Tel.";
-            this.clmNumero.Width = 186;
+            this.clmNumero.Width = 156;
             // 
             // clmEmail
             // 
             this.clmEmail.DisplayIndex = 3;
             this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 132;
+            this.clmEmail.Width = 168;
             // 
             // btnNuovoCliente
             // 
@@ -133,6 +135,10 @@ namespace ClientManagement.Contatti
             this.btnElimina.UseVisualStyleBackColor = false;
             this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
             // 
+            // clmId
+            // 
+            this.clmId.Text = "Id";
+            // 
             // ListaContatti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,5 +167,6 @@ namespace ClientManagement.Contatti
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Label lblClienti;
         private System.Windows.Forms.Button btnElimina;
+        private System.Windows.Forms.ColumnHeader clmId;
     }
 }
