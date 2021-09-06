@@ -14,10 +14,10 @@ namespace ClientManagement.Contatti
     class EditorHandlerAggiungiContatto 
     {
         // diamo la visibilità anche alle classi derivate
-        protected TextBox txtNome;
-        protected TextBox txtCognome;
-        protected TextBox txtEmail;
-        protected TextBox txtNumeroTelefono;
+        protected readonly TextBox TxtNome;
+        protected readonly TextBox TxtCognome;
+        protected readonly TextBox TxtEmail;
+        protected readonly TextBox TxtNumeroTelefono;
         
 
         public EditorHandlerAggiungiContatto()
@@ -25,22 +25,22 @@ namespace ClientManagement.Contatti
 
         }
 
-        //OK
+        
         public EditorHandlerAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono)
         {
-            this.txtNome = txtNome;
-            this.txtCognome = txtCognome;
-            this.txtEmail = txtEmail;
-            this.txtNumeroTelefono = txtNumeroTelefono;
+            this.TxtNome = txtNome;
+            this.TxtCognome = txtCognome;
+            this.TxtEmail = txtEmail;
+            this.TxtNumeroTelefono = txtNumeroTelefono;
         }
 
-        //OK
+        // Cancelliamo il testo presente in tutte le text box
         internal virtual void ResetFields()
         {
-            txtNome.Text = "";
-            txtCognome.Text = "";
-            txtEmail.Text = "";
-            txtNumeroTelefono.Text = "";
+            TxtNome.Text = "";
+            TxtCognome.Text = "";
+            TxtEmail.Text = "";
+            TxtNumeroTelefono.Text = "";
 
         }
 
@@ -51,7 +51,7 @@ namespace ClientManagement.Contatti
             CorreggiCaratteri();
 
             // inserisco il cliente
-            Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text);
+            Cliente cl = new Cliente(TxtNome.Text, TxtCognome.Text, TxtNumeroTelefono.Text, TxtEmail.Text);
 
             // aggiungo il cliente al dizionario usufruendo dell'overload
             CommissionManager.AggiungiEntry(cl);
@@ -62,12 +62,12 @@ namespace ClientManagement.Contatti
         internal void CorreggiCaratteri()
         {
             // Prima lettere maiuscola il resto in minuscolo
-            txtNome.Text = txtNome.Text.ToLower();
-            txtNome.Text = char.ToUpper(txtNome.Text[0])+ txtNome.Text.Substring(1);
+            TxtNome.Text = TxtNome.Text.ToLower();
+            TxtNome.Text = char.ToUpper(TxtNome.Text[0])+ TxtNome.Text.Substring(1);
 
             // Stessa cosa per il cognome
-            txtCognome.Text = txtCognome.Text.ToLower();
-            txtCognome.Text = char.ToUpper(txtCognome.Text[0]) + txtCognome.Text.Substring(1);
+            TxtCognome.Text = TxtCognome.Text.ToLower();
+            TxtCognome.Text = char.ToUpper(TxtCognome.Text[0]) + TxtCognome.Text.Substring(1);
 
         }
 
@@ -75,13 +75,13 @@ namespace ClientManagement.Contatti
         internal virtual void ControllaValiditaInput()
         {
             // eliminiamo degli spazi e caratteri indesiderati alla fine dei nomi
-            var nome = txtNome.Text.Split(' ');
-            var cognome = txtCognome.Text.Split(' ');
-            txtNome.Text = nome[0];
-            txtCognome.Text = cognome[0];
+            var nome = TxtNome.Text.Split(' ');
+            var cognome = TxtCognome.Text.Split(' ');
+            TxtNome.Text = nome[0];
+            TxtCognome.Text = cognome[0];
 
-            // usiamo la classe statica per controllare se ci sono errori negli input delle textbox
-            Controllo.ControlloInputCliente(txtNome.Text, txtCognome.Text, txtEmail.Text, txtNumeroTelefono.Text);
+            // usiamo la classe statica per controllare se ci sono errori negli input delle text box
+            Controllo.ControlloInputCliente(TxtNome.Text, TxtCognome.Text, TxtEmail.Text, TxtNumeroTelefono.Text);
 
 
         }

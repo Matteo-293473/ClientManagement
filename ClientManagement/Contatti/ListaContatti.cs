@@ -14,8 +14,8 @@ namespace ClientManagement.Contatti
 {
     public partial class ListaContatti : UserControl
     {
-        private HandlerContatti handler;
-        private EditorHandlerAggiungiContatto editorAggiungiContatti;
+        private readonly HandlerContatti handler;
+        private readonly EditorHandlerAggiungiContatto editorAggiungiContatti;
         public ListaContatti()
         {
             InitializeComponent();
@@ -26,11 +26,6 @@ namespace ClientManagement.Contatti
         }
 
         private void Clienti_OnListaCambia(object sender, Dictionary<int, Cliente> clienti)
-        {
-            handler.AggiornaListaContatti(lstContatti);
-        }
-
-        private void Contatti_Load(object sender, EventArgs e)
         {
             handler.AggiornaListaContatti(lstContatti);
         }

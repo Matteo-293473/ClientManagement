@@ -96,7 +96,7 @@ namespace ClientManagement.Contatti
             this.lblNumero.TabIndex = 25;
             this.lblNumero.Text = "Numero di telefono:";
             // 
-            // txtNumeroTelefono
+            // TxtNumeroTelefono
             // 
             this.txtNumeroTelefono.Location = new System.Drawing.Point(97, 319);
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
@@ -137,7 +137,7 @@ namespace ClientManagement.Contatti
             this.lblNomeCliente.TabIndex = 22;
             this.lblNomeCliente.Text = "Nome:";
             // 
-            // txtCognome
+            // TxtCognome
             // 
             this.txtCognome.Location = new System.Drawing.Point(97, 205);
             this.txtCognome.Name = "txtCognome";
@@ -145,7 +145,7 @@ namespace ClientManagement.Contatti
             this.txtCognome.TabIndex = 1;
             this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCognome_KeyPress);
             // 
-            // txtNome
+            // TxtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(97, 146);
             this.txtNome.Name = "txtNome";
@@ -204,7 +204,7 @@ namespace ClientManagement.Contatti
             this.btnModifica.UseVisualStyleBackColor = false;
             this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
             // 
-            // txtEmail
+            // TxtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(97, 263);
             this.txtEmail.Name = "txtEmail";

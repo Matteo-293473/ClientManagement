@@ -10,7 +10,7 @@ namespace ClientManagement.Composite
     // classe che funge da gruppo di oggetti
     class Composite : IComponent
     {
-        private List<IComponent> components = new List<IComponent>();
+        private readonly List<IComponent> components = new List<IComponent>();
 
         public void Add(IComponent leaf)
         {
@@ -37,10 +37,5 @@ namespace ClientManagement.Composite
             return row;
         }
 
-        public static ListViewItem ToListView(IComponent item)
-        {
-            var row = item.ToArrayString();
-            return new ListViewItem(row);
-        }
     }
 }

@@ -120,7 +120,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblTxtNome.Name = "lblTxtNome";
             this.lblTxtNome.Size = new System.Drawing.Size(72, 19);
             this.lblTxtNome.TabIndex = 19;
-            this.lblTxtNome.Text = "txtNome";
+            this.lblTxtNome.Text = "TxtNome";
             // 
             // lblTxtCognome
             // 
@@ -131,7 +131,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblTxtCognome.Name = "lblTxtCognome";
             this.lblTxtCognome.Size = new System.Drawing.Size(96, 19);
             this.lblTxtCognome.TabIndex = 20;
-            this.lblTxtCognome.Text = "txtCognome";
+            this.lblTxtCognome.Text = "TxtCognome";
             // 
             // lblTxtEmail
             // 
@@ -142,7 +142,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             this.lblTxtEmail.Name = "lblTxtEmail";
             this.lblTxtEmail.Size = new System.Drawing.Size(67, 19);
             this.lblTxtEmail.TabIndex = 21;
-            this.lblTxtEmail.Text = "txtEmail";
+            this.lblTxtEmail.Text = "TxtEmail";
             // 
             // lblNumero
             // 

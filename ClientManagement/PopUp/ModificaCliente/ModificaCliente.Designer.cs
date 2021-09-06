@@ -40,7 +40,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             this.txtNome = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txtEmail
+            // TxtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(12, 146);
             this.txtEmail.Name = "txtEmail";
@@ -72,7 +72,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             this.lblNumero.TabIndex = 34;
             this.lblNumero.Text = "Numero di telefono:";
             // 
-            // txtNumeroTelefono
+            // TxtNumeroTelefono
             // 
             this.txtNumeroTelefono.Location = new System.Drawing.Point(12, 202);
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
@@ -113,7 +113,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             this.lblNomeCliente.TabIndex = 31;
             this.lblNomeCliente.Text = "Nome:";
             // 
-            // txtCognome
+            // TxtCognome
             // 
             this.txtCognome.Location = new System.Drawing.Point(12, 88);
             this.txtCognome.Name = "txtCognome";
@@ -121,7 +121,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             this.txtCognome.TabIndex = 27;
             this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCognome_KeyPress);
             // 
-            // txtNome
+            // TxtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(12, 29);
             this.txtNome.Name = "txtNome";

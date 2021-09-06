@@ -34,7 +34,6 @@ namespace ClientManagement.Contatti
             this.clmCognome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmNumero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmIdCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnNuovoCliente = new System.Windows.Forms.Button();
             this.btnModifica = new System.Windows.Forms.Button();
             this.lblClienti = new System.Windows.Forms.Label();
@@ -46,9 +45,8 @@ namespace ClientManagement.Contatti
             this.lstContatti.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmNome,
             this.clmCognome,
-            this.clmNumero,
             this.clmEmail,
-            this.clmIdCliente});
+            this.clmNumero});
             this.lstContatti.FullRowSelect = true;
             this.lstContatti.GridLines = true;
             this.lstContatti.HideSelection = false;
@@ -71,18 +69,15 @@ namespace ClientManagement.Contatti
             // 
             // clmNumero
             // 
+            this.clmNumero.DisplayIndex = 2;
             this.clmNumero.Text = "N. Tel.";
             this.clmNumero.Width = 186;
             // 
             // clmEmail
             // 
+            this.clmEmail.DisplayIndex = 3;
             this.clmEmail.Text = "Email";
             this.clmEmail.Width = 132;
-            // 
-            // clmIdCliente
-            // 
-            this.clmIdCliente.Text = "Id Cliente";
-            this.clmIdCliente.Width = 80;
             // 
             // btnNuovoCliente
             // 
@@ -163,7 +158,6 @@ namespace ClientManagement.Contatti
         private System.Windows.Forms.ColumnHeader clmNumero;
         private System.Windows.Forms.ColumnHeader clmEmail;
         private System.Windows.Forms.Button btnNuovoCliente;
-        private System.Windows.Forms.ColumnHeader clmIdCliente;
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Label lblClienti;
         private System.Windows.Forms.Button btnElimina;

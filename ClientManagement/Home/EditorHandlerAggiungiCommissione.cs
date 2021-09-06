@@ -12,12 +12,9 @@ namespace ClientManagement
     class EditorHandlerAggiungiCommissione : EditorHandlerAggiungiContatto
     {
 
-        private TextBox txtDescrizioneCommissione;
-        private DateTimePicker dtpScadenza;
+        private readonly TextBox txtDescrizioneCommissione;
+        private readonly DateTimePicker dtpScadenza;
 
-        
-        public string DescrizioneCommissione { get => txtDescrizioneCommissione.Text; }
-        public DateTime Scadenza { get => dtpScadenza.Value; }
 
 
         public EditorHandlerAggiungiCommissione(TextBox txtNome, 
@@ -64,7 +61,7 @@ namespace ClientManagement
 
             // creazione della commissione cm e del cliente cl 
             Commissione cm = new Commissione(txtDescrizioneCommissione.Text, dtpScadenza.Value);
-            Cliente cl = new Cliente(txtNome.Text, txtCognome.Text, txtNumeroTelefono.Text, txtEmail.Text);
+            Cliente cl = new Cliente(TxtNome.Text, TxtCognome.Text, TxtNumeroTelefono.Text, TxtEmail.Text);
 
             // aggiungo commissione e cliente al managerCommissioni al cliente
             CommissionManager.AggiungiEntry(cl, cm);
@@ -104,10 +101,10 @@ namespace ClientManagement
             // da tre campi che ne determinano una sorta di superchiave.
             
             // popolo i campi attraverso il cliente trovato
-            txtNome.Text = CommissionManager.Clienti[clienteFiltrato].Nome;
-            txtCognome.Text = CommissionManager.Clienti[clienteFiltrato].Cognome;
-            txtEmail.Text = CommissionManager.Clienti[clienteFiltrato].Email;
-            txtNumeroTelefono.Text = CommissionManager.Clienti[clienteFiltrato].Numero;
+            TxtNome.Text = CommissionManager.Clienti[clienteFiltrato].Nome;
+            TxtCognome.Text = CommissionManager.Clienti[clienteFiltrato].Cognome;
+            TxtEmail.Text = CommissionManager.Clienti[clienteFiltrato].Email;
+            TxtNumeroTelefono.Text = CommissionManager.Clienti[clienteFiltrato].Numero;
 
 
 

@@ -31,11 +31,12 @@ namespace ClientManagement.Models
 
         // se viene invocato uno dei due eventi significa che c'è stato un cambiamento che non è
         // stato salvato
-        public static void ClienteCommissioniCambia(object sender, Dictionary<int, Cliente> e)
+        private static void ClienteCommissioniCambia(object sender, Dictionary<int, Cliente> e)
         {
             Salvato = false;
         }
-        public static void ClienteCambia(object sender, Dictionary<int, List<Commissione>> e)
+
+        private static void ClienteCambia(object sender, Dictionary<int, List<Commissione>> e)
         {
             Salvato = false;
         }
@@ -43,9 +44,6 @@ namespace ClientManagement.Models
 
         // facciamo iniziare il valore a 1 perché quando ritorna un valore non trovato il valore è 0
         private static int _value = 1;
-
-        
-
 
 
         // usufruiamo dell'overload
@@ -214,8 +212,5 @@ namespace ClientManagement.Models
             Salvato = true;
         }
 
-
-
-        
     }
 }

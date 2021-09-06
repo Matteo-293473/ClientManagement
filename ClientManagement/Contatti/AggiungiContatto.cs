@@ -14,8 +14,8 @@ namespace ClientManagement.Contatti
 {
     public partial class AggiungiContatto : UserControl
     {
-        private EditorHandlerAggiungiContatto editorAggiungiContatti;
-        private HandlerContatti handlerContatti;
+        private readonly EditorHandlerAggiungiContatto editorAggiungiContatti;
+        private readonly HandlerContatti handlerContatti;
 
         public AggiungiContatto()
         {

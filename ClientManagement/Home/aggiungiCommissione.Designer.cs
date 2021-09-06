@@ -57,7 +57,7 @@ namespace ClientManagement.Resources
             this.dtpScadenza.Size = new System.Drawing.Size(259, 25);
             this.dtpScadenza.TabIndex = 5;
             // 
-            // txtNome
+            // TxtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(81, 213);
             this.txtNome.Name = "txtNome";
@@ -66,7 +66,7 @@ namespace ClientManagement.Resources
             this.txtNome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
-            // txtCognome
+            // TxtCognome
             // 
             this.txtCognome.Location = new System.Drawing.Point(81, 258);
             this.txtCognome.Name = "txtCognome";
@@ -153,7 +153,7 @@ namespace ClientManagement.Resources
             this.lblNumero.Text = "Numero di telefono:";
             this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
             // 
-            // txtNumeroTelefono
+            // TxtNumeroTelefono
             // 
             this.txtNumeroTelefono.Location = new System.Drawing.Point(80, 372);
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
@@ -221,7 +221,7 @@ namespace ClientManagement.Resources
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // txtEmail
+            // TxtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(81, 319);
             this.txtEmail.Name = "txtEmail";

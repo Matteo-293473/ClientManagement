@@ -8,13 +8,14 @@ namespace ClientManagement
 {
     public partial class CommissioniTotali : UserControl
     {
-        private HandlerCommissioniTotali handler;
+        private readonly HandlerCommissioniTotali handler;
 
         public CommissioniTotali()
         {
             InitializeComponent();
             handler = new HandlerCommissioniTotali();
-            //ci mettiamo in ascolto di qualche evento
+
+            //ci mettiamo in ascolto dell'evento
             //l'evento viene generato quando si aggiunge una nuova commissione
             CommissionManager.OnClienteCommissioniCambia += CommissioniTotali_OnListaCambia;
         }
