@@ -10,18 +10,15 @@ namespace ClientManagement.PopUpModifica
 {
     class EditorModificaCommissione
     {
-        private TextBox txtDescrizioneCommissione;
-        private DateTimePicker dtpScadenza;
-        private CheckBox cbxTask;
+        private readonly TextBox txtDescrizioneCommissione;
+        private readonly DateTimePicker dtpScadenza;
+        private readonly CheckBox cbxTask;
         private Commissione cm;
 
         // nel caso in cui segniamo il task completo, potrebbe succedere che
         // non si possa modificare poiché la data è passata. La data quindi viene segnata
         // e viene aggiunta come eccezione 
         public DateTime DtScadenzaOld;
-
-        public string DescrizioneCommissione { get => txtDescrizioneCommissione.Text; }
-        public DateTime Scadenza { get => dtpScadenza.Value; }
 
 
         public EditorModificaCommissione(TextBox txtDescrizioneCommissione, DateTimePicker dtpScadenza,CheckBox cbxTask) 

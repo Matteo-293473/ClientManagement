@@ -95,7 +95,6 @@ namespace ClientManagement
             this.cbxTask.Size = new System.Drawing.Size(15, 14);
             this.cbxTask.TabIndex = 22;
             this.cbxTask.UseVisualStyleBackColor = true;
-            this.cbxTask.CheckedChanged += new System.EventHandler(this.cbxTask_CheckedChanged);
             // 
             // btnModifica
             // 
@@ -130,7 +129,6 @@ namespace ClientManagement
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modifica Dati";
-            this.Load += new System.EventHandler(this.ModificaDati_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

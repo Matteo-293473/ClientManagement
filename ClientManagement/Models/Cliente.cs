@@ -19,19 +19,14 @@ namespace ClientManagement.Models
             this.Cognome = cognome;
             this.Numero = numero;
             this.Email = email;
-            //globalId++;
 
         }
 
-
         
-
         public string[] ToArrayString()
         {
             string[] row = { this.Nome, this.Cognome, this.Email, this.Numero };
             return row;
         }
-
-
     }
 }

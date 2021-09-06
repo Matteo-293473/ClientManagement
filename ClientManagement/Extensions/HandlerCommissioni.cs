@@ -16,15 +16,10 @@ namespace ClientManagement.Extensions
         internal void MostraPopUp(ListView lstCommissioniScadenza, UserControl userControl, string opzione)
         {
 
-            // controlliamo che la listview non sia vuota
-            // oppure che ci sia un elemento selezionato
-            // oppure che ci sia un solo elemento selezionato 
+            // Controllo sulla ListView e sulla selezione dell'elemento
             Controllo.ControlloListViewSelezione(lstCommissioniScadenza);
-
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);
-
-
             // recupero l'id del cliente attraverso la funzione recuperaChiaveCliente
             var idCliente = RecuperaIdClienteSelezionato(lstCommissioniScadenza);
 
@@ -51,7 +46,7 @@ namespace ClientManagement.Extensions
         // Eliminare una commissione
         internal void Elimina(ListView lstCommissioniScadenza)
         {
-
+            // Controllo sulla ListView e sulla selezione dell'elemento
             Controllo.ControlloListViewSelezione(lstCommissioniScadenza);
             // recupero l'id della commissione
             var idCommissione = Convert.ToInt32(lstCommissioniScadenza.SelectedItems[0].SubItems[6].Text);

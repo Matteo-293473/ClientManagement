@@ -106,9 +106,6 @@ namespace ClientManagement
             TxtEmail.Text = CommissionManager.Clienti[clienteFiltrato].Email;
             TxtNumeroTelefono.Text = CommissionManager.Clienti[clienteFiltrato].Numero;
 
-
-
-
         }
 
     }

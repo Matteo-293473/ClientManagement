@@ -13,7 +13,7 @@ namespace ClientManagement.Models
         public DateTime Scadenza { get; set; }
         public string Descrizione { set; get; }
         public bool TaskCompletato { set; get; }
-        public int IdCommissione { set; get; }
+        public int IdCommissione { get; }
         // identifichiamo il cliente con questi due campi che fungono da chiavi esterne
 
         private static int globalId = 1;

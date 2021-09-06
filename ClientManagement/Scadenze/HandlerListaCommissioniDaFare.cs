@@ -10,7 +10,7 @@ using ClientManagement.Models;
 
 namespace ClientManagement.Scadenze
 {
-    class HandlerListaCommissioniDaFare
+    class HandlerListaCommissioniDaFare : HandlerCommissioni
     {
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {

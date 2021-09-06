@@ -66,7 +66,6 @@ namespace ClientManagement
             this.lstCommissioniScadenza.TabIndex = 0;
             this.lstCommissioniScadenza.UseCompatibleStateImageBehavior = false;
             this.lstCommissioniScadenza.View = System.Windows.Forms.View.Details;
-            this.lstCommissioniScadenza.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // clmNome
             // 

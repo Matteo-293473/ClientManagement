@@ -23,14 +23,6 @@ namespace ClientManagement
             this.idCommissione = idCommissione;
             editorModificaCommissione = new EditorModificaCommissione(txtDescrizioneCommissione, dtpScadenza,cbxTask);
             editorModificaCommissione.CaricaDati(idCommissione);
-
-            // aggiungere un editor handler che va a popolare i campi 
-            // editor.PopolaCampi();
-        }
-
-        private void ModificaDati_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnModifica_Click(object sender, EventArgs e)
@@ -53,14 +45,6 @@ namespace ClientManagement
             {
                 MessageBox.Show("Input errati: " + err.Message);
             }
-
-
-            
-            
-        }
-
-        private void cbxTask_CheckedChanged(object sender, EventArgs e)
-        {
 
         }
     }

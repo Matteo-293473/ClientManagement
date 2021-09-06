@@ -76,7 +76,6 @@
     <Compile Include="Contatti\ListaContatti.Designer.cs">
       <DependentUpon>ListaContatti.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions\clienteCommissioniExtensions.cs" />
     <Compile Include="Extensions\Controllo.cs" />
     <Compile Include="Extensions\DateComparer.cs" />
     <Compile Include="Extensions\HandlerCommissioni.cs" />

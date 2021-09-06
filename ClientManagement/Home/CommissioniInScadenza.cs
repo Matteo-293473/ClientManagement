@@ -33,10 +33,6 @@ namespace ClientManagement
         {
             editor.AggiornaListView(lstCommissioniScadenza);
         }
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void CommissioniInScadenza_Load(object sender, EventArgs e)
         {
@@ -49,8 +45,6 @@ namespace ClientManagement
         {
             this.SendToBack();
         }
-
-
 
         private void btnModifica_Click(object sender, EventArgs e)
         {

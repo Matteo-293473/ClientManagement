@@ -31,7 +31,6 @@ namespace ClientManagement.Extensions
         }
 
         // Controllo sulla selezione dell'elemento nella ListView
-
         public static void ControlloListViewSelezione(ListView listView)
         {
             if (listView.Items.Count == 0)
@@ -63,10 +62,8 @@ namespace ClientManagement.Extensions
                                                || numero.Length < 10))
                 throw new Exception("Numero di telefono non valido");
 
-
             if (!cognome.All(char.IsLetter))
                 throw new Exception("Cognome non valido, ci sono caratteri errati");
-
 
             if (!numero.All(char.IsDigit))
                 throw new Exception("Numero di telefono non valido");
@@ -87,7 +84,6 @@ namespace ClientManagement.Extensions
         }
 
 
-
         public static void ControlloInputCommissione(string descrizione, DateTime data)
         {
             if (String.IsNullOrEmpty(descrizione))
@@ -96,7 +92,6 @@ namespace ClientManagement.Extensions
             if (data.Date < DateTime.Now.Date)  // controlliamo che non sia una data passata
                 throw new Exception("La data non può essere una passata");
         }
-
 
 
         // usiamo questo metodo per la modifica delle commissioni

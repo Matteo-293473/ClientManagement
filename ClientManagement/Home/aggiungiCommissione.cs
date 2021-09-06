@@ -9,13 +9,12 @@ namespace ClientManagement.Resources
 
     public partial class aggiungiCommissione : UserControl
     {
-        private EditorHandlerAggiungiCommissione editor;
+        private readonly EditorHandlerAggiungiCommissione editor;
 
         public aggiungiCommissione()
         {
             InitializeComponent();
             editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
-            //ListaClienti.OnListaCambia += Clienti_OnListaCambia;
             CommissionManager.OnClientiCambia += AggiungiContatto_OnListaCambia;
         }
 
@@ -23,22 +22,6 @@ namespace ClientManagement.Resources
         {
             cmbCliente.Items.Clear();
             editor.CaricaCmbox(cmbCliente);
-        }
-
-
-        private void Appari_OnNuovaCommissione(object sender, EventArgs e)
-        {
-            this.BringToFront();
-        }
-
-        private void btnIndietro_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAggiungiEntry_Click(object sender, EventArgs e)
@@ -61,11 +44,6 @@ namespace ClientManagement.Resources
 
         }
 
-        private void txtNumeroTelefono_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaNumeri(e);
@@ -80,29 +58,9 @@ namespace ClientManagement.Resources
             Controllo.ControllaCaratteri(e);
         }
 
-        private void aggiungiCommissione_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnIndietro_Click_1(object sender, EventArgs e)
         {
             this.SendToBack();
-        }
-
-        private void cmbEmail_TextChanged(object sender, EventArgs e)
-        {
-            //----editor.SuggerisciEmail(e);
-        }
-
-        private void cmbEmail_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,31 +72,6 @@ namespace ClientManagement.Resources
         private void btnReset_Click(object sender, EventArgs e)
         {
             editor.ResetFields();
-        }
-
-        private void lblCognome_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCognome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNumero_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNomeCliente_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)

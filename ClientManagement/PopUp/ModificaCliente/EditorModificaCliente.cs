@@ -5,10 +5,10 @@ namespace ClientManagement.PopUp.ModificaCliente
 {
     class EditorModificaCliente
     {
-        protected TextBox txtNome;
-        protected TextBox txtCognome;
-        protected TextBox txtEmail;
-        protected TextBox txtNumeroTelefono;
+        private readonly TextBox txtNome;
+        private readonly TextBox txtCognome;
+        private readonly TextBox txtEmail;
+        private readonly TextBox txtNumeroTelefono;
         private Cliente cl;
 
 
@@ -32,7 +32,6 @@ namespace ClientManagement.PopUp.ModificaCliente
             txtCognome.Text = cl.Cognome;
             txtEmail.Text = cl.Email;
             txtNumeroTelefono.Text = cl.Numero;
-
 
         }
 

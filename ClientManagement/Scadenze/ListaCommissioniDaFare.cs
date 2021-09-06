@@ -13,13 +13,13 @@ namespace ClientManagement.Scadenze
 {
     public partial class ListaCommissioniDaFare : UserControl
     {
-        private HandlerListaCommissioniDaFare handler;
+        private readonly HandlerListaCommissioniDaFare handler;
         public ListaCommissioniDaFare()
         {
             InitializeComponent();
             handler = new HandlerListaCommissioniDaFare();
-            //ci mettiamo in ascolto di qualche evento
-            //l'evento viene generato quando si aggiunge una nuova commissione
+
+            //ci mettiamo in ascolto dell'evento che viene generato quando si aggiunge una nuova commissione
             CommissionManager.OnClienteCommissioniCambia += CommissioniTotali_OnListaCambia;
         }
 
@@ -28,9 +28,16 @@ namespace ClientManagement.Scadenze
             handler.AggiornaListView(lstCommissioniScadenza);
         }
 
-        private void CommissioniTotali_Load(object sender, EventArgs e)
+        private void btnVisualizza_Click(object sender, EventArgs e)
         {
-            handler.AggiornaListView(lstCommissioniScadenza);
+            try
+            {
+                handler.MostraPopUp(lstCommissioniScadenza, this, "visualizza");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }

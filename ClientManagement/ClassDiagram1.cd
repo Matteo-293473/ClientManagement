@@ -3,14 +3,14 @@
   <Class Name="ClientManagement.ClientManagement">
     <Position X="16.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CQAAGBAAAKFQjAAADACKQAFCQBCAAAACAAxBAAAAIAA=</HashCode>
+      <HashCode>CQAAGBgAAKEQjAAACACKQAFCQACAAAACAAxBAAAAIAA=</HashCode>
       <FileName>ClientManagement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.CommissioniTotali" Collapsed="true">
     <Position X="6.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAgAACgAAAAAAAiAAAAKAQAgQAABAIAAAUBAEAA=</HashCode>
+      <HashCode>AABICAgAACgAAAAAAAiEAAAKAQAgQAABAIAAIUBAEAA=</HashCode>
       <FileName>Commissioni\CommissioniTotali.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -21,17 +21,17 @@
       <FileName>Commissioni\HandlerCommissioniTotali.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClientManagement.EditorContatti" Collapsed="true">
+  <Class Name="ClientManagement.HandlerContatti" Collapsed="true">
     <Position X="6.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Contatti\EditorContatti.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Contatti\HandlerContatti.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.HandlerClientManagement" Collapsed="true">
     <Position X="11.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAAgAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>HandlerClientManagement.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,7 +52,7 @@
   <Class Name="ClientManagement.EditorHandlerAggiungiCommissione">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgCAAQAAAQAAAAAAACAgACAAAAIAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgCAAQAAAQAAAAAAACAgAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Home\EditorHandlerAggiungiCommissione.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -87,7 +87,7 @@
   <Class Name="ClientManagement.Contatti.AggiungiContatto" Collapsed="true">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gCBQAAAAASgNYAAAAACAIAAuAAIAQIAQFIhAoAAgCAA=</HashCode>
+      <HashCode>gCBQAAAAASgNYAAAAACAIAAuAAIAQIARBIhAoAAgCAA=</HashCode>
       <FileName>Contatti\AggiungiContatto.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -101,14 +101,14 @@
   <Class Name="ClientManagement.Contatti.EditorHandlerAggiungiContatto" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AiAQAAAAAAAAAAQAAAAAIACEgAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAEAAAAAIwAAAAQIACAgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Contatti\EditorHandlerAggiungiContatto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.Contatti.ListaContatti" Collapsed="true">
     <Position X="6.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAAKhIAAAAAICAAAAKAAIEQAAAAAAgogAgAAA=</HashCode>
+      <HashCode>AABIAAgAAKgAAAAAAACEAAAKAQIEQAAAAAAgogAgAAA=</HashCode>
       <FileName>Contatti\ListaContatti.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -119,13 +119,6 @@
       <FileName>Database\DBHandler.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="ClientManagement.Extensions.clienteCommissioniExtensions">
-    <Position X="14.75" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAQCAAA=</HashCode>
-      <FileName>Extensions\clienteCommissioniExtensions.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="ClientManagement.Extensions.ControlloCaratteri" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
@@ -144,7 +137,7 @@
   <Class Name="ClientManagement.Models.Cliente" Collapsed="true">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAgAAAAAABAAAAAAAAAAAAAAAAAEBAAA=</HashCode>
+      <HashCode>AAAAAgAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAEBAAA=</HashCode>
       <FileName>Models\Cliente.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -152,7 +145,7 @@
   <Class Name="ClientManagement.Models.Commissione" Collapsed="true">
     <Position X="3" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAEAAAAAgAAAAAAAAAAAAAAAAAIAAAEQAAAAAA=</HashCode>
+      <HashCode>ABAAAgAEAAAAAAAAAAAAAAAAAAAAAAAIAAAEQAAAAAA=</HashCode>
       <FileName>Models\Commissione.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -174,7 +167,7 @@
   <Class Name="ClientManagement.PopUpModifica.EditorModificaCommissione" Collapsed="true">
     <Position X="10" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAQAAAQAAQIAAAAAgACAAAAIAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAABAAAAAQAAAQAAQIAAAAAgACAAAAIAAAEAAAAgAA=</HashCode>
       <FileName>PopUp\ModificaCommissione\EditorModificaCommissione.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -193,7 +186,7 @@
   <Class Name="ClientManagement.Models.CommissionManager" Collapsed="true">
     <Position X="8.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AJIAiAAAAAAAAAACAAAIAAIAAAAAABEAAAEACAAAAIA=</HashCode>
+      <HashCode>AJIAiAAAAAEAAQBCAAAIAAIAAAAAABEAAQEACAAAAJA=</HashCode>
       <FileName>Models\CommissionManager.cs</FileName>
     </TypeIdentifier>
   </Class>

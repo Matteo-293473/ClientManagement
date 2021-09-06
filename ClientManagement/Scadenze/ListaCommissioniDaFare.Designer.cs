@@ -38,6 +38,7 @@ namespace ClientManagement.Scadenze
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCompletato = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnVisualizza = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -104,11 +105,25 @@ namespace ClientManagement.Scadenze
             this.clmCompletato.Text = "Completato";
             this.clmCompletato.Width = 70;
             // 
+            // btnVisualizza
+            // 
+            this.btnVisualizza.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVisualizza.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnVisualizza.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVisualizza.Location = new System.Drawing.Point(50, 417);
+            this.btnVisualizza.Name = "btnVisualizza";
+            this.btnVisualizza.Size = new System.Drawing.Size(115, 38);
+            this.btnVisualizza.TabIndex = 18;
+            this.btnVisualizza.Text = "VISUALIZZA";
+            this.btnVisualizza.UseVisualStyleBackColor = false;
+            this.btnVisualizza.Click += new System.EventHandler(this.btnVisualizza_Click);
+            // 
             // ListaCommissioniDaFare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.btnVisualizza);
             this.Controls.Add(this.lstCommissioniScadenza);
             this.Name = "ListaCommissioniDaFare";
             this.Size = new System.Drawing.Size(764, 485);
@@ -127,5 +142,6 @@ namespace ClientManagement.Scadenze
         private System.Windows.Forms.ColumnHeader clmScadenza;
         private System.Windows.Forms.ColumnHeader clmId;
         private System.Windows.Forms.ColumnHeader clmCompletato;
+        private System.Windows.Forms.Button btnVisualizza;
     }
 }
