@@ -25,7 +25,7 @@ namespace ClientManagement
 
         /// <summary>
         /// Metodo necessario per il supporto della finestra di progettazione. Non modificare
-        /// il contenuto del metodo con l'editor di codice.
+        /// il contenuto del metodo con l'handler di codice.
         /// </summary>
         private void InitializeComponent()
         {
@@ -210,6 +210,7 @@ namespace ClientManagement
             this.MaximizeBox = false;
             this.Name = "ClientManagement";
             this.Text = "Client Management";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientManagement_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.PnlLogo.ResumeLayout(false);

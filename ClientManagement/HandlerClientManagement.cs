@@ -1,5 +1,7 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using ClientManagement.Models;
 
 namespace ClientManagement
 {
@@ -24,6 +26,19 @@ namespace ClientManagement
         internal void ColoreDeselezione(Button btn)
         {
             btn.BackColor = Color.FromArgb(13, 8, 20);
+        }
+
+        internal void ControllaSalvataggio(Form form)
+        {
+            if (CommissionManager.Salvato == false)
+            {
+                DialogResult dialogResult = MessageBox.Show("Ci sono dati non salvati, uscire lo stesso", "Uscire", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    form.Close(); //sistema
+                }
+
+            }
         }
     }
 }

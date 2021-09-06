@@ -9,18 +9,21 @@ namespace ClientManagement
 {
     public partial class ClientManagement : Form
     {
-        private HandlerClientManagement editor;
+        private HandlerClientManagement handler;
         private readonly IDatabase db;
+
         public ClientManagement(IDatabase database)
         {
             InitializeComponent();
 
             db = database;
-            editor = new HandlerClientManagement();
-            editor.ColoreSelezione(btnHome, pnlSideMenu);
+            handler = new HandlerClientManagement();
+            handler.ColoreSelezione(btnHome, pnlSideMenu);
+
 
             LoadStorage();
         }
+
 
         private void LoadStorage()
         {
@@ -41,15 +44,10 @@ namespace ClientManagement
 
 
 
-        private void btnRiduciAIcona_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnHome_Click(object sender, EventArgs e)
         {
             // se viene selezionato abbiamo il colore più chiaro
-            editor.ColoreSelezione(btnHome, pnlSideMenu);
+            handler.ColoreSelezione(btnHome, pnlSideMenu);
 
             // gestire meglio con tab control selectedTab
             home1.BringToFront();
@@ -69,41 +67,41 @@ namespace ClientManagement
 
         private void BtnRubrica_Click(object sender, EventArgs e)
         {
-            editor.ColoreSelezione(btnRubrica, pnlSideMenu);
+            handler.ColoreSelezione(btnRubrica, pnlSideMenu);
             contatti1.BringToFront();
         }
 
         private void BtnCommissioni_Click(object sender, EventArgs e)
         {
-            editor.ColoreSelezione(btnCommissioni, pnlSideMenu);
+            handler.ColoreSelezione(btnCommissioni, pnlSideMenu);
             commissioniTotali1.BringToFront();
         }
 
 
         private void BtnScadenze_Click(object sender, EventArgs e)
         {
-            editor.ColoreSelezione(btnScadenze, pnlSideMenu);
+            handler.ColoreSelezione(btnScadenze, pnlSideMenu);
             listaCommissioniDaFare1.BringToFront();
         }
 
         private void btnHome_Leave(object sender, EventArgs e)
         {
-            editor.ColoreDeselezione(btnHome);
+            handler.ColoreDeselezione(btnHome);
         }
 
         private void btnRubrica_Leave(object sender, EventArgs e)
         {
-            editor.ColoreDeselezione(btnRubrica);
+            handler.ColoreDeselezione(btnRubrica);
         }
 
         private void btnCommissioni_Leave(object sender, EventArgs e)
         {
-            editor.ColoreDeselezione(btnCommissioni);
+            handler.ColoreDeselezione(btnCommissioni);
         }
 
         private void btnScadenze_Leave(object sender, EventArgs e)
         {
-            editor.ColoreDeselezione(btnScadenze);
+            handler.ColoreDeselezione(btnScadenze);
         }
 
 
@@ -113,10 +111,9 @@ namespace ClientManagement
 
         }
 
-
-        private void calendario1_Load_1(object sender, EventArgs e)
+        private void ClientManagement_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            handler.ControllaSalvataggio(this);
         }
     }
 }

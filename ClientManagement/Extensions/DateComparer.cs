@@ -8,10 +8,10 @@ using System.Windows.Forms;
 
 namespace ClientManagement.Extensions
 {
+    // questa classe ci permette di confrontare due oggetti al fine di creare una lista ordinata
     class DateComparer : IComparer
     {
         private int pointsColumnIndex = 0;
-
 
         public DateComparer(int indiceColonna)
         {

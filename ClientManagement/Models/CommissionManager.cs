@@ -18,9 +18,34 @@ namespace ClientManagement.Models
         public static event EventHandler<Dictionary<int, List<Commissione>>> OnClienteCommissioniCambia;
         public static event EventHandler<Dictionary<int, Cliente>> OnClientiCambia;
 
+        public static bool Salvato = true;
+
+
+        // il costruttore della classe statica viene chiamato la prima volta che si fa riferimento alla classe statica
+        static CommissionManager()
+        {
+            OnClientiCambia += ClienteCommissioniCambia;
+            OnClienteCommissioniCambia += ClienteCambia;
+        }
+
+
+        // se viene invocato uno dei due eventi significa che c'è stato un cambiamento che non è
+        // stato salvato
+        public static void ClienteCommissioniCambia(object sender, Dictionary<int, Cliente> e)
+        {
+            Salvato = false;
+        }
+        public static void ClienteCambia(object sender, Dictionary<int, List<Commissione>> e)
+        {
+            Salvato = false;
+        }
+
 
         // facciamo iniziare il valore a 1 perché quando ritorna un valore non trovato il valore è 0
         private static int _value = 1;
+
+        
+
 
 
         // usufruiamo dell'overload
@@ -158,6 +183,7 @@ namespace ClientManagement.Models
             db.SaveDataClienti(Clienti);
             db.SaveDataCommissioni(ClienteCommissioni);
             MessageBox.Show("Salvato con successo!");
+            Salvato = true;
         }
 
         // Caricamento dei dizionari attraverso i due dizionari ricavati dai file

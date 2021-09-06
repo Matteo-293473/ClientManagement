@@ -9,8 +9,6 @@ namespace ClientManagement
 {
     public partial class CommissioniInScadenza : UserControl
     {
-        //private IDictionary<Cliente, List<Commissione>> ClienteCommissioni = new Dictionary<Cliente, List<Commissione>>();
-        //private readonly IDatabase db;
 
         private readonly EditorCommissioniInScadenza editor;
 
@@ -23,13 +21,12 @@ namespace ClientManagement
             db = database;
 
             editor = new EditorCommissioniInScadenza();
+
             //ci mettiamo in ascolto di qualche evento
             //l'evento viene generato quando si aggiunge una nuova commissione
-
             CommissionManager.OnClienteCommissioniCambia += Commissioni_OnListaCambia;
             
         }
-
 
 
         private void Commissioni_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
@@ -51,11 +48,6 @@ namespace ClientManagement
         private void btnNuovaCommission_Click(object sender, EventArgs e)
         {
             this.SendToBack();
-        }
-
-        private void txtCommissioniScadenza_Click(object sender, EventArgs e)
-        {
-
         }
 
 

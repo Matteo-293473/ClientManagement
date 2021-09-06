@@ -113,7 +113,6 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\IDatabase.cs" />
-    <Compile Include="ListaClienti.cs" />
     <Compile Include="Models\CommissionManager.cs" />
     <Compile Include="PopUp\ModificaCliente\EditorModificaCliente.cs" />
     <Compile Include="PopUp\ModificaCliente\ModificaCliente.cs">
