@@ -47,5 +47,19 @@
     "Cognome": "Delpriori",
     "Numero": "5556667777",
     "Email": "s.delPriori@gmail.com"
+  },
+  {
+    "Id": 8,
+    "Nome": "Mario",
+    "Cognome": "Rossi",
+    "Numero": "3333333333",
+    "Email": "m.rossi@outlook.it"
+  },
+  {
+    "Id": 9,
+    "Nome": "Andrea",
+    "Cognome": "Capoccia",
+    "Numero": "3333333334",
+    "Email": "a.capoccia@live.it"
   }
 ]

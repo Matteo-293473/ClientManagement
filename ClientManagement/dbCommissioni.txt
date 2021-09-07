@@ -50,9 +50,37 @@
   },
   {
     "IdCliente": 7,
-    "Descrizione": "Riparazione telefono ",
+    "Descrizione": "Riparazione smartphone",
     "Scadenza": "2021-09-06T18:09:41",
+    "TaskCompletato": true,
+    "IdCommissione": 8
+  },
+  {
+    "IdCliente": 8,
+    "Descrizione": "eliminare virus pc",
+    "Scadenza": "2021-09-09T15:51:48",
     "TaskCompletato": false,
-    "IdCommissione": 7
+    "IdCommissione": 9
+  },
+  {
+    "IdCliente": 8,
+    "Descrizione": "preventivo pc",
+    "Scadenza": "2021-09-09T15:54:53",
+    "TaskCompletato": false,
+    "IdCommissione": 10
+  },
+  {
+    "IdCliente": 6,
+    "Descrizione": "sostituire batteria laptop",
+    "Scadenza": "2021-09-13T15:55:17",
+    "TaskCompletato": false,
+    "IdCommissione": 11
+  },
+  {
+    "IdCliente": 9,
+    "Descrizione": "Montior pc rotto",
+    "Scadenza": "2021-09-12T15:57:21",
+    "TaskCompletato": false,
+    "IdCommissione": 12
   }
 ]

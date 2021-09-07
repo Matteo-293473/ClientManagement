@@ -60,7 +60,7 @@ namespace ClientManagement
         {
             try
             {
-                DialogResult dialogResult = MessageBox.Show("Sei sicuro di voler eliminare la commissione?", "Eliminare commissione", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Sei sicuro di voler eliminare la commissione?", "Eliminare", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     handler.Elimina(lstCommissioniScadenza);
