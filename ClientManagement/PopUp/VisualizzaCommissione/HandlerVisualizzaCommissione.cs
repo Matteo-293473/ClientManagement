@@ -11,13 +11,13 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
 {
     class HandlerVisualizzaCommissione
     {
-        private Label lblNome;
-        private Label lblCognome;
-        private Label lblEmail;
-        private Label lblNumeroTelefono;
-        private TextBox txtDescrizioneCommissione;
-        private Label lblDataScadenza;
-        private Label lblCompletato;
+        private readonly Label lblNome;
+        private readonly Label lblCognome;
+        private readonly Label lblEmail;
+        private readonly Label lblNumeroTelefono;
+        private readonly TextBox txtDescrizioneCommissione;
+        private readonly Label lblDataScadenza;
+        private readonly Label lblCompletato;
 
 
         public HandlerVisualizzaCommissione(
@@ -55,6 +55,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
             RegolaFont();
         }
 
+        // nel caso in cui ci siano troppi caratteri a schermo viene abbassata la dimensione del font
         private void RegolaFont()
         {
             var i = lblEmail.Text.Length < 20 ? 10 : 8;

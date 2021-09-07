@@ -82,5 +82,19 @@
     "Scadenza": "2021-09-12T15:57:21",
     "TaskCompletato": false,
     "IdCommissione": 12
+  },
+  {
+    "IdCliente": 10,
+    "Descrizione": "preventivo computer desktop",
+    "Scadenza": "2021-09-11T16:44:48",
+    "TaskCompletato": false,
+    "IdCommissione": 13
+  },
+  {
+    "IdCliente": 10,
+    "Descrizione": "controllo dissipazione pc",
+    "Scadenza": "2021-09-17T16:47:24",
+    "TaskCompletato": false,
+    "IdCommissione": 14
   }
 ]

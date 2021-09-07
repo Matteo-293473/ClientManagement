@@ -27,7 +27,7 @@ namespace ClientManagement
 
         /// <summary> 
         /// Metodo necessario per il supporto della finestra di progettazione. Non modificare 
-        /// il contenuto del metodo con l'editor di codice.
+        /// il contenuto del metodo con l'handler di codice.
         /// </summary>
         private void InitializeComponent()
         {
@@ -52,8 +52,8 @@ namespace ClientManagement
             this.lstCommissioniScadenza.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmNome,
             this.clmCognome,
-            this.clmEmail,
             this.clmNtel,
+            this.clmEmail,
             this.clmComm,
             this.clmScadenza,
             this.clmIdComm});
@@ -79,13 +79,11 @@ namespace ClientManagement
             // 
             // clmEmail
             // 
-            this.clmEmail.DisplayIndex = 3;
             this.clmEmail.Text = "Email";
             this.clmEmail.Width = 120;
             // 
             // clmNtel
             // 
-            this.clmNtel.DisplayIndex = 2;
             this.clmNtel.Text = "N. Tel.";
             this.clmNtel.Width = 125;
             // 

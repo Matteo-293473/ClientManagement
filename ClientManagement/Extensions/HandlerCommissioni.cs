@@ -62,8 +62,8 @@ namespace ClientManagement.Extensions
             return CommissionManager.RecuperaChiaveDaCliente(new Cliente(
                 lstCommissioniScadenza.SelectedItems[0].SubItems[0].Text,
                 lstCommissioniScadenza.SelectedItems[0].SubItems[1].Text,
-                lstCommissioniScadenza.SelectedItems[0].SubItems[3].Text,
-                lstCommissioniScadenza.SelectedItems[0].SubItems[2].Text
+                lstCommissioniScadenza.SelectedItems[0].SubItems[2].Text,
+                lstCommissioniScadenza.SelectedItems[0].SubItems[3].Text
             ));
         }
     }

@@ -9,7 +9,7 @@ using ClientManagement.PopUp.VisualizzaCommissione;
 
 namespace ClientManagement
 {
-    class EditorCommissioniInScadenza : HandlerCommissioni
+    class HandlerCommissioniInScadenza : HandlerCommissioni
     {
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {
@@ -22,7 +22,7 @@ namespace ClientManagement
 
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
-            string[] arr = new string[8]; //era 7
+            string[] arr = new string[8]; 
 
             foreach (var i in CommissionManager.ClienteCommissioni)
             {
@@ -39,9 +39,7 @@ namespace ClientManagement
                     lst.BackColor = cm.TaskCompletato ? Color.Aquamarine : Color.PaleVioletRed;
 
                     lstCommissioniScadenza.Items.Add(lst);
-
-
-
+                    
                     clientiCommissioni.Clear();
                 }
             }

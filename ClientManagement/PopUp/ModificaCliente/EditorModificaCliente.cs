@@ -7,18 +7,18 @@ namespace ClientManagement.PopUp.ModificaCliente
     {
         private readonly TextBox txtNome;
         private readonly TextBox txtCognome;
-        private readonly TextBox txtEmail;
         private readonly TextBox txtNumeroTelefono;
+        private readonly TextBox txtEmail;
         private Cliente cl;
 
 
 
-        public EditorModificaCliente(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono)
+        public EditorModificaCliente(TextBox txtNome, TextBox txtCognome, TextBox txtNumeroTelefono, TextBox txtEmail)
         {
             this.txtNome = txtNome;
             this.txtCognome = txtCognome;
-            this.txtEmail = txtEmail;
             this.txtNumeroTelefono = txtNumeroTelefono;
+            this.txtEmail = txtEmail;
         }
 
 
@@ -30,8 +30,8 @@ namespace ClientManagement.PopUp.ModificaCliente
 
             txtNome.Text = cl.Nome;
             txtCognome.Text = cl.Cognome;
-            txtEmail.Text = cl.Email;
             txtNumeroTelefono.Text = cl.Numero;
+            txtEmail.Text = cl.Email;
 
         }
 
@@ -40,8 +40,8 @@ namespace ClientManagement.PopUp.ModificaCliente
             // aggiorno i campi
             cl.Nome = txtNome.Text;
             cl.Cognome = txtCognome.Text;
-            cl.Email = txtEmail.Text;
             cl.Numero = txtNumeroTelefono.Text;
+            cl.Email = txtEmail.Text;
             CommissionManager.ModificaCliente(cl, idCliente);
         }
     }

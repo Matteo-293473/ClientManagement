@@ -145,8 +145,8 @@ namespace ClientManagement.Models
         {
             Clienti[idCliente].Nome = cliente.Nome;
             Clienti[idCliente].Cognome = cliente.Cognome;
-            Clienti[idCliente].Email = cliente.Email;
             Clienti[idCliente].Numero = cliente.Numero;
+            Clienti[idCliente].Email = cliente.Email;
             OnClientiCambia?.Invoke(cliente, Clienti);
             OnClienteCommissioniCambia?.Invoke(cliente, ClienteCommissioni);
         }

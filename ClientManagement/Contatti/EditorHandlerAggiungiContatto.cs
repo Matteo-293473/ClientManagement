@@ -26,12 +26,12 @@ namespace ClientManagement.Contatti
         }
 
         
-        public EditorHandlerAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtEmail, TextBox txtNumeroTelefono)
+        public EditorHandlerAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtNumeroTelefono, TextBox txtEmail)
         {
             this.TxtNome = txtNome;
             this.TxtCognome = txtCognome;
-            this.TxtEmail = txtEmail;
             this.TxtNumeroTelefono = txtNumeroTelefono;
+            this.TxtEmail = txtEmail;
         }
 
         // Cancelliamo il testo presente in tutte le text box
@@ -39,8 +39,8 @@ namespace ClientManagement.Contatti
         {
             TxtNome.Text = "";
             TxtCognome.Text = "";
-            TxtEmail.Text = "";
             TxtNumeroTelefono.Text = "";
+            TxtEmail.Text = "";
 
         }
 
@@ -81,7 +81,7 @@ namespace ClientManagement.Contatti
             TxtCognome.Text = cognome[0];
 
             // usiamo la classe statica per controllare se ci sono errori negli input delle text box
-            Controllo.ControlloInputCliente(TxtNome.Text, TxtCognome.Text, TxtEmail.Text, TxtNumeroTelefono.Text);
+            Controllo.ControlloInputCliente(TxtNome.Text, TxtCognome.Text, TxtNumeroTelefono.Text, TxtEmail.Text);
 
 
         }

@@ -19,13 +19,13 @@ namespace ClientManagement
 
         public EditorHandlerAggiungiCommissione(TextBox txtNome, 
             TextBox txtCognome,
+            TextBox txtNumeroTelefono,
             TextBox txtEmail, 
-            TextBox txtNumeroTelefono, 
             TextBox txtDescrizioneCommissione, 
             DateTimePicker dtpScadenza) : base(txtNome,
             txtCognome,
-            txtEmail,
-            txtNumeroTelefono)
+            txtNumeroTelefono,
+            txtEmail)
         {
             this.txtDescrizioneCommissione = txtDescrizioneCommissione;
             this.dtpScadenza = dtpScadenza;
@@ -103,8 +103,8 @@ namespace ClientManagement
             // popolo i campi attraverso il cliente trovato
             TxtNome.Text = CommissionManager.Clienti[clienteFiltrato].Nome;
             TxtCognome.Text = CommissionManager.Clienti[clienteFiltrato].Cognome;
-            TxtEmail.Text = CommissionManager.Clienti[clienteFiltrato].Email;
             TxtNumeroTelefono.Text = CommissionManager.Clienti[clienteFiltrato].Numero;
+            TxtEmail.Text = CommissionManager.Clienti[clienteFiltrato].Email;
 
         }
 

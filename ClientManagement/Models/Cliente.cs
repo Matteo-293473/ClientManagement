@@ -25,7 +25,7 @@ namespace ClientManagement.Models
         
         public string[] ToArrayString()
         {
-            string[] row = { this.Nome, this.Cognome, this.Email, this.Numero };
+            string[] row = { this.Nome, this.Cognome, this.Numero, this.Email,};
             return row;
         }
     }

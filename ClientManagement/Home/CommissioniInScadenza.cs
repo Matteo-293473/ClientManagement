@@ -10,7 +10,7 @@ namespace ClientManagement
     public partial class CommissioniInScadenza : UserControl
     {
 
-        private readonly EditorCommissioniInScadenza editor;
+        private readonly HandlerCommissioniInScadenza handler;
 
         private readonly IDatabase db;
 
@@ -20,7 +20,7 @@ namespace ClientManagement
 
             db = database;
 
-            editor = new EditorCommissioniInScadenza();
+            handler = new HandlerCommissioniInScadenza();
 
             //ci mettiamo in ascolto di qualche evento
             //l'evento viene generato quando si aggiunge una nuova commissione
@@ -31,13 +31,13 @@ namespace ClientManagement
 
         private void Commissioni_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
         {
-            editor.AggiornaListView(lstCommissioniScadenza);
+            handler.AggiornaListView(lstCommissioniScadenza);
         }
 
         private void CommissioniInScadenza_Load(object sender, EventArgs e)
         {
 
-            editor.AggiornaListView(lstCommissioniScadenza);
+            handler.AggiornaListView(lstCommissioniScadenza);
 
         }
 
@@ -50,7 +50,7 @@ namespace ClientManagement
         {
             try
             {
-                editor.MostraPopUp(lstCommissioniScadenza,this, "modifica");
+                handler.MostraPopUp(lstCommissioniScadenza,this, "modifica");
             }
             catch(Exception err)
             {
@@ -62,7 +62,7 @@ namespace ClientManagement
         {
             try
             {
-                editor.MostraPopUp(lstCommissioniScadenza, this,"visualizza");
+                handler.MostraPopUp(lstCommissioniScadenza, this,"visualizza");
             }
             catch (Exception err)
             {

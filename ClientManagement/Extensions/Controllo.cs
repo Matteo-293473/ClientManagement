@@ -45,7 +45,7 @@ namespace ClientManagement.Extensions
 
 
 
-        public static void ControlloInputCliente(string nome, string cognome, string email, string numero)
+        public static void ControlloInputCliente(string nome, string cognome, string numero, string email)
         {
             // controllo degli input
             if (String.IsNullOrEmpty(nome) || String.IsNullOrEmpty(cognome) ||

@@ -49,8 +49,8 @@ namespace ClientManagement
             this.lstCommissioniScadenza.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmNome,
             this.clmCognome,
-            this.clmEmail,
             this.clmNtel,
+            this.clmEmail,
             this.clmComm,
             this.clmScadenza,
             this.clmId,
@@ -77,13 +77,11 @@ namespace ClientManagement
             // 
             // clmEmail
             // 
-            this.clmEmail.DisplayIndex = 3;
             this.clmEmail.Text = "Email";
             this.clmEmail.Width = 92;
             // 
             // clmNtel
             // 
-            this.clmNtel.DisplayIndex = 2;
             this.clmNtel.Text = "N. Tel.";
             this.clmNtel.Width = 93;
             // 
@@ -167,8 +165,8 @@ namespace ClientManagement
         private System.Windows.Forms.ListView lstCommissioniScadenza;
         private System.Windows.Forms.ColumnHeader clmNome;
         private System.Windows.Forms.ColumnHeader clmCognome;
-        private System.Windows.Forms.ColumnHeader clmEmail;
         private System.Windows.Forms.ColumnHeader clmNtel;
+        private System.Windows.Forms.ColumnHeader clmEmail;
         private System.Windows.Forms.ColumnHeader clmComm;
         private System.Windows.Forms.ColumnHeader clmScadenza;
         private System.Windows.Forms.ColumnHeader clmId;

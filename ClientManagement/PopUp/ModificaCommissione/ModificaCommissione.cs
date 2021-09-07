@@ -15,12 +15,10 @@ namespace ClientManagement
 {
     public partial class ModificaCommissione : Form
     {
-        private EditorModificaCommissione editorModificaCommissione;
-        private int idCommissione;
+        private readonly EditorModificaCommissione editorModificaCommissione;
         public ModificaCommissione(int idCommissione)
         {
             InitializeComponent();
-            this.idCommissione = idCommissione;
             editorModificaCommissione = new EditorModificaCommissione(txtDescrizioneCommissione, dtpScadenza,cbxTask);
             editorModificaCommissione.CaricaDati(idCommissione);
         }

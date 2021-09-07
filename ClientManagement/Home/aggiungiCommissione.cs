@@ -14,7 +14,7 @@ namespace ClientManagement.Resources
         public aggiungiCommissione()
         {
             InitializeComponent();
-            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtEmail, txtNumeroTelefono, txtDescrizioneCommissione, dtpScadenza);
+            editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtNumeroTelefono, txtEmail, txtDescrizioneCommissione, dtpScadenza);
             CommissionManager.OnClientiCambia += AggiungiContatto_OnListaCambia;
         }
 

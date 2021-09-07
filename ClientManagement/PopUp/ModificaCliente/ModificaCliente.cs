@@ -15,15 +15,15 @@ namespace ClientManagement.PopUp.ModificaCliente
     
     public partial class ModificaCliente : Form
     {
-        private EditorHandlerAggiungiContatto editorAggiungiContatti;
-        private EditorModificaCliente editorModificaCliente;
-        private int idCliente;
+        private readonly EditorHandlerAggiungiContatto editorAggiungiContatti;
+        private readonly EditorModificaCliente editorModificaCliente;
+        private readonly int idCliente;
         public ModificaCliente(int idCliente)
         {
             InitializeComponent();
             this.idCliente = idCliente;
-            editorAggiungiContatti = new EditorHandlerAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
-            editorModificaCliente = new EditorModificaCliente(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
+            editorAggiungiContatti = new EditorHandlerAggiungiContatto(txtNome, txtCognome, txtNumeroTelefono, txtEmail);
+            editorModificaCliente = new EditorModificaCliente(txtNome, txtCognome, txtNumeroTelefono, txtEmail);
             editorModificaCliente.CaricaDati(idCliente);
         }
 
@@ -47,7 +47,6 @@ namespace ClientManagement.PopUp.ModificaCliente
             {
                 MessageBox.Show("Input errati: " + err.Message);
             }
-            
             
         }
 
