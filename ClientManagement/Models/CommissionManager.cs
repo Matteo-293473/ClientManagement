@@ -5,49 +5,56 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Database;
+using ClientManagement.Observer;
 
 namespace ClientManagement.Models
 {
-    static class CommissionManager
+    class CommissionManager : Subject, IObserver
     {
-        // dizionari nei quali vengono archiviati i dati
-        public static readonly Dictionary<int, List<Commissione>> ClienteCommissioni = new Dictionary<int, List<Commissione>>();
-        public static readonly Dictionary<int, Cliente> Clienti = new Dictionary<int, Cliente>();
 
-        // creiamo due eventi
-        public static event EventHandler<Dictionary<int, List<Commissione>>> OnClienteCommissioniCambia;
-        public static event EventHandler<Dictionary<int, Cliente>> OnClientiCambia;
+        private static CommissionManager _instance;
+
+
+        // dizionari nei quali vengono archiviati i dati
+        public readonly Dictionary<int, List<Commissione>> ClienteCommissioni = new Dictionary<int, List<Commissione>>();
+        public readonly Dictionary<int, Cliente> Clienti = new Dictionary<int, Cliente>();
 
         public static bool Salvato = true;
+        
 
-
-        // il costruttore della classe statica viene chiamato la prima volta che si fa riferimento alla classe statica
-        static CommissionManager()
+        // Non vogliamo istanziare due volte CommissionManager
+        public static CommissionManager GetInstance()
         {
-            OnClientiCambia += ClienteCommissioniCambia;
-            OnClienteCommissioniCambia += ClienteCambia;
+            if (_instance == null)
+            {
+                _instance = new CommissionManager();
+            }
+
+            return _instance;
         }
+
+        // Qui applichiamo il pattern Singleton.
+        private CommissionManager()
+        {
+           // aggiungi qui gli observer
+        }
+
+
 
 
         // se viene invocato uno dei due eventi significa che c'è stato un cambiamento che non è
         // stato salvato
-        private static void ClienteCommissioniCambia(object sender, Dictionary<int, Cliente> e)
+        public void Update()
         {
             Salvato = false;
         }
-
-        private static void ClienteCambia(object sender, Dictionary<int, List<Commissione>> e)
-        {
-            Salvato = false;
-        }
-
 
         // facciamo iniziare il valore a 1 perché quando ritorna un valore non trovato il valore è 0
         private static int _value = 1;
 
 
         // usufruiamo dell'overload
-        public static void AggiungiEntry(Cliente cl)
+        public void AggiungiEntry(Cliente cl)
         {
             var c = RecuperaChiaveDaCliente(cl);
 
@@ -57,12 +64,14 @@ namespace ClientManagement.Models
             // aggiungo il cliente
             Clienti.Add(_value, cl);
             _value += 1;
-            OnClientiCambia?.Invoke(cl, Clienti);
+
+            //OnClientiCambia?.Invoke(cl, Clienti);----
+            NotificaObservers();
 
         }
 
 
-        public static void AggiungiEntry(Cliente cl, Commissione cm)
+        public void AggiungiEntry(Cliente cl, Commissione cm)
         {
             var commissioni = new List<Commissione>();
 
@@ -77,7 +86,9 @@ namespace ClientManagement.Models
                 commissioni = ClienteCommissioni[c];
                 commissioni.Add(cm);
                 ClienteCommissioni[c] = commissioni;
-                OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+
+                //OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+                NotificaObservers(); 
             }
 
             else if (Clienti.ContainsKey(c))
@@ -87,7 +98,9 @@ namespace ClientManagement.Models
 
                 commissioni.Add(cm);
                 ClienteCommissioni.Add(c, commissioni);
-                OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+
+                //OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+                NotificaObservers();
             }
             else
             {
@@ -95,9 +108,15 @@ namespace ClientManagement.Models
 
                 commissioni.Add(cm); // aggiungo la commissione
                 Clienti.Add(_value, cl); // aggiungo il cliente nella rubrica
-                OnClientiCambia?.Invoke(cl, Clienti); // invoco l'evento
+
+                //OnClientiCambia?.Invoke(cl, Clienti); // invoco l'evento
+                NotificaObservers();
+
                 ClienteCommissioni.Add(_value, commissioni); // aggiungo la commissione associata al cliente
-                OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+
+                //OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+                NotificaObservers();
+
                 _value += 1; // aggiorno il valore
             }
 
@@ -107,7 +126,7 @@ namespace ClientManagement.Models
 
         // Per il confronto del cliente usiamo Nome Cognome e Numero come superchiave. Se questi 3 valori sono
         // uguali, significa che ci stiamo riferendo allo stesso cliente
-        public static int RecuperaChiaveDaCliente(Cliente cl)
+        public int RecuperaChiaveDaCliente(Cliente cl)
         {
             return Clienti.Where(s =>
                 Clienti[s.Key].Nome == cl.Nome &&
@@ -118,20 +137,22 @@ namespace ClientManagement.Models
         }
 
 
-        public static void ModificaCommissione(Commissione commissione)
+        public void ModificaCommissione(Commissione commissione)
         {
             foreach (var cm in ClienteCommissioni.Values.SelectMany(listaCommissioni =>
                 listaCommissioni.Where(cm => cm.IdCommissione == commissione.IdCommissione)))
             {
                 cm.Scadenza = commissione.Scadenza;
                 cm.Descrizione = commissione.Descrizione;
-                OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+
+                //OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+                NotificaObservers();
             }
         }
 
         
 
-        public static Commissione RestituisciCommissione(int idCommissione)
+        public Commissione RestituisciCommissione(int idCommissione)
         {
             return ClienteCommissioni.Values
                 .SelectMany(listaCommissioni => listaCommissioni
@@ -141,42 +162,49 @@ namespace ClientManagement.Models
         }
 
 
-        internal static void ModificaCliente(Cliente cliente, int idCliente)
+        internal void ModificaCliente(Cliente cliente, int idCliente)
         {
             Clienti[idCliente].Nome = cliente.Nome;
             Clienti[idCliente].Cognome = cliente.Cognome;
             Clienti[idCliente].Numero = cliente.Numero;
             Clienti[idCliente].Email = cliente.Email;
-            OnClientiCambia?.Invoke(cliente, Clienti);
-            OnClienteCommissioniCambia?.Invoke(cliente, ClienteCommissioni);
+
+            //OnClientiCambia?.Invoke(cliente, Clienti);
+            //OnClienteCommissioniCambia?.Invoke(cliente, ClienteCommissioni);
+            NotificaObservers();
         }
 
 
         // rimuoviamo la commissione selezionata
-        public static void EliminaCommissione(int idCommissione, int idCliente)
+        public void EliminaCommissione(int idCommissione, int idCliente)
         {
             ClienteCommissioni[idCliente].RemoveAll((x => x.IdCommissione == idCommissione));
-            OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+
+            //OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+            NotificaObservers();
         }
 
         // rimuoviamo il cliente e tutte le commissioni ad esso associate
-        public static void EliminaCliente(int idCliente)
+        public void EliminaCliente(int idCliente)
         {
             ClienteCommissioni.Remove(idCliente);
             Clienti.Remove(idCliente);
-            OnClientiCambia?.Invoke(ClienteCommissioni, Clienti);
-            OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+
+            //OnClientiCambia?.Invoke(ClienteCommissioni, Clienti);
+            //OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+            NotificaObservers();
+
         }
 
 
-        public static Cliente RestituisciCliente(int idCliente) =>
+        public Cliente RestituisciCliente(int idCliente) =>
             Clienti.Where(c => c.Key == idCliente)
                 .Select(c => c.Value)
                 .FirstOrDefault();
 
 
         // metodo che prende il db, salva Clienti commissioni e mostra il messaggio di salvataggio
-        public static void Salva(IDatabase db)
+        public void Salva(IDatabase db)
         {
             db.SaveDataClienti(Clienti);
             db.SaveDataCommissioni(ClienteCommissioni);
@@ -185,7 +213,7 @@ namespace ClientManagement.Models
         }
 
         // Caricamento dei dizionari attraverso i due dizionari ricavati dai file
-        public static void Load(IDictionary<int, Cliente> clDictionary,
+        public void Load(IDictionary<int, Cliente> clDictionary,
                                 IDictionary<int, List<Commissione>> cmDictionary)
         {
 
@@ -211,6 +239,5 @@ namespace ClientManagement.Models
             // Appena caricato il file non dobbiamo segnare che bisogna salvare
             Salvato = true;
         }
-
     }
 }

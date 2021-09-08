@@ -3,22 +3,24 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
+using ClientManagement.Observer;
 
 namespace ClientManagement.Resources
 {
 
-    public partial class aggiungiCommissione : UserControl
+    public partial class aggiungiCommissione : UserControl, IObserver
     {
         private readonly EditorHandlerAggiungiCommissione editor;
+        private readonly CommissionManager commissionManager  = CommissionManager.GetInstance();
 
         public aggiungiCommissione()
         {
             InitializeComponent();
             editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtNumeroTelefono, txtEmail, txtDescrizioneCommissione, dtpScadenza);
-            CommissionManager.OnClientiCambia += AggiungiContatto_OnListaCambia;
+            commissionManager.AggiungiObserver(this);
         }
 
-        private void AggiungiContatto_OnListaCambia(object sender, Dictionary<int, Cliente> clienteCommissioni)
+        public new void Update()
         {
             cmbCliente.Items.Clear();
             editor.CaricaCmbox(cmbCliente);

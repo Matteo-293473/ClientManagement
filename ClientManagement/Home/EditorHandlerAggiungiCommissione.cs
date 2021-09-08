@@ -64,7 +64,7 @@ namespace ClientManagement
             Cliente cl = new Cliente(TxtNome.Text, TxtCognome.Text, TxtNumeroTelefono.Text, TxtEmail.Text);
 
             // aggiungo commissione e cliente al managerCommissioni al cliente
-            CommissionManager.AggiungiEntry(cl, cm);
+            commissionManager.AggiungiEntry(cl, cm);
         }
 
 
@@ -72,10 +72,10 @@ namespace ClientManagement
 
         internal void CaricaCmbox(ComboBox cmb)
         {
-            foreach (var i in CommissionManager.Clienti)
+            foreach (var i in commissionManager.Clienti)
             {
 
-                cmb.Items.Add((CommissionManager.Clienti[i.Key].Nome + " " + CommissionManager.Clienti[i.Key].Cognome + " " + CommissionManager.Clienti[i.Key].Numero));
+                cmb.Items.Add((commissionManager.Clienti[i.Key].Nome + " " + commissionManager.Clienti[i.Key].Cognome + " " + commissionManager.Clienti[i.Key].Numero));
 
             }
             
@@ -92,19 +92,19 @@ namespace ClientManagement
             // popoliamo i campi 
 
             // seleziono la chiave che mi interessa
-            var clienteFiltrato = CommissionManager.Clienti.Where(i => (
-                    CommissionManager.Clienti[i.Key].Nome == nomeCognomeNumeroSplit[0] &&
-                    CommissionManager.Clienti[i.Key].Cognome == nomeCognomeNumeroSplit[1] &&
-                    CommissionManager.Clienti[i.Key].Numero == nomeCognomeNumeroSplit[2]))
+            var clienteFiltrato = commissionManager.Clienti.Where(i => (
+                    commissionManager.Clienti[i.Key].Nome == nomeCognomeNumeroSplit[0] &&
+                    commissionManager.Clienti[i.Key].Cognome == nomeCognomeNumeroSplit[1] &&
+                    commissionManager.Clienti[i.Key].Numero == nomeCognomeNumeroSplit[2]))
                 .Select(i => i.Key).First(); 
             // al fine di risolvere i problemi con gli omonimi, il cliente viene identificato
             // da tre campi che ne determinano una sorta di superchiave.
             
             // popolo i campi attraverso il cliente trovato
-            TxtNome.Text = CommissionManager.Clienti[clienteFiltrato].Nome;
-            TxtCognome.Text = CommissionManager.Clienti[clienteFiltrato].Cognome;
-            TxtNumeroTelefono.Text = CommissionManager.Clienti[clienteFiltrato].Numero;
-            TxtEmail.Text = CommissionManager.Clienti[clienteFiltrato].Email;
+            TxtNome.Text = commissionManager.Clienti[clienteFiltrato].Nome;
+            TxtCognome.Text = commissionManager.Clienti[clienteFiltrato].Cognome;
+            TxtNumeroTelefono.Text = commissionManager.Clienti[clienteFiltrato].Numero;
+            TxtEmail.Text = commissionManager.Clienti[clienteFiltrato].Email;
 
         }
 

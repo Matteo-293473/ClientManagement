@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 using ClientManagement.Models;
+using ClientManagement.Observer;
 
 namespace ClientManagement.Contatti
 {
-    public partial class AggiungiContatto : UserControl
+    public partial class AggiungiContatto : UserControl, IObserver
     {
         private readonly EditorHandlerAggiungiContatto editorAggiungiContatti;
         private readonly HandlerContatti handlerContatti;
+        private readonly CommissionManager commissionManager = CommissionManager.GetInstance();
 
         public AggiungiContatto()
         {
@@ -28,9 +30,10 @@ namespace ClientManagement.Contatti
             
             // il secondo permette di richiamare il metodo aggiornaListaContatti
             handlerContatti = new HandlerContatti();
-            CommissionManager.OnClientiCambia += AggiungiContatto_OnListaCambia;
+            commissionManager.AggiungiObserver(this);
         }
-        private void AggiungiContatto_OnListaCambia(object sender, Dictionary<int, Cliente> clienteCommissioni)
+
+        public new void Update()
         {
             handlerContatti.AggiornaListaContatti(lstContatti);
         }

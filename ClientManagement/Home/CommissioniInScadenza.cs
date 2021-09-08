@@ -4,13 +4,15 @@ using System.Linq;
 using System.Windows.Forms;
 using ClientManagement.Database;
 using ClientManagement.Models;
+using ClientManagement.Observer;
 
 namespace ClientManagement
 {
-    public partial class CommissioniInScadenza : UserControl
+    public partial class CommissioniInScadenza : UserControl, IObserver
     {
 
         private readonly HandlerCommissioniInScadenza handler;
+        private readonly CommissionManager commissionManager;
 
         private readonly IDatabase db;
 
@@ -21,15 +23,17 @@ namespace ClientManagement
             db = database;
 
             handler = new HandlerCommissioniInScadenza();
+            commissionManager = CommissionManager.GetInstance();
 
-            //ci mettiamo in ascolto di qualche evento
-            //l'evento viene generato quando si aggiunge una nuova commissione
-            CommissionManager.OnClienteCommissioniCambia += Commissioni_OnListaCambia;
-            
+            //ci mettiamo in ascolto dell'evento
+            commissionManager.AggiungiObserver(this);
+
+
         }
 
 
-        private void Commissioni_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
+        // observable pattern
+        public new void Update()
         {
             handler.AggiornaListView(lstCommissioniScadenza);
         }
@@ -72,7 +76,7 @@ namespace ClientManagement
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-            CommissionManager.Salva(db);
+            commissionManager.Salva(db);
         }
     }
 }

@@ -9,23 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 using ClientManagement.Models;
+using ClientManagement.Observer;
 
 namespace ClientManagement.Contatti
 {
-    public partial class ListaContatti : UserControl
+    public partial class ListaContatti : UserControl, IObserver
     {
         private readonly HandlerContatti handler;
         private readonly EditorHandlerAggiungiContatto editorAggiungiContatti;
+        private readonly CommissionManager commissionManager;
+
         public ListaContatti()
         {
             InitializeComponent();
             editorAggiungiContatti = new EditorHandlerAggiungiContatto();
-            // ci iscriviamo all'evento della lista Clienti
-            CommissionManager.OnClientiCambia += Clienti_OnListaCambia;
+            commissionManager = CommissionManager.GetInstance();
             handler = new HandlerContatti();
+
+            // ci iscriviamo all'evento
+            commissionManager.AggiungiObserver(this);
+
         }
 
-        private void Clienti_OnListaCambia(object sender, Dictionary<int, Cliente> clienti)
+        public new void Update()
         {
             handler.AggiornaListaContatti(lstContatti);
         }

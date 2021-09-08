@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ClientManagement.Models;
+using ClientManagement.Observer;
 
 namespace ClientManagement.Commissioni
 {
-    public partial class CommissioniTotali : UserControl
+    public partial class CommissioniTotali : UserControl, IObserver
     {
         private readonly HandlerCommissioniTotali handler;
+        private readonly CommissionManager commissionManager;
 
         public CommissioniTotali()
         {
             InitializeComponent();
             handler = new HandlerCommissioniTotali();
+            commissionManager = CommissionManager.GetInstance();
 
             //ci mettiamo in ascolto dell'evento
-            //l'evento viene generato quando si aggiunge una nuova commissione
-            CommissionManager.OnClienteCommissioniCambia += CommissioniTotali_OnListaCambia;
+            commissionManager.AggiungiObserver(this);
         }
 
-        private void CommissioniTotali_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
+        public new void Update()
         {
             handler.AggiornaListView(lstCommissioniScadenza);
-          
         }
 
         private void CommissioniTotali_Load(object sender, EventArgs e)

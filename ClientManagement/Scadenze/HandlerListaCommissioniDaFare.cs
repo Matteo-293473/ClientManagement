@@ -20,13 +20,13 @@ namespace ClientManagement.Scadenze
             lstCommissioniScadenza.Items.Clear();
             ListViewItem lst;
             string[] arr = new string[8];
-            foreach (var i in CommissionManager.ClienteCommissioni)
+            foreach (var i in commissionManager.ClienteCommissioni)
             {
                 // prendiamo una lista di commissioni temporanea
                 var temp = i.Value;
                 foreach (var cm in temp)
                 {
-                    clientiCommissioni.Add(CommissionManager.Clienti[i.Key]);
+                    clientiCommissioni.Add(commissionManager.Clienti[i.Key]);
                     clientiCommissioni.Add(cm);
 
                     if (!cm.TaskCompletato)

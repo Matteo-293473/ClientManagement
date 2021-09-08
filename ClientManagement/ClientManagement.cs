@@ -11,6 +11,7 @@ namespace ClientManagement
     {
         private HandlerClientManagement handler;
         private readonly IDatabase db;
+        private readonly CommissionManager commissionManager;
 
         public ClientManagement(IDatabase database)
         {
@@ -19,6 +20,7 @@ namespace ClientManagement
             db = database;
             handler = new HandlerClientManagement();
             handler.ColoreSelezione(btnHome, pnlSideMenu);
+            commissionManager = CommissionManager.GetInstance();
 
 
             LoadStorage();
@@ -28,9 +30,9 @@ namespace ClientManagement
         private void LoadStorage()
         {
             var clienti = db.GetDataClienti();
-            var commissioni = db.GetDataCommissioni(); 
+            var commissioni = db.GetDataCommissioni();
 
-            CommissionManager.Load(clienti,commissioni);
+            commissionManager.Load(clienti,commissioni);
 
         }
 

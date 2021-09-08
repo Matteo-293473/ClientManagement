@@ -11,6 +11,9 @@ namespace ClientManagement.Extensions
 {
     class HandlerCommissioni
     {
+
+        protected readonly CommissionManager commissionManager = CommissionManager.GetInstance();
+
         // invece di scrivere due volte la stessa funzione, viene aggiunto un nuovo parametro che serve 
         // a distinguere tra modifica e visualizzazione
         internal void MostraPopUp(ListView lstCommissioniScadenza, UserControl userControl, string opzione)
@@ -53,13 +56,13 @@ namespace ClientManagement.Extensions
             // recupero l'id del cliente attraverso la funzione recuperaChiaveCliente
             var idCliente = RecuperaIdClienteSelezionato(lstCommissioniScadenza);
 
-            CommissionManager.EliminaCommissione(idCommissione, idCliente);
+            commissionManager.EliminaCommissione(idCommissione, idCliente);
 
         }
 
-        private static int RecuperaIdClienteSelezionato(ListView lstCommissioniScadenza)
+        private int RecuperaIdClienteSelezionato(ListView lstCommissioniScadenza)
         {
-            return CommissionManager.RecuperaChiaveDaCliente(new Cliente(
+            return commissionManager.RecuperaChiaveDaCliente(new Cliente(
                 lstCommissioniScadenza.SelectedItems[0].SubItems[0].Text,
                 lstCommissioniScadenza.SelectedItems[0].SubItems[1].Text,
                 lstCommissioniScadenza.SelectedItems[0].SubItems[2].Text,

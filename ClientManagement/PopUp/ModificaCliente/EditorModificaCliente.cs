@@ -10,6 +10,7 @@ namespace ClientManagement.PopUp.ModificaCliente
         private readonly TextBox txtNumeroTelefono;
         private readonly TextBox txtEmail;
         private Cliente cl;
+        private readonly CommissionManager commissionManager = CommissionManager.GetInstance();
 
 
 
@@ -26,7 +27,7 @@ namespace ClientManagement.PopUp.ModificaCliente
         {
 
             // Ci viene restituito il cliente selezionato
-            this.cl = CommissionManager.RestituisciCliente(idCliente);
+            this.cl = commissionManager.RestituisciCliente(idCliente);
 
             txtNome.Text = cl.Nome;
             txtCognome.Text = cl.Cognome;
@@ -42,7 +43,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             cl.Cognome = txtCognome.Text;
             cl.Numero = txtNumeroTelefono.Text;
             cl.Email = txtEmail.Text;
-            CommissionManager.ModificaCliente(cl, idCliente);
+            commissionManager.ModificaCliente(cl, idCliente);
         }
     }
 }

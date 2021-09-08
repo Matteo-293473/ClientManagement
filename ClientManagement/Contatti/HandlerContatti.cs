@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
@@ -8,7 +9,7 @@ namespace ClientManagement
 {
     internal class HandlerContatti
     {
-
+        private readonly CommissionManager commissionManager = CommissionManager.GetInstance();
         internal void AggiornaListaContatti(ListView lstContatti)
         {
 
@@ -16,10 +17,10 @@ namespace ClientManagement
             lstContatti.Items.Clear();
             ListViewItem lst;
             string[] arr = new string[5];
-            foreach (var i in CommissionManager.Clienti)
+            foreach (var i in commissionManager.Clienti)
             {
                 // uso il metodo all'interno del Cliente per inserire l'item
-                var arrayCliente = CommissionManager.Clienti[i.Key].ToArrayString();
+                var arrayCliente = commissionManager.Clienti[i.Key].ToArrayString();
                 for(var j = 0; j < arrayCliente.Length; j++)
                 {
                     arr[j] = arrayCliente[j];
@@ -37,13 +38,13 @@ namespace ClientManagement
             Controllo.ControlloListViewSelezione(lstContatti);
 
             // recupero l'id del cliente
-            var idCliente = CommissionManager.RecuperaChiaveDaCliente(new Cliente(
+            var idCliente = commissionManager.RecuperaChiaveDaCliente(new Cliente(
                 lstContatti.SelectedItems[0].SubItems[0].Text,
                 lstContatti.SelectedItems[0].SubItems[1].Text,
                 lstContatti.SelectedItems[0].SubItems[2].Text,
                 lstContatti.SelectedItems[0].SubItems[3].Text));
 
-            CommissionManager.EliminaCliente(idCliente);
+            commissionManager.EliminaCliente(idCliente);
         }
 
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace ClientManagement.Contatti
         protected readonly TextBox TxtCognome;
         protected readonly TextBox TxtEmail;
         protected readonly TextBox TxtNumeroTelefono;
+        protected readonly CommissionManager commissionManager = CommissionManager.GetInstance();
 
         public EditorHandlerAggiungiContatto()
         {
@@ -52,7 +54,7 @@ namespace ClientManagement.Contatti
             Cliente cl = new Cliente(TxtNome.Text, TxtCognome.Text, TxtNumeroTelefono.Text, TxtEmail.Text);
 
             // aggiungo il cliente al dizionario usufruendo dell'overload
-            CommissionManager.AggiungiEntry(cl);
+            commissionManager.AggiungiEntry(cl);
             
         }
 

@@ -8,22 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Models;
+using ClientManagement.Observer;
 
 namespace ClientManagement.Scadenze
 {
-    public partial class ListaCommissioniDaFare : UserControl
+    public partial class ListaCommissioniDaFare : UserControl, IObserver
     {
         private readonly HandlerListaCommissioniDaFare handler;
+        private readonly CommissionManager commissionManager;
         public ListaCommissioniDaFare()
         {
             InitializeComponent();
             handler = new HandlerListaCommissioniDaFare();
+            commissionManager = CommissionManager.GetInstance();
 
-            //ci mettiamo in ascolto dell'evento che viene generato quando si aggiunge una nuova commissione
-            CommissionManager.OnClienteCommissioniCambia += CommissioniTotali_OnListaCambia;
+            //ci mettiamo in ascolto dell'evento
+            commissionManager.AggiungiObserver(this);
         }
 
-        private void CommissioniTotali_OnListaCambia(object sender, Dictionary<int, List<Commissione>> clienteCommissioni)
+        public new void Update()
         {
             handler.AggiornaListView(lstCommissioniScadenza);
         }
