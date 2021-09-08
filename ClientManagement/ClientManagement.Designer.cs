@@ -1,4 +1,6 @@
 ﻿
+using ClientManagement.Commissioni;
+
 namespace ClientManagement
 {
     partial class ClientManagement

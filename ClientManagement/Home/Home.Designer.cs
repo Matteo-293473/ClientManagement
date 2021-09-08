@@ -30,7 +30,7 @@ namespace ClientManagement
         private void InitializeComponent()
         {
             this.aggiungiCommissione1 = new Resources.aggiungiCommissione();
-            this.commissioniInScadenza1 = new CommissioniInScadenza(Database.DBHandler.GetInstance(@"C:\Users\pulci\Documents\progetto oop\ClientManagement\ClientManagement\dbClienti.txt",
+            this.commissioniInScadenza1 = new CommissioniInScadenza(Database.DbHandler.GetInstance(@"C:\Users\pulci\Documents\progetto oop\ClientManagement\ClientManagement\dbClienti.txt",
                 @"C:\Users\pulci\Documents\progetto oop\ClientManagement\ClientManagement\dbCommissioni.txt")
             );
             this.SuspendLayout();

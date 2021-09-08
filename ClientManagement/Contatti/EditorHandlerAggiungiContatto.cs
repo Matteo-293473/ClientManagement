@@ -11,21 +11,19 @@ using ClientManagement.PopUp.ModificaCliente;
 
 namespace ClientManagement.Contatti
 {
-    class EditorHandlerAggiungiContatto 
+    internal class EditorHandlerAggiungiContatto 
     {
         // diamo la visibilità anche alle classi derivate
         protected readonly TextBox TxtNome;
         protected readonly TextBox TxtCognome;
         protected readonly TextBox TxtEmail;
         protected readonly TextBox TxtNumeroTelefono;
-        
 
         public EditorHandlerAggiungiContatto()
         {
 
         }
 
-        
         public EditorHandlerAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtNumeroTelefono, TextBox txtEmail)
         {
             this.TxtNome = txtNome;

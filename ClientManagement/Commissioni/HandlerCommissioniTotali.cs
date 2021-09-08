@@ -17,8 +17,6 @@ namespace ClientManagement
 
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
-            ListViewItem lst;
-            string[] arr = new string[8];
             foreach (var i in CommissionManager.ClienteCommissioni)
             {
                 List<Commissione> temp = i.Value;
@@ -28,9 +26,13 @@ namespace ClientManagement
                     clientiCommissioni.Add(CommissionManager.Clienti[i.Key]);
                     clientiCommissioni.Add(cm);
 
-                    lst = new ListViewItem(clientiCommissioni.ToArrayString());
+                    var lst = new ListViewItem(clientiCommissioni.ToArrayString())
+                    {
+                        // imposto il colore di background in base a
+                        // se la commissione è stata completata o meno
+                        BackColor = cm.TaskCompletato ? Color.Aquamarine : Color.PaleVioletRed
+                    };
 
-                    lst.BackColor = cm.TaskCompletato ? Color.Aquamarine : Color.PaleVioletRed;
 
                     lstCommissioniScadenza.Items.Add(lst);
 

@@ -1,5 +1,5 @@
 ﻿
-namespace ClientManagement
+namespace ClientManagement.Commissioni
 {
     partial class CommissioniTotali
     {

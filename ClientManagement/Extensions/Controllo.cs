@@ -48,8 +48,8 @@ namespace ClientManagement.Extensions
         public static void ControlloInputCliente(string nome, string cognome, string numero, string email)
         {
             // controllo degli input
-            if (String.IsNullOrEmpty(nome) || String.IsNullOrEmpty(cognome) ||
-                String.IsNullOrEmpty(numero))
+            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(cognome) ||
+                string.IsNullOrEmpty(numero))
                 throw new Exception("Uno dei campi è vuoto");
 
             // usiamo una libreria per controllare la validità dell'email

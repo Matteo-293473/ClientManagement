@@ -5,14 +5,8 @@ using ClientManagement.Models;
 
 namespace ClientManagement
 {
-    class HandlerClientManagement
+    internal class HandlerClientManagement
     {
-
-
-        public HandlerClientManagement()
-        {
-
-        }
 
         internal void ColoreSelezione(Button btn, Panel pnl)
         {

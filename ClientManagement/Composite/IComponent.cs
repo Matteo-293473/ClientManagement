@@ -8,7 +8,7 @@ using ClientManagement.Models;
 
 namespace ClientManagement.Composite
 {
-    interface IComponent
+    internal interface IComponent
     {
         string[] ToArrayString();
     }

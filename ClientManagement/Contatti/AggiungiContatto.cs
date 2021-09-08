@@ -24,7 +24,7 @@ namespace ClientManagement.Contatti
             
             // carico due handler che alleggeriscono il codice della classe
             // il primo si occupa della verifica e inserimento dei dati
-            editorAggiungiContatti = new EditorHandlerAggiungiContatto(txtNome, txtCognome, txtEmail, txtNumeroTelefono);
+            editorAggiungiContatti = new EditorHandlerAggiungiContatto(txtNome, txtCognome, txtNumeroTelefono, txtEmail);
             
             // il secondo permette di richiamare il metodo aggiornaListaContatti
             handlerContatti = new HandlerContatti();

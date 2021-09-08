@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ClientManagement.Extensions;
 using ClientManagement.Models;
 
-namespace ClientManagement
+namespace ClientManagement.Commissioni
 {
     public partial class CommissioniTotali : UserControl
     {

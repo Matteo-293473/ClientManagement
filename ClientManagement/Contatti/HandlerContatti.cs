@@ -6,7 +6,7 @@ using ClientManagement.Models;
 
 namespace ClientManagement
 {
-    class HandlerContatti
+    internal class HandlerContatti
     {
 
         internal void AggiornaListaContatti(ListView lstContatti)
@@ -19,11 +19,11 @@ namespace ClientManagement
             foreach (var i in CommissionManager.Clienti)
             {
                 // uso il metodo all'interno del Cliente per inserire l'item
-                //var arrayCliente = CommissionManager.Clienti[i.Key].ToArrayString();
-                arr[0] = CommissionManager.Clienti[i.Key].Nome;
-                arr[1] = CommissionManager.Clienti[i.Key].Cognome;
-                arr[2] = CommissionManager.Clienti[i.Key].Numero;
-                arr[3] = CommissionManager.Clienti[i.Key].Email;
+                var arrayCliente = CommissionManager.Clienti[i.Key].ToArrayString();
+                for(var j = 0; j < arrayCliente.Length; j++)
+                {
+                    arr[j] = arrayCliente[j];
+                }
                 arr[4] = i.Key.ToString();
 
                 lst = new ListViewItem(arr);
