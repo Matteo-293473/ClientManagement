@@ -42,8 +42,7 @@ namespace ClientManagement.Models
 
 
 
-        // se viene invocato uno dei due eventi significa che c'è stato un cambiamento che non è
-        // stato salvato
+        // se viene invocato significa che c'è stato un cambiamento che le nuove modifiche non sono state salvate
         public void Update()
         {
             Salvato = false;
@@ -65,7 +64,7 @@ namespace ClientManagement.Models
             Clienti.Add(_value, cl);
             _value += 1;
 
-            //OnClientiCambia?.Invoke(cl, Clienti);----
+            // notifico le modifiche
             NotificaObservers();
 
         }
@@ -87,7 +86,7 @@ namespace ClientManagement.Models
                 commissioni.Add(cm);
                 ClienteCommissioni[c] = commissioni;
 
-                //OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+                // notifico le modifiche
                 NotificaObservers(); 
             }
 
@@ -99,7 +98,7 @@ namespace ClientManagement.Models
                 commissioni.Add(cm);
                 ClienteCommissioni.Add(c, commissioni);
 
-                //OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+                // notifico le modifiche
                 NotificaObservers();
             }
             else
@@ -109,12 +108,12 @@ namespace ClientManagement.Models
                 commissioni.Add(cm); // aggiungo la commissione
                 Clienti.Add(_value, cl); // aggiungo il cliente nella rubrica
 
-                //OnClientiCambia?.Invoke(cl, Clienti); // invoco l'evento
+                // notifico le modifiche
                 NotificaObservers();
 
                 ClienteCommissioni.Add(_value, commissioni); // aggiungo la commissione associata al cliente
 
-                //OnClienteCommissioniCambia?.Invoke(cl, ClienteCommissioni); // invoco l'evento
+                // notifico le modifiche
                 NotificaObservers();
 
                 _value += 1; // aggiorno il valore
@@ -145,7 +144,7 @@ namespace ClientManagement.Models
                 cm.Scadenza = commissione.Scadenza;
                 cm.Descrizione = commissione.Descrizione;
 
-                //OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+                // notifico le modifiche
                 NotificaObservers();
             }
         }
@@ -169,8 +168,7 @@ namespace ClientManagement.Models
             Clienti[idCliente].Numero = cliente.Numero;
             Clienti[idCliente].Email = cliente.Email;
 
-            //OnClientiCambia?.Invoke(cliente, Clienti);
-            //OnClienteCommissioniCambia?.Invoke(cliente, ClienteCommissioni);
+            // notifico le modifiche
             NotificaObservers();
         }
 
@@ -180,7 +178,7 @@ namespace ClientManagement.Models
         {
             ClienteCommissioni[idCliente].RemoveAll((x => x.IdCommissione == idCommissione));
 
-            //OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+            // notifico le modifiche
             NotificaObservers();
         }
 
@@ -190,8 +188,7 @@ namespace ClientManagement.Models
             ClienteCommissioni.Remove(idCliente);
             Clienti.Remove(idCliente);
 
-            //OnClientiCambia?.Invoke(ClienteCommissioni, Clienti);
-            //OnClienteCommissioniCambia?.Invoke(ClienteCommissioni, ClienteCommissioni);
+            // notifico le modifiche
             NotificaObservers();
 
         }

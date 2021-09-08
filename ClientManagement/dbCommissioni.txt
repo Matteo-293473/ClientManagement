@@ -96,5 +96,12 @@
     "Scadenza": "2021-09-17T16:47:24",
     "TaskCompletato": false,
     "IdCommissione": 14
+  },
+  {
+    "IdCliente": 5,
+    "Descrizione": "Pc difettoso, controllare",
+    "Scadenza": "2021-09-10T17:22:56",
+    "TaskCompletato": false,
+    "IdCommissione": 15
   }
 ]
