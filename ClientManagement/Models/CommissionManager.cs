@@ -20,7 +20,7 @@ namespace ClientManagement.Models
         public readonly Dictionary<int, Cliente> Clienti = new Dictionary<int, Cliente>();
 
         public static bool Salvato = true;
-        
+
 
         // Non vogliamo istanziare due volte CommissionManager
         public static CommissionManager GetInstance()
@@ -36,7 +36,7 @@ namespace ClientManagement.Models
         // Qui applichiamo il pattern Singleton.
         private CommissionManager()
         {
-           // aggiungi qui gli observer
+            this.AggiungiObserver(this);
         }
 
 
