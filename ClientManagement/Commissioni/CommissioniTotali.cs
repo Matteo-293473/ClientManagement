@@ -9,13 +9,12 @@ namespace ClientManagement.Commissioni
     public partial class CommissioniTotali : UserControl, IObserver
     {
         private readonly HandlerCommissioniTotali handler;
-        private readonly CommissionManager commissionManager;
 
         public CommissioniTotali()
         {
             InitializeComponent();
             handler = new HandlerCommissioniTotali();
-            commissionManager = CommissionManager.GetInstance();
+            var commissionManager = CommissionManager.GetInstance();
 
             //ci mettiamo in ascolto dell'evento
             commissionManager.AggiungiObserver(this);

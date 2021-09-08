@@ -7,13 +7,12 @@ using ClientManagement.Observer;
 
 namespace ClientManagement.Resources
 {
-
-    public partial class aggiungiCommissione : UserControl, IObserver
+    public partial class AggiungiCommissione : UserControl, IObserver
     {
         private readonly EditorHandlerAggiungiCommissione editor;
         private readonly CommissionManager commissionManager  = CommissionManager.GetInstance();
 
-        public aggiungiCommissione()
+        public AggiungiCommissione()
         {
             InitializeComponent();
             editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtNumeroTelefono, txtEmail, txtDescrizioneCommissione, dtpScadenza);

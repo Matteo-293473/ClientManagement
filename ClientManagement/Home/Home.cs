@@ -5,7 +5,7 @@ namespace ClientManagement
 {
     public partial class Home : UserControl
     {
-        // classe che unisce le due form aggiungiCommissione e CommissioniInScandenza
+        // classe che unisce le due form AggiungiCommissione e CommissioniInScandenza
         public Home()
         {
             InitializeComponent();

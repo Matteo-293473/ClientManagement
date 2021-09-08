@@ -1,7 +1,7 @@
 ﻿
 namespace ClientManagement.Resources
 {
-    partial class aggiungiCommissione
+    partial class AggiungiCommissione
     {
         /// <summary> 
         /// Variabile di progettazione necessaria.
@@ -29,7 +29,7 @@ namespace ClientManagement.Resources
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aggiungiCommissione));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AggiungiCommissione));
             this.dtpScadenza = new System.Windows.Forms.DateTimePicker();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCognome = new System.Windows.Forms.TextBox();
@@ -221,7 +221,7 @@ namespace ClientManagement.Resources
             this.txtEmail.TabIndex = 2;
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
-            // aggiungiCommissione
+            // AggiungiCommissione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,7 +244,7 @@ namespace ClientManagement.Resources
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dtpScadenza);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "aggiungiCommissione";
+            this.Name = "AggiungiCommissione";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
             this.PerformLayout();

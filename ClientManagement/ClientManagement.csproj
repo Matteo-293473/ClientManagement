@@ -138,11 +138,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Home\aggiungiCommissione.cs">
+    <Compile Include="Home\AggiungiCommissione.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Home\aggiungiCommissione.Designer.cs">
-      <DependentUpon>aggiungiCommissione.cs</DependentUpon>
+    <Compile Include="Home\AggiungiCommissione.Designer.cs">
+      <DependentUpon>AggiungiCommissione.cs</DependentUpon>
     </Compile>
     <Compile Include="Scadenze\HandlerListaCommissioniDaFare.cs" />
     <Compile Include="Scadenze\ListaCommissioniDaFare.cs">
@@ -186,8 +186,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home\aggiungiCommissione.resx">
-      <DependentUpon>aggiungiCommissione.cs</DependentUpon>
+    <EmbeddedResource Include="Home\AggiungiCommissione.resx">
+      <DependentUpon>AggiungiCommissione.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scadenze\ListaCommissioniDaFare.resx">
       <DependentUpon>ListaCommissioniDaFare.cs</DependentUpon>

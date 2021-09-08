@@ -29,7 +29,7 @@ namespace ClientManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.aggiungiCommissione1 = new Resources.aggiungiCommissione();
+            this.aggiungiCommissione1 = new Resources.AggiungiCommissione();
             this.commissioniInScadenza1 = new CommissioniInScadenza(Database.DbHandler.GetInstance(@"C:\Users\pulci\Documents\progetto oop\ClientManagement\ClientManagement\dbClienti.txt",
                 @"C:\Users\pulci\Documents\progetto oop\ClientManagement\ClientManagement\dbCommissioni.txt")
             );
@@ -65,7 +65,7 @@ namespace ClientManagement
         }
 
         #endregion
-        private Resources.aggiungiCommissione aggiungiCommissione1;
+        private Resources.AggiungiCommissione aggiungiCommissione1;
         private CommissioniInScadenza commissioniInScadenza1;
     }
 }
