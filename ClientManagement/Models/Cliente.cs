@@ -19,10 +19,9 @@ namespace ClientManagement.Models
             this.Cognome = cognome;
             this.Numero = numero;
             this.Email = email;
-
         }
 
-        
+        // Metodo dell'interfaccia IComponent 
         public string[] ToArrayString()
         {
             string[] row = { this.Nome, this.Cognome, this.Numero, this.Email,};

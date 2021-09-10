@@ -19,7 +19,7 @@ namespace ClientManagement.Contatti
         protected readonly TextBox TxtCognome;
         protected readonly TextBox TxtEmail;
         protected readonly TextBox TxtNumeroTelefono;
-        protected readonly CommissionManager commissionManager = CommissionManager.GetInstance();
+        protected readonly DatiLocali DatiLocali = DatiLocali.GetInstance();
 
         public EditorHandlerAggiungiContatto()
         {
@@ -54,7 +54,7 @@ namespace ClientManagement.Contatti
             Cliente cl = new Cliente(TxtNome.Text, TxtCognome.Text, TxtNumeroTelefono.Text, TxtEmail.Text);
 
             // aggiungo il cliente al dizionario usufruendo dell'overload
-            commissionManager.AggiungiEntry(cl);
+            DatiLocali.AggiungiEntry(cl);
             
         }
 

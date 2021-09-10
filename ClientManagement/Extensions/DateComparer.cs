@@ -11,13 +11,14 @@ namespace ClientManagement.Extensions
     // questa classe ci permette di confrontare due oggetti al fine di creare una lista ordinata
     class DateComparer : IComparer
     {
-        private int pointsColumnIndex = 0;
+        private readonly int pointsColumnIndex = 0;
 
         public DateComparer(int indiceColonna)
         {
             this.pointsColumnIndex = indiceColonna;
         }
 
+        // metodo per paragonare due date
         public int Compare(object x, object y)
         {
             var valoreX = DateTime.Parse(((ListViewItem) x).SubItems[pointsColumnIndex].Text);

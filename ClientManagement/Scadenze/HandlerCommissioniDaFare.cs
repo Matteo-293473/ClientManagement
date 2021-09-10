@@ -10,7 +10,7 @@ using ClientManagement.Models;
 
 namespace ClientManagement.Scadenze
 {
-    class HandlerListaCommissioniDaFare : HandlerCommissioni
+    class HandlerCommissioniDaFare : HandlerCommissioni
     {
         internal void AggiornaListView(ListView lstCommissioniScadenza)
         {
@@ -20,13 +20,13 @@ namespace ClientManagement.Scadenze
             lstCommissioniScadenza.Items.Clear();
             ListViewItem lst;
             string[] arr = new string[8];
-            foreach (var i in commissionManager.ClienteCommissioni)
+            foreach (var i in DatiLocali.ClienteCommissioni)
             {
                 // prendiamo una lista di commissioni temporanea
                 var temp = i.Value;
                 foreach (var cm in temp)
                 {
-                    clientiCommissioni.Add(commissionManager.Clienti[i.Key]);
+                    clientiCommissioni.Add(DatiLocali.Clienti[i.Key]);
                     clientiCommissioni.Add(cm);
 
                     if (!cm.TaskCompletato)

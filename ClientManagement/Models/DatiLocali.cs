@@ -9,10 +9,10 @@ using ClientManagement.Observer;
 
 namespace ClientManagement.Models
 {
-    class CommissionManager : Subject, IObserver
+    class DatiLocali : Subject, IObserver
     {
 
-        private static CommissionManager _instance;
+        private static DatiLocali _instance;
 
 
         // dizionari nei quali vengono archiviati i dati
@@ -22,19 +22,19 @@ namespace ClientManagement.Models
         public static bool Salvato = true;
 
 
-        // Non vogliamo istanziare due volte CommissionManager
-        public static CommissionManager GetInstance()
+        // Non vogliamo istanziare due volte datiLocali
+        public static DatiLocali GetInstance()
         {
             if (_instance == null)
             {
-                _instance = new CommissionManager();
+                _instance = new DatiLocali();
             }
 
             return _instance;
         }
 
         // Qui applichiamo il pattern Singleton.
-        private CommissionManager()
+        private DatiLocali()
         {
             this.AggiungiObserver(this);
         }

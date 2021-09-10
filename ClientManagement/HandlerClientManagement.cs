@@ -24,7 +24,7 @@ namespace ClientManagement
 
         internal void ControllaSalvataggio(FormClosingEventArgs e)
         {
-            if (CommissionManager.Salvato == false)
+            if (DatiLocali.Salvato == false)
             {
                 DialogResult dialogResult = MessageBox.Show("Ci sono dati non salvati, uscire lo stesso?", "Uscire", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.No)

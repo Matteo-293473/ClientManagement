@@ -12,6 +12,9 @@ namespace ClientManagement.Database
 {
     class DbHandler : IDatabase
     {
+        // come attributi abbiamo le due stringhe che rappresentano
+        // il percorso di dove si trovano i due file in formato JSON
+        // e un'istanza della classe, utile per implementare il singleton
         private readonly string dbPathClienti;
         private readonly string dbPathCommissioni;
         private static DbHandler _instance;
@@ -23,7 +26,6 @@ namespace ClientManagement.Database
             {
                 _instance = new DbHandler(databaseFilePathClienti, databaseFilePathCommissioni);
             }
-
             return _instance;
         }
 
@@ -39,7 +41,6 @@ namespace ClientManagement.Database
 
 
         // Qua usiamo l'estensione Newtonsoft.json
-
         public IDictionary<int, Cliente> GetDataClienti()
         {
             IDictionary<int, Cliente> clienti = null;

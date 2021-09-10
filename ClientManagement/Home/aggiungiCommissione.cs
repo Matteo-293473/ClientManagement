@@ -10,13 +10,13 @@ namespace ClientManagement.Resources
     public partial class AggiungiCommissione : UserControl, IObserver
     {
         private readonly EditorHandlerAggiungiCommissione editor;
-        private readonly CommissionManager commissionManager  = CommissionManager.GetInstance();
+        private readonly DatiLocali datiLocali  = DatiLocali.GetInstance();
 
         public AggiungiCommissione()
         {
             InitializeComponent();
             editor = new EditorHandlerAggiungiCommissione(txtNome, txtCognome, txtNumeroTelefono, txtEmail, txtDescrizioneCommissione, dtpScadenza);
-            commissionManager.AggiungiObserver(this);
+            datiLocali.AggiungiObserver(this);
         }
 
         public new void Update()

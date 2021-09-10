@@ -12,7 +12,7 @@ namespace ClientManagement.Extensions
     class HandlerCommissioni
     {
 
-        protected readonly CommissionManager commissionManager = CommissionManager.GetInstance();
+        protected readonly DatiLocali DatiLocali = DatiLocali.GetInstance();
 
         // invece di scrivere due volte la stessa funzione, viene aggiunto un nuovo parametro che serve 
         // a distinguere tra modifica e visualizzazione
@@ -46,7 +46,7 @@ namespace ClientManagement.Extensions
 
         }
 
-        // Eliminare una commissione
+        // Eliminazione di una commissione
         internal void Elimina(ListView lstCommissioniScadenza)
         {
             // Controllo sulla ListView e sulla selezione dell'elemento
@@ -56,13 +56,14 @@ namespace ClientManagement.Extensions
             // recupero l'id del cliente attraverso la funzione recuperaChiaveCliente
             var idCliente = RecuperaIdClienteSelezionato(lstCommissioniScadenza);
 
-            commissionManager.EliminaCommissione(idCommissione, idCliente);
+            DatiLocali.EliminaCommissione(idCommissione, idCliente);
 
         }
 
+        // Recupero dell'id del cliente selezionato nella listview
         private int RecuperaIdClienteSelezionato(ListView lstCommissioniScadenza)
         {
-            return commissionManager.RecuperaChiaveDaCliente(new Cliente(
+            return DatiLocali.RecuperaChiaveDaCliente(new Cliente(
                 lstCommissioniScadenza.SelectedItems[0].SubItems[0].Text,
                 lstCommissioniScadenza.SelectedItems[0].SubItems[1].Text,
                 lstCommissioniScadenza.SelectedItems[0].SubItems[2].Text,

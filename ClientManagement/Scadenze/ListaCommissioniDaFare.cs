@@ -14,16 +14,16 @@ namespace ClientManagement.Scadenze
 {
     public partial class ListaCommissioniDaFare : UserControl, IObserver
     {
-        private readonly HandlerListaCommissioniDaFare handler;
-        private readonly CommissionManager commissionManager;
+        private readonly HandlerCommissioniDaFare handler;
+
         public ListaCommissioniDaFare()
         {
             InitializeComponent();
-            handler = new HandlerListaCommissioniDaFare();
-            commissionManager = CommissionManager.GetInstance();
+            handler = new HandlerCommissioniDaFare();
+            var datiLocali = DatiLocali.GetInstance();
 
             //ci mettiamo in ascolto dell'evento
-            commissionManager.AggiungiObserver(this);
+            datiLocali.AggiungiObserver(this);
         }
 
         public new void Update()

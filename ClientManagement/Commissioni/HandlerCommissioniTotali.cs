@@ -17,13 +17,13 @@ namespace ClientManagement
 
             // inseriamo ogni commissione all'interno della tabella
             lstCommissioniScadenza.Items.Clear();
-            foreach (var i in commissionManager.ClienteCommissioni)
+            foreach (var i in DatiLocali.ClienteCommissioni)
             {
                 List<Commissione> temp = i.Value;
                 foreach (Commissione cm in temp)
                 {
                     // aggiungo le due "foglie" al composite
-                    clientiCommissioni.Add(commissionManager.Clienti[i.Key]);
+                    clientiCommissioni.Add(DatiLocali.Clienti[i.Key]);
                     clientiCommissioni.Add(cm);
 
                     var lst = new ListViewItem(clientiCommissioni.ToArrayString())
@@ -35,7 +35,6 @@ namespace ClientManagement
 
 
                     lstCommissioniScadenza.Items.Add(lst);
-
                     clientiCommissioni.Clear();
 
                 }

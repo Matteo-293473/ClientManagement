@@ -14,10 +14,10 @@ namespace ClientManagement.Commissioni
         {
             InitializeComponent();
             handler = new HandlerCommissioniTotali();
-            var commissionManager = CommissionManager.GetInstance();
+            var datiLocali = DatiLocali.GetInstance();
 
             //ci mettiamo in ascolto dell'evento
-            commissionManager.AggiungiObserver(this);
+            datiLocali.AggiungiObserver(this);
         }
 
         public new void Update()

@@ -45,6 +45,8 @@ namespace ClientManagement
         }
 
 
+        // Sfruttando l'override e il polimorfismo, estendiamo la funzione della classe base e
+        // aggiungiamo un controllo anche alla commissione
         internal override void ControllaValiditaInput()
         {
             base.ControllaValiditaInput();
@@ -53,7 +55,7 @@ namespace ClientManagement
         }
 
 
-
+        // Sfruttando l'override e il polimorfismo, riscriviamo il metodo riadattandolo anche alle commissioni
         internal override void InserisciEntry()
         {
             // Controllo i caratteri delle textBox nome e cognome
@@ -64,23 +66,25 @@ namespace ClientManagement
             Cliente cl = new Cliente(TxtNome.Text, TxtCognome.Text, TxtNumeroTelefono.Text, TxtEmail.Text);
 
             // aggiungo commissione e cliente al managerCommissioni al cliente
-            commissionManager.AggiungiEntry(cl, cm);
+            DatiLocali.AggiungiEntry(cl, cm);
         }
 
 
 
-
+        // Metodo semplice che carica la combo box alla compilazione automatica dei campi in base
+        // al cliente scelto
         internal void CaricaCmbox(ComboBox cmb)
         {
-            foreach (var i in commissionManager.Clienti)
+            foreach (var i in DatiLocali.Clienti)
             {
 
-                cmb.Items.Add((commissionManager.Clienti[i.Key].Nome + " " + commissionManager.Clienti[i.Key].Cognome + " " + commissionManager.Clienti[i.Key].Numero));
+                cmb.Items.Add((DatiLocali.Clienti[i.Key].Nome + " " + DatiLocali.Clienti[i.Key].Cognome + " " + DatiLocali.Clienti[i.Key].Numero));
 
             }
             
         }
 
+        // Metodo che carica i campi in base all'elemento selezionato nella combo box
         internal void FillFields(string nomeCognomeNumero)
         {
             // prima resettiamo i campi
@@ -91,20 +95,20 @@ namespace ClientManagement
             
             // popoliamo i campi 
 
-            // seleziono la chiave che mi interessa
-            var clienteFiltrato = commissionManager.Clienti.Where(i => (
-                    commissionManager.Clienti[i.Key].Nome == nomeCognomeNumeroSplit[0] &&
-                    commissionManager.Clienti[i.Key].Cognome == nomeCognomeNumeroSplit[1] &&
-                    commissionManager.Clienti[i.Key].Numero == nomeCognomeNumeroSplit[2]))
+            // seleziono la chiave che mi interessa attraverso una query, sfruttando la libreria LINQ
+            var clienteFiltrato = DatiLocali.Clienti.Where(i => (
+                    DatiLocali.Clienti[i.Key].Nome == nomeCognomeNumeroSplit[0] &&
+                    DatiLocali.Clienti[i.Key].Cognome == nomeCognomeNumeroSplit[1] &&
+                    DatiLocali.Clienti[i.Key].Numero == nomeCognomeNumeroSplit[2]))
                 .Select(i => i.Key).First(); 
             // al fine di risolvere i problemi con gli omonimi, il cliente viene identificato
             // da tre campi che ne determinano una sorta di superchiave.
             
             // popolo i campi attraverso il cliente trovato
-            TxtNome.Text = commissionManager.Clienti[clienteFiltrato].Nome;
-            TxtCognome.Text = commissionManager.Clienti[clienteFiltrato].Cognome;
-            TxtNumeroTelefono.Text = commissionManager.Clienti[clienteFiltrato].Numero;
-            TxtEmail.Text = commissionManager.Clienti[clienteFiltrato].Email;
+            TxtNome.Text = DatiLocali.Clienti[clienteFiltrato].Nome;
+            TxtCognome.Text = DatiLocali.Clienti[clienteFiltrato].Cognome;
+            TxtNumeroTelefono.Text = DatiLocali.Clienti[clienteFiltrato].Numero;
+            TxtEmail.Text = DatiLocali.Clienti[clienteFiltrato].Email;
 
         }
 

@@ -9,7 +9,7 @@ namespace ClientManagement
 {
     internal class HandlerContatti
     {
-        private readonly CommissionManager commissionManager = CommissionManager.GetInstance();
+        private readonly DatiLocali datiLocali = DatiLocali.GetInstance();
         internal void AggiornaListaContatti(ListView lstContatti)
         {
 
@@ -17,10 +17,10 @@ namespace ClientManagement
             lstContatti.Items.Clear();
             ListViewItem lst;
             string[] arr = new string[5];
-            foreach (var i in commissionManager.Clienti)
+            foreach (var i in datiLocali.Clienti)
             {
                 // uso il metodo all'interno del Cliente per inserire l'item
-                var arrayCliente = commissionManager.Clienti[i.Key].ToArrayString();
+                var arrayCliente = datiLocali.Clienti[i.Key].ToArrayString();
                 for(var j = 0; j < arrayCliente.Length; j++)
                 {
                     arr[j] = arrayCliente[j];
@@ -38,13 +38,13 @@ namespace ClientManagement
             Controllo.ControlloListViewSelezione(lstContatti);
 
             // recupero l'id del cliente
-            var idCliente = commissionManager.RecuperaChiaveDaCliente(new Cliente(
+            var idCliente = datiLocali.RecuperaChiaveDaCliente(new Cliente(
                 lstContatti.SelectedItems[0].SubItems[0].Text,
                 lstContatti.SelectedItems[0].SubItems[1].Text,
                 lstContatti.SelectedItems[0].SubItems[2].Text,
                 lstContatti.SelectedItems[0].SubItems[3].Text));
 
-            commissionManager.EliminaCliente(idCliente);
+            datiLocali.EliminaCliente(idCliente);
         }
 
     }

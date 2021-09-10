@@ -17,17 +17,16 @@ namespace ClientManagement.Contatti
     {
         private readonly HandlerContatti handler;
         private readonly EditorHandlerAggiungiContatto editorAggiungiContatti;
-        private readonly CommissionManager commissionManager;
 
         public ListaContatti()
         {
             InitializeComponent();
             editorAggiungiContatti = new EditorHandlerAggiungiContatto();
-            commissionManager = CommissionManager.GetInstance();
+            var datiLocali = DatiLocali.GetInstance();
             handler = new HandlerContatti();
 
             // ci iscriviamo all'evento
-            commissionManager.AggiungiObserver(this);
+            datiLocali.AggiungiObserver(this);
 
         }
 

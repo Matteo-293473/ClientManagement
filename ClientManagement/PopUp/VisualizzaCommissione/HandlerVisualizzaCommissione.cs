@@ -18,7 +18,7 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
         private readonly TextBox txtDescrizioneCommissione;
         private readonly Label lblDataScadenza;
         private readonly Label lblCompletato;
-        private readonly CommissionManager commissionManager = CommissionManager.GetInstance();
+        private readonly DatiLocali datiLocali = DatiLocali.GetInstance();
 
 
         public HandlerVisualizzaCommissione(
@@ -42,8 +42,8 @@ namespace ClientManagement.PopUp.VisualizzaCommissione
         public void CaricaDati(int idCommissione, int idCliente)
         {
             // cerchiamo cliente e commissione
-            Cliente cl = commissionManager.RestituisciCliente(idCliente);
-            Commissione cm = commissionManager.RestituisciCommissione(idCommissione);
+            Cliente cl = datiLocali.RestituisciCliente(idCliente);
+            Commissione cm = datiLocali.RestituisciCommissione(idCommissione);
 
             // aggiorniamo i dati
             this.lblNome.Text = cl.Nome;

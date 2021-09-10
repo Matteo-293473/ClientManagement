@@ -112,7 +112,7 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\IDatabase.cs" />
-    <Compile Include="Models\CommissionManager.cs" />
+    <Compile Include="Models\DatiLocali.cs" />
     <Compile Include="Observer\IObserver.cs" />
     <Compile Include="Observer\Subject.cs" />
     <Compile Include="PopUp\ModificaCliente\EditorModificaCliente.cs" />
@@ -144,7 +144,7 @@
     <Compile Include="Home\AggiungiCommissione.Designer.cs">
       <DependentUpon>AggiungiCommissione.cs</DependentUpon>
     </Compile>
-    <Compile Include="Scadenze\HandlerListaCommissioniDaFare.cs" />
+    <Compile Include="Scadenze\HandlerCommissioniDaFare.cs" />
     <Compile Include="Scadenze\ListaCommissioniDaFare.cs">
       <SubType>UserControl</SubType>
     </Compile>

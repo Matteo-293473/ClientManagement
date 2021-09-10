@@ -12,7 +12,7 @@ namespace ClientManagement
     {
 
         private readonly HandlerCommissioniInScadenza handler;
-        private readonly CommissionManager commissionManager;
+        private readonly DatiLocali datiLocali;
 
         private readonly IDatabase db;
 
@@ -23,10 +23,10 @@ namespace ClientManagement
             db = database;
 
             handler = new HandlerCommissioniInScadenza();
-            commissionManager = CommissionManager.GetInstance();
+            datiLocali = DatiLocali.GetInstance();
 
             //ci mettiamo in ascolto dell'evento
-            commissionManager.AggiungiObserver(this);
+            datiLocali.AggiungiObserver(this);
 
 
         }
@@ -76,7 +76,7 @@ namespace ClientManagement
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-            commissionManager.Salva(db);
+            datiLocali.Salva(db);
         }
     }
 }

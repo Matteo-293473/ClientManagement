@@ -24,7 +24,7 @@ namespace ClientManagement
             lstCommissioniScadenza.Items.Clear();
             string[] arr = new string[8]; 
 
-            foreach (var i in commissionManager.ClienteCommissioni)
+            foreach (var i in DatiLocali.ClienteCommissioni)
             {
                 List<Commissione> temp = i.Value;
                 foreach (var cm in temp.Where(cm => cm.TaskCompletato == false && cm.Scadenza < nextSunday))
@@ -32,7 +32,7 @@ namespace ClientManagement
                     ListViewItem lst;
                     lst = new ListViewItem();
                     
-                    clientiCommissioni.Add(commissionManager.Clienti[i.Key]);
+                    clientiCommissioni.Add(DatiLocali.Clienti[i.Key]);
                     clientiCommissioni.Add(cm);
                     lst = new ListViewItem(clientiCommissioni.ToArrayString());
 

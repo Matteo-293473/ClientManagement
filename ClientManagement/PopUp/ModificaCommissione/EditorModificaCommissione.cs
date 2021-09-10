@@ -14,7 +14,7 @@ namespace ClientManagement.PopUpModifica
         private readonly DateTimePicker dtpScadenza;
         private readonly CheckBox cbxTask;
         private Commissione cm;
-        private readonly CommissionManager commissionManager = CommissionManager.GetInstance();
+        private readonly DatiLocali datiLocali = DatiLocali.GetInstance();
 
         // nel caso in cui segniamo il task completo, potrebbe succedere che
         // non si possa modificare poiché la data è passata. La data quindi viene segnata
@@ -40,7 +40,7 @@ namespace ClientManagement.PopUpModifica
         {
 
             // Ci viene restituita la commissione selezionata
-            this.cm = commissionManager.RestituisciCommissione(idCommissione);
+            this.cm = datiLocali.RestituisciCommissione(idCommissione);
             
             txtDescrizioneCommissione.Text = cm.Descrizione;
             dtpScadenza.Value = cm.Scadenza;
@@ -55,7 +55,7 @@ namespace ClientManagement.PopUpModifica
             cm.Descrizione = txtDescrizioneCommissione.Text;
             cm.Scadenza = dtpScadenza.Value;
             cm.TaskCompletato = cbxTask.Checked;
-            commissionManager.ModificaCommissione(cm);
+            datiLocali.ModificaCommissione(cm);
         }
 
     }

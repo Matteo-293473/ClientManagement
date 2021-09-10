@@ -17,7 +17,7 @@ namespace ClientManagement.Contatti
     {
         private readonly EditorHandlerAggiungiContatto editorAggiungiContatti;
         private readonly HandlerContatti handlerContatti;
-        private readonly CommissionManager commissionManager = CommissionManager.GetInstance();
+        private readonly DatiLocali datiLocali = DatiLocali.GetInstance();
 
         public AggiungiContatto()
         {
@@ -30,7 +30,7 @@ namespace ClientManagement.Contatti
             
             // il secondo permette di richiamare il metodo aggiornaListaContatti
             handlerContatti = new HandlerContatti();
-            commissionManager.AggiungiObserver(this);
+            datiLocali.AggiungiObserver(this);
         }
 
         public new void Update()

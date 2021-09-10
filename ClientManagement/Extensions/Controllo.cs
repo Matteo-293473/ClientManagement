@@ -13,7 +13,6 @@ namespace ClientManagement.Extensions
     static class Controllo
     {
         // Controllo caratteri, utilizzato all'interno delle textbox
-
         public static void ControllaNumeri(KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
@@ -97,12 +96,12 @@ namespace ClientManagement.Extensions
         // usiamo questo metodo per la modifica delle commissioni
         public static void ControlloInputCommissione(string descrizione, DateTime dataScelta, DateTime oldData)
         {
-            if (String.IsNullOrEmpty(descrizione))
+            if (string.IsNullOrEmpty(descrizione))
                 throw new Exception("Il campo \"descrizione della commissione\" non può essere vuoto");
 
             // Non si può scegliere una data passata diversa da quella che era stata inserita
             if (dataScelta.Date != oldData.Date && oldData.Date < DateTime.Now.Date && dataScelta.Date < DateTime.Now.Date)
-                throw new Exception("Non puoi scegliere una data passata differente da quella che già c'era");
+                throw new Exception("Non si può scegliere una data passata differente da quella che già c'era");
 
             if (oldData.Date >= DateTime.Now.Date && dataScelta.Date < DateTime.Now.Date)
                 throw new Exception("La data non può essere una passata");
