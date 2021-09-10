@@ -34,8 +34,8 @@ namespace ClientManagement
             this.lstCommissioniScadenza = new System.Windows.Forms.ListView();
             this.clmNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCognome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmIdComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -77,15 +77,15 @@ namespace ClientManagement
             this.clmCognome.Text = "Cognome";
             this.clmCognome.Width = 100;
             // 
-            // clmEmail
-            // 
-            this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 120;
-            // 
             // clmNtel
             // 
             this.clmNtel.Text = "N. Tel.";
             this.clmNtel.Width = 125;
+            // 
+            // clmEmail
+            // 
+            this.clmEmail.Text = "Email";
+            this.clmEmail.Width = 131;
             // 
             // clmComm
             // 

@@ -32,8 +32,8 @@ namespace ClientManagement.Commissioni
             this.lstCommissioniScadenza = new System.Windows.Forms.ListView();
             this.clmNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCognome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmNtel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmComm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmScadenza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -68,27 +68,27 @@ namespace ClientManagement.Commissioni
             // clmNome
             // 
             this.clmNome.Text = "Nome";
-            this.clmNome.Width = 77;
+            this.clmNome.Width = 76;
             // 
             // clmCognome
             // 
             this.clmCognome.Text = "Cognome";
-            this.clmCognome.Width = 95;
-            // 
-            // clmEmail
-            // 
-            this.clmEmail.Text = "Email";
-            this.clmEmail.Width = 92;
+            this.clmCognome.Width = 93;
             // 
             // clmNtel
             // 
             this.clmNtel.Text = "N. Tel.";
             this.clmNtel.Width = 93;
             // 
+            // clmEmail
+            // 
+            this.clmEmail.Text = "Email";
+            this.clmEmail.Width = 101;
+            // 
             // clmComm
             // 
             this.clmComm.Text = "Commissione";
-            this.clmComm.Width = 125;
+            this.clmComm.Width = 118;
             // 
             // clmScadenza
             // 
