@@ -72,51 +72,35 @@ namespace ClientManagement.Models
         public void AggiungiEntry(Cliente cl, Commissione cm)
         {
             var commissioni = new List<Commissione>();
-
             var c = RecuperaChiaveDaCliente(cl);
 
             if (ClienteCommissioni.ContainsKey(c))
             {
                 // se il cliente è già presente e ha delle commissioni
-
                 // aggiungi cm alla lista delle commissioni del cliente
                 //ClienteCommissioni.Add(cl, commissioni);
                 commissioni = ClienteCommissioni[c];
                 commissioni.Add(cm);
                 ClienteCommissioni[c] = commissioni;
-
-                // notifico le modifiche
-                NotificaObservers(); 
             }
 
             else if (Clienti.ContainsKey(c))
             {
-
                 // se il cliente non esiste tra le commissioni ma esiste nella rubrica
-
                 commissioni.Add(cm);
                 ClienteCommissioni.Add(c, commissioni);
-
-                // notifico le modifiche
-                NotificaObservers();
             }
             else
             {
                 // se il cliente non esiste nè tra le commissioni nè nella rubrica
-
                 commissioni.Add(cm); // aggiungo la commissione
                 Clienti.Add(_value, cl); // aggiungo il cliente nella rubrica
-
-                // notifico le modifiche
-                NotificaObservers();
-
                 ClienteCommissioni.Add(_value, commissioni); // aggiungo la commissione associata al cliente
-
-                // notifico le modifiche
-                NotificaObservers();
-
                 _value += 1; // aggiorno il valore
             }
+
+            // notifico le modifiche
+            NotificaObservers();
 
         }
 
