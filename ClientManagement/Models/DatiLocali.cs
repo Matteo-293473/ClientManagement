@@ -11,15 +11,14 @@ namespace ClientManagement.Models
 {
     class DatiLocali : Subject, IObserver
     {
-
+        // attributo per mantenere sempre la stessa istanza
         private static DatiLocali _instance;
-
 
         // dizionari nei quali vengono archiviati i dati
         public readonly Dictionary<int, List<Commissione>> ClienteCommissioni = new Dictionary<int, List<Commissione>>();
         public readonly Dictionary<int, Cliente> Clienti = new Dictionary<int, Cliente>();
 
-        public static bool Salvato = true;
+        public static bool Salvato { get; private set; } = true;
 
 
         // Non vogliamo istanziare due volte datiLocali

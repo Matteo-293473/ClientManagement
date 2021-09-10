@@ -10,6 +10,5 @@ namespace ClientManagement.Observer
     interface IObserver
     {
         void Update();
-
     }
 }

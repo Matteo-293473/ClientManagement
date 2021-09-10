@@ -5,6 +5,7 @@ namespace ClientManagement.PopUp.ModificaCliente
 {
     class EditorModificaCliente
     {
+        // TextBox Cliente
         private readonly TextBox txtNome;
         private readonly TextBox txtCognome;
         private readonly TextBox txtNumeroTelefono;

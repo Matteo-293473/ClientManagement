@@ -19,7 +19,7 @@ namespace ClientManagement.PopUpModifica
         // nel caso in cui segniamo il task completo, potrebbe succedere che
         // non si possa modificare poiché la data è passata. La data quindi viene segnata
         // e viene aggiunta come eccezione 
-        public DateTime DtScadenzaOld;
+        public DateTime DtScadenzaOld { get; private set; }
 
 
         public EditorModificaCommissione(TextBox txtDescrizioneCommissione, DateTimePicker dtpScadenza,CheckBox cbxTask) 

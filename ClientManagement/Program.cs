@@ -13,6 +13,7 @@ namespace ClientManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // passo i file iniettandoli da fuori
             Application.Run(new ClientManagement(
                 Database.DbHandler.GetInstance(@"C:\Users\pulci\Documents\progetto oop\ClientManagement\ClientManagement\dbClienti.txt",
                     @"C:\Users\pulci\Documents\progetto oop\ClientManagement\ClientManagement\dbCommissioni.txt")

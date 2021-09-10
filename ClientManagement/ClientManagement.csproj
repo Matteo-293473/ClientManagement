@@ -93,7 +93,7 @@
     <Compile Include="Commissioni\CommissioniTotali.Designer.cs">
       <DependentUpon>CommissioniTotali.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database\DBHandler.cs" />
+    <Compile Include="Database\DbHandler.cs" />
     <Compile Include="Home\HandlerCommissioniInScadenza.cs" />
     <Compile Include="Commissioni\HandlerCommissioniTotali.cs" />
     <Compile Include="Contatti\HandlerContatti.cs" />
