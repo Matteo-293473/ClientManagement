@@ -116,7 +116,7 @@ namespace ClientManagement.Commissioni
             this.btnVisualizza.TabIndex = 18;
             this.btnVisualizza.Text = "VISUALIZZA";
             this.btnVisualizza.UseVisualStyleBackColor = false;
-            this.btnVisualizza.Click += new System.EventHandler(this.btnVisualizza_Click);
+            this.btnVisualizza.Click += new System.EventHandler(this.BtnVisualizza_Click);
             // 
             // btnModifica
             // 
@@ -129,7 +129,7 @@ namespace ClientManagement.Commissioni
             this.btnModifica.TabIndex = 19;
             this.btnModifica.Text = "MODIFICA";
             this.btnModifica.UseVisualStyleBackColor = false;
-            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
+            this.btnModifica.Click += new System.EventHandler(this.BtnModifica_Click);
             // 
             // btnElimina
             // 
@@ -142,7 +142,7 @@ namespace ClientManagement.Commissioni
             this.btnElimina.TabIndex = 20;
             this.btnElimina.Text = "ELIMINA";
             this.btnElimina.UseVisualStyleBackColor = false;
-            this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
+            this.btnElimina.Click += new System.EventHandler(this.BtnElimina_Click);
             // 
             // CommissioniTotali
             // 

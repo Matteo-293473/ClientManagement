@@ -1,5 +1,5 @@
 ﻿
-namespace ClientManagement
+namespace ClientManagement.PopUp.ModificaCommissione
 {
     partial class ModificaCommissione
     {
@@ -107,7 +107,7 @@ namespace ClientManagement
             this.btnModifica.TabIndex = 23;
             this.btnModifica.Text = "MODIFICA";
             this.btnModifica.UseVisualStyleBackColor = false;
-            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
+            this.btnModifica.Click += new System.EventHandler(this.BtnModifica_Click);
             // 
             // ModificaCommissione
             // 

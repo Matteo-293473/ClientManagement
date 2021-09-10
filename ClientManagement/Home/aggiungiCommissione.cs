@@ -1,16 +1,15 @@
-﻿using ClientManagement.Models;
-using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using ClientManagement.Extensions;
+﻿using ClientManagement.Extensions;
+using ClientManagement.Models;
 using ClientManagement.Observer;
+using System;
+using System.Windows.Forms;
 
 namespace ClientManagement.Resources
 {
     public partial class AggiungiCommissione : UserControl, IObserver
     {
         private readonly EditorHandlerAggiungiCommissione editor;
-        private readonly DatiLocali datiLocali  = DatiLocali.GetInstance();
+        private readonly DatiLocali datiLocali = DatiLocali.GetInstance();
 
         public AggiungiCommissione()
         {
@@ -22,10 +21,10 @@ namespace ClientManagement.Resources
         public new void Update()
         {
             cmbCliente.Items.Clear();
-            editor.CaricaCmbox(cmbCliente);
+            editor.CaricaCmbBox(cmbCliente);
         }
 
-        private void btnAggiungiEntry_Click(object sender, EventArgs e)
+        private void BtnAggiungiEntry_Click(object sender, EventArgs e)
         {
             try
             {
@@ -45,37 +44,37 @@ namespace ClientManagement.Resources
 
         }
 
-        private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaNumeri(e);
         }
 
-        private void txtCognome_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtCognome_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaCaratteri(e);
         }
-        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaCaratteri(e);
         }
 
-        private void btnIndietro_Click_1(object sender, EventArgs e)
+        private void BtnIndietro_Click_1(object sender, EventArgs e)
         {
             this.SendToBack();
         }
 
-        private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             // passo l'item selezionato all'interno della comboBox
             editor.FillFields(cmbCliente.SelectedItem.ToString());
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void BtnReset_Click(object sender, EventArgs e)
         {
             editor.ResetFields();
         }
 
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaSpazi(e);
         }

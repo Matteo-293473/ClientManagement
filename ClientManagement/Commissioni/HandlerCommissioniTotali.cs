@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 using ClientManagement.Models;
-using System.Linq;
 
 namespace ClientManagement
 {

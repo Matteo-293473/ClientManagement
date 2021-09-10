@@ -63,7 +63,7 @@ namespace ClientManagement.Resources
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(148, 20);
             this.txtNome.TabIndex = 0;
-            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNome_KeyPress);
             // 
             // TxtCognome
             // 
@@ -71,7 +71,7 @@ namespace ClientManagement.Resources
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(148, 20);
             this.txtCognome.TabIndex = 1;
-            this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCognome_KeyPress);
+            this.txtCognome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCognome_KeyPress);
             // 
             // lblDataScadenza
             // 
@@ -153,7 +153,7 @@ namespace ClientManagement.Resources
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(148, 20);
             this.txtNumeroTelefono.TabIndex = 3;
-            this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTelefono_KeyPress);
+            this.txtNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumeroTelefono_KeyPress);
             // 
             // btnAggiungiEntry
             // 
@@ -165,7 +165,7 @@ namespace ClientManagement.Resources
             this.btnAggiungiEntry.Size = new System.Drawing.Size(103, 57);
             this.btnAggiungiEntry.TabIndex = 6;
             this.btnAggiungiEntry.UseVisualStyleBackColor = false;
-            this.btnAggiungiEntry.Click += new System.EventHandler(this.btnAggiungiEntry_Click);
+            this.btnAggiungiEntry.Click += new System.EventHandler(this.BtnAggiungiEntry_Click);
             // 
             // btnIndietro
             // 
@@ -176,7 +176,7 @@ namespace ClientManagement.Resources
             this.btnIndietro.Size = new System.Drawing.Size(77, 57);
             this.btnIndietro.TabIndex = 8;
             this.btnIndietro.UseVisualStyleBackColor = false;
-            this.btnIndietro.Click += new System.EventHandler(this.btnIndietro_Click_1);
+            this.btnIndietro.Click += new System.EventHandler(this.BtnIndietro_Click_1);
             // 
             // cmbCliente
             // 
@@ -187,7 +187,7 @@ namespace ClientManagement.Resources
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(147, 21);
             this.cmbCliente.TabIndex = 9;
-            this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
+            this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.CmbCliente_SelectedIndexChanged);
             // 
             // lblCliente
             // 
@@ -211,7 +211,7 @@ namespace ClientManagement.Resources
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "RESET";
             this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // TxtEmail
             // 
@@ -219,7 +219,7 @@ namespace ClientManagement.Resources
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(148, 20);
             this.txtEmail.TabIndex = 2;
-            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmail_KeyPress);
             // 
             // AggiungiCommissione
             // 

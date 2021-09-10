@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
-using ClientManagement.Models;
-using ClientManagement.PopUpModifica;
 
-namespace ClientManagement
+namespace ClientManagement.PopUp.ModificaCommissione
 {
     public partial class ModificaCommissione : Form
     {
@@ -23,7 +14,7 @@ namespace ClientManagement
             editorModificaCommissione.CaricaDati(idCommissione);
         }
 
-        private void btnModifica_Click(object sender, EventArgs e)
+        private void BtnModifica_Click(object sender, EventArgs e)
         {
 
             try

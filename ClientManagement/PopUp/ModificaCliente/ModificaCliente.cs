@@ -1,12 +1,5 @@
 ﻿using ClientManagement.Contatti;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 
@@ -27,7 +20,7 @@ namespace ClientManagement.PopUp.ModificaCliente
             editorModificaCliente.CaricaDati(idCliente);
         }
 
-        private void btnModifica_Click(object sender, EventArgs e)
+        private void BtnModifica_Click(object sender, EventArgs e)
         {
             try
             {
@@ -52,22 +45,22 @@ namespace ClientManagement.PopUp.ModificaCliente
 
 
         // Piccolo controllo sui caratteri delle textBox
-        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaCaratteri(e);
         }
 
-        private void txtCognome_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtCognome_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaCaratteri(e);
         }
 
-        private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaNumeri(e);
         }
 
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaSpazi(e);
         }

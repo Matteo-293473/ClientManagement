@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows.Forms;
 using ClientManagement.Contatti;
 using ClientManagement.Extensions;
@@ -73,7 +70,7 @@ namespace ClientManagement
 
         // Metodo semplice che carica la combo box alla compilazione automatica dei campi in base
         // al cliente scelto
-        internal void CaricaCmbox(ComboBox cmb)
+        internal void CaricaCmbBox(ComboBox cmb)
         {
             foreach (var i in DatiLocali.Clienti)
             {
@@ -89,10 +86,8 @@ namespace ClientManagement
         {
             // prima resettiamo i campi
             ResetFields();
-
             string[] nomeCognomeNumeroSplit = nomeCognomeNumero.Split(' ');
-            
-            
+
             // popoliamo i campi 
 
             // seleziono la chiave che mi interessa attraverso una query, sfruttando la libreria LINQ

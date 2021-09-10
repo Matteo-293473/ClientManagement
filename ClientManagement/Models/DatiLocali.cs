@@ -15,8 +15,8 @@ namespace ClientManagement.Models
         private static DatiLocali _instance;
 
         // dizionari nei quali vengono archiviati i dati
-        public readonly Dictionary<int, List<Commissione>> ClienteCommissioni = new Dictionary<int, List<Commissione>>();
-        public readonly Dictionary<int, Cliente> Clienti = new Dictionary<int, Cliente>();
+        public Dictionary<int, List<Commissione>> ClienteCommissioni { get; } = new Dictionary<int, List<Commissione>>();
+        public Dictionary<int, Cliente> Clienti { get; } = new Dictionary<int, Cliente>();
 
         public static bool Salvato { get; private set; } = true;
 

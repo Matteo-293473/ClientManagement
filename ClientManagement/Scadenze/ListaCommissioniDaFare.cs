@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Models;
 using ClientManagement.Observer;
@@ -31,7 +24,7 @@ namespace ClientManagement.Scadenze
             handler.AggiornaListView(lstCommissioniScadenza);
         }
 
-        private void btnVisualizza_Click(object sender, EventArgs e)
+        private void BtnVisualizza_Click(object sender, EventArgs e)
         {
             try
             {

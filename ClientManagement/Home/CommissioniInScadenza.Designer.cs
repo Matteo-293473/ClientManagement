@@ -112,7 +112,7 @@ namespace ClientManagement
             this.btnModifica.TabIndex = 2;
             this.btnModifica.Text = "MODIFICA";
             this.btnModifica.UseVisualStyleBackColor = false;
-            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
+            this.btnModifica.Click += new System.EventHandler(this.BtnModifica_Click);
             // 
             // btnNuovaCommission
             // 
@@ -129,7 +129,7 @@ namespace ClientManagement
             this.btnNuovaCommission.Text = "Nuova commissione";
             this.btnNuovaCommission.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuovaCommission.UseVisualStyleBackColor = false;
-            this.btnNuovaCommission.Click += new System.EventHandler(this.btnNuovaCommission_Click);
+            this.btnNuovaCommission.Click += new System.EventHandler(this.BtnNuovaCommission_Click);
             // 
             // lblCommissioniSettimana
             // 
@@ -153,7 +153,7 @@ namespace ClientManagement
             this.btnVisualizza.TabIndex = 17;
             this.btnVisualizza.Text = "VISUALIZZA";
             this.btnVisualizza.UseVisualStyleBackColor = false;
-            this.btnVisualizza.Click += new System.EventHandler(this.btnVisualizza_Click);
+            this.btnVisualizza.Click += new System.EventHandler(this.BtnVisualizza_Click);
             // 
             // btnSalva
             // 
@@ -166,7 +166,7 @@ namespace ClientManagement
             this.btnSalva.TabIndex = 18;
             this.btnSalva.Text = "SALVA";
             this.btnSalva.UseVisualStyleBackColor = false;
-            this.btnSalva.Click += new System.EventHandler(this.btnSalva_Click);
+            this.btnSalva.Click += new System.EventHandler(this.BtnSalva_Click);
             // 
             // CommissioniInScadenza
             // 

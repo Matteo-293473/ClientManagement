@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
-using ClientManagement.Models;
 
 namespace ClientManagement.Scadenze
 {
@@ -32,8 +26,10 @@ namespace ClientManagement.Scadenze
                     if (!cm.TaskCompletato)
                     {
 
-                        lst = new ListViewItem(clientiCommissioni.ToArrayString());
-                        lst.BackColor = Color.PaleVioletRed;
+                        lst = new ListViewItem(clientiCommissioni.ToArrayString())
+                        {
+                            BackColor = Color.PaleVioletRed
+                        };
                         lstCommissioniScadenza.Items.Add(lst);
                     }
 

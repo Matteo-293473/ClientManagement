@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 using ClientManagement.Models;
@@ -23,7 +16,6 @@ namespace ClientManagement.Contatti
         {
             InitializeComponent();
 
-            
             // carico due handler che alleggeriscono il codice della classe
             // il primo si occupa della verifica e inserimento dei dati
             editorAggiungiContatti = new EditorHandlerAggiungiContatto(txtNome, txtCognome, txtNumeroTelefono, txtEmail);
@@ -39,27 +31,27 @@ namespace ClientManagement.Contatti
         }
 
 
-        private void btnIndietro_Click(object sender, EventArgs e)
+        private void BtnIndietro_Click(object sender, EventArgs e)
         {
             this.SendToBack();
         }
 
-        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaCaratteri(e);
         }
 
-        private void txtCognome_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtCognome_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaCaratteri(e);
         }
 
-        private void txtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNumeroTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaNumeri(e);
         }
 
-        private void btnAggiungiEntry_Click(object sender, EventArgs e)
+        private void BtnAggiungiEntry_Click(object sender, EventArgs e)
         {
             try
             {
@@ -78,7 +70,7 @@ namespace ClientManagement.Contatti
             }
         }
 
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controllo.ControllaSpazi(e);
         }

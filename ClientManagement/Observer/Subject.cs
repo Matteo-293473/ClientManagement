@@ -12,7 +12,6 @@ namespace ClientManagement.Observer
 
         // lista di observers 
         private static readonly List<IObserver> Observers = new List<IObserver>();
-
         public void AggiungiObserver(IObserver observer)
         {
             Observers.Add(observer);

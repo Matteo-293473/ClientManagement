@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using ClientManagement.Models;
 using ClientManagement.Observer;
@@ -30,7 +29,7 @@ namespace ClientManagement.Commissioni
             handler.AggiornaListView(lstCommissioniScadenza);
         }
 
-        private void btnVisualizza_Click(object sender, EventArgs e)
+        private void BtnVisualizza_Click(object sender, EventArgs e)
         {
             try
             {
@@ -43,7 +42,7 @@ namespace ClientManagement.Commissioni
         }
 
 
-        private void btnModifica_Click(object sender, EventArgs e)
+        private void BtnModifica_Click(object sender, EventArgs e)
         {
             try
             {
@@ -55,7 +54,7 @@ namespace ClientManagement.Commissioni
             }
         }
 
-        private void btnElimina_Click(object sender, EventArgs e)
+        private void BtnElimina_Click(object sender, EventArgs e)
         {
             try
             {

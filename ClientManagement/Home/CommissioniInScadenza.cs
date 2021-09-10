@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using ClientManagement.Database;
 using ClientManagement.Models;
@@ -45,12 +43,12 @@ namespace ClientManagement
 
         }
 
-        private void btnNuovaCommission_Click(object sender, EventArgs e)
+        private void BtnNuovaCommission_Click(object sender, EventArgs e)
         {
             this.SendToBack();
         }
 
-        private void btnModifica_Click(object sender, EventArgs e)
+        private void BtnModifica_Click(object sender, EventArgs e)
         {
             try
             {
@@ -62,7 +60,7 @@ namespace ClientManagement
             }
         }
 
-        private void btnVisualizza_Click(object sender, EventArgs e)
+        private void BtnVisualizza_Click(object sender, EventArgs e)
         {
             try
             {
@@ -74,7 +72,7 @@ namespace ClientManagement
             }
         }
 
-        private void btnSalva_Click(object sender, EventArgs e)
+        private void BtnSalva_Click(object sender, EventArgs e)
         {
             datiLocali.Salva(db);
         }

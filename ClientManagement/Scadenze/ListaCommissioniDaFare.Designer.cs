@@ -114,7 +114,7 @@ namespace ClientManagement.Scadenze
             this.btnVisualizza.TabIndex = 18;
             this.btnVisualizza.Text = "VISUALIZZA";
             this.btnVisualizza.UseVisualStyleBackColor = false;
-            this.btnVisualizza.Click += new System.EventHandler(this.btnVisualizza_Click);
+            this.btnVisualizza.Click += new System.EventHandler(this.BtnVisualizza_Click);
             // 
             // ListaCommissioniDaFare
             // 

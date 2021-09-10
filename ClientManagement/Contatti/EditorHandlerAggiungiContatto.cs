@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 using ClientManagement.Models;
@@ -82,8 +76,6 @@ namespace ClientManagement.Contatti
 
             // usiamo la classe statica per controllare se ci sono errori negli input delle text box
             Controllo.ControlloInputCliente(TxtNome.Text, TxtCognome.Text, TxtNumeroTelefono.Text, TxtEmail.Text);
-
-
         }
 
         internal void MostraPopUpModifica(ListView lstContatti)
@@ -93,7 +85,6 @@ namespace ClientManagement.Contatti
 
             // recupero l'id della commissione
             var idCliente = Convert.ToInt32(lstContatti.SelectedItems[0].SubItems[4].Text);
-
 
             var popUpModificaCliente = new ModificaCliente(idCliente);
             popUpModificaCliente.ShowDialog(lstContatti);

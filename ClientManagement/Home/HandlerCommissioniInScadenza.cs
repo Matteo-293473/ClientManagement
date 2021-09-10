@@ -5,7 +5,6 @@ using System.Linq;
 using System.Windows.Forms;
 using ClientManagement.Extensions;
 using ClientManagement.Models;
-using ClientManagement.PopUp.VisualizzaCommissione;
 
 namespace ClientManagement
 {

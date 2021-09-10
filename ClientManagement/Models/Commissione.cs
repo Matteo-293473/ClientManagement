@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
 using ClientManagement.Composite;
 
 namespace ClientManagement.Models
@@ -16,16 +14,16 @@ namespace ClientManagement.Models
         public int IdCommissione { get; }
         // identifichiamo il cliente con questi due campi che fungono da chiavi esterne
 
-        private static int globalId = 1;
+        private static int _globalId = 1;
 
         // questo costruttore 
         public Commissione(string descrizione, DateTime scadenza)
         {
-            this.IdCommissione = globalId; // ogni Commissione è identificata da un numero
+            this.IdCommissione = _globalId; // ogni Commissione è identificata da un numero
             this.Descrizione = descrizione;
             this.Scadenza = scadenza;
             this.TaskCompletato = false;
-            globalId++;
+            _globalId++;
         }
 
 
@@ -36,8 +34,8 @@ namespace ClientManagement.Models
             this.Descrizione = descrizione;
             this.Scadenza = scadenza;
             this.TaskCompletato = taskCompletato;
-            if (idCommissione >= globalId)
-                globalId = idCommissione+1;
+            if (idCommissione >= _globalId)
+                _globalId = idCommissione+1;
         }
 
 
