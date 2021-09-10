@@ -41,7 +41,7 @@ namespace ClientManagement
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
             this.contatti1 = new Contatti.Contatti();
             this.listaCommissioniDaFare1 = new Scadenze.ListaCommissioniDaFare();
-            this.commissioniTotali1 = new CommissioniTotali();
+            this.commissioniTotali1 = new Commissioni.CommissioniTotali();
             this.home1 = new Home();
             this.pnlSideMenu.SuspendLayout();
             this.PnlLogo.SuspendLayout();
@@ -176,7 +176,7 @@ namespace ClientManagement
             // listaCommissioniDaFare1
             // 
             this.listaCommissioniDaFare1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.listaCommissioniDaFare1.Location = new System.Drawing.Point(172, 0);
+            this.listaCommissioniDaFare1.Location = new System.Drawing.Point(172, -12);
             this.listaCommissioniDaFare1.Name = "listaCommissioniDaFare1";
             this.listaCommissioniDaFare1.Size = new System.Drawing.Size(764, 485);
             this.listaCommissioniDaFare1.TabIndex = 3;
@@ -184,7 +184,7 @@ namespace ClientManagement
             // commissioniTotali1
             // 
             this.commissioniTotali1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.commissioniTotali1.Location = new System.Drawing.Point(173, 1);
+            this.commissioniTotali1.Location = new System.Drawing.Point(173, 3);
             this.commissioniTotali1.Name = "commissioniTotali1";
             this.commissioniTotali1.Size = new System.Drawing.Size(764, 485);
             this.commissioniTotali1.TabIndex = 7;
@@ -203,10 +203,10 @@ namespace ClientManagement
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(931, 483);
             this.Controls.Add(this.pnlSideMenu);
-            this.Controls.Add(this.contatti1);
             this.Controls.Add(this.listaCommissioniDaFare1);
             this.Controls.Add(this.commissioniTotali1);
             this.Controls.Add(this.home1);
+            this.Controls.Add(this.contatti1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
