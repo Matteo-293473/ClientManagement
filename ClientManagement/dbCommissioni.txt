@@ -36,7 +36,7 @@
   },
   {
     "IdCliente": 4,
-    "Descrizione": "aggiungere Ram",
+    "Descrizione": "aggiungere RAM",
     "Scadenza": "2021-09-03T12:48:18",
     "TaskCompletato": false,
     "IdCommissione": 5
