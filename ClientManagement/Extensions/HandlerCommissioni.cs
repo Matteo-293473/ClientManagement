@@ -6,7 +6,7 @@ using ClientManagement.PopUp.VisualizzaCommissione;
 
 namespace ClientManagement.Extensions
 {
-    abstract class HandlerCommissioni
+    class HandlerCommissioni
     {
 
         protected readonly DatiLocali DatiLocali = DatiLocali.GetInstance();

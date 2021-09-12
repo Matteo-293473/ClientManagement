@@ -40,7 +40,7 @@ namespace ClientManagement
             this.PnlLogo = new System.Windows.Forms.Panel();
             this.PctBoxLogo = new System.Windows.Forms.PictureBox();
             this.contatti1 = new Contatti.Contatti();
-            this.listaCommissioniDaFare1 = new Scadenze.ListaCommissioniDaFare();
+            this.commissioniDaFare1 = new Scadenze.CommissioniDaFare();
             this.commissioniTotali1 = new Commissioni.CommissioniTotali();
             this.home1 = new Home();
             this.pnlSideMenu.SuspendLayout();
@@ -173,13 +173,13 @@ namespace ClientManagement
             this.contatti1.Size = new System.Drawing.Size(764, 485);
             this.contatti1.TabIndex = 4;
             // 
-            // listaCommissioniDaFare1
+            // commissioniDaFare1
             // 
-            this.listaCommissioniDaFare1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.listaCommissioniDaFare1.Location = new System.Drawing.Point(172, -12);
-            this.listaCommissioniDaFare1.Name = "listaCommissioniDaFare1";
-            this.listaCommissioniDaFare1.Size = new System.Drawing.Size(764, 485);
-            this.listaCommissioniDaFare1.TabIndex = 3;
+            this.commissioniDaFare1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.commissioniDaFare1.Location = new System.Drawing.Point(172, -12);
+            this.commissioniDaFare1.Name = "commissioniDaFare1";
+            this.commissioniDaFare1.Size = new System.Drawing.Size(764, 485);
+            this.commissioniDaFare1.TabIndex = 3;
             // 
             // commissioniTotali1
             // 
@@ -203,7 +203,7 @@ namespace ClientManagement
             this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(931, 483);
             this.Controls.Add(this.pnlSideMenu);
-            this.Controls.Add(this.listaCommissioniDaFare1);
+            this.Controls.Add(this.commissioniDaFare1);
             this.Controls.Add(this.commissioniTotali1);
             this.Controls.Add(this.home1);
             this.Controls.Add(this.contatti1);
@@ -230,7 +230,7 @@ namespace ClientManagement
         private System.Windows.Forms.Button btnCommissioni;
         private System.Windows.Forms.Button btnScadenze;
         private Home home1;
-        private Scadenze.ListaCommissioniDaFare listaCommissioniDaFare1;
+        private Scadenze.CommissioniDaFare commissioniDaFare1;
         private Contatti.Contatti contatti1;
         private CommissioniTotali commissioniTotali1;
     }

@@ -1,7 +1,7 @@
 ﻿
 namespace ClientManagement.Scadenze
 {
-    partial class ListaCommissioniDaFare
+    partial class CommissioniDaFare
     {
         /// <summary> 
         /// Variabile di progettazione necessaria.
@@ -116,14 +116,14 @@ namespace ClientManagement.Scadenze
             this.btnVisualizza.UseVisualStyleBackColor = false;
             this.btnVisualizza.Click += new System.EventHandler(this.BtnVisualizza_Click);
             // 
-            // ListaCommissioniDaFare
+            // CommissioniDaFare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.btnVisualizza);
             this.Controls.Add(this.lstCommissioniScadenza);
-            this.Name = "ListaCommissioniDaFare";
+            this.Name = "CommissioniDaFare";
             this.Size = new System.Drawing.Size(764, 485);
             this.ResumeLayout(false);
 

@@ -5,14 +5,11 @@ namespace ClientManagement.Models
 {
     public class Commissione : IComponent
     {
-        //protected string stato;
 
-        //public Cliente Cliente { set; get; }
         public DateTime Scadenza { get; set; }
         public string Descrizione { set; get; }
         public bool TaskCompletato { set; get; }
         public int IdCommissione { get; }
-        // identifichiamo il cliente con questi due campi che fungono da chiavi esterne
 
         private static int _globalId = 1;
 

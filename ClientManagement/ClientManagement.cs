@@ -83,7 +83,7 @@ namespace ClientManagement
         private void BtnScadenze_Click(object sender, EventArgs e)
         {
             handler.ColoreSelezione(btnScadenze, pnlSideMenu);
-            listaCommissioniDaFare1.BringToFront();
+            commissioniDaFare1.BringToFront();
         }
 
         private void btnHome_Leave(object sender, EventArgs e)

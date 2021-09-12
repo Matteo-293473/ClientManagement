@@ -145,11 +145,11 @@
       <DependentUpon>AggiungiCommissione.cs</DependentUpon>
     </Compile>
     <Compile Include="Scadenze\HandlerCommissioniDaFare.cs" />
-    <Compile Include="Scadenze\ListaCommissioniDaFare.cs">
+    <Compile Include="Scadenze\CommissioniDaFare.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Scadenze\ListaCommissioniDaFare.Designer.cs">
-      <DependentUpon>ListaCommissioniDaFare.cs</DependentUpon>
+    <Compile Include="Scadenze\CommissioniDaFare.Designer.cs">
+      <DependentUpon>CommissioniDaFare.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Contatti\AggiungiContatto.resx">
       <DependentUpon>AggiungiContatto.cs</DependentUpon>
@@ -189,8 +189,8 @@
     <EmbeddedResource Include="Home\AggiungiCommissione.resx">
       <DependentUpon>AggiungiCommissione.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Scadenze\ListaCommissioniDaFare.resx">
-      <DependentUpon>ListaCommissioniDaFare.cs</DependentUpon>
+    <EmbeddedResource Include="Scadenze\CommissioniDaFare.resx">
+      <DependentUpon>CommissioniDaFare.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="DiagrammaClassi.cd" />

@@ -2,30 +2,37 @@
 \subsection{Architettura}
 
 Per lo sviluppo del software, sono state create le classi commissione e cliente che sono dei semplici modelli
-e, al fine di avere un basso accoppiamento (loose coupling), si è creata una nuova classe statica che va a 
-separare la parte dello storage dei dati  . 
-Per farlo, la classe statica contiene due dizionari, uno con un identificativo e il cliente associato e l'altro composto da
- un identificativo che indica il cliente liste di commissioni.
+e, al fine di avere un basso accoppiamento (loose coupling), si è creata una nuova classe che va a 
+separare la parte dello storage dei dati. 
+Per farlo, si è optato per l'uso di due dizionari, il primo composto da un numero intero come chiave e l'oggetto cliente come valore associato e 
+l'altro definito da un intero che, oltre a funzionare come chiave, rappresenta anche il cliente attraverso il primo dizionario e come valore una
+lista di commissioni.  
  \vspace{0.5cm}
  Per l'architettura sono stati usati 3 pattern:
 \begin{itemize}
     \item Singleton, pattern creazionale che garantisce la creazione di una e una sola istanza della classe.  
     Viene usata durante la fase di salvataggio (in modo da richiamare sempre la stessa istanza) e per la gestione
     dei dati interni al programma. 
-
-    Il singleton ci serve per poter implementare un'interfaccia o per estendere un'altra classe avendo quindi i vantaggi di una classe statica.
+    Il singleton ci serve per poter implementare un'interfaccia o per estendere un'altra classe avendo i vantaggi di una classe statica.\\
     Durante la gestione dei dati interni implementiamo il singleton per poter poi aggiungere un altro pattern che è
     l'Observer. 
-    \item Composite, pattern strutturale per 
+    \item Composite, pattern strutturale conferisce al programma flessibilità ed estensibilità. Consente di creare nuovi oggetti annidati basati 
+    su altri già esistenti. Nel nostro caso, utile nella fase di rappresentazione dei dati per comporre le entry all'interno delle listview.
+
     \item Observer, pattern comportamentale che consente il sistema basato su eventi. \\
     Viene usato per notificare a tutte le classi dedite alla rappresentazione che son 
-    stati apportati cambiamenti in locale e devono essere aggiornati. L'approccio usato
-    è di tipo pull, ovvero la classe che notifica non invia dati ma il solo segnale, saranno
-    poi le classi notificate che si occuperanno a recuperare i dati attraverso metodi esposti
+    stati apportati cambiamenti in locale e quindi devono essere aggiornate con dati recenti. 
+    Oltre all'aspetto grafico, con questo pattern è stato possibile applicare un controllo in fase di uscita:
+    usufruiamo della notifica per indicare che c'è stato un cambiamento e che quindi è presente la necessità di salvare.
+
+    
+    L'approccio usato è di tipo pull, ovvero la classe che notifica non invia dati ma il solo segnale, saranno
+    poi le classi notificate ad occuparsi di recuperare i dati attraverso metodi esposti
     da parte della classe dedicata alla memoria. \\
     Il tipo di approccio pull permette una maggiore flessibilità, ogni observer decide cosa 
     richiedere. \\
     In genere si usa questo approccio quando ci sono diversi tipi di observer.
+    In virtù di questo pattern si è riusciti a separare dati e modelli.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -40,7 +47,7 @@ ad oggetti come \texttt{C\#}: Incapsulemento, ereditarietà, polimorfismo, eccez
 
 
 
-Al fine di non sporcare le classi e mantenere ordine nel codice, alcune logiche vengono delegate ad altre classi handler.
+Al fine di non sporcare le classi e mantenere ordine all'interno del codice, le logiche vengono delegate ad altre classi handler.
 Si è poi fatto uso dell'ereditarietà tra i vari handler, poichè alcune classi differivano solo di pochi metodi: 
 La classe \texttt{HandlerCommissioni} che funge da classe base, viene estesa dalle classi figlie \texttt{HandlerCommissioniTotali},
 \texttt{HandlerCommissioniInScadenza} e \texttt{HandlerCommissioniDaFare}.
@@ -48,24 +55,28 @@ La classe \texttt{HandlerCommissioni} che funge da classe base, viene estesa dal
 Sono state aggiunte alcune classi statiche, ad esempio quelle per il controllo degli input, al fine di non ripetere codice
 inutilmente
 
+\subsubsection{Cliente}
+La classe \texttt{Cliente} è composta da diverse proprietà, membri che forniscono un meccanismo flessibile per leggere, 
+scrivere o calcolare il valore di un campo privato, che definiscono il cliente. Troviamo Nome, Cognome, Email e Numero. \\
+La classe implementa l'interfaccia IComponent e quindi realizza il metodo ToArrayString così da poter applicare il pattern
+composite.
+
+\subsubsection{Commissione}
+\texttt{Commissione} è descritta da IdCommissione, Descrizione, TaskCompletato e da una Scadenza. È presenta anche un attributo
+statico che permette identificare in modo univoco ciascuna commissione. Usufruendo dell'overload poi, sono presenti due costruttori,
+uno utile nell'inserimento di una nuova commissione e l'altro necessario quando carichiamo le commissioni da file, in questo modo
+abbiamo più controllo sulla variabile globale statica. Come per la classe \texttt{Cliente}, anche qui viene implementata l'interfaccia
+IComponent.
+
+\subsubsection{DatiLocali}
+La gestione dei dati in locale è delegata alla classe \texttt{DatiLocali}, dove troviamo applicati i due pattern, \textbf{Singleton} e 
+\textbf{Observer}. Quest'ultimo è applicato implementando l'interfaccia \texttt{IObserver} e estendendo la classe \texttt{Subject}.
+Era necessaria una classe che avesse un'unica istanza, così da non andare a generare istanze con dati diversi, ma che potesse comunque 
+estendere una classe o implementare un'interfaccia. In questo caso ci viene incontro il Singleton, che appunto rende possibili entrambe le richieste blindando il costruttore, 
+rendendolo richiamabile una sola volta attraverso il metodo \texttt{GetInstance()}. Costruttore che contiene l'iscrizione all'evento
 
 
 
-
-Per lo sviluppo del gioco è stato utilizzato il design pattern \texttt{MVC} che permette la separazione della logica del gioco dal codice che si occupa della presentazione all'utente.
-
-Il pattern consiste in 3 componenti principali:
-\begin{itemize}
-    \item \textbf{M}odel che implementa la logica di business del programma tramite le classi che espongono metodi utili ad accedere e manipolare i dati
-
-    \item \textbf{V}iew che implementa l'interfaccia con cui l'utente interagirà. Ogni modifica che richiede l'intervento sui dati del \texttt{model} passerà attraverso il \texttt{controller}.
-
-    \item \textbf{C}ontroller che si occupa di veicolare i messaggi inseriti dall'utente nella \texttt{view} per manipolare i dati contenuti nel \texttt{model}.
-          Funge da tramite da \texttt{model} e \texttt{view} in quanto, sebbene la \texttt{view} sia in grado di leggere dati dal \texttt{model}, essa non è in grado di manipolarli.
-\end{itemize}
-
-\vspace{0.5cm}
-Nell'architettura del progetto è stato fatto largo uso di quelle tecniche che contraddistinguono un linguaggio ad oggetti come \texttt{C\#}: l'\emph{incapsulamento}, il \emph{polimorfismo}, l'\emph{ereditarietà}, l'utilizzo di \emph{eccezioni} e l'utilizzo di \emph{classi generiche}.
 
 \subsubsection{Model}
 La struttura del \texttt{model} ruota interamente attorno alle \emph{note} (ossi i colpi che deve effettuare l'utente), come esse vengono generate e il mantenimento dei punti quando esse vengono colpite.
@@ -89,7 +100,8 @@ Ogni schermata di gioco è implementata tramite la classe \texttt{Panel} fornita
 Nel caso sia necessario, tale schermata può comunicare con \texttt{MainView} contenendone un riferimento e, nel caso di \texttt{PlayingPanel} anche con \texttt{MainController}.
 
 \vspace{0.5cm}
-Particolare enfasi va posta sulla classe \texttt{PlayingPanel}: tale classe infatti si occupa di implementare in modo vero e proprio la schermata di gioco vista dall'utente.
+Particolare enfasi va posta sulla classe \texttt{PlayingPanel}: tale classe infatti si 
+occupa di implementare in modo vero e proprio la schermata di gioco vista dall'utente.
 Essa, implementando l'interfaccia \texttt{IObserver}, utilizza in modo diretto la classe \texttt{INoteGenerator} e mostra le nuove note generate all'utente inserendole in una lista generica di tipo \texttt{LinkedList} cosicchè sia possibile accedere all'elemento di testa e di coda.
 
 Nel momento in cui un tasto viene premuto comunica in modo diretto a \texttt{MainController} dell'avvenuto colpimento di una nota o del colpo a vuoto.

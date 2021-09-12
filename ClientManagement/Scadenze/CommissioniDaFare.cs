@@ -5,11 +5,11 @@ using ClientManagement.Observer;
 
 namespace ClientManagement.Scadenze
 {
-    public partial class ListaCommissioniDaFare : UserControl, IObserver
+    public partial class CommissioniDaFare : UserControl, IObserver
     {
         private readonly HandlerCommissioniDaFare handler;
 
-        public ListaCommissioniDaFare()
+        public CommissioniDaFare()
         {
             InitializeComponent();
             handler = new HandlerCommissioniDaFare();

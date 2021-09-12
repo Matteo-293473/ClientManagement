@@ -6,12 +6,13 @@ la data di scadenza e la descrizione.
 Il software sarà composto da un menù principale con 4 tab 
 \begin{itemize}
         \item \textbf{Home:} Questa è la schermata principale con cui si apre il software, all'interno
-        troviamo la lista delle commissioni con scadenza in settimana e la possibilità di modificare
-        e aggiungere commissioni.
-        \item \textbf{Rubrica:} In questa schermata troviamo tutti i contatti %aggiungi la possibilià di selezionare un contatto e aggiungere una commissione veloce
-        salvati con la possibilità di aggiungerne nuovi, modificare quelli già presenti o eliminarli (eliminando le relative commissioni).
-        \item \textbf{Commissioni:} Qui possiamo visualizzare tutte le commissioni (completate e non)
-        \item \textbf{Scadenze:} In quest'ultima tab verranno mostrate solo le commissioni non ancora completate, con la possibilità di eliminare
+        troviamo la lista delle commissioni con scadenza in settimana e la possibilità di visualizzare, modificare
+        e aggiungere commissioni. Sempre in questa schermata si ha la possibilità di salvare le modifiche appartate.
+        \item \textbf{Rubrica:} In questa schermata troviamo tutti i contatti salvati con la possibilità di aggiungerne nuovi, 
+        modificare quelli già presenti o eliminarli (eliminando tutte le relative commissioni).
+        \item \textbf{Commissioni:} Qui possiamo visualizzare tutte le commissioni (completate e non). Anche qui sono presenti i tasti 
+        visualizza, modifica e elimina.
+        \item \textbf{Scadenze:} In quest'ultima tab verranno mostrate solo le commissioni non ancora completate, con la possibilità di visualizzarle.
 
 \end{itemize}
 
@@ -27,29 +28,10 @@ salvataggio su database.
 
 \medskip
 Ogni elemento, cliente o commissione che sia, può essere visualizzato aggiunto, modificato o eliminato.
-Una volta selezionato un elemento 
+Una volta selezionato un elemento.
 Quando si richiede la modifica, verrà mostrata una schermata dedicata, mentre per quanto concerne l'eliminazione  
 sarà richiesta una conferma prima di eliminare definitivamente l'elemento.
 
 \medskip
 Una volta conclusa la sessione, prima della chiusura del programma, se sono stati apportati cambiamenti non salvati su file,
 il programma notifcherà l'utente. 
-
-Una volta compilati opportunamente i campi della schermata di una nuova partita, verrà mostrata la schermata di gioco con la quale l'utente interagirà.
-Essa sarà composta da un rullante e due bacchette inizialmente alzate. Alla pressione del tasto \textbf{c} e \textbf{n} le bacchette (rispettivamente sinistra e destra) reagiranno all'input dell'utente colpendo il rullante.
-La sequenza di colpi da effettuare verrà rappresentata da immagini rappresentanti note che si muovono lungo due linee che congiungono i due angoli superiori dello schermo sino al rullante.
-Nel momento in cui il punto raggiunge il rullante e in contemporanea viene effettuato il colpo allora esso verrà conteggiato come corretto.
-
-\medskip
-Il videogioco conterrà un semplice sistema di calcolo del punteggio totalizzato dall'utente.
-Tale punteggio sarà attribuito in base alla precisione del colpo.
-
-Nel caso l'utente colpisca il rullante esattamente nell'istante in cui viene richiesto allora aumenterà il proprio punteggio di $100$ punti (colpo perfetto).
-Nel caso in cui il colpo non sia precisamente nella posizione segnalata (colpo standard), ogni $2 ms$ di ritardo o di anticipo (rispetto al colpo perfetto) risulterà in una penalità di $1$ punto alla quantità che verrà aggiunta al punteggio totale.
-Nel caso l'utente colpisca il rullante quando il colpo non è ancora giunto sul rullante (colpo errato) non verrà attribuito alcun punteggio, dopo $20$ errori di questo tipo la partita termina.
-
-Durante la partita apparirà, in maniera casuale, al posto di un colpo standard un colpo speciale identificato diversamente dagli altri. Il punteggio assegnato nel caso in cui tale colpo venga eseguito in maniera corretta sarà doppio.
-
-La difficoltà del gioco è determinata dal numero di BPM che si sta affrontando. Essi aumentano progressivamente ogni 5 colpi corretti (perfetti o standard) effettuati.
-
-A fine partita il punteggio verrà mostrato all'utente e inserito in un file \texttt{csv} contenente tutti i punteggi effettuati con il gioco. Tali punteggi saranno visualizzabili a partire dalla schermata principale tramite un'apposita schermata raggiungibile premendo il tasto dedicato.
