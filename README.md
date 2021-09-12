@@ -19,7 +19,7 @@ troviamo la lista delle commissioni con scadenza in settimana e la possibilità 
 * **Commissioni**: Qui possiamo visualizzare tutte le commissioni (completate e non). Anche qui sono presenti i tasti visualizza, modifica e elimina.
 * **Scadenze**: In quest'ultima tab verranno mostrate solo le commissioni non ancora completate, con la possibilità di visualizzarle.
 
-Il software inoltre offre la possibilità di salvare i dati in locale e anche in formato Json per un eventuale
+Il software inoltre offre la possibilità di salvare i dati in locale in formato Json per un eventuale
 salvataggio su database.
 
 Ogni elemento, cliente o commissione che sia, può essere visualizzato aggiunto, modificato o eliminato.
