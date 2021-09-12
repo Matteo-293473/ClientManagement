@@ -1,7 +1,9 @@
 # Progetto Programmazione e Modellazione ad Oggetti
 Nome : Matteo
+
 Cognome : Pulcinelli
-Titolo:	Client Management<br>
+
+Titolo:	Client Management
 
 ### Specifica Progetto
 Si richiede di realizzare un software con interfaccia grafica per sistemi Windows-based che consenta la gestione dei clienti. Il software in questione terrà traccia dei clienti e delle varie commissioni
