@@ -4,7 +4,6 @@ Cognome : Pulcinelli
 Titolo:	Client Management<br>
 
 ### Specifica Progetto
-\section{Specifica del problema}
 Si richiede di realizzare un software con interfaccia grafica per sistemi Windows-based che consenta la gestione dei clienti. Il software in questione terrà traccia dei clienti e delle varie commissioni
 associate ad essi. Dei clienti ci interessano nome, cognome, il numero di telefono e email, mentre per ogni commissione ci interessano
 la data di scadenza e la descrizione.
