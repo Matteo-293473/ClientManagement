@@ -6,7 +6,7 @@ namespace ClientManagement.Scadenze
 {
     class HandlerCommissioniDaFare : HandlerCommissioni
     {
-        internal void AggiornaListView(ListView lstCommissioniScadenza)
+        public override void AggiornaListView(ListView lstCommissioniScadenza)
         {
             Composite.Composite clientiCommissioni = new Composite.Composite();
             

@@ -6,7 +6,7 @@ using ClientManagement.PopUp.VisualizzaCommissione;
 
 namespace ClientManagement.Extensions
 {
-    class HandlerCommissioni
+    abstract class HandlerCommissioni
     {
 
         protected readonly DatiLocali DatiLocali = DatiLocali.GetInstance();
@@ -67,5 +67,7 @@ namespace ClientManagement.Extensions
                 lstCommissioniScadenza.SelectedItems[0].SubItems[3].Text
             ));
         }
+
+        public abstract void AggiornaListView(ListView lst);
     }
 }

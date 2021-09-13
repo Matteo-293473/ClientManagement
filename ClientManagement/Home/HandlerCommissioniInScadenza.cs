@@ -10,7 +10,7 @@ namespace ClientManagement
 {
     class HandlerCommissioniInScadenza : HandlerCommissioni
     {
-        internal void AggiornaListView(ListView lstCommissioniScadenza)
+        public override void AggiornaListView(ListView lstCommissioniScadenza)
         {
             // rimuoviamo gli elementi presenti
             // lstCommissioniScadenza.Items.Clear();
