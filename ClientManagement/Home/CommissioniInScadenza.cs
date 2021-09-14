@@ -77,5 +77,24 @@ namespace ClientManagement
         {
             datiLocali.Salva(db);
         }
+
+        private void btnElimina_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Sei sicuro di voler eliminare la commissione?", "Eliminare", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                        handler.Elimina(lstCommissioniScadenza);
+                }
+            }
+            catch (Exception err)
+            {
+                    MessageBox.Show(err.Message);
+            }
+
+            
+        }
     }
 }

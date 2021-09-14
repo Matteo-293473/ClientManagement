@@ -44,6 +44,7 @@ namespace ClientManagement
             this.lblCommissioniSettimana = new System.Windows.Forms.Label();
             this.btnVisualizza = new System.Windows.Forms.Button();
             this.btnSalva = new System.Windows.Forms.Button();
+            this.btnElimina = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstCommissioniScadenza
@@ -168,11 +169,25 @@ namespace ClientManagement
             this.btnSalva.UseVisualStyleBackColor = false;
             this.btnSalva.Click += new System.EventHandler(this.BtnSalva_Click);
             // 
+            // btnElimina
+            // 
+            this.btnElimina.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnElimina.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnElimina.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnElimina.Location = new System.Drawing.Point(280, 405);
+            this.btnElimina.Name = "btnElimina";
+            this.btnElimina.Size = new System.Drawing.Size(104, 38);
+            this.btnElimina.TabIndex = 21;
+            this.btnElimina.Text = "ELIMINA";
+            this.btnElimina.UseVisualStyleBackColor = false;
+            this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
+            // 
             // CommissioniInScadenza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.btnElimina);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.btnVisualizza);
             this.Controls.Add(this.lblCommissioniSettimana);
@@ -202,5 +217,6 @@ namespace ClientManagement
         private System.Windows.Forms.ColumnHeader clmIdComm;
         private System.Windows.Forms.Button btnVisualizza;
         private System.Windows.Forms.Button btnSalva;
+        private System.Windows.Forms.Button btnElimina;
     }
 }
