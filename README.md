@@ -14,7 +14,7 @@ Il software sarà composto da un menù principale con 4 tab
 
 * **Home**: Questa è la schermata principale con cui si apre il software, all'interno
 troviamo la lista delle commissioni con scadenza in settimana e la possibilità di visualizzare, modificare
- e aggiungere commissioni. Sempre in questa schermata si ha la possibilità di salvare le modifiche appartate.
+ e aggiungere commissioni. Sempre in questa schermata si ha la possibilità di salvare le modifiche apportate.
 * **Rubrica**: In questa schermata troviamo tutti i contatti salvati con la possibilità di aggiungerne nuovi, modificare quelli già presenti o eliminarli (eliminando tutte le relative commissioni).
 * **Commissioni**: Qui possiamo visualizzare tutte le commissioni (completate e non). Anche qui sono presenti i tasti visualizza, modifica e elimina.
 * **Scadenze**: In quest'ultima tab verranno mostrate solo le commissioni non ancora completate, con la possibilità di visualizzarle.
