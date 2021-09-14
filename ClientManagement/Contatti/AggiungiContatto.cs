@@ -22,14 +22,14 @@ namespace ClientManagement.Contatti
             
             // il secondo permette di richiamare il metodo aggiornaListaContatti
             handlerContatti = new HandlerContatti();
-            datiLocali.AggiungiObserver(this);
+            datiLocali.AggiungiObserver(this); // ci iscriviamo al subject
         }
 
+        // observer pattern
         public new void Update()
         {
             handlerContatti.AggiornaListaContatti(lstContatti);
         }
-
 
         private void BtnIndietro_Click(object sender, EventArgs e)
         {

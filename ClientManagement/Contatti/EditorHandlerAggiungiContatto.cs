@@ -15,11 +15,13 @@ namespace ClientManagement.Contatti
         protected readonly TextBox TxtNumeroTelefono;
         protected readonly DatiLocali DatiLocali = DatiLocali.GetInstance();
 
+        
         public EditorHandlerAggiungiContatto()
         {
 
         }
 
+        // overload del costruttore
         public EditorHandlerAggiungiContatto(TextBox txtNome, TextBox txtCognome, TextBox txtNumeroTelefono, TextBox txtEmail)
         {
             this.TxtNome = txtNome;

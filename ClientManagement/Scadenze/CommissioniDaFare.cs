@@ -19,8 +19,10 @@ namespace ClientManagement.Scadenze
             datiLocali.AggiungiObserver(this);
         }
 
+        // observer pattern
         public new void Update()
         {
+            // uso del polimorfismo
             handler.AggiornaListView(lstCommissioniScadenza);
         }
 

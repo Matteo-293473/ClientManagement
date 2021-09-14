@@ -22,6 +22,7 @@ namespace ClientManagement.Contatti
 
         }
 
+        // observer pattern
         public new void Update()
         {
             handler.AggiornaListaContatti(lstContatti);

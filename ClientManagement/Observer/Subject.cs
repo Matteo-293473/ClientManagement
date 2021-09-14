@@ -10,7 +10,7 @@ namespace ClientManagement.Observer
     class Subject
     {
 
-        // lista di observers 
+        // lista di observers che sono iscritti all'evento
         private static readonly List<IObserver> Observers = new List<IObserver>();
         public void AggiungiObserver(IObserver observer)
         {

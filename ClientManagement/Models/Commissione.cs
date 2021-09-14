@@ -35,7 +35,7 @@ namespace ClientManagement.Models
                 _globalId = idCommissione+1;
         }
 
-
+        // Metodo dell'interfaccia IComponent 
         public string[] ToArrayString()
         {
             string[] row = { 

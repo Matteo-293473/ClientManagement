@@ -6,6 +6,7 @@ namespace ClientManagement.Composite
     // classe che permetti di raggruppare gli oggetti
     internal class Composite : IComponent
     {
+        // lista che compone il gruppo di oggetti
         private readonly List<IComponent> components = new List<IComponent>();
 
         // aggiunge un componente alla lista 
@@ -20,7 +21,7 @@ namespace ClientManagement.Composite
             components.Clear();
         }
 
-        // Metodo del Composite che richiama per ogni componente lo stesso metodo (leaf)
+        // Metodo del Composite che richiama per ogni componente (leaf) lo stesso metodo (ToArrayString())
         public string[] ToArrayString()
         {
             var j = 0;

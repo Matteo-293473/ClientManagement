@@ -30,9 +30,10 @@ namespace ClientManagement
         }
 
 
-        // observable pattern
+        // observer pattern
         public new void Update()
         {
+            // uso del polimorfismo
             handler.AggiornaListView(lstCommissioniScadenza);
         }
 

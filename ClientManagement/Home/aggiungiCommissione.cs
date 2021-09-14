@@ -18,6 +18,7 @@ namespace ClientManagement.Resources
             datiLocali.AggiungiObserver(this);
         }
 
+        // observer pattern
         public new void Update()
         {
             cmbCliente.Items.Clear();
