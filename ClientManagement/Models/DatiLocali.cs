@@ -68,6 +68,13 @@ namespace ClientManagement.Models
 
         }
 
+        // overload, questo metodo viene richiamato solo quando carichiamo i dati da file
+        public void AggiungiEntry(int chiave, Cliente cl)
+        {
+            Clienti.Add(chiave, cl);
+            _value = chiave >= _value ? chiave : _value;
+        }
+
 
         public void AggiungiEntry(Cliente cl, Commissione cm)
         {
@@ -207,7 +214,7 @@ namespace ClientManagement.Models
 
             // trasferiamo il dizionario clDictionary dei Clienti nel dizionario del programma
             foreach (var cl in newClDictionary)
-                AggiungiEntry(cl.Value);
+                AggiungiEntry(cl.Key,cl.Value);
             
 
             // trasferiamo il dizionario cmDictionary delle commissioni nel dizionario del programma

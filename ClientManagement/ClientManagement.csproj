@@ -223,8 +223,6 @@
     <None Include="Resources\appbar.home.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dbCommissioni.txt" />
-    <Content Include="dbClienti.txt" />
     <Content Include="Resources\clientManagement.png" />
   </ItemGroup>
   <ItemGroup />
